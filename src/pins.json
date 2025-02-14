@@ -1,0 +1,42 @@
+[
+    {
+      "ambiente": "Antebaño",
+      "pins": [
+        {
+          "id": 1,
+          "position": [100, 100, 400],
+          "label": "Toalleros",
+          "closeup": "img1.jpeg"
+        },
+        {
+          "id": 2,
+          "position": [100, -250, 300],
+          "label": "Inodoro",
+          "closeup": "img1.jpeg"
+        },
+        {
+          "id": 3,
+          "position": [200, -250, 300],
+          "label": "Rejilla de Patio",
+          "closeup": "img1.jpeg"
+        }
+      ]
+    },
+    {
+      "ambiente": "Baño",
+      "pins": [
+        {
+          "id": 1,
+          "position": [480, -50, 100],
+          "label": "Punto Spawn",
+          "closeup": "img1.jpeg"
+        },
+        {
+          "id": 2,
+          "position": [-420, 60, -200],
+          "label": "Base",
+          "closeup": "img2.jpg"
+        }
+      ]
+    }
+  ]

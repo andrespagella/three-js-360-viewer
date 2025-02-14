@@ -1,24 +1,18 @@
+// src/App.jsx
 import { useRef, useState } from "react";
 import "./App.css";
 import Three360Viewer from "./components/Three360Viewer";
+import ambientes from "./ambientes.json";
+import pinsData from "./pins.json";
 
 function App() {
-  const images = [
-    {
-      url: "street.webp",
-      name: "Street",
-    },
-    {
-      url: "mc-env.webp",
-      name: "Minecraft",
-    },
-    {
-      url: "dust-2.webp",
-      name: "Dust 2",
-    },
-  ];
-  const [currentView, setCurrentView] = useState(images[0]);
-
+  const [currentView, setCurrentView] = useState(ambientes[0]);
+  const [closeup, setCloseup] = useState(null);
+  const [zooming, setZooming] = useState(false);
+  
+  // Encuentra los pines correspondientes para el ambiente actual
+  const currentPins = pinsData.find((p) => p.ambiente === currentView.name)?.pins || [];
+  
   const containerRef = useRef(null);
   const viewRefs = useRef([]);
 
@@ -28,7 +22,6 @@ function App() {
       const viewWidth = viewRefs.current[index].offsetWidth;
       const scrollPosition =
         viewRefs.current[index].offsetLeft - containerWidth / 2 + viewWidth / 2;
-
       containerRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
@@ -40,16 +33,36 @@ function App() {
     setCurrentView(view);
     scrollToView(index);
   };
+
+  // Al hacer clic en un pin con closeup, activamos el zoom y luego mostramos la vista closeup
+  const handleOpenCloseup = (closeupFile) => {
+    setZooming(true);
+    setTimeout(() => {
+      setCloseup(`/closeups/${closeupFile}`);
+      setZooming(false);
+    }, 200); // 200ms de zoom (ajustable)
+  };
+
+  const handleCloseCloseup = () => {
+    setCloseup(null);
+  };
+
   return (
-    <div className="w-full relative">
-      <Three360Viewer imageUrl={currentView?.url} />
+    <div className="w-full relative overflow-hidden">
+      <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
+        <Three360Viewer
+          imageUrl={currentView?.url}
+          pins={currentPins}
+          onOpenCloseup={handleOpenCloseup}
+        />
+      </div>
       <div
         ref={containerRef}
         className="w-full flex items-center gap-4 overflow-x-auto absolute bottom-0 left-0 p-10"
       >
-        {images.map((item, index) => (
+        {ambientes.map((item, index) => (
           <button
-            key={item}
+            key={index}
             ref={(el) => (viewRefs.current[index] = el)}
             onClick={() => handleViewClick(item, index)}
             className={`${
@@ -60,6 +73,17 @@ function App() {
           </button>
         ))}
       </div>
+      {closeup && (
+        <div className="absolute top-0 left-0 w-full h-screen z-10">
+          <img src={closeup} alt="Closeup" className="w-full h-full object-cover" />
+          <button
+            onClick={handleCloseCloseup}
+            className="absolute top-4 right-4 bg-black text-white px-4 py-2"
+          >
+            Cerrar
+          </button>
+        </div>
+      )}
     </div>
   );
 }
