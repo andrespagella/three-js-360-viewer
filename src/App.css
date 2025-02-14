@@ -1,6 +1,0 @@
-.viewer-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Asegura que ocupa la pantalla completa */
-    overflow: hidden; /* Oculta scrollbars */
-  }
