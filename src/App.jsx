@@ -1,5 +1,4 @@
-// src/App.jsx
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Three360Viewer from "./components/Three360Viewer";
 import ambientes from "./ambientes.json";
@@ -9,38 +8,23 @@ function App() {
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
   const [zooming, setZooming] = useState(false);
-  
-  // Encuentra los pines correspondientes para el ambiente actual
-  const currentPins = pinsData.find((p) => p.ambiente === currentView.name)?.pins || [];
-  
-  const containerRef = useRef(null);
-  const viewRefs = useRef([]);
+  const [menuExpanded, setMenuExpanded] = useState(false);
 
-  const scrollToView = (index) => {
-    if (viewRefs.current[index] && containerRef.current) {
-      const containerWidth = containerRef.current.offsetWidth;
-      const viewWidth = viewRefs.current[index].offsetWidth;
-      const scrollPosition =
-        viewRefs.current[index].offsetLeft - containerWidth / 2 + viewWidth / 2;
-      containerRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const currentPins =
+    pinsData.find((p) => p.ambiente === currentView.name)?.pins || [];
 
-  const handleViewClick = (view, index) => {
+  const handleViewClick = (view) => {
     setCurrentView(view);
-    scrollToView(index);
+    setMenuExpanded(false);
   };
 
-  // Al hacer clic en un pin con closeup, activamos el zoom y luego mostramos la vista closeup
+  // Manejo del zoom para el closeup
   const handleOpenCloseup = (closeupFile) => {
     setZooming(true);
     setTimeout(() => {
       setCloseup(`/closeups/${closeupFile}`);
       setZooming(false);
-    }, 200); // 200ms de zoom (ajustable)
+    }, 200);
   };
 
   const handleCloseCloseup = () => {
@@ -48,42 +32,86 @@ function App() {
   };
 
   return (
-    <div className="w-full relative overflow-hidden">
-      <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
-        <Three360Viewer
-          imageUrl={currentView?.url}
-          pins={currentPins}
-          onOpenCloseup={handleOpenCloseup}
-        />
-      </div>
-      <div
-        ref={containerRef}
-        className="w-full flex items-center gap-4 overflow-x-auto absolute bottom-0 left-0 p-10"
-      >
-        {ambientes.map((item, index) => (
-          <button
-            key={index}
-            ref={(el) => (viewRefs.current[index] = el)}
-            onClick={() => handleViewClick(item, index)}
-            className={`${
-              currentView?.id === item.id ? "bg-black" : "bg-[#222]"
-            } px-4 py-2 flex-shrink-0 rounded text-white shadow-sm shadow-white`}
-          >
-            {item.name}
-          </button>
-        ))}
-      </div>
-      {closeup && (
-        <div className="absolute top-0 left-0 w-full h-screen z-10">
-          <img src={closeup} alt="Closeup" className="w-full h-full object-cover" />
-          <button
-            onClick={handleCloseCloseup}
-            className="absolute top-4 right-4 bg-black text-white px-4 py-2"
-          >
-            Cerrar
-          </button>
+    <div className="relative h-screen">
+      {/* Panel lateral visible solo cuando no hay closeup */}
+      {!closeup && (
+        <div
+          className="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transition-transform duration-300"
+          style={{
+            transform: menuExpanded
+              ? "translateX(0)"
+              : "translateX(-calc(16rem - 2.5rem))",
+          }}
+        >
+          <div className="p-4">
+            <h2 className="text-lg font-bold">Ambientes</h2>
+            <div className="mt-4 grid grid-cols-1 gap-2">
+              {ambientes.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleViewClick(item)}
+                  style={{ backgroundImage: `url(${item.preview})` }}
+                  className={`bg-cover bg-center h-[200px] rounded ${
+                    currentView.name === item.name
+                      ? "ring-4 ring-black"
+                      : "ring-2 ring-gray-700 hover:ring-gray-600"
+                  }`}
+                >
+                  <div className="w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+                    {item.name}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       )}
+
+      {/* Botón Toggle visible solo cuando no hay closeup */}
+      {!closeup && (
+        <button
+          onClick={() => setMenuExpanded(!menuExpanded)}
+          className="fixed z-50 bg-gray-800 text-white px-4 py-1 focus:outline-none"
+          style={{
+            left: menuExpanded ? "16rem" : "1.5rem",
+            top: "50%",
+            transform: "translate(-50%, -50%) rotate(-90deg)",
+            transformOrigin: "center",
+          }}
+        >
+          Ambientes
+        </button>
+      )}
+
+      {/* Contenido principal ajusta el margen según se muestre el panel */}
+      <div
+        className={`transition-all duration-300 ${
+          closeup ? "ml-0" : menuExpanded ? "ml-64" : "ml-2.5"
+        }`}
+      >
+        <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
+          <Three360Viewer
+            imageUrl={currentView?.url}
+            pins={currentPins}
+            onOpenCloseup={handleOpenCloseup}
+          />
+        </div>
+        {closeup && (
+          <div className="absolute top-0 left-0 w-full h-screen z-10">
+            <img
+              src={closeup}
+              alt="Closeup"
+              className="w-full h-full object-cover"
+            />
+            <button
+              onClick={handleCloseCloseup}
+              className="absolute top-4 right-4 bg-black text-white px-4 py-2"
+            >
+              Cerrar
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
