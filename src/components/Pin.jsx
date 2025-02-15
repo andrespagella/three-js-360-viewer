@@ -1,17 +1,16 @@
-import React, { useRef } from 'react';
-import { Billboard } from '@react-three/drei';
-import { useFrame, useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
-import { TextureLoader } from 'three';
+import React, { useRef } from "react";
+import { Billboard } from "@react-three/drei";
+import { useFrame, useLoader } from "@react-three/fiber";
+import * as THREE from "three";
+import { TextureLoader } from "three";
 
 const Pin = ({ position, onClick }) => {
   const pulseRef = useRef();
-  // Asegúrate de que el archivo "icon.svg" se encuentre en la carpeta "public"
-  const iconTexture = useLoader(TextureLoader, '/pbrush.svg');
+  const pinTexture = useLoader(TextureLoader, "/pin.svg");
 
   // Parámetros para el círculo blanco y su stroke
-  const innerRadius = 10;           // Radio del círculo blanco
-  const strokeWidth = 2;            // Grosor del stroke
+  const innerRadius = 10; // Radio del círculo blanco
+  const strokeWidth = 2; // Grosor del stroke
   const outerRadius = innerRadius + strokeWidth; // Radio para el stroke y el halo
 
   useFrame(({ clock }) => {
@@ -28,7 +27,7 @@ const Pin = ({ position, onClick }) => {
     <Billboard position={position}>
       <group>
         {/* Halo pulsante (círculo blanco expandiéndose) */}
-        <mesh ref={pulseRef} renderOrder={1}>
+        <mesh ref={pulseRef} renderOrder={11}>
           <circleGeometry args={[outerRadius, 64]} />
           <meshBasicMaterial
             color="violet"
@@ -39,33 +38,11 @@ const Pin = ({ position, onClick }) => {
           />
         </mesh>
 
-        {/* Stroke negro (simulado usando un anillo) */}
-        <mesh renderOrder={2}>
-          <ringGeometry args={[innerRadius, outerRadius, 64]} />
-          <meshBasicMaterial
-            color="black"
-            side={THREE.DoubleSide}
-            depthTest={false}
-          />
-        </mesh>
-
-        {/* Círculo blanco (relleno) */}
-        <mesh onClick={onClick} renderOrder={3}>
-          <circleGeometry args={[innerRadius, 64]} />
-          <meshBasicMaterial
-            color="white"
-            depthTest={false}  // Se ignora el depthTest para que quede siempre adelante
-            polygonOffset
-            polygonOffsetFactor={-1} // Desplaza la geometría hacia la cámara
-            polygonOffsetUnits={1}
-          />
-        </mesh>
-
         {/* Icono en el centro utilizando el sprite nativo de THREE */}
-        <sprite renderOrder={4} position={[0, 0, 0.1]} scale={[10, 10, 1]}>
+        <sprite renderOrder={14} position={[0, 0, 0.1]} scale={[20, 20, 1]}>
           <spriteMaterial
             attach="material"
-            map={iconTexture}
+            map={pinTexture}
             transparent
             depthTest={false}
           />

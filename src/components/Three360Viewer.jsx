@@ -52,9 +52,13 @@ const TransparentCanvasSphere = ({ baseTexture }) => {
       // Limpiar el canvas para asegurarnos de que esté en blanco
       ctx.clearRect(0, 0, width, height);
 
-      // Rellenar todo el canvas de rojo para probar el overlay
+      // Dibujar un rectángulo rojo centrado y proporcional al canvas
+      const rectWidth = canvas.width * 0.3;
+      const rectHeight = canvas.height * 0.3;
+      const rectX = (canvas.width - rectWidth) / 2;
+      const rectY = (canvas.height - rectHeight) / 2;
       ctx.fillStyle = "rgba(255, 0, 0, 1.0)";
-      ctx.fillRect(200, 700, 300, 300);
+      ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
 
       canvasTexture.needsUpdate = true;
     }
