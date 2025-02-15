@@ -71,7 +71,7 @@ const TransparentCanvasSphere = ({ baseTexture }) => {
 
   return (
     <mesh
-      renderOrder={10} // Asegura que se renderice después de la esfera base.
+      renderOrder={5} // Asegura que se renderice después de la esfera base.
       onBeforeRender={(renderer, scene, camera, geometry, material) => {
         material.polygonOffset = true;
         material.polygonOffsetFactor = -1;
