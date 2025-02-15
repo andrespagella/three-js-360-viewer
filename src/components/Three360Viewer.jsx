@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import React, { useEffect, useState, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -10,30 +10,86 @@ import Pin from "./Pin";
 const WarpZoom = ({ onComplete }) => {
   const { camera } = useThree();
   const originalFov = camera.fov;
-  
+
   useEffect(() => {
     gsap.to(camera, {
-      fov: 30, // Valor muy bajo para dar efecto de warp drive
-      duration: 0.5, // Duración de la animación en segundos
+      fov: 30,
+      duration: 0.5,
       ease: "power2.inOut",
       onUpdate: () => camera.updateProjectionMatrix(),
       onComplete: () => {
         onComplete();
-        // Restaurar el fov de inmediato para evitar rebotes
         setTimeout(() => {
           camera.fov = originalFov;
           camera.updateProjectionMatrix();
-        }, 500); // pequeño delay para evitar que la imagen rebote antes de cambiar de vista 
+        }, 500);
       },
     });
   }, [camera, onComplete, originalFov]);
-  
+
   return null;
+};
+
+/**
+ * Componente que genera una esfera overlay a partir de un canvas transparente.
+ * El canvas se dimensiona para coincidir con el de la textura 360 (baseTexture)
+ * y se actualiza a cada frame. Se le asigna un renderOrder mayor y se activa
+ * polygonOffset para asegurarse de que se renderice por sobre la esfera base.
+ */
+const TransparentCanvasSphere = ({ baseTexture }) => {
+  const canvasRef = useRef(document.createElement("canvas"));
+  const [canvasTexture] = useState(() => new THREE.CanvasTexture(canvasRef.current));
+
+  useEffect(() => {
+    if (baseTexture?.image) {
+      const width = baseTexture.image.width;
+      const height = baseTexture.image.height;
+      const canvas = canvasRef.current;
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext("2d");
+      
+      // Limpiar el canvas para asegurarnos de que esté en blanco
+      ctx.clearRect(0, 0, width, height);
+
+      // Rellenar todo el canvas de rojo para probar el overlay
+      ctx.fillStyle = "rgba(255, 0, 0, 1.0)";
+      ctx.fillRect(200, 700, 300, 300);
+
+      canvasTexture.needsUpdate = true;
+    }
+  }, [baseTexture, canvasTexture]);
+
+  // Actualiza la textura del canvas en cada frame (en caso de contenido dinámico)
+  useFrame(() => {
+    canvasTexture.needsUpdate = true;
+  });
+
+  return (
+    <mesh
+      renderOrder={10} // Asegura que se renderice después de la esfera base.
+      onBeforeRender={(renderer, scene, camera, geometry, material) => {
+        material.polygonOffset = true;
+        material.polygonOffsetFactor = -1;
+        material.polygonOffsetUnits = -1;
+      }}
+    >
+      {/* Radio ligeramente superior para evitar z-fighting */}
+      <sphereGeometry args={[500.05, 60, 40]} />
+      <meshBasicMaterial
+        map={canvasTexture}
+        transparent={true}
+        opacity={1}
+        depthTest={false}
+        side={THREE.BackSide} // Como la cámara está dentro de la esfera, renderea el interior
+      />
+    </mesh>
+  );
 };
 
 const Three360Viewer = ({ imageUrl, pins, onOpenCloseup }) => {
   const [texture, setTexture] = useState(null);
-  // Estado local para activar la animación warp
+  // Estado para activar la animación warp drive
   const [warpTarget, setWarpTarget] = useState(null);
 
   useEffect(() => {
@@ -49,7 +105,6 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup }) => {
 
   const handlePinClick = (pin) => {
     if (pin.closeup) {
-      // En lugar de llamar a onOpenCloseup inmediatamente, activamos el warp drive
       setWarpTarget(pin.closeup);
     } else {
       alert(`Pin "${pin.label}" clicked!`);
@@ -59,7 +114,6 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup }) => {
   return (
     <Canvas style={{ height: "100vh" }}>
       <OrbitControls
-        // Desactiva el zoom mientras se ejecuta la animación warp para evitar interferencias
         enableZoom={warpTarget ? false : true}
         enablePan={false}
         minPolarAngle={Math.PI / 4}
@@ -69,12 +123,19 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup }) => {
       />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
+
       {texture && (
-        <mesh>
-          <sphereGeometry args={[500, 60, 40]} />
-          <meshBasicMaterial map={texture} side={THREE.DoubleSide} />
-        </mesh>
+        <>
+          {/* Esfera base 360 */}
+          <mesh renderOrder={1}>
+            <sphereGeometry args={[500, 60, 40]} />
+            <meshBasicMaterial map={texture} side={THREE.DoubleSide} />
+          </mesh>
+          {/* Overlay generado a partir del canvas */}
+          <TransparentCanvasSphere baseTexture={texture} />
+        </>
       )}
+
       {pins.map((pin, index) => (
         <Pin
           key={pin.id || index}
@@ -82,12 +143,10 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup }) => {
           onClick={() => handlePinClick(pin)}
         />
       ))}
-      {/* Loader opcional */}
-      {/* <Loader /> */}
+
       {warpTarget && (
         <WarpZoom
           onComplete={() => {
-            // Una vez finaliza la animación, se llama al callback para mostrar el closeup y se restablece warpTarget
             onOpenCloseup(warpTarget);
             setWarpTarget(null);
           }}
