@@ -58,7 +58,7 @@ const TransparentCanvasSphere = ({ baseTexture }) => {
       const rectX = (canvas.width - rectWidth) / 2;
       const rectY = (canvas.height - rectHeight) / 2;
       ctx.fillStyle = "rgba(255, 0, 0, 1.0)";
-      ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+      //ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
 
       canvasTexture.needsUpdate = true;
     }

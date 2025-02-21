@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
+import CollectionPanel from "./components/CollectionPanel";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 
@@ -10,6 +11,7 @@ function App() {
   const [closeup, setCloseup] = useState(null);
   const [zooming, setZooming] = useState(false);
   const [menuExpanded, setMenuExpanded] = useState(false);
+  const [collectionPanelExpanded, setCollectionPanelExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -38,6 +40,16 @@ function App() {
     setCloseup(null);
   };
 
+  // Callbacks para seleccionar un ambiente o pin desde la colección
+  const handleSelectAmbiente = (ambiente) => {
+    setCurrentView(ambiente);
+  };
+
+  const handleSelectPin = (pin) => {
+    alert(`Pin "${pin.label}" del ambiente ${pin.ambiente} seleccionado`);
+    // Aquí podrías agregar lógica para, por ejemplo, hacer zoom al pin o mostrar detalles.
+  };
+
   return (
     <div className="relative h-screen">
       {!closeup && (
@@ -49,7 +61,7 @@ function App() {
             menuExpanded={menuExpanded}
             onToggleMenu={() => setMenuExpanded(!menuExpanded)}
           />
-          {/* Botón toggle externo solo para desktop */}
+          {/* Botón toggle externo para "Ambientes" */}
           {!isMobile && (
             <button
               onClick={() => setMenuExpanded(!menuExpanded)}
@@ -64,6 +76,33 @@ function App() {
               Ambientes
             </button>
           )}
+
+          {/* Renderizamos el CollectionPanel controlado externamente */}
+          <CollectionPanel
+            ambientes={ambientes}
+            pinsData={pinsData}
+            onSelectAmbiente={handleSelectAmbiente}
+            onSelectPin={handleSelectPin}
+            panelExpanded={collectionPanelExpanded}
+          />
+
+          {/* Botón toggle externo para el panel "Colección" */}
+          {!isMobile && (
+            <button
+              onClick={() =>
+                setCollectionPanelExpanded(!collectionPanelExpanded)
+              }
+              className="fixed z-50 bg-gray-800 text-white px-4 py-1 focus:outline-none"
+              style={{
+                right: collectionPanelExpanded ? "16rem" : "1.5rem",
+                top: "50%",
+                transform: "translate(50%, -50%) rotate(90deg)",
+                transformOrigin: "center",
+              }}
+            >
+              Colección
+            </button>
+          )}
         </>
       )}
 
@@ -76,10 +115,14 @@ function App() {
               ? "mb-64"
               : "mb-10"
             : closeup
-            ? "ml-0"
+            ? "ml-0 mr-0"
+            : menuExpanded && collectionPanelExpanded
+            ? "ml-64 mr-64"
             : menuExpanded
-            ? "ml-64"
-            : "ml-2.5"
+            ? "ml-64 mr-2.5"
+            : collectionPanelExpanded
+            ? "ml-2.5 mr-64"
+            : "ml-2.5 mr-2.5"
         }`}
       >
         <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
@@ -89,7 +132,9 @@ function App() {
             onOpenCloseup={handleOpenCloseup}
           />
         </div>
-        {closeup && <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />}
+        {closeup && (
+          <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
+        )}
       </div>
     </div>
   );
