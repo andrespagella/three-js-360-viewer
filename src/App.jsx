@@ -13,6 +13,7 @@ function App() {
   const [menuExpanded, setMenuExpanded] = useState(false);
   const [collectionPanelExpanded, setCollectionPanelExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [selectedPin, setSelectedPin] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -40,14 +41,15 @@ function App() {
     setCloseup(null);
   };
 
-  // Callbacks para seleccionar un ambiente o pin desde la colección
-  const handleSelectAmbiente = (ambiente) => {
-    setCurrentView(ambiente);
+  // Actualizamos el manejador para que al seleccionar un pin se guarde en el estado
+  const handleSelectPin = (pin) => {
+    setSelectedPin(pin);
+    // Aquí podrías agregar lógica adicional, por ejemplo, iniciar algún efecto o mostrar detalles.
   };
 
-  const handleSelectPin = (pin) => {
-    alert(`Pin "${pin.label}" del ambiente ${pin.ambiente} seleccionado`);
-    // Aquí podrías agregar lógica para, por ejemplo, hacer zoom al pin o mostrar detalles.
+  // Callbacks para seleccionar un ambiente desde la colección
+  const handleSelectAmbiente = (ambiente) => {
+    setCurrentView(ambiente);
   };
 
   return (
@@ -61,7 +63,6 @@ function App() {
             menuExpanded={menuExpanded}
             onToggleMenu={() => setMenuExpanded(!menuExpanded)}
           />
-          {/* Botón toggle externo para "Ambientes" */}
           {!isMobile && (
             <button
               onClick={() => setMenuExpanded(!menuExpanded)}
@@ -77,7 +78,6 @@ function App() {
             </button>
           )}
 
-          {/* Renderizamos el CollectionPanel controlado externamente */}
           <CollectionPanel
             ambientes={ambientes}
             pinsData={pinsData}
@@ -86,7 +86,6 @@ function App() {
             panelExpanded={collectionPanelExpanded}
           />
 
-          {/* Botón toggle externo para el panel "Colección" */}
           {!isMobile && (
             <button
               onClick={() =>
@@ -130,6 +129,7 @@ function App() {
             imageUrl={currentView?.url}
             pins={currentPins}
             onOpenCloseup={handleOpenCloseup}
+            selectedPin={selectedPin}
           />
         </div>
         {closeup && (
