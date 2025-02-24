@@ -7,39 +7,24 @@ import gsap from "gsap";
 const CameraController = ({ selectedPin }) => {
   const { camera } = useThree();
   const controlsRef = useRef();
+  // Almacenar la posición inicial de la cámara
+  const initialCameraPosition = useRef(camera.position.clone());
 
   useEffect(() => {
     if (selectedPin && controlsRef.current) {
-      // Ajusta este valor hasta alinear correctamente la vista.
-      // Si la cámara apunta "demasiado a la derecha", prueba con un valor positivo para desplazar el objetivo hacia la izquierda.
-      const correctionOffset = 50; // valor en unidades del mundo, ajústalo según necesites
-
-      // Calcular la posición del pin en mundo; se invierte la X para compensar la inversión de la textura,
-      // y se aplica el offset en X.
+      // Ajusta este valor según lo necesites
+      const correctionOffset = 50;
       const pinWorldPos = new THREE.Vector3(
-        selectedPin.position[0]- correctionOffset,
+        selectedPin.position[0] - correctionOffset,
         selectedPin.position[1],
         selectedPin.position[2]
       );
 
-      // Generar la matriz "lookAt" (sin modificar la cámara)
       const matrix = new THREE.Matrix4();
       matrix.lookAt(camera.position, pinWorldPos, camera.up);
-
-      // Extraer el cuaternión objetivo de la matriz
       const targetQuat = new THREE.Quaternion().setFromRotationMatrix(matrix);
-
-      // Alternativa con corrección angular (comentada):
-      // Si prefieres aplicar una corrección en la orientación,
-      // descomenta las siguientes líneas y ajusta correctionAngle (en radianes).
-      // const correctionAngle = 0.1; // prueba valores positivos o negativos según el resultado deseado
-      // const correctionQuat = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), correctionAngle);
-      // targetQuat.multiply(correctionQuat);
-
-      // Clonar el cuaternión actual de la cámara
       const initialQuat = camera.quaternion.clone();
 
-      // Desactivar OrbitControls durante la animación para evitar interferencias
       controlsRef.current.enabled = false;
 
       gsap.to({ t: 0 }, {
@@ -47,14 +32,17 @@ const CameraController = ({ selectedPin }) => {
         duration: 0.5,
         onUpdate: function () {
           const progress = this.targets()[0].t;
-          // Interpolar el cuaternión de la cámara sin modificar su posición
+          // Interpolar la rotación
           camera.quaternion.slerpQuaternions(initialQuat, targetQuat, progress);
+          // Reestablecer la posición fija
+          camera.position.copy(initialCameraPosition.current);
           camera.updateMatrixWorld();
         },
         onComplete: () => {
-          // Actualizar el target de OrbitControls para que concuerde con la nueva dirección
+          // Si OrbitControls utiliza un target relativo, puedes actualizarlo para que no modifique la posición
           const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
-          const newTarget = camera.position.clone().add(forward.multiplyScalar(100));
+          // Usar un offset para que el target siga la dirección pero sin mover la posición base
+          const newTarget = initialCameraPosition.current.clone().add(forward.multiplyScalar(100));
           controlsRef.current.target.copy(newTarget);
           controlsRef.current.enabled = true;
           controlsRef.current.update();

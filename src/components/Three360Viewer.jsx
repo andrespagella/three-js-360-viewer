@@ -5,8 +5,17 @@ import Pin from "./Pin";
 import WarpZoom from "./WarpZoom";
 import TransparentCanvasSphere from "./TransparentCanvasSphere";
 import CameraController from "./CameraController";
+import { Html } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
-const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin, onSelectPin }) => {
+const Three360Viewer = ({
+  imageUrl,
+  pins,
+  onOpenCloseup,
+  selectedPin,
+  onSelectPin,
+  developmentMode,
+}) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
 
@@ -65,8 +74,67 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin, onSelectPi
           }}
         />
       )}
+
+      {developmentMode && <DebugCameraInfo />}
     </Canvas>
   );
 };
+
+function DebugCameraInfo() {
+  const { camera } = useThree();
+  const [camInfo, setCamInfo] = useState({
+    posX: camera.position.x,
+    posY: camera.position.y,
+    posZ: camera.position.z,
+    rotX: camera.rotation.x,
+    rotY: camera.rotation.y,
+    rotZ: camera.rotation.z,
+    fov: camera.fov,
+  });
+
+  // Update the camera info every 100ms (useful for a development overlay)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCamInfo({
+        posX: camera.position.x,
+        posY: camera.position.y,
+        posZ: camera.position.z,
+        rotX: camera.rotation.x,
+        rotY: camera.rotation.y,
+        rotZ: camera.rotation.z,
+        fov: camera.fov,
+      });
+    }, 100);
+    return () => clearInterval(interval);
+  }, [camera]);
+
+  return (
+    <Html
+      style={{
+        position: "absolute",
+        top: "10px",
+        left: "10px",
+        width: "250px",
+        background: "rgba(0,0,0,0.5)",
+        color: "#fff",
+        padding: "5px",
+        fontSize: "12px",
+        pointerEvents: "none",
+      }}
+    >
+      <div>
+        <div>
+          Position: x: {camInfo.posX.toFixed(2)}, y: {camInfo.posY.toFixed(2)}, z:{" "}
+          {camInfo.posZ.toFixed(2)}
+        </div>
+        <div>
+          Rotation: x: {camInfo.rotX.toFixed(2)}, y: {camInfo.rotY.toFixed(2)}, z:{" "}
+          {camInfo.rotZ.toFixed(2)}
+        </div>
+        <div>FOV: {camInfo.fov.toFixed(2)}</div>
+      </div>
+    </Html>
+  );
+}
 
 export default Three360Viewer;

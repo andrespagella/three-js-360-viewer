@@ -7,6 +7,8 @@ import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 
 function App() {
+  const developmentMode = false; // Flag to enable development mode overlay
+
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
   const [zooming, setZooming] = useState(false);
@@ -14,7 +16,6 @@ function App() {
   const [collectionPanelExpanded, setCollectionPanelExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [selectedPin, setSelectedPin] = useState(null);
-  // Por defecto se parte en modo Claro (Light)
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -154,6 +155,7 @@ function App() {
             onOpenCloseup={handleOpenCloseup}
             selectedPin={selectedPin}
             onSelectPin={handleSelectPin}
+            developmentMode={developmentMode}
           />
         </div>
         {closeup && (
