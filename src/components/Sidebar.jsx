@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { getTransformStyle } from "../utils/transformStyles";
 
-// Función helper de respaldo (se puede sobrescribir si se recibe desde App)
+// Función helper de respaldo para obtener las rutas de imagen según el ambiente y el modo
 const getAmbientFilePaths = (ambient, darkMode) => {
   const mode = darkMode ? "Dark" : "Light";
   let prefix = "";
@@ -41,20 +42,13 @@ const Sidebar = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const desktopCollapsed = "translateX(calc(-16rem + 0.8rem))";
-  const desktopExpanded = "translateX(0)";
-  const mobileCollapsed = "translateY(calc(16rem - 2.5rem))";
-  const mobileExpanded = "translateY(0)";
-  const transformStyle = isMobile
-    ? menuExpanded
-      ? mobileExpanded
-      : mobileCollapsed
-    : menuExpanded
-    ? desktopExpanded
-    : desktopCollapsed;
+  // Para Sidebar: usar "bottom" en mobile y "left" en escritorio
+  const anchor = isMobile ? "bottom" : "left";
+  const transformStyle = getTransformStyle(anchor, menuExpanded);
 
-  // Fondo blanco, texto negro y sombra sutil
-  const containerClasses = `fixed z-50 transition-transform duration-300 bg-white text-black shadow-sm ${isMobile ? "bottom-0 left-0 w-full h-64" : "top-0 left-0 h-full w-64"}`;
+  const containerClasses = `fixed z-50 transition-transform duration-300 bg-white text-black shadow-sm ${
+    isMobile ? "bottom-0 left-0 w-full h-64" : "top-0 left-0 h-full w-64"
+  }`;
 
   return (
     <div className={containerClasses} style={{ transform: transformStyle }}>
@@ -74,7 +68,9 @@ const Sidebar = ({
             className="mx-2 relative w-12 h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-300"
           >
             <div
-              className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-400 rounded-full transition-transform duration-300 ${darkMode ? "translate-x-6" : ""}`}
+              className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-400 rounded-full transition-transform duration-300 ${
+                darkMode ? "translate-x-6" : ""
+              }`}
             ></div>
           </div>
           <span className="text-sm text-black">Oscuro</span>

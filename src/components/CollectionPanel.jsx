@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { getTransformStyle } from "../utils/transformStyles";
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -11,24 +12,17 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
 
   const allPins = pinsData.reduce((acc, ambienteItem) => {
     const ambienteName = ambienteItem.ambiente;
-    const pinsWithAmbiente = ambienteItem.pins.map((pin) => ({
-      ...pin,
-      ambiente: ambienteName,
-    }));
+    const pinsWithAmbiente = ambienteItem.pins.map((pin) => ({ ...pin, ambiente: ambienteName }));
     return [...acc, ...pinsWithAmbiente];
   }, []);
+
+  // Para CollectionPanel: usar "bottom" en mobile y "right" en escritorio
+  const anchor = isMobile ? "bottom" : "right";
+  const transformStyle = getTransformStyle(anchor, panelExpanded);
 
   const panelClasses = `fixed z-40 transition-transform duration-300 bg-white text-black overflow-auto shadow-sm ${
     isMobile ? "bottom-0 right-0 w-full h-64" : "top-0 right-0 h-full w-64"
   }`;
-
-  const transformStyle = isMobile
-    ? panelExpanded
-      ? "translateY(0)"
-      : "translateY(100%)"
-    : panelExpanded
-    ? "translateX(0)"
-    : "translateX(100%)";
 
   return (
     <div className={panelClasses} style={{ transform: transformStyle }}>
@@ -42,9 +36,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
                 className="cursor-pointer hover:underline"
                 onClick={() => {
                   if (onSelectAmbiente) {
-                    const ambienteObj = ambientes.find(
-                      (amb) => amb.name === pin.ambiente
-                    );
+                    const ambienteObj = ambientes.find((amb) => amb.name === pin.ambiente);
                     if (ambienteObj) {
                       onSelectAmbiente(ambienteObj);
                     }
@@ -52,8 +44,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
                   onSelectPin && onSelectPin(pin);
                 }}
               >
-                {pin.label}{" "}
-                <span className="text-sm text-black">({pin.ambiente})</span>
+                {pin.label} <span className="text-sm text-black">({pin.ambiente})</span>
               </li>
             ))}
           </ul>

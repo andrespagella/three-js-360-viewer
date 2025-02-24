@@ -89,9 +89,9 @@ function App() {
           {!isMobile && (
             <button
               onClick={() => setMenuExpanded(!menuExpanded)}
-              className="fixed z-50 bg-white text-black uppercase font-semibold rounded px-4 py-1 focus:outline-none"
+              className="fixed z-50 bg-white text-black uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
               style={{
-                left: menuExpanded ? "16.5rem" : "1.5rem",
+                left: menuExpanded ? "16.5rem" : "1rem",
                 top: "50%",
                 transform: "translate(-50%, -50%) rotate(-90deg)",
                 transformOrigin: "center",
@@ -114,9 +114,9 @@ function App() {
               onClick={() =>
                 setCollectionPanelExpanded(!collectionPanelExpanded)
               }
-              className="fixed z-50 bg-white text-black uppercase font-semibold rounded px-4 py-1 focus:outline-none"
+              className="fixed z-50 bg-white text-black uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
               style={{
-                right: collectionPanelExpanded ? "16.5rem" : "1.5rem",
+                right: collectionPanelExpanded ? "16.5rem" : "1rem",
                 top: "50%",
                 transform: "translate(50%, -50%) rotate(90deg)",
                 transformOrigin: "center",
@@ -135,16 +135,16 @@ function App() {
               ? "mb-0"
               : menuExpanded
               ? "mb-64"
-              : "mb-10"
+              : "mb-0"
             : closeup
             ? "ml-0 mr-0"
             : menuExpanded && collectionPanelExpanded
-            ? "ml-64 mr-64"
+            ? "ml-64"
             : menuExpanded
-            ? "ml-64 mr-2.5"
+            ? "ml-64"
             : collectionPanelExpanded
-            ? "ml-2.5 mr-64"
-            : "ml-2.5 mr-2.5"
+            ? "mr-64"
+            : "mr-0"
         }`}
       >
         <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
