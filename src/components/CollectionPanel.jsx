@@ -18,7 +18,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     return [...acc, ...pinsWithAmbiente];
   }, []);
 
-  const panelClasses = `fixed z-40 transition-transform duration-300 bg-gray-800 text-white overflow-auto ${
+  const panelClasses = `fixed z-40 transition-transform duration-300 bg-white text-black overflow-auto shadow-sm ${
     isMobile ? "bottom-0 right-0 w-full h-64" : "top-0 right-0 h-full w-64"
   }`;
 
@@ -33,8 +33,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
   return (
     <div className={panelClasses} style={{ transform: transformStyle }}>
       <div className="p-4">
-        <h2 className="text-lg font-bold">Colección</h2>
-        <div className="mt-4">
+        <div>
           <h3 className="text-md font-semibold">Colección</h3>
           <ul className="mt-2">
             {allPins.map((pin, index) => (
@@ -54,7 +53,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
                 }}
               >
                 {pin.label}{" "}
-                <span className="text-sm text-gray-400">({pin.ambiente})</span>
+                <span className="text-sm text-black">({pin.ambiente})</span>
               </li>
             ))}
           </ul>

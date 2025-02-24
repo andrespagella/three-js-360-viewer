@@ -14,12 +14,35 @@ function App() {
   const [collectionPanelExpanded, setCollectionPanelExpanded] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [selectedPin, setSelectedPin] = useState(null);
+  // Por defecto se parte en modo Claro (Light)
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Función que genera las rutas de imagen según el ambiente y el modo
+  const getAmbientFilePaths = (ambient, darkMode) => {
+    const mode = darkMode ? "Dark" : "Light";
+    let prefix = "";
+    if (ambient.name === "Antebaño") {
+      prefix = "Bath-";
+    } else if (ambient.name === "Baño") {
+      prefix = "ShowerArea-";
+    }
+    if (prefix) {
+      return {
+        url: `ambientes/${prefix}${mode}.webp`,
+        preview: `ambientes/${prefix}${mode}.webp`,
+      };
+    }
+    return {
+      url: ambient.url,
+      preview: ambient.preview,
+    };
+  };
 
   const currentPins =
     pinsData.find((p) => p.ambiente === currentView.name)?.pins || [];
@@ -41,7 +64,6 @@ function App() {
     setCloseup(null);
   };
 
-  // Al seleccionar un pin, sólo se actualiza el estado y Three360Viewer, mediante un efecto, se encarga de disparar la animación de warp
   const handleSelectPin = (pin) => {
     setSelectedPin(pin);
   };
@@ -60,13 +82,16 @@ function App() {
             onViewClick={handleViewClick}
             menuExpanded={menuExpanded}
             onToggleMenu={() => setMenuExpanded(!menuExpanded)}
+            darkMode={darkMode}
+            onToggleDarkMode={() => setDarkMode(!darkMode)}
+            getAmbientFilePaths={getAmbientFilePaths}
           />
           {!isMobile && (
             <button
               onClick={() => setMenuExpanded(!menuExpanded)}
-              className="fixed z-50 bg-gray-800 text-white px-4 py-1 focus:outline-none"
+              className="fixed z-50 bg-white text-black uppercase font-semibold rounded px-4 py-1 focus:outline-none"
               style={{
-                left: menuExpanded ? "16rem" : "1.5rem",
+                left: menuExpanded ? "16.5rem" : "1.5rem",
                 top: "50%",
                 transform: "translate(-50%, -50%) rotate(-90deg)",
                 transformOrigin: "center",
@@ -89,9 +114,9 @@ function App() {
               onClick={() =>
                 setCollectionPanelExpanded(!collectionPanelExpanded)
               }
-              className="fixed z-50 bg-gray-800 text-white px-4 py-1 focus:outline-none"
+              className="fixed z-50 bg-white text-black uppercase font-semibold rounded px-4 py-1 focus:outline-none"
               style={{
-                right: collectionPanelExpanded ? "16rem" : "1.5rem",
+                right: collectionPanelExpanded ? "16.5rem" : "1.5rem",
                 top: "50%",
                 transform: "translate(50%, -50%) rotate(90deg)",
                 transformOrigin: "center",
@@ -124,7 +149,7 @@ function App() {
       >
         <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
           <Three360Viewer
-            imageUrl={currentView?.url}
+            imageUrl={getAmbientFilePaths(currentView, darkMode).url}
             pins={currentPins}
             onOpenCloseup={handleOpenCloseup}
             selectedPin={selectedPin}
