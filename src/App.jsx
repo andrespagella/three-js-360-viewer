@@ -7,7 +7,7 @@ import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 
 function App() {
-  const developmentMode = false; // Flag to enable development mode overlay
+  const developmentMode = false; // Flag para activar el overlay de desarrollo
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
@@ -53,20 +53,37 @@ function App() {
     setMenuExpanded(false);
   };
 
+  // Actualizamos la función para seleccionar un pin.
+  // Se carga el archivo JSON indicado en el atributo "data",
+  // se toma el primer elemento y se usa su propiedad "closeup".
+  const handleSelectPin = async (pin) => {
+    try {
+      // Construir la URL correcta del recurso
+      const jsonUrl = new URL(pin.data, import.meta.url).href;
+      const response = await fetch(jsonUrl);
+      const jsonData = await response.json();
+  
+      if (Array.isArray(jsonData) && jsonData.length > 0) {
+        const updatedPin = { ...pin, closeup: jsonData[0].closeup };
+        setSelectedPin(updatedPin);
+      }
+    } catch (error) {
+      console.error("Error al cargar el archivo de datos del pin:", error);
+    }
+  };
+
+  // Función que abre el closeup utilizando la imagen obtenida del JSON.
   const handleOpenCloseup = (closeupFile) => {
     setZooming(true);
     setTimeout(() => {
-      setCloseup(`/closeups/${closeupFile}`);
+      // Se utiliza la URL obtenida del JSON sin agregar prefijos adicionales
+      setCloseup(closeupFile);
       setZooming(false);
     }, 200);
   };
 
   const handleCloseCloseup = () => {
     setCloseup(null);
-  };
-
-  const handleSelectPin = (pin) => {
-    setSelectedPin(pin);
   };
 
   const handleSelectAmbiente = (ambiente) => {

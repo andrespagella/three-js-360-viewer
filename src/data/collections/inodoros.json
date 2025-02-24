@@ -1,0 +1,25 @@
+[
+    {
+        "producto": "Inodoro",
+        "default": true,
+        "SKU": 2309,
+        "descripcion": "Inodoro Zedra inteligente",
+        "caracteristicas": [
+            "Pintable, de cara plana y canto redondeado",
+            "Diseño y color en cualquier ambiente",
+            ""
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Pintable",
+            "medidas": [
+                "70mm",
+                "15mm",
+                " 2,5mts"
+            ],
+            "forma": "Orbit"
+        },
+        "thumbnail": "thumbnails/inodoro/inodoro.webp",
+        "closeup": "closeups/inodoros/inodoro.webp"
+    }
+]

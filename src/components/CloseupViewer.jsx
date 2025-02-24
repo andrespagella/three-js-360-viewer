@@ -6,12 +6,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
       <img src={closeup} alt="Closeup" className="w-full h-full object-cover" />
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 bg-black text-white px-4 py-2"
+        className="absolute top-4 left-4 bg-black text-white px-4 py-2"
       >
-        Cerrar
+        Vista principal
+
       </button>
     </div>
   );
 };
-
 export default CloseupViewer;

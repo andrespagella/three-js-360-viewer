@@ -5,66 +5,77 @@
         {
           "id": 1,
           "position": [350, -100, 210],
+          "data": "data/collections/toalleros.json",
           "label": "Toalleros",
           "closeup": "img1.jpeg"
         },
         {
           "id": 2,
           "position": [130, -250, 210],
+          "data": "data/collections/inodoros.json",
           "label": "Inodoro",
           "closeup": "img1.jpeg"
         },
         {
           "id": 3,
           "position": [250, -250, 220],
+          "data": "data/collections/rejillas.json",
           "label": "Rejilla de Patio",
           "closeup": "img1.jpeg"
         },
         {
           "id":4,
           "position": [220, -150, 150],
+          "data": "data/collections/zocalos.json",
           "label": "Zócalos",
           "closeup": "img1.jpeg"
         },
         {
           "id": 5,
           "position": [-300, 50, 200],
+          "data": "data/collections/cabinets.json",
           "label": "Cabinets",
           "closeup": "img1.jpeg"
         },
         {
           "id": 6,
           "position": [-300, 50, -270],
+          "data": "data/collections/wallpanels.json",
           "label": "Wall Panels & SPC",
           "closeup": "img1.jpeg"
         },
         {
           "id": 7,
           "position": [-300, -150, -100],
+          "data": "data/collections/espejos.json",
           "label": "Espejos",
           "closeup": "img1.jpeg"
         },
         {
           "id": 8,
           "position": [-150, -200, -200],
+          "data": "data/collections/vanitories.json",
           "label": "Vanitories",
           "closeup": "img1.jpeg"
         },
         {
           "id": 9,
           "position": [150, -300, -150],
+          "data": "data/collections/perfiles-piso.json",
           "label": "Perfiles Piso",
           "closeup": "img1.jpeg"
         },
         {
           "id":10,
           "position": [350, -200, -150],
+          "data": "data/collections/baneras.json",
           "label": "Bañera",
           "closeup": "img1.jpeg"
         },
         {
           "id":11,
           "position": [280, 0, 270],
+          "data": "data/collections/perfiles-pared.json",
           "label": "Perfiles Pared",
           "closeup": "img1.jpeg"
         }
@@ -76,12 +87,14 @@
         {
           "id": 1,
           "position": [-200, -400, -100],
+          "data": "data/collections/desagues.json",
           "label": "Desagües",
           "closeup": "img1.jpeg"
         },
         {
           "id": 2,
           "position": [400, 0, 100],
+          "data": "data/collections/estantes.json",
           "label": "Estantes",
           "closeup": "img1.jpeg"
         }
