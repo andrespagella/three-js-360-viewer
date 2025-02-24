@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const CollectionPanel = ({
-  ambientes,
-  pinsData,
-  onSelectAmbiente,
-  onSelectPin,
-  panelExpanded,
-}) => {
+const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -47,7 +41,17 @@ const CollectionPanel = ({
               <li
                 key={index}
                 className="cursor-pointer hover:underline"
-                onClick={() => onSelectPin && onSelectPin(pin)}
+                onClick={() => {
+                  if (onSelectAmbiente) {
+                    const ambienteObj = ambientes.find(
+                      (amb) => amb.name === pin.ambiente
+                    );
+                    if (ambienteObj) {
+                      onSelectAmbiente(ambienteObj);
+                    }
+                  }
+                  onSelectPin && onSelectPin(pin);
+                }}
               >
                 {pin.label}{" "}
                 <span className="text-sm text-gray-400">({pin.ambiente})</span>

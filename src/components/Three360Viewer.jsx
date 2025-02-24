@@ -1,14 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import React, { useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import gsap from "gsap";
 import Pin from "./Pin";
 import WarpZoom from "./WarpZoom";
 import TransparentCanvasSphere from "./TransparentCanvasSphere";
 import CameraController from "./CameraController";
 
-const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin }) => {
+const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin, onSelectPin }) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
 
@@ -23,29 +21,30 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin }) => {
     });
   }, [imageUrl]);
 
-  const handlePinClick = (pin) => {
-    if (pin.closeup) {
-      setWarpTarget(pin.closeup);
-    } else {
-      alert(`Pin "${pin.label}" clicked!`);
+  // Cuando cambia el pin seleccionado, se agenda (tras 600 ms) la animación de warp
+  useEffect(() => {
+    if (selectedPin && selectedPin.closeup) {
+      const timeout = setTimeout(() => {
+        setWarpTarget(selectedPin.closeup);
+      }, 600);
+      return () => clearTimeout(timeout);
     }
-  };
+  }, [selectedPin]);
 
   return (
     <Canvas style={{ height: "100vh" }}>
-      {/* Componente que maneja la rotación de la cámara basado en el pin seleccionado */}
+      {/* La cámara rota hacia el pin seleccionado */}
       <CameraController selectedPin={selectedPin} />
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
 
       {texture && (
         <>
-          {/* Esfera 360 base */}
+          {/* Esfera 360 con textura */}
           <mesh renderOrder={1}>
             <sphereGeometry args={[500, 60, 40]} />
             <meshBasicMaterial map={texture} side={THREE.DoubleSide} />
           </mesh>
-          {/* Overlay generado a partir del canvas */}
           <TransparentCanvasSphere baseTexture={texture} />
         </>
       )}
@@ -54,7 +53,7 @@ const Three360Viewer = ({ imageUrl, pins, onOpenCloseup, selectedPin }) => {
         <Pin
           key={pin.id || index}
           position={pin.position}
-          onClick={() => handlePinClick(pin)}
+          onClick={() => onSelectPin(pin)}
         />
       ))}
 

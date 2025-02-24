@@ -41,13 +41,11 @@ function App() {
     setCloseup(null);
   };
 
-  // Actualizamos el manejador para que al seleccionar un pin se guarde en el estado
+  // Al seleccionar un pin, sólo se actualiza el estado y Three360Viewer, mediante un efecto, se encarga de disparar la animación de warp
   const handleSelectPin = (pin) => {
     setSelectedPin(pin);
-    // Aquí podrías agregar lógica adicional, por ejemplo, iniciar algún efecto o mostrar detalles.
   };
 
-  // Callbacks para seleccionar un ambiente desde la colección
   const handleSelectAmbiente = (ambiente) => {
     setCurrentView(ambiente);
   };
@@ -130,6 +128,7 @@ function App() {
             pins={currentPins}
             onOpenCloseup={handleOpenCloseup}
             selectedPin={selectedPin}
+            onSelectPin={handleSelectPin}
           />
         </div>
         {closeup && (

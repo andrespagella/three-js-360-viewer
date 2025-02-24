@@ -4,13 +4,13 @@
       "pins": [
         {
           "id": 1,
-          "position": [170, 0, 300],
+          "position": [350, -100, 210],
           "label": "Toalleros",
           "closeup": "img1.jpeg"
         },
         {
           "id": 2,
-          "position": [150, -230, 250],
+          "position": [130, -250, 210],
           "label": "Inodoro",
           "closeup": "img1.jpeg"
         },
@@ -22,7 +22,7 @@
         },
         {
           "id":4,
-          "position": [350, -200, 200],
+          "position": [220, -150, 150],
           "label": "Zócalos",
           "closeup": "img1.jpeg"
         },
@@ -40,7 +40,7 @@
         },
         {
           "id": 7,
-          "position": [-300, -100, -100],
+          "position": [-300, -150, -100],
           "label": "Espejos",
           "closeup": "img1.jpeg"
         },
@@ -57,8 +57,7 @@
           "closeup": "img1.jpeg"
         },
         {
-          "id":10
-          ,
+          "id":10,
           "position": [350, -200, -150],
           "label": "Bañera",
           "closeup": "img1.jpeg"
