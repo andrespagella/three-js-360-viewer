@@ -1,0 +1,117 @@
+[
+    {
+        "producto": "estante etm230ac",
+        "sku": "etm230ac",
+        "descripcion": "Estante Triangular Cuadrado",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Acero Cepillado",
+            "medidas": [
+                "23cm",
+                "23cm",
+                "32.8cm",
+                "2 cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Triangular"
+        },
+        "thumbnail": "thumbnails/etm230ac.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "estante erp300ac",
+        "sku": "erp300ac",
+        "descripcion": "Estante Rectangular Línea",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Acero Cepillado",
+            "medidas": [
+                "30cm",
+                "11.5cm",
+                "2cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Rectangular"
+        },
+        "thumbnail": "thumbnails/erp300ac.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "estante ejt230bm",
+        "sku": "etj230bm",
+        "descripcion": "Estante Triangular Abstracto",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Blanco Mate",
+            "medidas": [
+                "23cm",
+                "23cm",
+                "2cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Triangular"
+        },
+        "thumbnail": "thumbnails/etj230bm.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "estante etj230nm",
+        "sku": "etj230nm",
+        "descripcion": "Estante Rectangular Línea",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "30cm",
+                "11cm",
+                "2cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Rectangular"
+        },
+        "thumbnail": "thumbnails/etj230nm.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "estante erp300nm",
+        "sku": "erp300nm",
+        "descripcion": "Estante Triangular Abstracto",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "30cm",
+                "23cm",
+                "2cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Triangular"
+        },
+        "thumbnail": "thumbnails/erp300nm.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "estante erm300nm",
+        "sku": "erm300nm",
+        "descripcion": "Estante Rectangular Cuadrado",
+        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "30cm",
+                "11cm",
+                "2cm"
+            ],
+            "peso": "0.256 kg",
+            "forma": "Rectangular"
+        },
+        "thumbnail": "thumbnails/erm300nm.webp",
+        "closeup": ""
+    }
+]

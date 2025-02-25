@@ -1,0 +1,153 @@
+[
+    {
+        "producto": "desague dn700t02",
+        "sku": "dn700t02",
+        "descripcion": "Desagüe Lineal Narrow",
+        "caracteristicas": "Desagüe de ducha de acero inoxidable AISI 304 doble esmerilado. Diseño delgado, que reemplaza la rejilla tradicional y crea un plano único de continuidad en el piso de la ducha. Provisto de pies regulables en altura que se fijan al cuerpo del desagüe para una nivelación precisa y rápida. Con cesta para filtro de pelos que puede retirarse manualmente para su limpieza.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "700mm",
+                "76mm x40mm"
+            ],
+            "peso": "1.8 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DN700702.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da300t02",
+        "sku": "da300t02",
+        "descripcion": "Desagüe Lineal 2 en 1",
+        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Tapa 2 en 1: Cromo o Ceramic (cavidad para insertar el revestimiento). Diseñado para reemplazar la rejilla. Caída en forma de diamante.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "30 cm",
+                "7 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.663 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA300T02.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da700t10",
+        "sku": "da700t10",
+        "descripcion": "Desagüe Lineal Eme",
+        "caracteristicas": "Desagüe de acero inoxidable AISI 304. La ranura central y los planos inclinados permiten que el agua fluya rápidamente.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "70 cm",
+                "7 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.822 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA700T10.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da900t01",
+        "sku": "da900t01",
+        "descripcion": "Desagüe Lineal Clásico",
+        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Patrones de líneas rectas. Su cuerpo con caída en forma de diamante permite una mayor capacidad de drenaje",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "90 cm",
+                "7 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.822 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA900T01.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da150t02",
+        "sku": "da150t02",
+        "descripcion": "Desagüe Cuadrado",
+        "caracteristicas": "Desagüe cuadrado de acero inoxidable AISI 304. Ofrece dos opciones de tapas en un único producto: Clásica, con un acabado esmerilado y Ceramic, cuyo lado posterior es hueco y permite insertar el revestimiento.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "15 cm",
+                "15 cm",
+                "7 cm"
+            ],
+            "peso": "0.538 kg",
+            "forma": "Cuadrada"
+        },
+        "thumbnail": "thumbnails/desagues/DA150T02.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da600t09",
+        "sku": "da600t09",
+        "descripcion": "Desagüe Lineal Grid",
+        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Diseño reticular combina drenaje eficiente, resistencia y ligereza.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "60 cm",
+                "7 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.729 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA600T01.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "desague da700t05",
+        "sku": "da700t05",
+        "descripcion": "Desagüe Lineal Diagonal",
+        "caracteristicas": "Desagüe de acero inoxidable AISI 304 doble esmerilado, tapa de patrones de líneas en diagonal. Diseñado para reemplazar la rejilla tradicional. Con caída en forma de diamante permite una mayor capacidad de drenaje.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                "70 cm",
+                "7 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.822 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA700T05.webp",
+        "closeup": ""
+    },
+    {
+        "producto": "rejilla pr120t02",
+        "sku": "pr120t02",
+        "descripcion": "Rejilla para Pileta de Patio",
+        "caracteristicas": "Rejilla de acero inoxidable 304 diseñada para facilitar la evacuación del agua, prevenir olores y evitar el acceso de grasas a las tuberías. Tapa desmontable, reversible 2 en 1. Salida vertical inferior de Ø 110 mm.\nSe instala en: baños, lavaderos y donde se requiera drenaje de agua.",
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Mate",
+            "medidas": [
+                " 12 cm",
+                "12 cm",
+                "7.4 cm"
+            ],
+            "peso": "0.475 kg",
+            "forma": NaN
+        },
+        "thumbnail": "thumbnails/desagues/PR120T02.webp",
+        "closeup": ""
+    }
+]

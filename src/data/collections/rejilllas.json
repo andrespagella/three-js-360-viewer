@@ -1,0 +1,24 @@
+[
+    {
+        "producto": "REJILLA PR120T02",
+        "SKU": 2309,
+        "descripcion": "Zócalo Orbit",
+        "caracteristicas": [
+            "Pintable, de cara plana y canto redondeado",
+            "Diseño y color en cualquier ambiente",
+            ""
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Pintable",
+            "medidas": [
+                "70mm",
+                "15mm",
+                "2,5mts"
+            ],
+            "forma": "Orbit"
+        },
+        "thumbnail": "thumbnails/rejilla/PR120T02.webp",
+        "closeup": "closeups/rejilla/PR120T02.webp"
+    }
+]
