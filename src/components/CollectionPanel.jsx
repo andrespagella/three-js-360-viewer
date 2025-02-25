@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
+import useIsMobile from "../hooks/useIsMobile";
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   const allPins = pinsData.reduce((acc, ambienteItem) => {
     const ambienteName = ambienteItem.ambiente;

@@ -1,26 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
-
-// Función helper de respaldo para obtener las rutas de imagen según el ambiente y el modo
-const getAmbientFilePaths = (ambient, darkMode) => {
-  const mode = darkMode ? "Dark" : "Light";
-  let prefix = "";
-  if (ambient.name === "Antebaño") {
-    prefix = "Bath-";
-  } else if (ambient.name === "Baño") {
-    prefix = "ShowerArea-";
-  }
-  if (prefix) {
-    return {
-      url: `ambientes/${prefix}${mode}.webp`,
-      preview: `ambientes/${prefix}${mode}.webp`,
-    };
-  }
-  return {
-    url: ambient.url,
-    preview: ambient.preview,
-  };
-};
+import getAmbientFilePaths from "../utils/getAmbientFilePaths";
+import useIsMobile from "../hooks/useIsMobile";
 
 const Sidebar = ({
   ambientes,
@@ -32,15 +13,7 @@ const Sidebar = ({
   onToggleDarkMode,
   getAmbientFilePaths: externalGetAmbientFilePaths,
 }) => {
-  // Usar la función helper recibida o la propia
-  const getPaths = externalGetAmbientFilePaths || getAmbientFilePaths;
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   // Para Sidebar: usar "bottom" en mobile y "left" en escritorio
   const anchor = isMobile ? "bottom" : "left";
@@ -81,7 +54,7 @@ const Sidebar = ({
           <div className="p-4 pt-2">
             <div className="grid grid-cols-1 gap-2">
               {ambientes.map((item, index) => {
-                const paths = getPaths(item, darkMode);
+                const paths = externalGetAmbientFilePaths ? externalGetAmbientFilePaths(item, darkMode) : getAmbientFilePaths(item, darkMode);
                 return (
                   <button
                     key={index}
@@ -106,7 +79,7 @@ const Sidebar = ({
         <div className="p-4 overflow-auto">
           <div className="grid grid-cols-1 gap-4">
             {ambientes.map((item, index) => {
-              const paths = getPaths(item, darkMode);
+              const paths = externalGetAmbientFilePaths ? externalGetAmbientFilePaths(item, darkMode) : getAmbientFilePaths(item, darkMode);
               return (
                 <button
                   key={index}

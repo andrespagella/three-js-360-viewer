@@ -5,6 +5,7 @@ import CloseupViewer from "./components/CloseupViewer";
 import CollectionPanel from "./components/CollectionPanel";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
+import getAmbientFilePaths from './utils/getAmbientFilePaths';
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
@@ -23,27 +24,6 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // Función que genera las rutas de imagen según el ambiente y el modo
-  const getAmbientFilePaths = (ambient, darkMode) => {
-    const mode = darkMode ? "Dark" : "Light";
-    let prefix = "";
-    if (ambient.name === "Antebaño") {
-      prefix = "Bath-";
-    } else if (ambient.name === "Baño") {
-      prefix = "ShowerArea-";
-    }
-    if (prefix) {
-      return {
-        url: `ambientes/${prefix}${mode}.webp`,
-        preview: `ambientes/${prefix}${mode}.webp`,
-      };
-    }
-    return {
-      url: ambient.url,
-      preview: ambient.preview,
-    };
-  };
 
   const currentPins =
     pinsData.find((p) => p.ambiente === currentView.name)?.pins || [];
