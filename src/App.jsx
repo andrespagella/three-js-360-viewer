@@ -3,12 +3,14 @@ import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
 import CollectionPanel from "./components/CollectionPanel";
+import LanguageSelector from "./components/LanguageSelector";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
+  const [language, setLanguage] = useState(null);
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
@@ -71,6 +73,15 @@ function App() {
   const handleSelectAmbiente = (ambiente) => {
     setCurrentView(ambiente);
   };
+
+  const handleSelectLanguage = (lang) => {
+    setLanguage(lang);
+  };
+
+  // Hasta que el usuario seleccione el idioma, mostramos el selector
+  if (!language) {
+    return <LanguageSelector onSelectLanguage={handleSelectLanguage} />;
+  }
 
   return (
     <div className="relative h-screen">
