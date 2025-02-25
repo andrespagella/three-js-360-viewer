@@ -69,7 +69,7 @@ const Three360Viewer = ({
       {warpTarget && (
         <WarpZoom
           onComplete={() => {
-            onOpenCloseup(warpTarget);
+            onOpenCloseup();
             setWarpTarget(null);
           }}
         />

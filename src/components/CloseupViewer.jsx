@@ -1,17 +1,43 @@
 import React, { useState, useEffect } from "react";
-import products from "../data/collections/inodoros.json";
 
 const CloseupViewer = ({ closeup, onClose }) => {
+  const { file: closeupFile, collection: defaultCollection } = closeup;
+  const [currentCollection, setCurrentCollection] = useState(defaultCollection || "inodoros");
+  const [products, setProducts] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
-    if (closeup) {
-      const foundIndex = products.findIndex(product => product.closeup === closeup);
-      if (foundIndex !== -1) {
-        setSelectedIndex(foundIndex);
-      }
+    // Dynamically import the JSON file based on the currentCollection state
+    import(`../data/collections/${currentCollection}.json`)
+      .then(module => {
+        const data = module.default;
+        setProducts(data);
+        if (closeupFile) {
+          const foundIndex = data.findIndex(product => product.closeup === closeupFile);
+          if (foundIndex !== -1) {
+            setSelectedIndex(foundIndex);
+          } else {
+            setSelectedIndex(0);
+          }
+        } else {
+          setSelectedIndex(0);
+        }
+      })
+      .catch(err => {
+        console.error(`Error loading JSON for collection ${currentCollection}:`, err);
+      });
+  }, [currentCollection, closeupFile]);
+
+  const handleCollectionChange = (newCollection) => {
+    if(newCollection !== currentCollection){
+      setCurrentCollection(newCollection);
+      setSelectedIndex(0);
     }
-  }, [closeup]);
+  };
+
+  if (products.length === 0) {
+    return <div>Cargando...</div>;
+  }
 
   const selectedProduct = products[selectedIndex];
 
@@ -29,6 +55,22 @@ const CloseupViewer = ({ closeup, onClose }) => {
         >
           Vista principal
         </button>
+
+        {/* Collection selection buttons */}
+        <div className="absolute top-4 right-4 flex space-x-2">
+          <button
+            onClick={() => handleCollectionChange('inodoros')}
+            className={`px-3 py-1 rounded ${currentCollection === 'inodoros' ? 'bg-violet-500 text-white' : 'bg-gray-200'}`}
+          >
+            Inodoros
+          </button>
+          <button
+            onClick={() => handleCollectionChange('zocalos')}
+            className={`px-3 py-1 rounded ${currentCollection === 'zocalos' ? 'bg-violet-500 text-white' : 'bg-gray-200'}`}
+          >
+            Zócalos
+          </button>
+        </div>
 
         <div className="absolute bottom-0 left-0 w-full flex justify-center p-4 space-x-4">
           {products.map((product, index) => (

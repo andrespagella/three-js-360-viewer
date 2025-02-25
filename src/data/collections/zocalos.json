@@ -1,0 +1,118 @@
+[
+    {
+        "producto": "zocalo 2309",
+        "SKU": 2309,
+        "descripcion": "Zócalo Orbit",
+        "caracteristicas": [
+            "Pintable, de cara plana y canto redondeado",
+            "Diseño y color en cualquier ambiente",
+            ""
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Pintable",
+            "medidas": [
+                "70mm",
+                "15mm",
+                " 2,5mts"
+            ],
+            "forma": "Orbit"
+        },
+        "thumbnail": "thumbnails/zocalos/2309.webp",
+        "closeup": "closeups/zocalos/2309.webp"
+    },
+    {
+        "producto": "zocalo 2356",
+        "SKU": 2356,
+        "descripcion": "Zócalo Maxi Line",
+        "caracteristicas": [
+            "El Zócalo blanco Maxi line con línea bajo relieve, da mayor sofisticación y elegancia a tus ambientes.",
+            "Además son altamente resistente a los golpes y no se deforman con el agua ni humedad como ocurre con otros materiales.",
+            "Son de muy fácil instalación y no se deterioran con el tiempo.",
+            "",
+            "Diseño de cara plana y línea bajo relieve",
+            "Mayor sofisticación y elegancia",
+            "Altamente resistente a los golpes - No se deforman con el agua ni humedad."
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Blanco ",
+            "medidas": [
+                "150mm",
+                "15mm",
+                "2,5mts"
+            ],
+            "forma": "Maxi Line"
+        },
+        "thumbnail": "thumbnails/zocalos/2356.webp",
+        "closeup": "closeups/zocalos/2356.webp"
+    },
+    {
+        "producto": "zocalo 2066",
+        "SKU": 2066,
+        "descripcion": "Zócalo Slim",
+        "caracteristicas": [
+            "Este Zócalo ultra delgado es ideal para usar en ambientes de decoración minimalista tanto en hogares como en oficinas. Combina funcionalidad y estética",
+            "Son resistentes a los golpes y roces",
+            "No requieren mantenimiento ni se deterioran con el tiempo",
+            "Para su instalación solo tenés que usar Adhesivo Rellenador ProFix",
+            "",
+            "Ultradelgado, diseño minimalista",
+            "Resistentes a los golpes y roces"
+        ],
+        "ficha": {
+            "material": "Aluminio Anodizado",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "100 mm",
+                "10 mm",
+                "2,50 m"
+            ],
+            "forma": "Slim"
+        },
+        "thumbnail": "thumbnails/zocalos/2066.webp",
+        "closeup": "closeups/zocalos/2066.webp"
+    },
+    {
+        "producto": "zocalo 2314",
+        "SKU": 2314,
+        "descripcion": "Zócalo Line",
+        "caracteristicas": [
+            "Diseño vanguardista que destaca con personalidad los espacios.",
+            "Variedad de colores en tendencia."
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Cemento",
+            "medidas": [
+                "100 mm",
+                "15 mm",
+                "2,5 m"
+            ],
+            "forma": "Extra line"
+        },
+        "thumbnail": "thumbnails/zocalos/2314.webp",
+        "closeup": "closeups/zocalos/2314.webp"
+    },
+    {
+        "producto": "zocalo 2323",
+        "SKU": 2323,
+        "descripcion": "Zócalo Curves",
+        "caracteristicas": [
+            "Diseño tradicional",
+            "Otorga una visual continua a la unión con la pared."
+        ],
+        "ficha": {
+            "material": "EPS",
+            "terminacion": "Avellana",
+            "medidas": [
+                "80 mm",
+                "15 mm",
+                "2,5 m"
+            ],
+            "forma": "Curves"
+        },
+        "thumbnail": "thumbnails/zocalos/2323.webp",
+        "closeup": "closeups/zocalos/2323.webp"
+    }
+]

@@ -64,7 +64,8 @@ function App() {
       const jsonData = await response.json();
   
       if (Array.isArray(jsonData) && jsonData.length > 0) {
-        const updatedPin = { ...pin, closeup: jsonData[0].closeup };
+        const collectionName = pin.data.split('/').pop().replace('.json', '');
+        const updatedPin = { ...pin, closeup: jsonData[0].closeup, collection: collectionName };
         setSelectedPin(updatedPin);
       }
     } catch (error) {
@@ -73,11 +74,12 @@ function App() {
   };
 
   // Función que abre el closeup utilizando la imagen obtenida del JSON.
-  const handleOpenCloseup = (closeupFile) => {
+  const handleOpenCloseup = () => {
     setZooming(true);
     setTimeout(() => {
-      // Se utiliza la URL obtenida del JSON sin agregar prefijos adicionales
-      setCloseup(closeupFile);
+      if (selectedPin) {
+        setCloseup({ file: selectedPin.closeup, collection: selectedPin.collection });
+      }
       setZooming(false);
     }, 200);
   };
