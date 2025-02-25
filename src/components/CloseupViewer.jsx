@@ -29,7 +29,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
   }, [currentCollection, closeupFile]);
 
   const handleCollectionChange = (newCollection) => {
-    if(newCollection !== currentCollection){
+    if (newCollection !== currentCollection) {
       setCurrentCollection(newCollection);
       setSelectedIndex(0);
     }
@@ -55,22 +55,6 @@ const CloseupViewer = ({ closeup, onClose }) => {
         >
           Vista principal
         </button>
-
-        {/* Collection selection buttons */}
-        <div className="absolute top-4 right-4 flex space-x-2">
-          <button
-            onClick={() => handleCollectionChange('inodoros')}
-            className={`px-3 py-1 rounded ${currentCollection === 'inodoros' ? 'bg-violet-500 text-white' : 'bg-gray-200'}`}
-          >
-            Inodoros
-          </button>
-          <button
-            onClick={() => handleCollectionChange('zocalos')}
-            className={`px-3 py-1 rounded ${currentCollection === 'zocalos' ? 'bg-violet-500 text-white' : 'bg-gray-200'}`}
-          >
-            Zócalos
-          </button>
-        </div>
 
         <div className="absolute bottom-0 left-0 w-full flex justify-center p-4 space-x-4">
           {products.map((product, index) => (
