@@ -23,12 +23,13 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     <div className={panelClasses} style={{ transform: transformStyle }}>
       <div className="p-4">
         <div>
-          <h3 className="text-md font-semibold">Colección</h3>
-          <ul className="mt-2">
+          <h3 className="text-sm font-semibold">Colección</h3>
+          <div className="grid grid-cols-2 gap-4 mt-2">
             {allPins.map((pin, index) => (
-              <li
+              <button
                 key={index}
-                className="cursor-pointer hover:underline"
+                className="relative cursor-pointer w-full aspect-square bg-cover bg-center rounded shadow-md overflow-hidden"
+                style={{ backgroundImage: `url(${pin.thumbnail || '/default-thumbnail.jpg'})` }}
                 onClick={() => {
                   if (onSelectAmbiente) {
                     const ambienteObj = ambientes.find((amb) => amb.name === pin.ambiente);
@@ -39,10 +40,14 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
                   onSelectPin && onSelectPin(pin);
                 }}
               >
-                {pin.label} <span className="text-sm text-black">({pin.ambiente})</span>
-              </li>
+                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end">
+                  <span className="w-full text-center text-white text-xs p-2 bg-black bg-opacity-50">
+                    {pin.label}
+                  </span>
+                </div>
+              </button>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
