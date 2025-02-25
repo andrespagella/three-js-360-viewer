@@ -16,7 +16,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
   const transformStyle = getTransformStyle(anchor, panelExpanded);
 
   const panelClasses = `fixed z-40 transition-transform duration-300 bg-white text-black overflow-auto shadow-sm ${
-    isMobile ? "bottom-0 right-0 w-full h-64" : "top-0 right-0 h-full w-64"
+    isMobile ? "bottom-0 right-0 w-full h-64" : "top-15 right-0 h-full w-64"
   }`;
 
   return (

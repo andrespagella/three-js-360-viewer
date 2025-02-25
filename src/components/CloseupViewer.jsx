@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ViewerHeader from "./ViewerHeader";
 
 const CloseupViewer = ({ closeup, onClose }) => {
   const { file: closeupFile, collection: defaultCollection } = closeup;
@@ -51,7 +52,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
         />
         <button
           onClick={onClose}
-          className="absolute top-4 left-4 bg-black text-white px-4 py-2"
+          className="absolute top-20 left-4 bg-black text-white px-4 py-2"
         >
           Vista principal
         </button>

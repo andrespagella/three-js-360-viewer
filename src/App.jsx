@@ -7,6 +7,7 @@ import LanguageSelector from "./components/LanguageSelector";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
+import ViewerHeader from "./components/ViewerHeader";
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
@@ -85,80 +86,61 @@ function App() {
 
   return (
     <div className="relative h-screen">
-      {!closeup && (
-        <>
-          <Sidebar
-            ambientes={ambientes}
-            currentView={currentView}
-            onViewClick={handleViewClick}
-            menuExpanded={menuExpanded}
-            onToggleMenu={() => setMenuExpanded(!menuExpanded)}
-            darkMode={darkMode}
-            onToggleDarkMode={() => setDarkMode(!darkMode)}
-            getAmbientFilePaths={getAmbientFilePaths}
-          />
-          {!isMobile && (
-            <button
-              onClick={() => setMenuExpanded(!menuExpanded)}
-              className="fixed z-50 bg-white text-black uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
-              style={{
-                left: menuExpanded ? "16.5rem" : "1rem",
-                top: "50%",
-                transform: "translate(-50%, -50%) rotate(-90deg)",
-                transformOrigin: "center",
-              }}
-            >
-              Ambientes
-            </button>
-          )}
+      <ViewerHeader />
+      <div className="pt-[40px] h-full">
+        {!closeup && (
+          <>
+            <Sidebar
+              ambientes={ambientes}
+              currentView={currentView}
+              onViewClick={handleViewClick}
+              menuExpanded={menuExpanded}
+              onToggleMenu={() => setMenuExpanded(!menuExpanded)}
+              darkMode={darkMode}
+              onToggleDarkMode={() => setDarkMode(!darkMode)}
+              getAmbientFilePaths={getAmbientFilePaths}
+            />
+            {!isMobile && (
+              <button
+                onClick={() => setMenuExpanded(!menuExpanded)}
+                className="fixed z-50 bg-white text-black uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
+                style={{
+                  left: menuExpanded ? "16.5rem" : "1rem",
+                  top: "50%",
+                  transform: "translate(-50%, -50%) rotate(-90deg)",
+                  transformOrigin: "center",
+                }}
+              >
+                Ambientes
+              </button>
+            )}
 
-          <CollectionPanel
-            ambientes={ambientes}
-            pinsData={pinsData}
-            onSelectAmbiente={handleSelectAmbiente}
-            onSelectPin={handleSelectPin}
-            panelExpanded={collectionPanelExpanded}
-          />
+            <CollectionPanel
+              ambientes={ambientes}
+              pinsData={pinsData}
+              onSelectAmbiente={handleSelectAmbiente}
+              onSelectPin={handleSelectPin}
+              panelExpanded={collectionPanelExpanded}
+            />
 
-          {!isMobile && (
-            <button
-              onClick={() =>
-                setCollectionPanelExpanded(!collectionPanelExpanded)
-              }
-              className="fixed z-50 bg-white text-black uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
-              style={{
-                right: collectionPanelExpanded ? "16.5rem" : "1rem",
-                top: "50%",
-                transform: "translate(50%, -50%) rotate(90deg)",
-                transformOrigin: "center",
-              }}
-            >
-              Colección
-            </button>
-          )}
-        </>
-      )}
+            {!isMobile && (
+              <button
+                onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
+                className="fixed z-50 bg-white text-black uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
+                style={{
+                  right: collectionPanelExpanded ? "16.5rem" : "1rem",
+                  top: "50%",
+                  transform: "translate(50%, -50%) rotate(90deg)",
+                  transformOrigin: "center",
+                }}
+              >
+                Colección
+              </button>
+            )}
+          </>
+        )}
 
-      <div
-        className={`transition-all duration-300 ${
-          isMobile
-            ? closeup
-              ? "mb-0"
-              : menuExpanded
-              ? "mb-64"
-              : "mb-0"
-            : closeup
-            ? "ml-0 mr-0"
-            : menuExpanded && collectionPanelExpanded
-            ? "ml-64"
-            : menuExpanded
-            ? "ml-64"
-            : collectionPanelExpanded
-            ? "mr-64"
-            : "mr-0"
-        }`}
-      >
-        <div className={`viewer-container ${zooming ? "zoom-animation" : ""}`}>
+        <div className="viewer-container h-full">
           <Three360Viewer
             imageUrl={getAmbientFilePaths(currentView, darkMode).url}
             pins={currentPins}
@@ -167,10 +149,10 @@ function App() {
             onSelectPin={handleSelectPin}
             developmentMode={developmentMode}
           />
+          {closeup && (
+            <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
+          )}
         </div>
-        {closeup && (
-          <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
-        )}
       </div>
     </div>
   );

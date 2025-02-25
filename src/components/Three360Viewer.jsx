@@ -41,7 +41,7 @@ const Three360Viewer = ({
   }, [selectedPin]);
 
   return (
-    <Canvas style={{ height: "100vh" }}>
+    <Canvas style={{ height: "100%" }}>
       {/* La cámara rota hacia el pin seleccionado */}
       <CameraController selectedPin={selectedPin} />
       <ambientLight />
@@ -124,12 +124,10 @@ function DebugCameraInfo() {
     >
       <div>
         <div>
-          Position: x: {camInfo.posX.toFixed(2)}, y: {camInfo.posY.toFixed(2)}, z:{" "}
-          {camInfo.posZ.toFixed(2)}
+          Position: x: {camInfo.posX.toFixed(2)}, y: {camInfo.posY.toFixed(2)}, z: {camInfo.posZ.toFixed(2)}
         </div>
         <div>
-          Rotation: x: {camInfo.rotX.toFixed(2)}, y: {camInfo.rotY.toFixed(2)}, z:{" "}
-          {camInfo.rotZ.toFixed(2)}
+          Rotation: x: {camInfo.rotX.toFixed(2)}, y: {camInfo.rotY.toFixed(2)}, z: {camInfo.rotZ.toFixed(2)}
         </div>
         <div>FOV: {camInfo.fov.toFixed(2)}</div>
       </div>

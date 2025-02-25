@@ -20,7 +20,7 @@ const Sidebar = ({
   const transformStyle = getTransformStyle(anchor, menuExpanded);
 
   const containerClasses = `fixed z-50 transition-transform duration-300 bg-white text-black shadow-sm ${
-    isMobile ? "bottom-0 left-0 w-full h-64" : "top-0 left-0 h-full w-64"
+    isMobile ? "bottom-0 left-0 w-full h-64" : "top-15 left-0 h-full w-64"
   }`;
 
   return (
