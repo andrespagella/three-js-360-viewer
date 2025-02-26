@@ -75,13 +75,13 @@
       "pins": [
         {
           "id": 1,
-          "position": [-200, -400, -100],
+          "position": [-50, -300, -150],
           "data": "data/collections/desagues.json",
           "label": "Desagües"
         },
         {
           "id": 2,
-          "position": [400, 0, 100],
+          "position": [250, -100, 50],
           "data": "data/collections/estantes.json",
           "label": "Estantes"
         }
