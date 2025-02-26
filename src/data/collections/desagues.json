@@ -15,7 +15,10 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DN700T02.webp",
-        "closeup": "closeups/desagues/DN700T02.webp"
+        "closeup": "closeups/desagues/DN700T02.webp",
+        "overlay": "overlays/desagues/DN700T02.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da300t02",
@@ -34,7 +37,10 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA300T02.webp",
-        "closeup": "closeups/desagues/DA300T02.webp"
+        "closeup": "closeups/desagues/DA300T02.webp",
+        "overlay": "overlays/desagues/DA300T02.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da700t10",
@@ -53,7 +59,10 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA700T10.webp",
-        "closeup": "closeups/desagues/DA700T10.webp"
+        "closeup": "closeups/desagues/DA700T10.webp",
+        "overlay": "overlays/desagues/DA700T10.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da900t01",
@@ -72,7 +81,10 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA900T01.webp",
-        "closeup": "closeups/desagues/DA900T01.webp"
+        "closeup": "closeups/desagues/DA900T01.webp",
+        "overlay": "overlays/desagues/DA900T01.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da150t02",
@@ -91,7 +103,10 @@
             "forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/desagues/DA150T02.webp",
-        "closeup": "closeups/desagues/DA150T02.webp"
+        "closeup": "closeups/desagues/DA150T02.webp",
+        "overlay": "overlays/desagues/DA150T02.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da600t09",
@@ -110,7 +125,10 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA600T09.webp",
-        "closeup": "closeups/desagues/DA600T09.webp"
+        "closeup": "closeups/desagues/DA600T09.webp",
+        "overlay": "overlays/desagues/DA600T09.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "desague da700t05",
@@ -129,6 +147,9 @@
             "forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA700T05.webp",
-        "closeup": "closeups/desagues/DA700T05.webp"
+        "closeup": "closeups/desagues/DA700T05.webp",
+        "overlay": "overlays/desagues/DA700T05.webp",
+        "x": 0,
+        "y": 0
     }
 ]

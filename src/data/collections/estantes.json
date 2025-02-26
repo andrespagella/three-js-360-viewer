@@ -17,7 +17,10 @@
             "forma": "Triangular"
         },
         "thumbnail": "thumbnails/estantes/ETM230AC.webp",
-        "closeup": "closeups/estantes/ETM230AC.webp"
+        "closeup": "closeups/estantes/ETM230AC.webp",
+        "overlay": "overlays/estantes/ETM230AC.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "estante erp300ac",
@@ -36,7 +39,10 @@
             "forma": "Rectangular"
         },
         "thumbnail": "thumbnails/estantes/ERP300AC.webp",
-        "closeup": "closeups/estantes/ERP300AC.webp"
+        "closeup": "closeups/estantes/ERP300AC.webp",
+        "overlay": "overlays/estantes/ERP300AC.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "estante etj230bm",
@@ -55,7 +61,10 @@
             "forma": "Triangular"
         },
         "thumbnail": "thumbnails/estantes/ETJ230BM.webp",
-        "closeup": "closeups/estantes/ETJ230BM.webp"
+        "closeup": "closeups/estantes/ETJ230BM.webp",
+        "overlay": "overlays/estantes/ETJ230BM.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "estante etj230nm",
@@ -74,7 +83,10 @@
             "forma": "Rectangular"
         },
         "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
-        "closeup": "closeups/estantes/ETJ230NM.webp"
+        "closeup": "closeups/estantes/ETJ230NM.webp",
+        "overlay": "overlays/estantes/ETJ230NM.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "estante erp300nm",
@@ -93,7 +105,10 @@
             "forma": "Triangular"
         },
         "thumbnail": "thumbnails/estantes/ERP300NM.webp",
-        "closeup": "closeups/estantes/ERP300NM.webp"
+        "closeup": "closeups/estantes/ERP300NM.webp",
+        "overlay": "overlays/estantes/ERP300NM.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "estante erm300nm",
@@ -112,6 +127,9 @@
             "forma": "Rectangular"
         },
         "thumbnail": "thumbnails/estantes/ERM300NM.webp",
-        "closeup": "closeups/estantes/ERM300NM.webp"
+        "closeup": "closeups/estantes/ERM300NM.webp",
+        "overlay": "overlays/estantes/ERM300NM.webp",
+        "x": 0,
+        "y": 0
     }
 ]

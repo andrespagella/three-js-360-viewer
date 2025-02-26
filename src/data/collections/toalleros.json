@@ -7,7 +7,7 @@
             "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
             "Está compuesto por:",
             "4 Barras calentadoras",
-            "Fijación trasera",
+            "Fijación trasera", 
             "Cables calefactores de aleación, con alta eficiencia de conversión",
             "Marco completamente soldado",
             "El grado de impermeabilidad alcanza IPX1",
@@ -29,7 +29,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/CUBIC-1135+.webp",
-        "closeup": "closeups/toalleros/CUBIC-1135+.webp"
+        "closeup": "closeups/toalleros/CUBIC-1135+.webp",
+        "overlay": "overlays/toalleros/CUBIC-1135+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico coco-1116+",
@@ -62,7 +65,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1116+.webp",
-        "closeup": "closeups/toalleros/COCO-1116+.webp"
+        "closeup": "closeups/toalleros/COCO-1116+.webp",
+        "overlay": "overlays/toalleros/COCO-1116+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico coco-1110+",
@@ -95,7 +101,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1110+.webp",
-        "closeup": "closeups/toalleros/COCO-1110+.webp"
+        "closeup": "closeups/toalleros/COCO-1110+.webp",
+        "overlay": "overlays/toalleros/COCO-1110+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico coco-1111+",
@@ -128,7 +137,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1111+.webp",
-        "closeup": "closeups/toalleros/COCO-1111+.webp"
+        "closeup": "closeups/toalleros/COCO-1111+.webp",
+        "overlay": "overlays/toalleros/COCO-1111+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico coco-1119+",
@@ -161,7 +173,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1119+.webp",
-        "closeup": "closeups/toalleros/COCO-1119+.webp"
+        "closeup": "closeups/toalleros/COCO-1119+.webp",
+        "overlay": "overlays/toalleros/COCO-1119+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico cubic-1137+",
@@ -194,7 +209,10 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/CUBIC-1137+.webp",
-        "closeup": "closeups/toalleros/CUBIC-1137+.webp"
+        "closeup": "closeups/toalleros/CUBIC-1137+.webp",
+        "overlay": "overlays/toalleros/CUBIC-1137+.webp",
+        "x": 0,
+        "y": 0
     },
     {
         "producto": "toallero electrico coco-1004+",
@@ -227,6 +245,9 @@
             "instrucciones": "https://www.youtube.com/watch?v=CcRqElNMNyA&t=11s"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1004+.webp",
-        "closeup": "closeups/toalleros/COCO-1004+.webp"
+        "closeup": "closeups/toalleros/COCO-1004+.webp",
+        "overlay": "overlays/toalleros/COCO-1004+.webp",
+        "x": 0,
+        "y": 0
     }
 ]
