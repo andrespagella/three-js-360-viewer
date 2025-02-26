@@ -56,6 +56,19 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
       });
     };
 
+    // Función para obtener el overlay path considerando el modo oscuro
+    const getOverlayPath = (item) => {
+      return darkMode && item.overlayDark ? item.overlayDark : item.overlay;
+    };
+
+    // Función para cargar un item específico
+    const loadItemOverlay = async (item) => {
+      if (item && item.overlay) {
+        const overlayPath = getOverlayPath(item);
+        await loadAndDrawImage(overlayPath, item.x, item.y);
+      }
+    };
+
     // Función para cargar todas las imágenes en secuencia
     const loadAllImages = async () => {
       // 1. Primero dibujamos la textura base si está disponible
@@ -66,107 +79,36 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
       // 2. Determinamos qué colecciones cargar según el ambiente actual
       const ambienteName = currentView?.name || "";
       
-      if (ambienteName === "Antebaño" || ambienteName === "Ante baño" || ambienteName === "Antebaño principal") {
-        // Para Antebaño, cargamos zócalos y toalleros
-        const zocaloItem = zocalos && zocalos.length > 0 ? zocalos[0] : null;
-        const toalleroItem = toalleros && toalleros.length > 0 ? toalleros[0] : null;
-        const vanitoryItem = vanitories && vanitories.length > 0 ? vanitories[0] : null;
-        const cabinetItem = cabinets && cabinets.length > 0 ? cabinets[0] : null;
-        const espejoItem = espejos && espejos.length > 0 ? espejos[0] : null;
-
-        // Cargamos y dibujamos la imagen overlay del primer zócalo
-        if (zocaloItem && zocaloItem.overlay) {
-          const overlayPath = darkMode && zocaloItem.overlayDark 
-            ? zocaloItem.overlayDark 
-            : zocaloItem.overlay;
-          await loadAndDrawImage(overlayPath, zocaloItem.x, zocaloItem.y);
-        }
-
-        // Cargamos y dibujamos la imagen overlay del primer toallero
-        if (toalleroItem && toalleroItem.overlay) {
-          const overlayPath = darkMode && toalleroItem.overlayDark 
-            ? toalleroItem.overlayDark 
-            : toalleroItem.overlay;
-          await loadAndDrawImage(overlayPath, toalleroItem.x, toalleroItem.y);
-        }
+      try {
+        // Obtenemos el primer item de cada colección
+        const collections = {
+          zocalo: zocalos && zocalos.length > 0 ? zocalos[0] : null,
+          toallero: toalleros && toalleros.length > 0 ? toalleros[0] : null,
+          estante: estantes && estantes.length > 0 ? estantes[0] : null,
+          desague: desagues && desagues.length > 0 ? desagues[0] : null,
+          vanitory: vanitories && vanitories.length > 0 ? vanitories[0] : null,
+          cabinet: cabinets && cabinets.length > 0 ? cabinets[0] : null,
+          espejo: espejos && espejos.length > 0 ? espejos[0] : null,
+          perfil_piso: perfiles_piso && perfiles_piso.length > 0 ? perfiles_piso[0] : null
+        };
         
-        // Cargamos y dibujamos la imagen overlay del primer vanitory
-        if (vanitoryItem && vanitoryItem.overlay) {
-          const overlayPath = darkMode && vanitoryItem.overlayDark 
-            ? vanitoryItem.overlayDark 
-            : vanitoryItem.overlay;
-          await loadAndDrawImage(overlayPath, vanitoryItem.x, vanitoryItem.y);
+        if (ambienteName === "Antebaño" || ambienteName === "Ante baño" || ambienteName === "Antebaño principal") {
+          // Para Antebaño, cargamos zócalos, toalleros, vanitories, cabinets y espejos
+          await loadItemOverlay(collections.zocalo);
+          await loadItemOverlay(collections.toallero);
+          await loadItemOverlay(collections.vanitory);
+          await loadItemOverlay(collections.cabinet);
+          await loadItemOverlay(collections.espejo);
+        } 
+        else if (ambienteName === "Baño" || ambienteName === "Baño principal") {
+          // Para Baño, cargamos estantes, desagües, vanitories, cabinets y espejos
+          await loadItemOverlay(collections.estante);
+          await loadItemOverlay(collections.desague);
         }
-        
-        // Cargamos y dibujamos la imagen overlay del primer cabinet
-        if (cabinetItem && cabinetItem.overlay) {
-          const overlayPath = darkMode && cabinetItem.overlayDark 
-            ? cabinetItem.overlayDark 
-            : cabinetItem.overlay;
-          await loadAndDrawImage(overlayPath, cabinetItem.x, cabinetItem.y);
-        }
-        
-        // Cargamos y dibujamos la imagen overlay del primer espejo
-        if (espejoItem && espejoItem.overlay) {
-          const overlayPath = darkMode && espejoItem.overlayDark 
-            ? espejoItem.overlayDark 
-            : espejoItem.overlay;
-          await loadAndDrawImage(overlayPath, espejoItem.x, espejoItem.y);
-        }
-      } 
-      else if (ambienteName === "Baño" || ambienteName === "Baño principal") {
-        // Para Baño, cargamos estantes y desagües
-        try {
-          const estanteItem = estantes && estantes.length > 0 ? estantes[0] : null;
-          const desagueItem = desagues && desagues.length > 0 ? desagues[0] : null;
-          const vanitoryItem = vanitories && vanitories.length > 0 ? vanitories[0] : null;
-          const cabinetItem = cabinets && cabinets.length > 0 ? cabinets[0] : null;
-          const espejoItem = espejos && espejos.length > 0 ? espejos[0] : null;
-
-          // Cargamos y dibujamos la imagen overlay del primer estante
-          if (estanteItem && estanteItem.overlay) {
-            const overlayPath = darkMode && estanteItem.overlayDark 
-              ? estanteItem.overlayDark 
-              : estanteItem.overlay;
-            await loadAndDrawImage(overlayPath, estanteItem.x, estanteItem.y);
-          }
-
-          // Cargamos y dibujamos la imagen overlay del primer desagüe
-          if (desagueItem && desagueItem.overlay) {
-            const overlayPath = darkMode && desagueItem.overlayDark 
-              ? desagueItem.overlayDark 
-              : desagueItem.overlay;
-            await loadAndDrawImage(overlayPath, desagueItem.x, desagueItem.y);
-          }
-          
-          // Cargamos y dibujamos la imagen overlay del primer vanitory
-          if (vanitoryItem && vanitoryItem.overlay) {
-            const overlayPath = darkMode && vanitoryItem.overlayDark 
-              ? vanitoryItem.overlayDark 
-              : vanitoryItem.overlay;
-            await loadAndDrawImage(overlayPath, vanitoryItem.x, vanitoryItem.y);
-          }
-          
-          // Cargamos y dibujamos la imagen overlay del primer cabinet
-          if (cabinetItem && cabinetItem.overlay) {
-            const overlayPath = darkMode && cabinetItem.overlayDark 
-              ? cabinetItem.overlayDark 
-              : cabinetItem.overlay;
-            await loadAndDrawImage(overlayPath, cabinetItem.x, cabinetItem.y);
-          }
-          
-          // Cargamos y dibujamos la imagen overlay del primer espejo
-          if (espejoItem && espejoItem.overlay) {
-            const overlayPath = darkMode && espejoItem.overlayDark 
-              ? espejoItem.overlayDark 
-              : espejoItem.overlay;
-            await loadAndDrawImage(overlayPath, espejoItem.x, espejoItem.y);
-          }
-        } catch (error) {
-          console.error("Error cargando colecciones para Baño:", error);
-        }
+        // Para otros ambientes, no cargamos overlays específicos
+      } catch (error) {
+        console.error(`Error cargando colecciones para ${ambienteName}:`, error);
       }
-      // Para otros ambientes, no cargamos overlays específicos
     };
 
     // Iniciamos la carga de imágenes
