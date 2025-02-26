@@ -1,25 +1,17 @@
 [
     {
-        "producto": "Inodoro",
-        "default": true,
-        "SKU": 2309,
-        "descripcion": "Inodoro Zedra inteligente",
+        "producto": "inodoro pur390",
+        "SKU": "pur390",
+        "descripcion": "Inodoro Inteligente PuraSense - Tanque de agua & Trampa S 250mm ",
         "caracteristicas": [
-            "Pintable, de cara plana y canto redondeado",
-            "Diseño y color en cualquier ambiente",
-            ""
+            "Inodoro inteligente de diseño sutil y elegante.",
+            "Funciones principales:",
+            "- Apertura y cierre automáticos para mayor comodidad.",
+            "- Funciones de lavado, secado, autolimpieza, temperatura y flujo de agua ajustable.",
+            "- Sistema de descarga que no requiere electricidad ni presión.",
+            "- Trampa S de 250 mm para una instalación sencilla y eficiente."
         ],
-        "ficha": {
-            "material": "EPS",
-            "terminacion": "Pintable",
-            "medidas": [
-                "70mm",
-                "15mm",
-                " 2,5mts"
-            ],
-            "forma": "Orbit"
-        },
-        "thumbnail": "closeups/inodoros/inodoro.webp",
+        "thumbnail": "thumbnails/inodoros/inodoro.webp",
         "closeup": "closeups/inodoros/inodoro.webp"
     }
 ]

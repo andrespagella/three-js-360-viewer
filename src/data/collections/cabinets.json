@@ -1,0 +1,112 @@
+[
+    {
+        "producto": "cabinet varplel",
+        "SKU": "varplel",
+        "descripcion": "cabinet varenna pleno laqueado",
+        "caracteristicas": [
+            "Diseño excepcional con biselado a 45° en todos sus laterales.",
+            "Acabado laqueado en color a elección.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior.",
+            "terminacion": "Gris grafito mate",
+            "medidas": "30X30X150 CM"
+        },
+        "thumbnail": "thumbnails/cabinets/VARPLEL.webp",
+        "closeup": "closeups/cabinets/VARPLEL.webp",
+        "overlay": "overlays/cabinets/VARPLEL.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "cabinet ravplel",
+        "SKU": "ravplel",
+        "descripcion": "cabinet ravello pleno laqueado",
+        "caracteristicas": [
+            "Diseño excepcional con biselado a 45° en todos sus laterales.",
+            "Acabado laqueado en color a elección.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas.",
+            "terminacion": "Verde Suculenta mate",
+            "medidas": "30X30X150 CM"
+        },
+        "thumbnail": "thumbnails/cabinets/RAVPLEL.webp",
+        "closeup": "closeups/cabinets/RAVPLEL.webp",
+        "overlay": "overlays/cabinets/RAVPLEL.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "cabinet madduol",
+        "SKU": "madduol",
+        "descripcion": "cabinet madrid duo laqueado",
+        "caracteristicas": [
+            "Diseño clásico con dos estantes a la vista.",
+            "Acabado laqueado o madera personalizable.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "1 tabiquefijo, 2 estantes movibles en el interior y 1 estante movible en el exterior",
+            "terminacion": "Greige mate",
+            "medidas": "30X30X150 CM"
+        },
+        "thumbnail": "thumbnails/cabinets/MADDUOL.webp",
+        "closeup": "closeups/cabinets/MADDUOL.webp",
+        "overlay": "overlays/cabinets/MADDUOL.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "cabinet madsimm",
+        "SKU": "madsimm",
+        "descripcion": "cabinet madrid simple madera",
+        "caracteristicas": [
+            "Diseño clásico con un estante a la vista.",
+            "Acabado laqueado o madera personalizable.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas",
+            "terminacion": "Roble Natural",
+            "medidas": "30X30X150 CM"
+        },
+        "thumbnail": "thumbnails/cabinets/MADSIMM.webp",
+        "closeup": "closeups/cabinets/MADSIMM.webp",
+        "overlay": "overlays/cabinets/MADSIMM.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "cabinet madplel",
+        "SKU": "madplel",
+        "descripcion": "cabinet madrid pleno laqueado",
+        "caracteristicas": [
+            "Diseño clásico con frente pleno.",
+            "Acabado laqueado o madera personalizable.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior",
+            "terminacion": "Azul Intenso mate\nc/ molduras",
+            "medidas": "30X30X150 CM"
+        },
+        "thumbnail": "thumbnails/cabinets/MADPLEL.webp",
+        "closeup": "closeups/cabinets/MADPLEL.webp",
+        "overlay": "overlays/cabinets/MADPLEL.webp",
+        "x": 0,
+        "y": 0
+    }
+]
