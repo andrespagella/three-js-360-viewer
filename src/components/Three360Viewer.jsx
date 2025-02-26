@@ -15,6 +15,8 @@ const Three360Viewer = ({
   selectedPin,
   onSelectPin,
   developmentMode,
+  darkMode,
+  currentView,
 }) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
@@ -49,12 +51,12 @@ const Three360Viewer = ({
 
       {texture && (
         <>
-          {/* Esfera 360 con textura */}
+          {/* Esfera 360 con textura - ahora transparente */}
           <mesh renderOrder={1}>
             <sphereGeometry args={[500, 60, 40]} />
-            <meshBasicMaterial map={texture} side={THREE.DoubleSide} />
+            <meshBasicMaterial transparent opacity={0} side={THREE.DoubleSide} />
           </mesh>
-          <TransparentCanvasSphere baseTexture={texture} />
+          <TransparentCanvasSphere baseTexture={texture} darkMode={darkMode} currentView={currentView} />
         </>
       )}
 

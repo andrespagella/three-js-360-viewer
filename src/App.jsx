@@ -148,6 +148,8 @@ function App() {
             selectedPin={selectedPin}
             onSelectPin={handleSelectPin}
             developmentMode={developmentMode}
+            darkMode={darkMode}
+            currentView={currentView}
           />
           {closeup && (
             <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
