@@ -57,16 +57,18 @@ const CloseupViewer = ({ closeup, onClose }) => {
           Vista principal
         </button>
 
-        <div className="absolute bottom-0 left-0 w-full flex justify-center p-4 space-x-4">
-          {products.map((product, index) => (
-            <img
-              key={index}
-              src={product.thumbnail}
-              alt={product.descripcion}
-              className={`w-32 h-32 object-cover cursor-pointer border-[3px] rounded-[10px] ${index === selectedIndex ? 'border-violet-500' : 'border-transparent'}`}
-              onClick={() => setSelectedIndex(index)}
-            />
-          ))}
+        <div className="absolute bottom-0 left-0 w-full p-4">
+          <div className="flex space-x-4 overflow-x-auto">
+            {products.map((product, index) => (
+              <img
+                key={index}
+                src={product.thumbnail}
+                alt={product.descripcion}
+                className={`w-32 h-32 object-cover cursor-pointer border-[3px] rounded-[10px] ${index === selectedIndex ? 'border-violet-500' : 'border-transparent'}`}
+                onClick={() => setSelectedIndex(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
       

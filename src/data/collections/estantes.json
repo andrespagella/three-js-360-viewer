@@ -16,8 +16,8 @@
             "peso": "0.256 kg",
             "forma": "Triangular"
         },
-        "thumbnail": "thumbnails/etm230ac.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ETM230AC.webp",
+        "closeup": "closeups/estantes/ETM230AC.webp"
     },
     {
         "producto": "estante erp300ac",
@@ -35,8 +35,8 @@
             "peso": "0.256 kg",
             "forma": "Rectangular"
         },
-        "thumbnail": "thumbnails/erp300ac.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ERP300AC.webp",
+        "closeup": "closeups/estantes/ERP300AC.webp"
     },
     {
         "producto": "estante ejt230bm",
@@ -54,8 +54,8 @@
             "peso": "0.256 kg",
             "forma": "Triangular"
         },
-        "thumbnail": "thumbnails/etj230bm.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ETJ230BM.webp",
+        "closeup": "closeups/estantes/ETJ230BM.webp"
     },
     {
         "producto": "estante etj230nm",
@@ -73,8 +73,8 @@
             "peso": "0.256 kg",
             "forma": "Rectangular"
         },
-        "thumbnail": "thumbnails/etj230nm.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
+        "closeup": "closeups/estantes/ETJ230NM.webp"
     },
     {
         "producto": "estante erp300nm",
@@ -92,8 +92,8 @@
             "peso": "0.256 kg",
             "forma": "Triangular"
         },
-        "thumbnail": "thumbnails/erp300nm.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ERP300NM.webp",
+        "closeup": "closeups/estantes/ERP300NM.webp"
     },
     {
         "producto": "estante erm300nm",
@@ -111,7 +111,7 @@
             "peso": "0.256 kg",
             "forma": "Rectangular"
         },
-        "thumbnail": "thumbnails/erm300nm.webp",
-        "closeup": ""
+        "thumbnail": "thumbnails/estantes/ERM300NM.webp",
+        "closeup": "closeups/estantes/ERM300NM.webp"
     }
 ]
