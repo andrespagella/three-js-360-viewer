@@ -72,8 +72,8 @@ const CloseupViewer = ({ closeup, onClose }) => {
         </div>
       </div>
       
-      <div className="w-1/3 bg-white p-6 overflow-y-auto">
-        <h2 className="text-xl font-bold mb-4">Ficha Técnica</h2>
+      <div className="w-1/3 bg-white mt-10 p-6 overflow-y-auto">
+        <h2 className="text-xl font-bold mb-4">{selectedProduct.producto.toUpperCase()}</h2>
         {selectedProduct.ficha ? (
           <div className="space-y-2">
             {selectedProduct.ficha.material && (
