@@ -6,6 +6,10 @@ import zocalos from "../data/collections/zocalos.json";
 import toalleros from "../data/collections/toalleros.json";
 import estantes from "../data/collections/estantes.json";
 import desagues from "../data/collections/desagues.json";
+import vanitories from "../data/collections/vanitories.json";
+import cabinets from "../data/collections/cabinets.json";
+import espejos from "../data/collections/espejos.json";
+import perfiles_piso from "../data/collections/perfiles_piso.json";
 
 const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
   const canvasTexture = useMemo(() => {
@@ -66,6 +70,9 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
         // Para Antebaño, cargamos zócalos y toalleros
         const zocaloItem = zocalos && zocalos.length > 0 ? zocalos[0] : null;
         const toalleroItem = toalleros && toalleros.length > 0 ? toalleros[0] : null;
+        const vanitoryItem = vanitories && vanitories.length > 0 ? vanitories[0] : null;
+        const cabinetItem = cabinets && cabinets.length > 0 ? cabinets[0] : null;
+        const espejoItem = espejos && espejos.length > 0 ? espejos[0] : null;
 
         // Cargamos y dibujamos la imagen overlay del primer zócalo
         if (zocaloItem && zocaloItem.overlay) {
@@ -82,12 +89,39 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
             : toalleroItem.overlay;
           await loadAndDrawImage(overlayPath, toalleroItem.x, toalleroItem.y);
         }
+        
+        // Cargamos y dibujamos la imagen overlay del primer vanitory
+        if (vanitoryItem && vanitoryItem.overlay) {
+          const overlayPath = darkMode && vanitoryItem.overlayDark 
+            ? vanitoryItem.overlayDark 
+            : vanitoryItem.overlay;
+          await loadAndDrawImage(overlayPath, vanitoryItem.x, vanitoryItem.y);
+        }
+        
+        // Cargamos y dibujamos la imagen overlay del primer cabinet
+        if (cabinetItem && cabinetItem.overlay) {
+          const overlayPath = darkMode && cabinetItem.overlayDark 
+            ? cabinetItem.overlayDark 
+            : cabinetItem.overlay;
+          await loadAndDrawImage(overlayPath, cabinetItem.x, cabinetItem.y);
+        }
+        
+        // Cargamos y dibujamos la imagen overlay del primer espejo
+        if (espejoItem && espejoItem.overlay) {
+          const overlayPath = darkMode && espejoItem.overlayDark 
+            ? espejoItem.overlayDark 
+            : espejoItem.overlay;
+          await loadAndDrawImage(overlayPath, espejoItem.x, espejoItem.y);
+        }
       } 
       else if (ambienteName === "Baño" || ambienteName === "Baño principal") {
         // Para Baño, cargamos estantes y desagües
         try {
           const estanteItem = estantes && estantes.length > 0 ? estantes[0] : null;
           const desagueItem = desagues && desagues.length > 0 ? desagues[0] : null;
+          const vanitoryItem = vanitories && vanitories.length > 0 ? vanitories[0] : null;
+          const cabinetItem = cabinets && cabinets.length > 0 ? cabinets[0] : null;
+          const espejoItem = espejos && espejos.length > 0 ? espejos[0] : null;
 
           // Cargamos y dibujamos la imagen overlay del primer estante
           if (estanteItem && estanteItem.overlay) {
@@ -103,6 +137,30 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
               ? desagueItem.overlayDark 
               : desagueItem.overlay;
             await loadAndDrawImage(overlayPath, desagueItem.x, desagueItem.y);
+          }
+          
+          // Cargamos y dibujamos la imagen overlay del primer vanitory
+          if (vanitoryItem && vanitoryItem.overlay) {
+            const overlayPath = darkMode && vanitoryItem.overlayDark 
+              ? vanitoryItem.overlayDark 
+              : vanitoryItem.overlay;
+            await loadAndDrawImage(overlayPath, vanitoryItem.x, vanitoryItem.y);
+          }
+          
+          // Cargamos y dibujamos la imagen overlay del primer cabinet
+          if (cabinetItem && cabinetItem.overlay) {
+            const overlayPath = darkMode && cabinetItem.overlayDark 
+              ? cabinetItem.overlayDark 
+              : cabinetItem.overlay;
+            await loadAndDrawImage(overlayPath, cabinetItem.x, cabinetItem.y);
+          }
+          
+          // Cargamos y dibujamos la imagen overlay del primer espejo
+          if (espejoItem && espejoItem.overlay) {
+            const overlayPath = darkMode && espejoItem.overlayDark 
+              ? espejoItem.overlayDark 
+              : espejoItem.overlay;
+            await loadAndDrawImage(overlayPath, espejoItem.x, espejoItem.y);
           }
         } catch (error) {
           console.error("Error cargando colecciones para Baño:", error);
