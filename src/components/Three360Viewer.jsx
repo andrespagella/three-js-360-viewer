@@ -17,6 +17,7 @@ const Three360Viewer = ({
   developmentMode,
   darkMode,
   currentView,
+  selectedItems,
 }) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
@@ -56,7 +57,12 @@ const Three360Viewer = ({
             <sphereGeometry args={[500, 60, 40]} />
             <meshBasicMaterial transparent opacity={0} side={THREE.DoubleSide} />
           </mesh>
-          <TransparentCanvasSphere baseTexture={texture} darkMode={darkMode} currentView={currentView} />
+          <TransparentCanvasSphere 
+            baseTexture={texture} 
+            darkMode={darkMode} 
+            currentView={currentView} 
+            selectedItems={selectedItems}
+          />
         </>
       )}
 

@@ -11,7 +11,7 @@ import cabinets from "../data/collections/cabinets.json";
 import espejos from "../data/collections/espejos.json";
 import perfiles_piso from "../data/collections/perfiles_piso.json";
 
-const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
+const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedItems }) => {
   const canvasTexture = useMemo(() => {
     // Determine canvas dimensions from baseTexture if available, else default to 512
     const defaultWidth = 2048, defaultHeight = 1024;
@@ -61,6 +61,17 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
       return darkMode && item.overlayDark ? item.overlayDark : item.overlay;
     };
 
+    // Función para obtener el item seleccionado de una colección
+    const getSelectedItem = (collection, collectionName) => {
+      if (!collection || collection.length === 0) return null;
+      
+      // Usar el índice seleccionado por el usuario o el primero por defecto
+      const selectedIndex = selectedItems?.[collectionName] || 0;
+      
+      // Asegurarse de que el índice es válido
+      return collection[Math.min(selectedIndex, collection.length - 1)];
+    };
+
     // Función para cargar un item específico
     const loadItemOverlay = async (item) => {
       if (item && item.overlay) {
@@ -80,16 +91,16 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
       const ambienteName = currentView?.name || "";
       
       try {
-        // Obtenemos el primer item de cada colección
+        // Obtenemos el item seleccionado de cada colección
         const collections = {
-          zocalo: zocalos && zocalos.length > 0 ? zocalos[0] : null,
-          toallero: toalleros && toalleros.length > 0 ? toalleros[0] : null,
-          estante: estantes && estantes.length > 0 ? estantes[0] : null,
-          desague: desagues && desagues.length > 0 ? desagues[0] : null,
-          vanitory: vanitories && vanitories.length > 0 ? vanitories[0] : null,
-          cabinet: cabinets && cabinets.length > 0 ? cabinets[0] : null,
-          espejo: espejos && espejos.length > 0 ? espejos[0] : null,
-          perfil_piso: perfiles_piso && perfiles_piso.length > 0 ? perfiles_piso[0] : null
+          zocalo: getSelectedItem(zocalos, 'zocalos'),
+          toallero: getSelectedItem(toalleros, 'toalleros'),
+          estante: getSelectedItem(estantes, 'estantes'),
+          desague: getSelectedItem(desagues, 'desagues'),
+          vanitory: getSelectedItem(vanitories, 'vanitories'),
+          cabinet: getSelectedItem(cabinets, 'cabinets'),
+          espejo: getSelectedItem(espejos, 'espejos'),
+          perfil_piso: getSelectedItem(perfiles_piso, 'perfiles_piso')
         };
         
         if (ambienteName === "Antebaño" || ambienteName === "Ante baño" || ambienteName === "Antebaño principal") {
@@ -115,7 +126,7 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView }) => {
     loadAllImages();
 
     return texture;
-  }, [baseTexture, darkMode, currentView]);
+  }, [baseTexture, darkMode, currentView, selectedItems]);
 
   return (
     <mesh rotation={[0, 0, 0]} position={[0, 0, 0]}>

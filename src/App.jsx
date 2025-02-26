@@ -22,6 +22,18 @@ function App() {
   const [selectedPin, setSelectedPin] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
+  // Añadir un nuevo estado para almacenar las selecciones del usuario
+  const [selectedItems, setSelectedItems] = useState({
+    zocalos: 0,
+    toalleros: 0,
+    estantes: 0,
+    desagues: 0,
+    vanitories: 0,
+    cabinets: 0,
+    espejos: 0,
+    perfiles_piso: 0
+  });
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
@@ -67,7 +79,15 @@ function App() {
     }, 200);
   };
 
-  const handleCloseCloseup = () => {
+  // Modificar la función handleCloseCloseup para recibir y almacenar la selección
+  const handleCloseCloseup = (collection, selectedIndex) => {
+    // Si se proporciona una colección y un índice, actualizar la selección
+    if (collection && selectedIndex !== undefined) {
+      setSelectedItems(prev => ({
+        ...prev,
+        [collection]: selectedIndex
+      }));
+    }
     setCloseup(null);
   };
 
@@ -150,6 +170,7 @@ function App() {
             developmentMode={developmentMode}
             darkMode={darkMode}
             currentView={currentView}
+            selectedItems={selectedItems}
           />
           {closeup && (
             <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />

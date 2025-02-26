@@ -51,7 +51,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
           className="w-full h-full object-cover" 
         />
         <button
-          onClick={onClose}
+          onClick={() => onClose(currentCollection, selectedIndex)}
           className="absolute top-20 left-4 bg-black text-white px-4 py-2"
         >
           Vista principal

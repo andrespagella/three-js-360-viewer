@@ -58,7 +58,7 @@
         },
         {
           "id": 10,
-          "position": [350, -200, -150],
+          "position": [300, -200, -50],
           "data": "data/collections/baneras.json",
           "label": "Bañera"
         },
