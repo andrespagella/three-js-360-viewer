@@ -109,14 +109,14 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
         
         if (ambienteName === "Antebaño" || ambienteName === "Ante baño" || ambienteName === "Antebaño principal") {
           // Para Antebaño, cargamos zócalos, toalleros, vanitories, cabinets y espejos
+          await loadItemOverlay(collections.perfil_piso);
+          await loadItemOverlay(collections.perfil_pared);
           await loadItemOverlay(collections.zocalo);
           await loadItemOverlay(collections.toallero);
           await loadItemOverlay(collections.wallpanel);
           await loadItemOverlay(collections.vanitory);
           await loadItemOverlay(collections.cabinet);
           await loadItemOverlay(collections.espejo);
-          await loadItemOverlay(collections.perfil_piso);
-          await loadItemOverlay(collections.perfil_pared);
         } 
         else if (ambienteName === "Baño" || ambienteName === "Baño principal") {
           // Para Baño, cargamos estantes, desagües, vanitories, cabinets y espejos
