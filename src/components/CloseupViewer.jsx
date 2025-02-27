@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import ViewerHeader from "./ViewerHeader";
 
 const CloseupViewer = ({ closeup, onClose }) => {
-  const { file: closeupFile, collection: defaultCollection } = closeup;
+  const { file: closeupFile, collection: defaultCollection, selectedIndex: initialIndex = 0 } = closeup;
   const [currentCollection, setCurrentCollection] = useState(defaultCollection || "inodoros");
   const [products, setProducts] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(initialIndex);
 
   useEffect(() => {
     // Dynamically import the JSON file based on the currentCollection state
@@ -13,7 +13,13 @@ const CloseupViewer = ({ closeup, onClose }) => {
       .then(module => {
         const data = module.default;
         setProducts(data);
-        if (closeupFile) {
+        
+        // Si se proporciona un índice inicial, usarlo
+        if (initialIndex !== undefined && initialIndex < data.length) {
+          setSelectedIndex(initialIndex);
+        } 
+        // Si no, intentar encontrar el producto por su closeup
+        else if (closeupFile) {
           const foundIndex = data.findIndex(product => product.closeup === closeupFile);
           if (foundIndex !== -1) {
             setSelectedIndex(foundIndex);
@@ -27,7 +33,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
       .catch(err => {
         console.error(`Error loading JSON for collection ${currentCollection}:`, err);
       });
-  }, [currentCollection, closeupFile]);
+  }, [currentCollection, closeupFile, initialIndex]);
 
   const handleCollectionChange = (newCollection) => {
     if (newCollection !== currentCollection) {

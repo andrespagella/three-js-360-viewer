@@ -32,8 +32,20 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
             const collectionModule = await import(/* @vite-ignore */ `../${pin.data}`);
             const collectionData = collectionModule.default;
             
-            if (collectionData && collectionData.length > 0 && collectionData[0].thumbnail) {
-              thumbnailsData[pin.id] = collectionData[0].thumbnail;
+            // Extraer el nombre de la colección del path del archivo
+            const collectionName = pin.data.split('/').pop().replace('.json', '');
+            
+            // Usar el índice seleccionado de selectedItems si existe, de lo contrario usar 0
+            const selectedIndex = selectedItems[collectionName] || 0;
+            
+            if (collectionData && collectionData.length > 0) {
+              // Usar el elemento en el índice seleccionado, o el primero si el índice no es válido
+              const selectedItem = collectionData[selectedIndex] || collectionData[0];
+              if (selectedItem.thumbnail) {
+                thumbnailsData[pin.id] = selectedItem.thumbnail;
+              } else {
+                thumbnailsData[pin.id] = '/default-thumbnail.svg';
+              }
             } else {
               thumbnailsData[pin.id] = '/default-thumbnail.svg';
             }
@@ -48,7 +60,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     };
     
     loadThumbnails();
-  }, [allPins]);
+  }, [allPins, selectedItems]);
 
   // Función para obtener el thumbnail para un pin específico
   const getThumbnailForPin = (pin) => {

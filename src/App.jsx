@@ -50,7 +50,7 @@ function App() {
 
   // Actualizamos la función para seleccionar un pin.
   // Se carga el archivo JSON indicado en el atributo "data",
-  // se toma el primer elemento y se usa su propiedad "closeup".
+  // se toma el elemento seleccionado según selectedItems y se usa su propiedad "closeup".
   const handleSelectPin = async (pin) => {
     try {
       // Construir la URL correcta del recurso
@@ -60,7 +60,20 @@ function App() {
   
       if (Array.isArray(jsonData) && jsonData.length > 0) {
         const collectionName = pin.data.split('/').pop().replace('.json', '');
-        const updatedPin = { ...pin, closeup: jsonData[0].closeup, collection: collectionName };
+        
+        // Usar el índice seleccionado de selectedItems si existe, de lo contrario usar 0
+        const selectedIndex = selectedItems[collectionName] || 0;
+        
+        // Usar el elemento en el índice seleccionado, o el primero si el índice no es válido
+        const selectedItem = jsonData[selectedIndex] || jsonData[0];
+        
+        const updatedPin = { 
+          ...pin, 
+          closeup: selectedItem.closeup, 
+          collection: collectionName,
+          selectedIndex: selectedIndex
+        };
+        
         setSelectedPin(updatedPin);
       }
     } catch (error) {
@@ -73,7 +86,11 @@ function App() {
     setZooming(true);
     setTimeout(() => {
       if (selectedPin) {
-        setCloseup({ file: selectedPin.closeup, collection: selectedPin.collection });
+        setCloseup({ 
+          file: selectedPin.closeup, 
+          collection: selectedPin.collection,
+          selectedIndex: selectedPin.selectedIndex || 0
+        });
       }
       setZooming(false);
     }, 200);

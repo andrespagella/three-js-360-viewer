@@ -74,13 +74,13 @@
       "ambiente": "Baño",
       "pins": [
         {
-          "id": 1,
+          "id": 12,
           "position": [-50, -300, -150],
           "data": "data/collections/desagues.json",
           "label": "Desagües"
         },
         {
-          "id": 2,
+          "id": 13,
           "position": [250, -100, 50],
           "data": "data/collections/estantes.json",
           "label": "Estantes"
