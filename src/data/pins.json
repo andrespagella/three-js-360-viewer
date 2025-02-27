@@ -65,7 +65,7 @@
         {
           "id": 11,
           "position": [280, 0, 270],
-          "data": "data/collections/perfiles-pared.json",
+          "data": "data/collections/perfiles_pared.json",
           "label": "Perfiles Pared"
         }
       ]

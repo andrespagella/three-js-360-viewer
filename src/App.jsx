@@ -141,6 +141,7 @@ function App() {
               onSelectAmbiente={handleSelectAmbiente}
               onSelectPin={handleSelectPin}
               panelExpanded={collectionPanelExpanded}
+              selectedItems={selectedItems}
             />
 
             {!isMobile && (

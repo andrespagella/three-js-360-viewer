@@ -1,0 +1,22 @@
+[
+    {
+        "producto": "bañera obo160s",
+        "SKU": "obo160s",
+        "descripcion": "bañera ovalada",
+        "caracteristicas": [
+            "Solid furface: es un material innovador similar a la piedra, compuesto por minerales y resinas que le otorgan versatilidad y una textura suave y homogénea. Su nula porosidad permite un fácil mantenimiento y limpieza ideal para tu baño."
+        ],
+        "ficha": {
+            "coleccion": "ocean",
+            "material": "orastone",
+            "medida": [
+                "160 cm",
+                "78 cm",
+                "71 cm"
+            ],
+            "color": "blanco"
+        },
+        "thumbnail": "thumbnails/baneras/banera.webp",
+        "closeup": "closeups/baneras/banera.webp"
+    }
+]
