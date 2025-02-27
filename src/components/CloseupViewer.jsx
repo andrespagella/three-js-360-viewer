@@ -93,13 +93,14 @@ const CloseupViewer = ({ closeup, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-10 flex"
+      className="fixed inset-0 z-10 flex p-0 m-0"
       onDragStart={preventDragHandler}
       onDragOver={preventDragHandler}
       onDragEnd={preventDragHandler}
       onDrop={preventDragHandler}
     >
-      <div className="relative flex-1">
+      {/* Contenedor de la imagen principal - exactamente 2/3 del ancho */}
+      <div className="relative w-2/3 h-full p-0 m-0">
         <img 
           src={selectedProduct.closeup} 
           alt={selectedProduct.descripcion} 
@@ -107,27 +108,35 @@ const CloseupViewer = ({ closeup, onClose }) => {
           draggable="false"
           onDragStart={preventDragHandler}
         />
+        
+        {/* Botón Vista Principal - pegado al borde izquierdo */}
         <button
           onClick={() => handleCloseCloseup(currentCollection, selectedIndex)}
-          className="absolute top-20 left-4 bg-black text-white px-4 py-2 rounded-lg text-sm font-bold"
+          className="absolute top-20 left-[10px] bg-black text-white px-4 py-2 text-sm font-bold rounded-md"
         >
           Vista principal
         </button>
 
-        {/* Contenedor principal de la galería de thumbnails */}
-        <div className="absolute bottom-0 left-0 w-full" style={{ bottom: '-10px' }}>
-          {/* Contenedor con padding adicional para las sombras */}
-          <div className="px-4 pt-4 pb-6">
-            {/* Contenedor de desplazamiento con overflow visible para las sombras */}
-            <div className="flex space-x-4 overflow-x-auto" style={{ paddingBottom: '8px' }}>
+        {/* Contenedor principal de la galería - pegado completamente al borde inferior */}
+        <div className="absolute bottom-0 left-0 right-0 w-full m-0 p-0" style={{ 
+          bottom: '0',
+          backgroundColor: 'rgba(0,0,0,0.0)'
+        }}>
+          {/* Eliminar todos los paddings excepto un poco arriba */}
+          <div className="pt-2 pl-2 pb-2 px-0 m-0 w-full">
+            {/* Contenedor de desplazamiento - eliminar todos los espacios */}
+            <div className="flex overflow-x-auto m-0 p-0 w-full">
               {products.map((product, index) => (
                 <div 
                   key={index} 
-                  className="relative"
-                  style={{ padding: '3px' }} // Espacio para la sombra
+                  className="relative flex-shrink-0"
+                  style={{ 
+                    padding: '3px',
+                    marginLeft: index === 0 ? '0' : '8px' // Espacio entre items, pero no al inicio
+                  }}
                 >
                   <div 
-                    className="w-32 h-32 relative cursor-pointer rounded-[10px] overflow-hidden"
+                    className="w-28 h-28 relative cursor-pointer rounded-[10px] overflow-hidden"
                     onClick={() => setSelectedIndex(index)}
                     style={index === selectedIndex ? 
                       { 
@@ -155,15 +164,16 @@ const CloseupViewer = ({ closeup, onClose }) => {
         </div>
       </div>
       
+      {/* Panel lateral - exactamente 1/3 del ancho y pegado al borde derecho */}
       <div 
-        className="w-1/3 p-6 overflow-y-auto"
+        className="w-1/3 p-6 overflow-y-auto m-0"
         style={{ 
           backgroundColor: theme.background.primary,
           color: theme.text.primary,
           borderLeft: `1px solid ${theme.border.light}`,
           boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)',
-          marginTop: '57px', // Ajustado para separarlo del top como las otras sidebars
-          height: 'calc(100% - 57px)' // Ajustar la altura para que no sobrepase la pantalla
+          marginTop: '57px',
+          height: 'calc(100% - 57px)'
         }}
       >
         <h2 
