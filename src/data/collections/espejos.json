@@ -1,61 +1,21 @@
 [
     {
-        "producto": "espejo gap060m",
-        "SKU": "gap060m",
-        "descripcion": "ESPEJO LED GAP 60X80 CM LAQUEADO",
+        "producto": "espejo orb060m",
+        "SKU": "orb060m",
+        "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
         "caracteristicas": [
-            "Diseño en tendencia.",
+            "Diseño curvo.",
             "Posibilidad con marco o sin marco.",
             "Luz neutra LED integrada en el contorno del espejo."
         ],
         "ficha": {
-            "coleccion": "Gap",
-            "terminacion": "Gris grafito mate",
-            "medidas": ["400mm", "600mm", "800mm"]
+            "coleccion": "Orbital",
+            "terminacion": "Azul Intenso mate",
+            "medidas": ["600mm", "800mm"]
         },
-        "thumbnail": "thumbnails/espejos/GAP060M.webp",
-        "closeup": "closeups/espejos/GAP060M.webp",
-        "overlay": "overlays/espejos/GAP060M.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
-        "producto": "espejo ten050m",
-        "SKU": "ten050m",
-        "descripcion": "ESPEJO LED TENDENCE 50X90 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño que se adapta a tu estilo.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
-        "ficha": {
-            "coleccion": "Tendence",
-            "terminacion": "Verde Suculenta mate",
-            "medidas": ["500mm", "100mm"]
-        },
-        "thumbnail": "thumbnails/espejos/TEN050M.webp",
-        "closeup": "closeups/espejos/TEN050M.webp",
-        "overlay": "overlays/espejos/TEN050M.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
-        "producto": "espejo pil040m",
-        "SKU": "pil040m",
-        "descripcion": "ESPEJO LED PILL 40X100 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño tipo pastilla.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
-        "ficha": {
-            "coleccion": "Pill",
-            "terminacion": "Greige mate",
-            "medidas": ["400mm", "1000mm"]
-        },
-        "thumbnail": "thumbnails/espejos/PIL040M.webp",
-        "closeup": "closeups/espejos/PIL040M.webp",
-        "overlay": "overlays/espejos/PIL040M.webp",
+        "thumbnail": "thumbnails/espejos/ORB060M.webp",
+        "closeup": "closeups/espejos/ORB060M.webp",
+        "overlay": "overlays/espejos/ORB060M.webp",
         "x": 0,
         "y": 0
     },
@@ -80,22 +40,62 @@
         "y": 0
     },
     {
-        "producto": "espejo orb060m",
-        "SKU": "orb060m",
-        "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
+        "producto": "espejo pil040m",
+        "SKU": "pil040m",
+        "descripcion": "ESPEJO LED PILL 40X100 CM LAQUEADO",
         "caracteristicas": [
-            "Diseño curvo.",
+            "Diseño tipo pastilla.",
             "Posibilidad con marco o sin marco.",
             "Luz neutra LED integrada en el contorno del espejo."
         ],
         "ficha": {
-            "coleccion": "Orbital",
-            "terminacion": "Azul Intenso mate",
-            "medidas": ["600mm", "800mm"]
+            "coleccion": "Pill",
+            "terminacion": "Greige mate",
+            "medidas": ["400mm", "1000mm"]
         },
-        "thumbnail": "thumbnails/espejos/ORB060M.webp",
-        "closeup": "closeups/espejos/ORB060M.webp",
-        "overlay": "overlays/espejos/ORB060M.webp",
+        "thumbnail": "thumbnails/espejos/PIL040M.webp",
+        "closeup": "closeups/espejos/PIL040M.webp",
+        "overlay": "overlays/espejos/PIL040M.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "espejo ten050m",
+        "SKU": "ten050m",
+        "descripcion": "ESPEJO LED TENDENCE 50X90 CM LAQUEADO",
+        "caracteristicas": [
+            "Diseño que se adapta a tu estilo.",
+            "Posibilidad con marco o sin marco.",
+            "Luz neutra LED integrada en el contorno del espejo."
+        ],
+        "ficha": {
+            "coleccion": "Tendence",
+            "terminacion": "Verde Suculenta mate",
+            "medidas": ["500mm", "100mm"]
+        },
+        "thumbnail": "thumbnails/espejos/TEN050M.webp",
+        "closeup": "closeups/espejos/TEN050M.webp",
+        "overlay": "overlays/espejos/TEN050M.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "espejo gap060m",
+        "SKU": "gap060m",
+        "descripcion": "ESPEJO LED GAP 60X80 CM LAQUEADO",
+        "caracteristicas": [
+            "Diseño en tendencia.",
+            "Posibilidad con marco o sin marco.",
+            "Luz neutra LED integrada en el contorno del espejo."
+        ],
+        "ficha": {
+            "coleccion": "Gap",
+            "terminacion": "Gris grafito mate",
+            "medidas": ["400mm", "600mm", "800mm"]
+        },
+        "thumbnail": "thumbnails/espejos/GAP060M.webp",
+        "closeup": "closeups/espejos/GAP060M.webp",
+        "overlay": "overlays/espejos/GAP060M.webp",
         "x": 0,
         "y": 0
     }

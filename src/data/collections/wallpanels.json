@@ -1,32 +1,5 @@
 [
     {
-        "producto": "REVESTIMIENTO EWP302-260T",
-        "sku": "ewp302-260t",
-        "descripcion": "Revestimientos de paredes EPS",
-        "caracteristicas": [
-            "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
-            "Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio",
-            "Son muy livianos lo que permiten una fácil instalación",
-            "Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente",
-            "\n- Diseño y decoración a tus ambientes\n- Ayudan a mantener temperaturas más agradables en interiores \n- Son muy livianos lo que permite una fácil instalación",
-            "\n- Muy buena resistencia al impacto y la humedad, \n- Se limpian fácilmente",
-            ""
-        ],
-        "ficha": {
-            "material": "EPS",
-            "medidas": [
-                "1.2",
-                "12",
-                "244 cm"
-            ]
-        },
-        "thumbnail": "thumbnails/wallpanels-spc/EWP302-260T.webp",
-        "closeup": "closeups/wallpanels-spc/EWP302-260T.webp",
-        "overlay": "overlays/wallpanels-spc/EWP302-260T.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
         "producto": "REVESTIMIENTO EWP301-259T",
         "sku": "ewp301-259t",
         "descripcion": "Revestimientos de paredes EPS",
@@ -50,6 +23,33 @@
         "thumbnail": "thumbnails/wallpanels-spc/EWP301-259T.webp",
         "closeup": "closeups/wallpanels-spc/EWP301-259T.webp",
         "overlay": "overlays/wallpanels-spc/EWP301-259T.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "REVESTIMIENTO EWP302-260T",
+        "sku": "ewp302-260t",
+        "descripcion": "Revestimientos de paredes EPS",
+        "caracteristicas": [
+            "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
+            "Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio",
+            "Son muy livianos lo que permiten una fácil instalación",
+            "Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente",
+            "\n- Diseño y decoración a tus ambientes\n- Ayudan a mantener temperaturas más agradables en interiores \n- Son muy livianos lo que permite una fácil instalación",
+            "\n- Muy buena resistencia al impacto y la humedad, \n- Se limpian fácilmente",
+            ""
+        ],
+        "ficha": {
+            "material": "EPS",
+            "medidas": [
+                "1.2",
+                "12",
+                "244 cm"
+            ]
+        },
+        "thumbnail": "thumbnails/wallpanels-spc/EWP302-260T.webp",
+        "closeup": "closeups/wallpanels-spc/EWP302-260T.webp",
+        "overlay": "overlays/wallpanels-spc/EWP302-260T.webp",
         "x": 0,
         "y": 0
     },

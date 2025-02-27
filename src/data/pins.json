@@ -28,7 +28,7 @@
         },
         {
           "id": 5,
-          "position": [-300, 50, 200],
+          "position": [-300, -80, 200],
           "data": "data/collections/cabinets.json",
           "label": "Cabinets"
         },
