@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ViewerHeader from "./ViewerHeader";
+import { useTheme } from "../context/ThemeContext";
 
 const CloseupViewer = ({ closeup, onClose }) => {
   const { file: closeupFile, collection: defaultCollection, selectedIndex: initialIndex = 0 } = closeup;
   const [currentCollection, setCurrentCollection] = useState(defaultCollection || "inodoros");
   const [products, setProducts] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(initialIndex);
+  const { theme } = useTheme();
 
   useEffect(() => {
     // Dynamically import the JSON file based on the currentCollection state
@@ -72,7 +74,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
         />
         <button
           onClick={() => onClose(currentCollection, selectedIndex)}
-          className="absolute top-20 left-4 bg-black text-white px-4 py-2"
+          className="absolute top-20 left-4 bg-black text-white px-4 py-2 rounded-lg text-sm font-bold"
         >
           Vista principal
         </button>
@@ -88,31 +90,87 @@ const CloseupViewer = ({ closeup, onClose }) => {
                 onClick={() => setSelectedIndex(index)}
                 draggable="false"
                 onDragStart={preventDragHandler}
+                style={index === selectedIndex ? 
+                  { 
+                    borderColor: theme.accent.primary,
+                    boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)'
+                  } : 
+                  { 
+                    border: '1px solid rgba(0,0,0,0.2)',
+                    boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
+                  }
+                }
               />
             ))}
           </div>
         </div>
       </div>
       
-      <div className="w-1/3 bg-white mt-10 p-6 overflow-y-auto">
-        <h2 className="text-xl font-bold mb-4">{selectedProduct.producto.toUpperCase()}</h2>
+      <div 
+        className="w-1/3 p-6 overflow-y-auto"
+        style={{ 
+          backgroundColor: theme.background.primary,
+          color: theme.text.primary,
+          borderLeft: `1px solid ${theme.border.light}`,
+          boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)',
+          marginTop: '57px', // Ajustado para separarlo del top como las otras sidebars
+          height: 'calc(100% - 57px)' // Ajustar la altura para que no sobrepase la pantalla
+        }}
+      >
+        <h2 
+          className="text-xl font-bold"
+          style={{ color: theme.text.primary }}
+        >
+          {selectedProduct.producto.toUpperCase()}
+        </h2>
+        
+        {selectedProduct.SKU && (
+          <p 
+            className="text-sm mb-4"
+            style={{ color: theme.text.tertiary }}
+          >
+            SKU: {selectedProduct.SKU}
+          </p>
+        )}
+
+        <h3 className="text-lg font-bold mb-3">Ficha Técnica</h3>
+        
         {selectedProduct.ficha ? (
-          <div className="space-y-2">
-            {selectedProduct.ficha.material && (
-              <p><strong>Material:</strong> {selectedProduct.ficha.material}</p>
-            )}
-            {selectedProduct.ficha.terminacion && (
-              <p><strong>Terminación:</strong> {selectedProduct.ficha.terminacion}</p>
-            )}
-            {selectedProduct.ficha.medidas && (
-              <p><strong>Medidas:</strong> {selectedProduct.ficha.medidas.join(", ")}</p>
-            )}
-            {selectedProduct.ficha.forma && (
-              <p><strong>Forma:</strong> {selectedProduct.ficha.forma}</p>
-            )}
+          <div className="w-full">
+            <table className="w-full border-collapse border border-black">
+              <tbody>
+                {Object.entries(selectedProduct.ficha).map(([key, value]) => {
+                  // Ignorar propiedades que no deberían mostrarse o están vacías
+                  if (!value || typeof value === 'object' && !Array.isArray(value)) return null;
+                  
+                  // Formatear el valor si es un array
+                  const displayValue = Array.isArray(value) ? value.join(", ") : value;
+                  
+                  // Capitalizar la primera letra de la clave
+                  const label = key.charAt(0).toUpperCase() + key.slice(1);
+                  
+                  return (
+                    <tr key={key} style={{ borderBottom: `1px solid black` }}>
+                      <td 
+                        className="py-2 px-3 font-bold border border-black align-top" 
+                        style={{ color: theme.text.primary, width: "40%" }}
+                      >
+                        {label}
+                      </td>
+                      <td 
+                        className="py-2 px-3 border border-black align-top text-sm" 
+                        style={{ color: theme.text.secondary }}
+                      >
+                        {displayValue}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         ) : (
-          <p>No hay información disponible.</p>
+          <p style={{ color: theme.text.tertiary }}>No hay información disponible.</p>
         )}
       </div>
     </div>
