@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
-import { FixedSizeGrid } from 'react-window';
 import { processMobileCollection } from "../utils/imageUtils";
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
@@ -67,9 +66,6 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     loadThumbnails();
   }, [allPins, selectedItems]);
 
-  // Calcular la altura disponible para el grid
-  const gridHeight = isMobile ? 220 : window.innerHeight - 110; // Ajustar para que ocupe todo el espacio disponible
-
   return (
     <div 
       className={`fixed z-40 transition-transform duration-300 overflow-hidden shadow-sm ${
@@ -84,65 +80,44 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
         boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
       }}
     >
-      <div className="h-full">
+      <div className="h-full flex flex-col">
         <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mt-2 mb-2 px-2">Colección</h2>
 
-        <FixedSizeGrid
-          columnCount={2}
-          columnWidth={140}
-          height={gridHeight}
-          rowCount={Math.ceil(allPins.length / 2)}
-          rowHeight={130}
-          width={300}
-          itemData={allPins}
-          className="mx-auto"
+        <div 
+          className="flex-1 overflow-y-auto px-2"
           style={{ overflowX: 'hidden' }}
         >
-          {({ columnIndex, rowIndex, style }) => {
-            const index = rowIndex * 2 + columnIndex;
-            if (index >= allPins.length) return null;
-            const pin = allPins[index];
-            
-            // Modificar el estilo para añadir margen entre elementos
-            const adjustedStyle = {
-              ...style,
-              left: parseInt(style.left) + 5,
-              top: parseInt(style.top) + 5,
-              width: parseInt(style.width) - 10,
-              height: parseInt(style.height) - 10,
-            };
-            
-            return (
-              <div style={adjustedStyle}>
-                <div
-                  onClick={() => {
-                    onSelectAmbiente(ambientes.find(a => a.name === pin.ambiente));
-                    onSelectPin(pin);
-                  }}
-                  className="cursor-pointer rounded-lg overflow-hidden hover:shadow-md transition-shadow h-full"
-                  style={{ border: `1px solid ${theme.border.light}` }}
-                >
-                  <div className="relative h-full flex flex-col">
-                    <img
-                      src={thumbnails[pin.id] || '/default-thumbnail.svg'}
-                      alt={pin.title || 'Thumbnail'}
-                      className="w-full h-20 object-cover"
-                    />
-                    <div 
-                      className="absolute bottom-0 left-0 right-0 p-1 text-xs font-bold text-center"
-                      style={{ 
-                        backgroundColor: theme.background.secondary,
-                        color: theme.text.primary
-                      }}
-                    >
-                      {pin.label || 'Sin título'}
-                    </div>
+          <div className="grid grid-cols-2 gap-2 auto-rows-max">
+            {allPins.map((pin, index) => (
+              <div 
+                key={`pin-${pin.id}-${index}`}
+                onClick={() => {
+                  onSelectAmbiente(ambientes.find(a => a.name === pin.ambiente));
+                  onSelectPin(pin);
+                }}
+                className="cursor-pointer rounded-lg overflow-hidden hover:shadow-md transition-shadow h-[120px]"
+                style={{ border: `1px solid ${theme.border.light}` }}
+              >
+                <div className="relative h-full flex flex-col">
+                  <img
+                    src={thumbnails[pin.id] || '/default-thumbnail.svg'}
+                    alt={pin.title || 'Thumbnail'}
+                    className="w-full h-full object-cover"
+                  />
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 p-1 text-xs font-bold text-center"
+                    style={{ 
+                      backgroundColor: theme.background.secondary,
+                      color: theme.text.primary
+                    }}
+                  >
+                    {pin.label || 'Sin título'}
                   </div>
                 </div>
               </div>
-            );
-          }}
-        </FixedSizeGrid>
+            ))}
+          </div>
+        </div>
       </div>
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
