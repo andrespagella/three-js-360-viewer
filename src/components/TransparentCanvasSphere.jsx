@@ -8,8 +8,10 @@ import estantes from "../data/collections/estantes.json";
 import desagues from "../data/collections/desagues.json";
 import vanitories from "../data/collections/vanitories.json";
 import cabinets from "../data/collections/cabinets.json";
+import wallpanels from "../data/collections/wallpanels.json";
 import espejos from "../data/collections/espejos.json";
 import perfiles_piso from "../data/collections/perfiles_piso.json";
+import perfiles_pared from "../data/collections/perfiles_pared.json";
 
 const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedItems }) => {
   const canvasTexture = useMemo(() => {
@@ -97,19 +99,24 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
           toallero: getSelectedItem(toalleros, 'toalleros'),
           estante: getSelectedItem(estantes, 'estantes'),
           desague: getSelectedItem(desagues, 'desagues'),
+          wallpanel: getSelectedItem(wallpanels, 'wallpanels'),
           vanitory: getSelectedItem(vanitories, 'vanitories'),
           cabinet: getSelectedItem(cabinets, 'cabinets'),
           espejo: getSelectedItem(espejos, 'espejos'),
-          perfil_piso: getSelectedItem(perfiles_piso, 'perfiles_piso')
+          perfil_piso: getSelectedItem(perfiles_piso, 'perfiles_piso'),
+          perfil_pared: getSelectedItem(perfiles_pared, 'perfiles_pared')
         };
         
         if (ambienteName === "Antebaño" || ambienteName === "Ante baño" || ambienteName === "Antebaño principal") {
           // Para Antebaño, cargamos zócalos, toalleros, vanitories, cabinets y espejos
           await loadItemOverlay(collections.zocalo);
           await loadItemOverlay(collections.toallero);
+          await loadItemOverlay(collections.wallpanel);
           await loadItemOverlay(collections.vanitory);
           await loadItemOverlay(collections.cabinet);
           await loadItemOverlay(collections.espejo);
+          await loadItemOverlay(collections.perfil_piso);
+          await loadItemOverlay(collections.perfil_pared);
         } 
         else if (ambienteName === "Baño" || ambienteName === "Baño principal") {
           // Para Baño, cargamos estantes, desagües, vanitories, cabinets y espejos

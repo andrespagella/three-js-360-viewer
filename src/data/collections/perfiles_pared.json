@@ -1,5 +1,31 @@
 [
     {
+        "producto": "perfil decorativo 1810",
+        "sku": 1810,
+        "descripcion": "Terminación Cuadrada",
+        "caracteristicas": [
+            "Perfil de acero inoxidable",
+            "Puede utilizarse como divisor de pisos en el mismo nivel, para unir diferentes revestimientos a 90 grados, delimitar ambientes o como terminación de escalón protegiendo el canto.\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
+        ],
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Cromo",
+            "medidas": [
+                "10 mm",
+                "10 mm",
+                "2,5mts"
+            ],
+            "peso": "0.625 kg",
+            "forma": "Cuadrada",
+            "instrucciones": "https://www.youtube.com/watch?v=42JdNYGnGxI"
+        },
+        "thumbnail": "thumbnails/perfiles/1810.webp",
+        "closeup": "closeups/perfiles_pared/1810.webp",
+        "overlay": "overlays/perfiles_pared/1810.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
         "producto": "perfil decorativo 3421",
         "sku": 3421,
         "descripcion": "Guardacanto Quadra ",
@@ -21,8 +47,89 @@
             "instrucciones": "https://www.youtube.com/watch?v=R_xH1_iuewI&t=1s"
         },
         "thumbnail": "thumbnails/perfiles/3421.webp",
-        "closeup": "closeups/perfiles_piso/3421.webp",
-        "overlay": "overlays/perfiles_piso/3421.webp",
+        "closeup": "closeups/perfiles_pared/3421.webp",
+        "overlay": "overlays/perfiles_pared/3421.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "perfil decorativo 3422",
+        "sku": 3422,
+        "descripcion": "Guardacanto Quadra ",
+        "caracteristicas": [
+            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
+            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
+            "\n- Protege las uniones\n- Diseño moderno"
+        ],
+        "ficha": {
+            "material": "Aluminio",
+            "terminacion": "Oro Mate",
+            "medidas": [
+                "10 mm",
+                "10 mm",
+                "2,5mts"
+            ],
+            "peso": "0.258 kg",
+            "forma": "Cuadrada",
+            "instrucciones": "https://www.youtube.com/watch?v=R_xH1_iuewI&t=1s"
+        },
+        "thumbnail": "thumbnails/perfiles/3422.webp",
+        "closeup": "closeups/perfiles_pared/3422.webp",
+        "overlay": "overlays/perfiles_pared/3422.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "perfil decorativo 3425B",
+        "sku": "3425b",
+        "descripcion": "Guardacanto Quadra ",
+        "caracteristicas": [
+            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
+            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
+            "\n- Protege las uniones\n- Diseño moderno"
+        ],
+        "ficha": {
+            "material": "Aluminio",
+            "terminacion": "Olivo",
+            "medidas": [
+                "10 mm",
+                "10 mm",
+                "2,5mts"
+            ],
+            "peso": "0.253 kg",
+            "forma": "Cuadrada",
+            "instrucciones": "https://www.youtube.com/watch?v=R_xH1_iuewI&t=1s"
+        },
+        "thumbnail": "thumbnails/perfiles/3425B.webp",
+        "closeup": "closeups/perfiles_pared/3425B.webp",
+        "overlay": "overlays/perfiles_pared/3425B.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "perfil decorativo 3428TXA",
+        "sku": "3428txa",
+        "descripcion": "Guardacanto Quadra ",
+        "caracteristicas": [
+            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
+            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
+            "\n- Protege las uniones\n- Diseño moderno\n- Innovador color simil piedra "
+        ],
+        "ficha": {
+            "material": "Aluminio",
+            "terminacion": "Arena",
+            "medidas": [
+                "10 mm",
+                "10 mm",
+                "2,5mts"
+            ],
+            "peso": "0.253 kg",
+            "forma": "Cuadrada",
+            "instrucciones": "https://www.youtube.com/watch?v=R_xH1_iuewI&t=1s"
+        },
+        "thumbnail": "thumbnails/perfiles/3428TXA.webp",
+        "closeup": "closeups/perfiles_pared/3428TXA.webp",
+        "overlay": "overlays/perfiles_pared/3428TXA.webp",
         "x": 0,
         "y": 0
     }

@@ -13,7 +13,7 @@
         "ficha": {
             "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior.",
             "terminacion": "Gris grafito mate",
-            "medidas": "30X30X150 CM"
+            "medidas": ["300mm", "300mm", "1500mm"]
         },
         "thumbnail": "thumbnails/cabinets/VARPLEL.webp",
         "closeup": "closeups/cabinets/VARPLEL.webp",
@@ -35,7 +35,7 @@
         "ficha": {
             "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas.",
             "terminacion": "Verde Suculenta mate",
-            "medidas": "30X30X150 CM"
+            "medidas": ["300mm", "300mm", "1500mm"]
         },
         "thumbnail": "thumbnails/cabinets/RAVPLEL.webp",
         "closeup": "closeups/cabinets/RAVPLEL.webp",
@@ -57,7 +57,7 @@
         "ficha": {
             "composicion": "1 tabiquefijo, 2 estantes movibles en el interior y 1 estante movible en el exterior",
             "terminacion": "Greige mate",
-            "medidas": "30X30X150 CM"
+            "medidas": ["300mm", "300mm", "1500mm"]
         },
         "thumbnail": "thumbnails/cabinets/MADDUOL.webp",
         "closeup": "closeups/cabinets/MADDUOL.webp",
@@ -79,7 +79,7 @@
         "ficha": {
             "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas",
             "terminacion": "Roble Natural",
-            "medidas": "30X30X150 CM"
+            "medidas": ["300mm", "300mm", "1500mm"]
         },
         "thumbnail": "thumbnails/cabinets/MADSIMM.webp",
         "closeup": "closeups/cabinets/MADSIMM.webp",
@@ -101,7 +101,7 @@
         "ficha": {
             "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior",
             "terminacion": "Azul Intenso mate\nc/ molduras",
-            "medidas": "30X30X150 CM"
+            "medidas": ["300mm", "300mm", "1500mm"]
         },
         "thumbnail": "thumbnails/cabinets/MADPLEL.webp",
         "closeup": "closeups/cabinets/MADPLEL.webp",

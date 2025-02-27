@@ -11,7 +11,7 @@
         "ficha": {
             "coleccion": "Gap",
             "terminacion": "Gris grafito mate",
-            "medidas": "\n40 cm y 60 cm de ancho x 80 cm de altura."
+            "medidas": ["400mm", "600mm", "800mm"]
         },
         "thumbnail": "thumbnails/espejos/GAP060M.webp",
         "closeup": "closeups/espejos/GAP060M.webp",
@@ -31,7 +31,7 @@
         "ficha": {
             "coleccion": "Tendence",
             "terminacion": "Verde Suculenta mate",
-            "medidas": "50 cm de ancho x 100 cm de altura."
+            "medidas": ["500mm", "100mm"]
         },
         "thumbnail": "thumbnails/espejos/TEN050M.webp",
         "closeup": "closeups/espejos/TEN050M.webp",
@@ -51,7 +51,7 @@
         "ficha": {
             "coleccion": "Pill",
             "terminacion": "Greige mate",
-            "medidas": "40 m de ancho x 100 cm de altura."
+            "medidas": ["400mm", "1000mm"]
         },
         "thumbnail": "thumbnails/espejos/PIL040M.webp",
         "closeup": "closeups/espejos/PIL040M.webp",
@@ -71,7 +71,7 @@
         "ficha": {
             "coleccion": "Contour",
             "terminacion": "Roble Natural",
-            "medidas": "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm de ancho x 72 cm de altura"
+            "medidas": ["60mm", "1500mm"]
         },
         "thumbnail": "thumbnails/espejos/CON080M.webp",
         "closeup": "closeups/espejos/CON080M.webp",
@@ -91,7 +91,7 @@
         "ficha": {
             "coleccion": "Orbital",
             "terminacion": "Azul Intenso mate",
-            "medidas": "60 cm y 80 cm de diámetro."
+            "medidas": ["600mm", "800mm"]
         },
         "thumbnail": "thumbnails/espejos/ORB060M.webp",
         "closeup": "closeups/espejos/ORB060M.webp",

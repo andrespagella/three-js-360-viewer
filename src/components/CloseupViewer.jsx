@@ -42,6 +42,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
     }
   };
 
+  // Prevenir el comportamiento de arrastre (drag) en las imágenes
+  const preventDragHandler = (e) => {
+    e.preventDefault();
+    return false;
+  };
+
   if (products.length === 0) {
     return <div>Cargando...</div>;
   }
@@ -49,12 +55,20 @@ const CloseupViewer = ({ closeup, onClose }) => {
   const selectedProduct = products[selectedIndex];
 
   return (
-    <div className="fixed inset-0 z-10 flex">
+    <div 
+      className="fixed inset-0 z-10 flex"
+      onDragStart={preventDragHandler}
+      onDragOver={preventDragHandler}
+      onDragEnd={preventDragHandler}
+      onDrop={preventDragHandler}
+    >
       <div className="relative flex-1">
         <img 
           src={selectedProduct.closeup} 
           alt={selectedProduct.descripcion} 
           className="w-full h-full object-cover" 
+          draggable="false"
+          onDragStart={preventDragHandler}
         />
         <button
           onClick={() => onClose(currentCollection, selectedIndex)}
@@ -72,6 +86,8 @@ const CloseupViewer = ({ closeup, onClose }) => {
                 alt={product.descripcion}
                 className={`w-32 h-32 object-cover cursor-pointer border-[3px] rounded-[10px] ${index === selectedIndex ? 'border-violet-500' : 'border-transparent'}`}
                 onClick={() => setSelectedIndex(index)}
+                draggable="false"
+                onDragStart={preventDragHandler}
               />
             ))}
           </div>
