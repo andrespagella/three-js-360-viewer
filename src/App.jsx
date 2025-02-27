@@ -13,7 +13,7 @@ import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 
 function App() {
-  const developmentMode = true; // Flag para activar el overlay de desarrollo
+  const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
   const { theme } = useTheme();
 
