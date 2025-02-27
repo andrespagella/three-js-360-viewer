@@ -27,9 +27,7 @@ const Pin = ({ position, onClick }) => {
       <group onClick={(e) => { 
         
         e.stopPropagation(); 
-        onClick && onClick(); 
-
-        console.log("Fssd");
+        onClick && onClick();
 
       }}>
         {/* Halo pulsante utilizando una textura para bordes difuminados */}
