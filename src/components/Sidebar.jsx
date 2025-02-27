@@ -5,8 +5,6 @@ import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
 import Three360Viewer from "./Three360Viewer";
 
-const MemoizedThree360Viewer = React.memo(Three360Viewer);
-
 const Sidebar = ({
   ambientes,
   currentView,
