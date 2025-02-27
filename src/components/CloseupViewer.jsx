@@ -79,29 +79,39 @@ const CloseupViewer = ({ closeup, onClose }) => {
           Vista principal
         </button>
 
-        <div className="absolute bottom-0 left-0 w-full p-4">
-          <div className="flex space-x-4 overflow-x-auto">
-            {products.map((product, index) => (
-              <img
-                key={index}
-                src={product.thumbnail}
-                alt={product.descripcion}
-                className={`w-32 h-32 object-cover cursor-pointer border-[3px] rounded-[10px] ${index === selectedIndex ? 'border-violet-500' : 'border-transparent'}`}
-                onClick={() => setSelectedIndex(index)}
-                draggable="false"
-                onDragStart={preventDragHandler}
-                style={index === selectedIndex ? 
-                  { 
-                    borderColor: theme.accent.primary,
-                    boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)'
-                  } : 
-                  { 
-                    border: '1px solid rgba(0,0,0,0.2)',
-                    boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
-                  }
-                }
-              />
-            ))}
+        {/* Contenedor principal de la galería de thumbnails */}
+        <div className="absolute bottom-0 left-0 w-full" style={{ bottom: '-10px' }}>
+          {/* Contenedor con padding adicional para las sombras */}
+          <div className="px-4 pt-4 pb-6">
+            {/* Contenedor de desplazamiento con overflow visible para las sombras */}
+            <div className="flex space-x-4 overflow-x-auto" style={{ paddingBottom: '8px' }}>
+              {products.map((product, index) => (
+                <div 
+                  key={index} 
+                  className="relative"
+                  style={{ padding: '3px' }} // Espacio para la sombra
+                >
+                  <img
+                    src={product.thumbnail}
+                    alt={product.descripcion}
+                    className={`w-32 h-32 object-cover cursor-pointer rounded-[10px]`}
+                    onClick={() => setSelectedIndex(index)}
+                    draggable="false"
+                    onDragStart={preventDragHandler}
+                    style={index === selectedIndex ? 
+                      { 
+                        border: `3px solid ${theme.accent.primary}`,
+                        boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)'
+                      } : 
+                      { 
+                        border: '1px solid rgba(0,0,0,0.2)',
+                        boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
+                      }
+                    }
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
