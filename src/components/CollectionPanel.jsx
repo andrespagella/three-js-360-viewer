@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
+import { FixedSizeGrid } from 'react-window';
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
   const isMobile = useIsMobile();
   const [thumbnails, setThumbnails] = useState({});
   const { theme } = useTheme();
+  const [lowPerformanceMode, setLowPerformanceMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const allPins = pinsData.reduce((acc, ambienteItem) => {
     const ambienteName = ambienteItem.ambiente;
@@ -60,6 +63,29 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     loadThumbnails();
   }, [allPins, selectedItems]);
 
+  useEffect(() => {
+    // Detectar dispositivos de bajo rendimiento
+    const isMobile = window.innerWidth < 1024 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Realizar una prueba simple de rendimiento
+      const startTime = performance.now();
+      let counter = 0;
+      
+      for (let i = 0; i < 1000000; i++) {
+        counter++;
+      }
+      
+      const endTime = performance.now();
+      const duration = endTime - startTime;
+      
+      // Si la prueba toma más de cierto umbral, activar modo de bajo rendimiento
+      if (duration > 50) {
+        setLowPerformanceMode(true);
+      }
+    }
+  }, []);
+
   return (
     <div 
       className={`fixed z-40 transition-transform duration-300 overflow-auto shadow-sm ${
@@ -76,37 +102,58 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     >
       <div className="p-4">
         <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mb-4">Colección</h2>
-        <div className="grid grid-cols-2 gap-4 pb-16">
-          {allPins.map((pin) => (
-            <div
-              key={pin.id}
-              onClick={() => {
-                onSelectAmbiente(ambientes.find(a => a.name === pin.ambiente));
-                onSelectPin(pin);
-              }}
-              className="cursor-pointer rounded-lg overflow-hidden hover:shadow-md transition-shadow"
-              style={{ border: `1px solid ${theme.border.light}` }}
-            >
-              <div className="relative">
-                <img
-                  src={thumbnails[pin.id] || '/default-thumbnail.svg'}
-                  alt={pin.title || 'Thumbnail'}
-                  className="w-full h-24 object-cover"
-                />
-                <div 
-                  className="absolute bottom-0 left-0 right-0 p-1 text-xs font-bold text-center"
-                  style={{ 
-                    backgroundColor: theme.background.secondary,
-                    color: theme.text.primary
+        <FixedSizeGrid
+          columnCount={2}
+          columnWidth={150}
+          height={500}
+          rowCount={Math.ceil(allPins.length / 2)}
+          rowHeight={150}
+          width={300}
+        >
+          {({ columnIndex, rowIndex, style }) => {
+            const index = rowIndex * 2 + columnIndex;
+            if (index >= allPins.length) return null;
+            const pin = allPins[index];
+            
+            return (
+              <div style={style}>
+                <div
+                  onClick={() => {
+                    onSelectAmbiente(ambientes.find(a => a.name === pin.ambiente));
+                    onSelectPin(pin);
                   }}
+                  className="cursor-pointer rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+                  style={{ border: `1px solid ${theme.border.light}` }}
                 >
-                  {pin.label || 'Sin título'}
+                  <div className="relative">
+                    <img
+                      src={thumbnails[pin.id] || '/default-thumbnail.svg'}
+                      alt={pin.title || 'Thumbnail'}
+                      className="w-full h-24 object-cover"
+                    />
+                    <div 
+                      className="absolute bottom-0 left-0 right-0 p-1 text-xs font-bold text-center"
+                      style={{ 
+                        backgroundColor: theme.background.secondary,
+                        color: theme.text.primary
+                      }}
+                    >
+                      {pin.label || 'Sin título'}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            );
+          }}
+        </FixedSizeGrid>
       </div>
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded-lg">
+            <p>Cargando...</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

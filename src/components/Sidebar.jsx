@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useMemo, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
 import getAmbientFilePaths from "../utils/getAmbientFilePaths";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
+import Three360Viewer from "./Three360Viewer";
+
+const MemoizedThree360Viewer = React.memo(Three360Viewer);
 
 const Sidebar = ({
   ambientes,
