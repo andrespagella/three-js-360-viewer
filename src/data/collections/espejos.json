@@ -1,7 +1,7 @@
 [
     {
         "producto": "espejo orb060m",
-        "SKU": "orb060m",
+        "SKU": "ORB060M",
         "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
         "caracteristicas": [
             "Diseño curvo.",
@@ -11,7 +11,10 @@
         "ficha": {
             "coleccion": "Orbital",
             "terminacion": "Azul Intenso mate",
-            "medidas": ["600mm", "800mm"]
+            "medidas": [
+                "600mm",
+                "800mm"
+            ]
         },
         "thumbnail": "thumbnails/espejos/ORB060M.webp",
         "closeup": "closeups/espejos/ORB060M.webp",
@@ -21,7 +24,7 @@
     },
     {
         "producto": "espejo con080m",
-        "SKU": "con080m",
+        "SKU": "CON080M",
         "descripcion": "ESPEJO LED CONTOUR 120X72 CM MADERA",
         "caracteristicas": [
             "Diseño clásico y elegante.",
@@ -31,7 +34,10 @@
         "ficha": {
             "coleccion": "Contour",
             "terminacion": "Roble Natural",
-            "medidas": ["60mm", "1500mm"]
+            "medidas": [
+                "60mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/espejos/CON080M.webp",
         "closeup": "closeups/espejos/CON080M.webp",
@@ -41,7 +47,7 @@
     },
     {
         "producto": "espejo pil040m",
-        "SKU": "pil040m",
+        "SKU": "PIL040M",
         "descripcion": "ESPEJO LED PILL 40X100 CM LAQUEADO",
         "caracteristicas": [
             "Diseño tipo pastilla.",
@@ -51,7 +57,10 @@
         "ficha": {
             "coleccion": "Pill",
             "terminacion": "Greige mate",
-            "medidas": ["400mm", "1000mm"]
+            "medidas": [
+                "400mm",
+                "1000mm"
+            ]
         },
         "thumbnail": "thumbnails/espejos/PIL040M.webp",
         "closeup": "closeups/espejos/PIL040M.webp",
@@ -61,7 +70,7 @@
     },
     {
         "producto": "espejo ten050m",
-        "SKU": "ten050m",
+        "SKU": "TEN050M",
         "descripcion": "ESPEJO LED TENDENCE 50X90 CM LAQUEADO",
         "caracteristicas": [
             "Diseño que se adapta a tu estilo.",
@@ -71,7 +80,10 @@
         "ficha": {
             "coleccion": "Tendence",
             "terminacion": "Verde Suculenta mate",
-            "medidas": ["500mm", "100mm"]
+            "medidas": [
+                "500mm",
+                "100mm"
+            ]
         },
         "thumbnail": "thumbnails/espejos/TEN050M.webp",
         "closeup": "closeups/espejos/TEN050M.webp",
@@ -81,7 +93,7 @@
     },
     {
         "producto": "espejo gap060m",
-        "SKU": "gap060m",
+        "SKU": "GAP060M",
         "descripcion": "ESPEJO LED GAP 60X80 CM LAQUEADO",
         "caracteristicas": [
             "Diseño en tendencia.",
@@ -91,7 +103,11 @@
         "ficha": {
             "coleccion": "Gap",
             "terminacion": "Gris grafito mate",
-            "medidas": ["400mm", "600mm", "800mm"]
+            "medidas": [
+                "400mm",
+                "600mm",
+                "800mm"
+            ]
         },
         "thumbnail": "thumbnails/espejos/GAP060M.webp",
         "closeup": "closeups/espejos/GAP060M.webp",

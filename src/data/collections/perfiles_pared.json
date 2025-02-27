@@ -1,7 +1,6 @@
 [
     {
         "producto": "perfil decorativo 1810",
-        "sku": 1810,
         "descripcion": "Terminación Cuadrada",
         "caracteristicas": [
             "Perfil de acero inoxidable",
@@ -23,11 +22,11 @@
         "closeup": "closeups/perfiles_pared/1810.webp",
         "overlay": "overlays/perfiles_pared/1810.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1810"
     },
     {
         "producto": "perfil decorativo 3421",
-        "sku": 3421,
         "descripcion": "Guardacanto Quadra ",
         "caracteristicas": [
             "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
@@ -50,11 +49,11 @@
         "closeup": "closeups/perfiles_pared/3421.webp",
         "overlay": "overlays/perfiles_pared/3421.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "3421"
     },
     {
         "producto": "perfil decorativo 3422",
-        "sku": 3422,
         "descripcion": "Guardacanto Quadra ",
         "caracteristicas": [
             "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
@@ -77,11 +76,11 @@
         "closeup": "closeups/perfiles_pared/3422.webp",
         "overlay": "overlays/perfiles_pared/3422.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "3422"
     },
     {
         "producto": "perfil decorativo 3425B",
-        "sku": "3425b",
         "descripcion": "Guardacanto Quadra ",
         "caracteristicas": [
             "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
@@ -104,11 +103,11 @@
         "closeup": "closeups/perfiles_pared/3425B.webp",
         "overlay": "overlays/perfiles_pared/3425B.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "3425B"
     },
     {
         "producto": "perfil decorativo 3428TXA",
-        "sku": "3428txa",
         "descripcion": "Guardacanto Quadra ",
         "caracteristicas": [
             "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
@@ -131,6 +130,7 @@
         "closeup": "closeups/perfiles_pared/3428TXA.webp",
         "overlay": "overlays/perfiles_pared/3428TXA.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "3428TXA"
     }
 ]

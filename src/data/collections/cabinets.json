@@ -1,7 +1,7 @@
 [
     {
         "producto": "cabinet varplel",
-        "SKU": "varplel",
+        "SKU": "VARPLEL",
         "descripcion": "cabinet varenna pleno laqueado",
         "caracteristicas": [
             "Diseño excepcional con biselado a 45° en todos sus laterales.",
@@ -13,7 +13,11 @@
         "ficha": {
             "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior.",
             "terminacion": "Gris grafito mate",
-            "medidas": ["300mm", "300mm", "1500mm"]
+            "medidas": [
+                "300mm",
+                "300mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/cabinets/VARPLEL.webp",
         "closeup": "closeups/cabinets/VARPLEL.webp",
@@ -23,7 +27,7 @@
     },
     {
         "producto": "cabinet ravplel",
-        "SKU": "ravplel",
+        "SKU": "RAVPLEL",
         "descripcion": "cabinet ravello pleno laqueado",
         "caracteristicas": [
             "Diseño excepcional con biselado a 45° en todos sus laterales.",
@@ -35,7 +39,11 @@
         "ficha": {
             "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas.",
             "terminacion": "Verde Suculenta mate",
-            "medidas": ["300mm", "300mm", "1500mm"]
+            "medidas": [
+                "300mm",
+                "300mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/cabinets/RAVPLEL.webp",
         "closeup": "closeups/cabinets/RAVPLEL.webp",
@@ -45,7 +53,7 @@
     },
     {
         "producto": "cabinet madduol",
-        "SKU": "madduol",
+        "SKU": "MADDUOL",
         "descripcion": "cabinet madrid duo laqueado",
         "caracteristicas": [
             "Diseño clásico con dos estantes a la vista.",
@@ -57,7 +65,11 @@
         "ficha": {
             "composicion": "1 tabiquefijo, 2 estantes movibles en el interior y 1 estante movible en el exterior",
             "terminacion": "Greige mate",
-            "medidas": ["300mm", "300mm", "1500mm"]
+            "medidas": [
+                "300mm",
+                "300mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/cabinets/MADDUOL.webp",
         "closeup": "closeups/cabinets/MADDUOL.webp",
@@ -67,7 +79,7 @@
     },
     {
         "producto": "cabinet madsimm",
-        "SKU": "madsimm",
+        "SKU": "MADSIMM",
         "descripcion": "cabinet madrid simple madera",
         "caracteristicas": [
             "Diseño clásico con un estante a la vista.",
@@ -79,7 +91,11 @@
         "ficha": {
             "composicion": "2 tabiques fijos que definen el box y 1 estante movible en cada una de las puertas",
             "terminacion": "Roble Natural",
-            "medidas": ["300mm", "300mm", "1500mm"]
+            "medidas": [
+                "300mm",
+                "300mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/cabinets/MADSIMM.webp",
         "closeup": "closeups/cabinets/MADSIMM.webp",
@@ -89,7 +105,7 @@
     },
     {
         "producto": "cabinet madplel",
-        "SKU": "madplel",
+        "SKU": "MADPLEL",
         "descripcion": "cabinet madrid pleno laqueado",
         "caracteristicas": [
             "Diseño clásico con frente pleno.",
@@ -101,7 +117,11 @@
         "ficha": {
             "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior",
             "terminacion": "Azul Intenso mate\nc/ molduras",
-            "medidas": ["300mm", "300mm", "1500mm"]
+            "medidas": [
+                "300mm",
+                "300mm",
+                "1500mm"
+            ]
         },
         "thumbnail": "thumbnails/cabinets/MADPLEL.webp",
         "closeup": "closeups/cabinets/MADPLEL.webp",

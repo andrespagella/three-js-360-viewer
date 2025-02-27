@@ -1,7 +1,6 @@
 [
     {
         "producto": "estante etm230ac",
-        "sku": "etm230ac",
         "descripcion": "Estante Triangular Cuadrado",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -20,11 +19,11 @@
         "closeup": "closeups/estantes/ETM230AC.webp",
         "overlay": "overlays/estantes/ETM230AC.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ETM230AC"
     },
     {
         "producto": "estante erp300ac",
-        "sku": "erp300ac",
         "descripcion": "Estante Rectangular Línea",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -42,11 +41,11 @@
         "closeup": "closeups/estantes/ERP300AC.webp",
         "overlay": "overlays/estantes/ERP300AC.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ERP300AC"
     },
     {
         "producto": "estante etj230bm",
-        "sku": "etj230bm",
         "descripcion": "Estante Triangular Abstracto",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -64,11 +63,11 @@
         "closeup": "closeups/estantes/ETJ230BM.webp",
         "overlay": "overlays/estantes/ETJ230BM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ETJ230BM"
     },
     {
         "producto": "estante etj230nm",
-        "sku": "etj230nm",
         "descripcion": "Estante Rectangular Línea",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -86,11 +85,11 @@
         "closeup": "closeups/estantes/ETJ230NM.webp",
         "overlay": "overlays/estantes/ETJ230NM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ETJ230NM"
     },
     {
         "producto": "estante erp300nm",
-        "sku": "erp300nm",
         "descripcion": "Estante Triangular Abstracto",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -108,11 +107,11 @@
         "closeup": "closeups/estantes/ERP300NM.webp",
         "overlay": "overlays/estantes/ERP300NM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ERP300NM"
     },
     {
         "producto": "estante erm300nm",
-        "sku": "erm300nm",
         "descripcion": "Estante Rectangular Cuadrado",
         "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
         "ficha": {
@@ -130,6 +129,7 @@
         "closeup": "closeups/estantes/ERM300NM.webp",
         "overlay": "overlays/estantes/ERM300NM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "ERM300NM"
     }
 ]

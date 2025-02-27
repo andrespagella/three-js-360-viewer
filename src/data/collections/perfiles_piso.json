@@ -1,7 +1,6 @@
 [
     {
         "producto": "perfil decorativo 1810",
-        "sku": 1810,
         "descripcion": "Terminación Cuadrada",
         "caracteristicas": [
             "Perfil de acero inoxidable",
@@ -23,11 +22,11 @@
         "closeup": "closeups/perfiles_piso/1810.webp",
         "overlay": "overlays/perfiles_piso/1810.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1810"
     },
     {
         "producto": "perfil decorativo 1674",
-        "sku": 1674,
         "descripcion": "Varilla en L ",
         "caracteristicas": [
             "Perfil de aluminio de ángulo recto de 2,5 mm de cara visible",
@@ -49,11 +48,11 @@
         "closeup": "closeups/perfiles_piso/1674.webp",
         "overlay": "overlays/perfiles_piso/1674.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1674"
     },
     {
         "producto": "perfil decorativo 1403esm",
-        "sku": "1403esm",
         "descripcion": "Terminación Cuadrada",
         "caracteristicas": [
             "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
@@ -74,11 +73,11 @@
         "closeup": "closeups/perfiles_piso/1403ESP.webp",
         "overlay": "overlays/perfiles_piso/1403ESP.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1403ESM"
     },
     {
         "producto": "perfil decorativo 1402esm",
-        "sku": "1402esm",
         "descripcion": "Terminación Cuadrada",
         "caracteristicas": [
             "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
@@ -99,11 +98,11 @@
         "closeup": "closeups/perfiles_piso/1402ESM.webp",
         "overlay": "overlays/perfiles_piso/1402ESM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1402ESM"
     },
     {
         "producto": "perfil decorativo 1401esm",
-        "sku": "1401esm",
         "descripcion": "Terminación Cuadrada",
         "caracteristicas": [
             "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
@@ -124,6 +123,7 @@
         "closeup": "closeups/perfiles_piso/1401ESM.webp",
         "overlay": "overlays/perfiles_piso/1401ESM.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "1401ESM"
     }
 ]

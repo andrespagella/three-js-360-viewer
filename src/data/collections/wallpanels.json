@@ -1,7 +1,6 @@
 [
     {
         "producto": "REVESTIMIENTO EWP301-259T",
-        "sku": "ewp301-259t",
         "descripcion": "Revestimientos de paredes EPS",
         "caracteristicas": [
             "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
@@ -24,11 +23,11 @@
         "closeup": "closeups/wallpanels-spc/EWP301-259T.webp",
         "overlay": "overlays/wallpanels-spc/EWP301-259T.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "EWP301-259T"
     },
     {
         "producto": "REVESTIMIENTO EWP302-260T",
-        "sku": "ewp302-260t",
         "descripcion": "Revestimientos de paredes EPS",
         "caracteristicas": [
             "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
@@ -51,11 +50,11 @@
         "closeup": "closeups/wallpanels-spc/EWP302-260T.webp",
         "overlay": "overlays/wallpanels-spc/EWP302-260T.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "EWP302-260T"
     },
     {
         "producto": "REVESTIMIENTO SPC468",
-        "sku": "spc468",
         "descripcion": "Revestimientos de paredes SPC",
         "caracteristicas": [
             "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
@@ -74,11 +73,11 @@
         "closeup": "closeups/wallpanels-spc/SPC468.webp",
         "overlay": "overlays/wallpanels-spc/SPC468.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "SPC468"
     },
     {
         "producto": "REVESTIMIENTO SPC462",
-        "sku": "spc462",
         "descripcion": "Revestimientos de paredes SPC",
         "caracteristicas": [
             "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
@@ -97,11 +96,11 @@
         "closeup": "closeups/wallpanels-spc/SPC462.webp",
         "overlay": "overlays/wallpanels-spc/SPC462.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "SPC462"
     },
     {
         "producto": "REVESTIMIENTO SPC456",
-        "sku": "spc456",
         "descripcion": "Revestimientos de paredes SPC",
         "caracteristicas": [
             "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
@@ -120,11 +119,11 @@
         "closeup": "closeups/wallpanels-spc/SPC456.webp",
         "overlay": "overlays/wallpanels-spc/SPC456.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "SPC456"
     },
     {
         "producto": "REVESTIMIENTO SPC452",
-        "sku": "spc452",
         "descripcion": "Revestimientos de paredes SPC",
         "caracteristicas": [
             "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
@@ -143,6 +142,7 @@
         "closeup": "closeups/wallpanels-spc/SPC452.webp",
         "overlay": "overlays/wallpanels-spc/SPC452.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "SPC452"
     }
 ]

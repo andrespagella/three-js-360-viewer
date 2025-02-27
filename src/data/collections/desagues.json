@@ -1,7 +1,6 @@
 [
     {
         "producto": "desague dn700t02",
-        "sku": "dn700t02",
         "descripcion": "Desagüe Lineal Narrow",
         "caracteristicas": "Desagüe de ducha de acero inoxidable AISI 304 doble esmerilado. Diseño delgado, que reemplaza la rejilla tradicional y crea un plano único de continuidad en el piso de la ducha. Provisto de pies regulables en altura que se fijan al cuerpo del desagüe para una nivelación precisa y rápida. Con cesta para filtro de pelos que puede retirarse manualmente para su limpieza.",
         "ficha": {
@@ -18,11 +17,11 @@
         "closeup": "closeups/desagues/DN700T02.webp",
         "overlay": "overlays/desagues/DN700T02.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DN700T02"
     },
     {
         "producto": "desague da300t02",
-        "sku": "da300t02",
         "descripcion": "Desagüe Lineal 2 en 1",
         "caracteristicas": "Desagüe de acero inoxidable AISI 304. Tapa 2 en 1: Cromo o Ceramic (cavidad para insertar el revestimiento). Diseñado para reemplazar la rejilla. Caída en forma de diamante.",
         "ficha": {
@@ -40,11 +39,11 @@
         "closeup": "closeups/desagues/DA300T02.webp",
         "overlay": "overlays/desagues/DA300T02.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA300T02"
     },
     {
         "producto": "desague da700t10",
-        "sku": "da700t10",
         "descripcion": "Desagüe Lineal Eme",
         "caracteristicas": "Desagüe de acero inoxidable AISI 304. La ranura central y los planos inclinados permiten que el agua fluya rápidamente.",
         "ficha": {
@@ -62,11 +61,11 @@
         "closeup": "closeups/desagues/DA700T10.webp",
         "overlay": "overlays/desagues/DA700T10.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA700T10"
     },
     {
         "producto": "desague da900t01",
-        "sku": "da900t01",
         "descripcion": "Desagüe Lineal Clásico",
         "caracteristicas": "Desagüe de acero inoxidable AISI 304. Patrones de líneas rectas. Su cuerpo con caída en forma de diamante permite una mayor capacidad de drenaje",
         "ficha": {
@@ -84,11 +83,11 @@
         "closeup": "closeups/desagues/DA900T01.webp",
         "overlay": "overlays/desagues/DA900T01.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA900T01"
     },
     {
         "producto": "desague da150t02",
-        "sku": "da150t02",
         "descripcion": "Desagüe Cuadrado",
         "caracteristicas": "Desagüe cuadrado de acero inoxidable AISI 304. Ofrece dos opciones de tapas en un único producto: Clásica, con un acabado esmerilado y Ceramic, cuyo lado posterior es hueco y permite insertar el revestimiento.",
         "ficha": {
@@ -106,11 +105,11 @@
         "closeup": "closeups/desagues/DA150T02.webp",
         "overlay": "overlays/desagues/DA150T02.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA150T02"
     },
     {
         "producto": "desague da600t09",
-        "sku": "da600t09",
         "descripcion": "Desagüe Lineal Grid",
         "caracteristicas": "Desagüe de acero inoxidable AISI 304. Diseño reticular combina drenaje eficiente, resistencia y ligereza.",
         "ficha": {
@@ -128,11 +127,11 @@
         "closeup": "closeups/desagues/DA600T09.webp",
         "overlay": "overlays/desagues/DA600T09.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA600T09"
     },
     {
         "producto": "desague da700t05",
-        "sku": "da700t05",
         "descripcion": "Desagüe Lineal Diagonal",
         "caracteristicas": "Desagüe de acero inoxidable AISI 304 doble esmerilado, tapa de patrones de líneas en diagonal. Diseñado para reemplazar la rejilla tradicional. Con caída en forma de diamante permite una mayor capacidad de drenaje.",
         "ficha": {
@@ -150,6 +149,7 @@
         "closeup": "closeups/desagues/DA700T05.webp",
         "overlay": "overlays/desagues/DA700T05.webp",
         "x": 0,
-        "y": 0
+        "y": 0,
+        "SKU": "DA700T05"
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "producto": "zocalo 2309",
-        "SKU": 2309,
+        "SKU": "2309",
         "descripcion": "Zócalo Orbit",
         "caracteristicas": [
             "Pintable, de cara plana y canto redondeado",
@@ -26,7 +26,7 @@
     },
     {
         "producto": "zocalo 2356",
-        "SKU": 2356,
+        "SKU": "2356",
         "descripcion": "Zócalo Maxi Line",
         "caracteristicas": [
             "El Zócalo blanco Maxi line con línea bajo relieve, da mayor sofisticación y elegancia a tus ambientes.",
@@ -55,7 +55,7 @@
     },
     {
         "producto": "zocalo 2066",
-        "SKU": 2066,
+        "SKU": "2066",
         "descripcion": "Zócalo Slim",
         "caracteristicas": [
             "Este Zócalo ultra delgado es ideal para usar en ambientes de decoración minimalista tanto en hogares como en oficinas. Combina funcionalidad y estética",
@@ -84,7 +84,7 @@
     },
     {
         "producto": "zocalo 2314",
-        "SKU": 2314,
+        "SKU": "2314",
         "descripcion": "Zócalo Line",
         "caracteristicas": [
             "Diseño vanguardista que destaca con personalidad los espacios.",
@@ -108,7 +108,7 @@
     },
     {
         "producto": "zocalo 2323",
-        "SKU": 2323,
+        "SKU": "2323",
         "descripcion": "Zócalo Curves",
         "caracteristicas": [
             "Diseño tradicional",
