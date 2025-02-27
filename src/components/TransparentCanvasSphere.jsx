@@ -16,7 +16,7 @@ import perfiles_pared from "../data/collections/perfiles_pared.json";
 const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedItems }) => {
   const canvasTexture = useMemo(() => {
     // Determine canvas dimensions from baseTexture if available, else default to 512
-    const defaultWidth = 2048, defaultHeight = 1024;
+    const defaultWidth = 4096, defaultHeight = 2048; // Aumentar resolución para mejor calidad
     let canvasWidth = defaultWidth;
     let canvasHeight = defaultHeight;
 
@@ -35,10 +35,15 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
 
     // Creamos la textura a partir del canvas
     const texture = new THREE.CanvasTexture(canvas);
-    // Invertir la textura horizontalmente para que coincida con la orientación de la textura base
+    
+    // Configuración correcta para texturas panorámicas equirectangulares
+    texture.mapping = THREE.EquirectangularReflectionMapping;
     texture.wrapS = THREE.RepeatWrapping;
-    texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.x = -1;
+    texture.wrapT = THREE.ClampToEdgeWrapping; // Evita repetición vertical
+    texture.repeat.x = -1; // Invertir horizontalmente
+    texture.minFilter = THREE.LinearFilter; // Mejor filtrado
+    texture.magFilter = THREE.LinearFilter;
+    texture.anisotropy = 16; // Mejor calidad en ángulos oblicuos
 
     // Función para cargar y dibujar una imagen
     const loadAndDrawImage = (src, x, y) => {
@@ -46,7 +51,12 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
         const img = new Image();
         img.crossOrigin = "anonymous";
         img.onload = () => {
-          ctx.drawImage(img, x || 0, y || 0);
+          // Si es la imagen base (panorámica), asegurarse de que cubra todo el canvas
+          if (!x && !y) {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          } else {
+            ctx.drawImage(img, x || 0, y || 0);
+          }
           texture.needsUpdate = true;
           resolve();
         };
@@ -135,9 +145,10 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
     return texture;
   }, [baseTexture, darkMode, currentView, selectedItems]);
 
+  // Usar el mismo tamaño que la otra esfera (500)
   return (
     <mesh rotation={[0, 0, 0]} position={[0, 0, 0]}>
-      <sphereGeometry args={[498, 60, 40]} />
+      <sphereGeometry args={[500, 60, 40]} />
       <meshBasicMaterial
         map={canvasTexture}
         side={THREE.DoubleSide}

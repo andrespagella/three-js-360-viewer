@@ -21,7 +21,7 @@
         "thumbnail": "thumbnails/zocalos/2309.webp",
         "closeup": "closeups/zocalos/2309.webp",
         "overlay": "overlays/zocalos/2309.webp",
-        "x": 32,
+        "x": 0,
         "y": 0
     },
     {
@@ -50,7 +50,7 @@
         "thumbnail": "thumbnails/zocalos/2356.webp",
         "closeup": "closeups/zocalos/2356.webp",
         "overlay": "overlays/zocalos/2356.webp",
-        "x": 32,
+        "x": 0,
         "y": 0
     },
     {
@@ -79,7 +79,7 @@
         "thumbnail": "thumbnails/zocalos/2066.webp",
         "closeup": "closeups/zocalos/2066.webp",
         "overlay": "overlays/zocalos/2066.webp",
-        "x": 32,
+        "x": 0,
         "y": 0
     },
     {
@@ -103,7 +103,7 @@
         "thumbnail": "thumbnails/zocalos/2314.webp",
         "closeup": "closeups/zocalos/2314.webp",
         "overlay": "overlays/zocalos/2314.webp",
-        "x": 32,
+        "x": 0,
         "y": 0
     },
     {
@@ -127,7 +127,7 @@
         "thumbnail": "thumbnails/zocalos/2323.webp",
         "closeup": "closeups/zocalos/2323.webp",
         "overlay": "overlays/zocalos/2323.webp",
-        "x": 32,
+        "x": 0,
         "y": 0
     }
 ]

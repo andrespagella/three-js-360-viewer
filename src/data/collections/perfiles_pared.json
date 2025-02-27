@@ -22,7 +22,7 @@
         "thumbnail": "thumbnails/perfiles/1810.webp",
         "closeup": "closeups/perfiles_pared/1810.webp",
         "overlay": "overlays/perfiles_pared/1810.webp",
-        "x": 40,
+        "x": 0,
         "y": 0
     },
     {
@@ -49,7 +49,7 @@
         "thumbnail": "thumbnails/perfiles/3421.webp",
         "closeup": "closeups/perfiles_pared/3421.webp",
         "overlay": "overlays/perfiles_pared/3421.webp",
-        "x": 40,
+        "x": 0,
         "y": 0
     },
     {
@@ -76,7 +76,7 @@
         "thumbnail": "thumbnails/perfiles/3422.webp",
         "closeup": "closeups/perfiles_pared/3422.webp",
         "overlay": "overlays/perfiles_pared/3422.webp",
-        "x": 40,
+        "x": 0,
         "y": 0
     },
     {
@@ -103,7 +103,7 @@
         "thumbnail": "thumbnails/perfiles/3425B.webp",
         "closeup": "closeups/perfiles_pared/3425B.webp",
         "overlay": "overlays/perfiles_pared/3425B.webp",
-        "x": 40,
+        "x": 0,
         "y": 0
     },
     {
@@ -130,7 +130,7 @@
         "thumbnail": "thumbnails/perfiles/3428TXA.webp",
         "closeup": "closeups/perfiles_pared/3428TXA.webp",
         "overlay": "overlays/perfiles_pared/3428TXA.webp",
-        "x": 40,
+        "x": 0,
         "y": 0
     }
 ]
