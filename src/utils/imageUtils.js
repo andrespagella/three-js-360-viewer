@@ -5,7 +5,7 @@
 
 // Detecta si el dispositivo es móvil (iPad, iPhone, etc.)
 export const isMobileDevice = () => {
-  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 };
 
 // Modifica la ruta de la imagen para dispositivos móviles

@@ -71,11 +71,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
       setSelectedIndex(selectedIndex);
     }
     
-    // Verificar si es iOS
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    // Verificar si es dispositivo móvil (iOS o Android)
+    const isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    const isMobileDevice = isTouchDevice && !window.MSStream;
     
-    if (isIOS) {
-      // En iOS, primero cambiar a un estado de transición
+    if (isMobileDevice) {
+      // En dispositivos móviles, primero cambiar a un estado de transición
       console.log("Cambiando a estado de transición");
       setTransitionState('transitioning');
       

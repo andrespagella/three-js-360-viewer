@@ -1,10 +1,10 @@
 # Optimización de Imágenes para Dispositivos Móviles
 
-Este proyecto incluye una solución para optimizar automáticamente las imágenes en dispositivos móviles como iPads y iPhones, reduciendo su tamaño y calidad a la mitad para mejorar el rendimiento.
+Este proyecto incluye una solución para optimizar automáticamente las imágenes en dispositivos móviles como iPads, iPhones y dispositivos Android, reduciendo su tamaño y calidad a la mitad para mejorar el rendimiento.
 
 ## Cómo funciona
 
-1. **Detección de dispositivos móviles**: La aplicación detecta automáticamente si el usuario está utilizando un iPad o iPhone.
+1. **Detección de dispositivos móviles**: La aplicación detecta automáticamente si el usuario está utilizando un iPad, iPhone o dispositivo Android.
 
 2. **Rutas de imágenes modificadas**: Cuando se detecta un dispositivo móvil, las rutas de las imágenes se modifican para usar versiones optimizadas con el sufijo `-mobile` antes de la extensión.
 
@@ -34,7 +34,7 @@ Este script:
 La solución consta de los siguientes componentes:
 
 1. **Utilidades de imágenes** (`src/utils/imageUtils.js`):
-   - `isMobileDevice()`: Detecta si el dispositivo es un iPad o iPhone.
+   - `isMobileDevice()`: Detecta si el dispositivo es un iPad, iPhone o dispositivo Android.
    - `getMobileOptimizedImagePath()`: Modifica la ruta de la imagen para usar la versión optimizada.
    - `processMobileImages()`: Procesa todos los campos de imagen en un objeto JSON.
    - `processMobileCollection()`: Procesa una colección completa de elementos.

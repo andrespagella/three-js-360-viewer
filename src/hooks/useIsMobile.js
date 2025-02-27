@@ -11,7 +11,7 @@ function useIsMobile(threshold = 768) {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [threshold]);
-
+  
   return isMobile;
 }
 
