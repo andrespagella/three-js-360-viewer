@@ -1,0 +1,42 @@
+:root {
+  /* Variables de color que se actualizarán dinámicamente */
+  --bg-primary: #00FF00;
+  --bg-secondary: #FF0000;
+  --bg-tertiary: #0000FF;
+  
+  --text-primary: #111111;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+  --text-inverted: #FFFFFF;
+  
+  --border-light: #E0E0E0;
+  --border-medium: #CCCCCC;
+  --border-dark: #999999;
+  
+  --accent-primary: #6366F1;
+  --accent-hover: #4F46E5;
+  --accent-active: #4338CA;
+}
+
+/* Clases de utilidad para usar con los colores del tema */
+.bg-theme-primary { background-color: var(--bg-primary); }
+.bg-theme-secondary { background-color: var(--bg-secondary); }
+.bg-theme-tertiary { background-color: var(--bg-tertiary); }
+
+.text-theme-primary { color: var(--text-primary); }
+.text-theme-secondary { color: var(--text-secondary); }
+.text-theme-tertiary { color: var(--text-tertiary); }
+.text-theme-inverted { color: var(--text-inverted); }
+
+.border-theme-light { border-color: var(--border-light); }
+.border-theme-medium { border-color: var(--border-medium); }
+.border-theme-dark { border-color: var(--border-dark); }
+
+.accent-theme-primary { color: var(--accent-primary); }
+.bg-accent-theme-primary { background-color: var(--accent-primary); }
+.border-accent-theme-primary { border-color: var(--accent-primary); }
+
+/* Actualizar las variables CSS cuando cambia el tema */
+.theme-updater {
+  display: none;
+} 

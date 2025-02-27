@@ -8,10 +8,13 @@ import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
 import ViewerHeader from "./components/ViewerHeader";
+import ThemeUpdater from "./components/ThemeUpdater";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
+  const { theme } = useTheme();
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
@@ -123,6 +126,7 @@ function App() {
 
   return (
     <div className="relative h-screen">
+      <ThemeUpdater />
       <ViewerHeader />
       <div className="pt-[40px] h-full">
         {!closeup && (
@@ -140,12 +144,15 @@ function App() {
             {!isMobile && (
               <button
                 onClick={() => setMenuExpanded(!menuExpanded)}
-                className="fixed z-50 bg-white text-black uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
+                className="fixed z-50 uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
                 style={{
-                  left: menuExpanded ? "16.5rem" : "1rem",
+                  backgroundColor: theme.background.primary,
+                  color: theme.text.primary,
+                  left: menuExpanded ? "16.9rem" : "1rem",
                   top: "50%",
                   transform: "translate(-50%, -50%) rotate(-90deg)",
                   transformOrigin: "center",
+                  boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
                 }}
               >
                 Ambientes
@@ -164,12 +171,15 @@ function App() {
             {!isMobile && (
               <button
                 onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
-                className="fixed z-50 bg-white text-black uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
+                className="fixed z-50 uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
                 style={{
-                  right: collectionPanelExpanded ? "16.5rem" : "1rem",
+                  backgroundColor: theme.background.primary,
+                  color: theme.text.primary,
+                  right: collectionPanelExpanded ? "20.9rem" : "1rem",
                   top: "50%",
                   transform: "translate(50%, -50%) rotate(90deg)",
                   transformOrigin: "center",
+                  boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
                 }}
               >
                 Colección

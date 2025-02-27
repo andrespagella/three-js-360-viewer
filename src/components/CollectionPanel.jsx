@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { getTransformStyle } from "../utils/transformStyles";
 import useIsMobile from "../hooks/useIsMobile";
+import { useTheme } from "../context/ThemeContext";
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
   const isMobile = useIsMobile();
   const [thumbnails, setThumbnails] = useState({});
+  const { theme } = useTheme();
 
   const allPins = pinsData.reduce((acc, ambienteItem) => {
     const ambienteName = ambienteItem.ambiente;
@@ -15,10 +17,6 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
   // Para CollectionPanel: usar "bottom" en mobile y "right" en escritorio
   const anchor = isMobile ? "bottom" : "right";
   const transformStyle = getTransformStyle(anchor, panelExpanded);
-
-  const panelClasses = `fixed z-40 transition-transform duration-300 bg-white text-black overflow-auto shadow-sm ${
-    isMobile ? "bottom-0 right-0 w-full h-64" : "top-15 right-0 h-full w-64"
-  }`;
 
   // Cargar los thumbnails desde los archivos JSON
   useEffect(() => {
@@ -50,8 +48,8 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
               thumbnailsData[pin.id] = '/default-thumbnail.svg';
             }
           } catch (error) {
-            console.warn(`Error loading thumbnail for pin ${pin.id}:`, error);
-            thumbnailsData[pin.id] = '/default-thumbnail.jpg';
+            console.error(`Error cargando thumbnails para ${pin.id}:`, error);
+            thumbnailsData[pin.id] = '/default-thumbnail.svg';
           }
         }
       }
@@ -62,49 +60,51 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     loadThumbnails();
   }, [allPins, selectedItems]);
 
-  // Función para obtener el thumbnail para un pin específico
-  const getThumbnailForPin = (pin) => {
-    if (thumbnails[pin.id]) {
-      return thumbnails[pin.id];
-    }
-    
-    // Fallback mientras se cargan los thumbnails
-    return '/default-thumbnail.jpg';
-  };
-
   return (
-    <div className={panelClasses} style={{ transform: transformStyle }}>
+    <div 
+      className={`fixed z-40 transition-transform duration-300 overflow-auto shadow-sm ${
+        isMobile ? "bottom-0 right-0 w-full h-64" : "top-[57px] right-0 h-[calc(100%-57px)] w-80"
+      }`}
+      style={{ 
+        backgroundColor: theme.background.primary,
+        color: theme.text.primary,
+        borderLeft: isMobile ? 'none' : `1px solid ${theme.border.light}`,
+        borderTop: isMobile ? `1px solid ${theme.border.light}` : 'none',
+        transform: transformStyle,
+        boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
+      }}
+    >
       <div className="p-4">
-        <div>
-          <h3 className="text-sm font-semibold">Colección</h3>
-          <div className="grid grid-cols-2 gap-4 mt-2">
-            {allPins.map((pin, index) => {
-              const thumbnailUrl = getThumbnailForPin(pin);
-              
-              return (
-                <button
-                  key={index}
-                  className="relative cursor-pointer w-full aspect-square bg-cover bg-center rounded shadow-md overflow-hidden"
-                  style={{ backgroundImage: `url(${thumbnailUrl})` }}
-                  onClick={() => {
-                    if (onSelectAmbiente) {
-                      const ambienteObj = ambientes.find((amb) => amb.name === pin.ambiente);
-                      if (ambienteObj) {
-                        onSelectAmbiente(ambienteObj);
-                      }
-                    }
-                    onSelectPin && onSelectPin(pin);
+        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mb-4">Colección</h2>
+        <div className="grid grid-cols-2 gap-4 pb-16">
+          {allPins.map((pin) => (
+            <div
+              key={pin.id}
+              onClick={() => {
+                onSelectAmbiente(ambientes.find(a => a.name === pin.ambiente));
+                onSelectPin(pin);
+              }}
+              className="cursor-pointer rounded-lg overflow-hidden hover:shadow-md transition-shadow"
+              style={{ border: `1px solid ${theme.border.light}` }}
+            >
+              <div className="relative">
+                <img
+                  src={thumbnails[pin.id] || '/default-thumbnail.svg'}
+                  alt={pin.title || 'Thumbnail'}
+                  className="w-full h-24 object-cover"
+                />
+                <div 
+                  className="absolute bottom-0 left-0 right-0 p-1 text-xs font-bold text-center"
+                  style={{ 
+                    backgroundColor: theme.background.secondary,
+                    color: theme.text.primary
                   }}
                 >
-                  <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end">
-                    <span className="w-full text-center text-white text-xs p-2 bg-black bg-opacity-50">
-                      {pin.label}
-                    </span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+                  {pin.label || 'Sin título'}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

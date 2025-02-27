@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { getTransformStyle } from "../utils/transformStyles";
 import getAmbientFilePaths from "../utils/getAmbientFilePaths";
 import useIsMobile from "../hooks/useIsMobile";
+import { useTheme } from "../context/ThemeContext";
 
 const Sidebar = ({
   ambientes,
@@ -14,92 +15,102 @@ const Sidebar = ({
   getAmbientFilePaths: externalGetAmbientFilePaths,
 }) => {
   const isMobile = useIsMobile();
+  const { theme } = useTheme();
 
   // Para Sidebar: usar "bottom" en mobile y "left" en escritorio
   const anchor = isMobile ? "bottom" : "left";
   const transformStyle = getTransformStyle(anchor, menuExpanded);
 
-  const containerClasses = `fixed z-50 transition-transform duration-300 bg-white text-black shadow-sm ${
-    isMobile ? "bottom-0 left-0 w-full h-64" : "top-15 left-0 h-full w-64"
-  }`;
-
   return (
-    <div className={containerClasses} style={{ transform: transformStyle }}>
+    <div 
+      className={`fixed z-50 transition-transform duration-300 shadow-lg ${
+        isMobile ? "bottom-0 left-0 w-full h-64" : "top-[57px] left-0 h-[calc(100%-40px)] w-64"
+      }`}
+      style={{ 
+        backgroundColor: theme.background.primary,
+        color: theme.text.primary,
+        borderRight: isMobile ? 'none' : `1px solid ${theme.border.light}`,
+        borderTop: isMobile ? `1px solid ${theme.border.light}` : 'none',
+        transform: transformStyle,
+        boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
+      }}
+    >
       <div className="p-4 flex justify-between items-center">
         {isMobile && (
           <button
             onClick={onToggleMenu}
-            className="bg-white text-black uppercase font-semibold rounded px-4 py-1 shadow-sm focus:outline-none"
+            style={{
+              backgroundColor: theme.background.secondary,
+              color: theme.text.primary,
+            }}
+            className="uppercase font-semibold rounded px-4 py-1 shadow-sm focus:outline-none"
           >
             Ambientes
           </button>
         )}
         <div className="flex items-center">
-          <span className="text-sm text-black">Claro</span>
+          <span style={{ color: theme.text.secondary }} className="text-sm">Claro</span>
           <div
             onClick={onToggleDarkMode}
-            className="mx-2 relative w-12 h-6 rounded-full bg-gray-300 cursor-pointer transition-colors duration-300"
+            className="mx-2 relative w-12 h-6 rounded-full cursor-pointer transition-colors duration-300"
+            style={{ backgroundColor: theme.background.tertiary }}
           >
             <div
-              className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-400 rounded-full transition-transform duration-300 ${
+              className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform duration-300 ${
                 darkMode ? "translate-x-6" : ""
               }`}
+              style={{ 
+                backgroundColor: theme.background.primary,
+                border: `1px solid ${theme.border.medium}`
+              }}
             ></div>
           </div>
-          <span className="text-sm text-black">Oscuro</span>
+          <span style={{ color: theme.text.secondary }} className="text-sm">Oscuro</span>
         </div>
       </div>
-      {isMobile ? (
-        <div className="relative h-full overflow-auto">
-          <div className="p-4 pt-2">
-            <div className="grid grid-cols-1 gap-2">
-              {ambientes.map((item, index) => {
-                const paths = externalGetAmbientFilePaths ? externalGetAmbientFilePaths(item, darkMode) : getAmbientFilePaths(item, darkMode);
-                return (
-                  <button
-                    key={index}
-                    onClick={() => onViewClick(item)}
-                    style={{ backgroundImage: `url(${paths.preview})` }}
-                    className={`bg-cover bg-center h-[200px] rounded ${
-                      currentView.name === item.name
-                        ? "ring-4 ring-black"
-                        : "ring-2 ring-gray-700 hover:ring-gray-600"
-                    }`}
+
+      <div className="p-4 overflow-y-auto" style={{ maxHeight: isMobile ? "calc(100% - 60px)" : "calc(100% - 60px)" }}>
+        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mb-4">Ambientes</h2>
+        <div className="flex flex-col gap-4">
+          {ambientes.map((ambiente) => {
+            const { preview } = externalGetAmbientFilePaths
+              ? externalGetAmbientFilePaths(ambiente, darkMode)
+              : getAmbientFilePaths(ambiente, darkMode);
+            
+            const isActive = currentView.name === ambiente.name;
+            
+            return (
+              <div
+                key={ambiente.name}
+                onClick={() => onViewClick(ambiente)}
+                className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 transform ${
+                  isActive ? "scale-105 shadow-md" : "hover:scale-105"
+                }`}
+                style={{ 
+                  border: `2px solid ${isActive ? theme.accent.primary : 'transparent'}`,
+                }}
+              >
+                <div className="relative">
+                  <img
+                    src={preview}
+                    alt={ambiente.name}
+                    className="w-full h-[200px] object-cover"
+                  />
+                  <div
+                    className="absolute bottom-0 left-0 right-0 p-1 text-xs font-medium text-center"
+                    style={{ 
+                      backgroundColor: isActive ? theme.accent.primary : theme.background.secondary,
+                      color: isActive ? theme.text.inverted : theme.text.primary
+                    }}
                   >
-                    <div className="w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-                      {item.name}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="p-4 overflow-auto">
-          <div className="grid grid-cols-1 gap-4">
-            {ambientes.map((item, index) => {
-              const paths = externalGetAmbientFilePaths ? externalGetAmbientFilePaths(item, darkMode) : getAmbientFilePaths(item, darkMode);
-              return (
-                <button
-                  key={index}
-                  onClick={() => onViewClick(item)}
-                  style={{ backgroundImage: `url(${paths.preview})` }}
-                  className={`bg-cover bg-center h-[200px] rounded ${
-                    currentView.name === item.name
-                      ? "ring-4 ring-black"
-                      : "ring-2 ring-gray-700 hover:ring-gray-600"
-                  }`}
-                >
-                  <div className="w-full h-full flex items-center uppercase font-semibold justify-center bg-black bg-opacity-50 text-white">
-                    {item.name}
+                    {ambiente.name}
                   </div>
-                </button>
-              );
-            })}
-          </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      )}
+      </div>
     </div>
   );
 };

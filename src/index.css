@@ -1,3 +1,4 @@
+@import './theme.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,4 +11,6 @@ body {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
