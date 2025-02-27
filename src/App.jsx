@@ -10,6 +10,7 @@ import getAmbientFilePaths from './utils/getAmbientFilePaths';
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
+import { processMobileCollection } from "./utils/imageUtils";
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
@@ -59,8 +60,11 @@ function App() {
       // Construir la URL correcta del recurso
       const jsonUrl = new URL(pin.data, import.meta.url).href;
       const response = await fetch(jsonUrl);
-      const jsonData = await response.json();
+      let jsonData = await response.json();
   
+      // Procesar la colección para dispositivos móviles
+      jsonData = processMobileCollection(jsonData);
+
       if (Array.isArray(jsonData) && jsonData.length > 0) {
         const collectionName = pin.data.split('/').pop().replace('.json', '');
         

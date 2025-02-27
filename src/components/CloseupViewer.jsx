@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ViewerHeader from "./ViewerHeader";
 import { useTheme } from "../context/ThemeContext";
+import { processMobileCollection } from "../utils/imageUtils";
 
 const CloseupViewer = ({ closeup, onClose }) => {
   const { file: closeupFile, collection: defaultCollection, selectedIndex: initialIndex = 0 } = closeup;
@@ -15,7 +16,11 @@ const CloseupViewer = ({ closeup, onClose }) => {
     // Dynamically import the JSON file based on the currentCollection state
     import(`../data/collections/${currentCollection}.json`)
       .then(module => {
-        const data = module.default;
+        let data = module.default;
+        
+        // Procesar la colección para dispositivos móviles
+        data = processMobileCollection(data);
+        
         setProducts(data);
         
         // Si se proporciona un índice inicial, usarlo

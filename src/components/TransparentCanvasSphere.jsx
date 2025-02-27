@@ -1,5 +1,7 @@
 import React, { useMemo, useEffect } from "react";
 import * as THREE from "three";
+// Importar las utilidades de imágenes
+import { processMobileImages } from "../utils/imageUtils";
 
 // Importamos los archivos JSON (Vite permite importar JSON por defecto)
 import zocalos from "../data/collections/zocalos.json";
@@ -87,7 +89,9 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
     // Función para cargar un item específico
     const loadItemOverlay = async (item) => {
       if (item && item.overlay) {
-        const overlayPath = getOverlayPath(item);
+        // Procesar el item para obtener la ruta de imagen optimizada para móviles
+        const processedItem = processMobileImages(item);
+        const overlayPath = getOverlayPath(processedItem);
         await loadAndDrawImage(overlayPath, item.x, item.y);
       }
     };

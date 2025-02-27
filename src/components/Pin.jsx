@@ -25,8 +25,12 @@ const Pin = ({ position, onClick }) => {
   return (
     <Billboard position={position}>
       <group onClick={(e) => { 
+        
         e.stopPropagation(); 
         onClick && onClick(); 
+
+        console.log("Fssd");
+
       }}>
         {/* Halo pulsante utilizando una textura para bordes difuminados */}
         <mesh ref={pulseRef} renderOrder={11}>

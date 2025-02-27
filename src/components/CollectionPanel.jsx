@@ -3,6 +3,7 @@ import { getTransformStyle } from "../utils/transformStyles";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
 import { FixedSizeGrid } from 'react-window';
+import { processMobileCollection } from "../utils/imageUtils";
 
 const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
   const isMobile = useIsMobile();
@@ -31,7 +32,10 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
           try {
             // Importar dinámicamente los archivos JSON desde src/data
             const collectionModule = await import(/* @vite-ignore */ `../${pin.data}`);
-            const collectionData = collectionModule.default;
+            let collectionData = collectionModule.default;
+            
+            // Procesar la colección para dispositivos móviles
+            collectionData = processMobileCollection(collectionData);
             
             // Extraer el nombre de la colección del path del archivo
             const collectionName = pin.data.split('/').pop().replace('.json', '');
