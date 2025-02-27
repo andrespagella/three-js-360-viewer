@@ -8,6 +8,8 @@ const CloseupViewer = ({ closeup, onClose }) => {
   const [products, setProducts] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(initialIndex);
   const { theme } = useTheme();
+  const [intermediateScreen, setIntermediateScreen] = useState(false);
+  const [transitionState, setTransitionState] = useState('normal'); // 'normal', 'transitioning', 'loading'
 
   useEffect(() => {
     // Dynamically import the JSON file based on the currentCollection state
@@ -56,6 +58,39 @@ const CloseupViewer = ({ closeup, onClose }) => {
 
   const selectedProduct = products[selectedIndex];
 
+  const handleCloseCloseup = (collection, selectedIndex) => {
+    console.log("1. Inicio de handleCloseCloseup");
+    
+    // Actualizar selecciones
+    if (collection && selectedIndex !== undefined) {
+      setSelectedIndex(selectedIndex);
+    }
+    
+    // Verificar si es iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isIOS) {
+      // En iOS, primero cambiar a un estado de transición
+      console.log("Cambiando a estado de transición");
+      setTransitionState('transitioning');
+      
+      // Luego cerrar el closeup
+      setTimeout(() => {
+        console.log("Cerrando closeup");
+        onClose(collection, selectedIndex);
+        
+        // Finalmente, después de un breve retraso, volver al estado normal
+        setTimeout(() => {
+          console.log("Volviendo a estado normal");
+          setTransitionState('normal');
+        }, 300);
+      }, 50);
+    } else {
+      // En otros dispositivos, comportamiento normal
+      onClose(collection, selectedIndex);
+    }
+  };
+
   return (
     <div 
       className="fixed inset-0 z-10 flex"
@@ -73,7 +108,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
           onDragStart={preventDragHandler}
         />
         <button
-          onClick={() => onClose(currentCollection, selectedIndex)}
+          onClick={() => handleCloseCloseup(currentCollection, selectedIndex)}
           className="absolute top-20 left-4 bg-black text-white px-4 py-2 rounded-lg text-sm font-bold"
         >
           Vista principal
@@ -91,13 +126,9 @@ const CloseupViewer = ({ closeup, onClose }) => {
                   className="relative"
                   style={{ padding: '3px' }} // Espacio para la sombra
                 >
-                  <img
-                    src={product.thumbnail}
-                    alt={product.descripcion}
-                    className={`w-32 h-32 object-cover cursor-pointer rounded-[10px]`}
+                  <div 
+                    className="w-32 h-32 relative cursor-pointer rounded-[10px] overflow-hidden"
                     onClick={() => setSelectedIndex(index)}
-                    draggable="false"
-                    onDragStart={preventDragHandler}
                     style={index === selectedIndex ? 
                       { 
                         border: `3px solid ${theme.accent.primary}`,
@@ -108,7 +139,15 @@ const CloseupViewer = ({ closeup, onClose }) => {
                         boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
                       }
                     }
-                  />
+                  >
+                    <img
+                      src={product.thumbnail}
+                      alt={product.descripcion}
+                      className="absolute w-full h-full object-cover"
+                      draggable="false"
+                      onDragStart={preventDragHandler}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -183,6 +222,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
           <p style={{ color: theme.text.tertiary }}>No hay información disponible.</p>
         )}
       </div>
+
+      {transitionState === 'transitioning' && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black">
+          <div className="text-white text-xl">Cargando vista principal...</div>
+        </div>
+      )}
     </div>
   );
 };
