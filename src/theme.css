@@ -1,8 +1,8 @@
 :root {
   /* Variables de color que se actualizarán dinámicamente */
-  --bg-primary: #00FF00;
-  --bg-secondary: #FF0000;
-  --bg-tertiary: #0000FF;
+  --bg-primary: #FAFAFA;
+  --bg-secondary: rgba(255,255,255,0.8);
+  --bg-tertiary: #E8E8E8;
   
   --text-primary: #111111;
   --text-secondary: #333333;
@@ -13,7 +13,7 @@
   --border-medium: #CCCCCC;
   --border-dark: #999999;
   
-  --accent-primary: #6366F1;
+  --accent-primary: #512D7E;
   --accent-hover: #4F46E5;
   --accent-active: #4338CA;
 }
