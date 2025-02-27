@@ -22,8 +22,6 @@ const ThemeUpdater = () => {
     document.documentElement.style.setProperty('--accent-primary', theme.accent.primary);
     document.documentElement.style.setProperty('--accent-hover', theme.accent.hover);
     document.documentElement.style.setProperty('--accent-active', theme.accent.active);
-    
-    console.log('Theme updated:', theme);
   }, [theme]);
 
   return null; // Este componente no renderiza nada

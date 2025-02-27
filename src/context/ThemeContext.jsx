@@ -27,9 +27,6 @@ export const ThemeProvider = ({ children }) => {
     }
   };
 
-  // Añadir un console.log para verificar que el tema se está proporcionando correctamente
-  console.log('ThemeProvider rendering with theme:', currentTheme);
-
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, changeTheme }}>
       {children}
