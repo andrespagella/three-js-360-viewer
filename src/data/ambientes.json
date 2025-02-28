@@ -2,11 +2,11 @@
     {
       "url": "ambientes/new-bath-360-3.png",
       "preview": "ambientes/ante-preview.png",
-      "name": "Antebaño"
+      "name": "Baño"
     },
     {
       "url": "ambientes/new-bath-360-2.png",
       "preview": "ambientes/ante-preview.png",
-      "name": "Baño"
+      "name": "Ducha"
     }
   ]

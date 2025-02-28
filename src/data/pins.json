@@ -1,6 +1,6 @@
 [
     {
-      "ambiente": "Antebaño",
+      "ambiente": "Baño",
       "pins": [
         {
           "id": 1,
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "ambiente": "Baño",
+      "ambiente": "Ducha",
       "pins": [
         {
           "id": 12,

@@ -3,17 +3,17 @@ function getAmbientFilePaths(ambient, darkMode) {
   let prefix = "";
   
   // Para las imágenes de ambiente (vista 360)
-  if (ambient.name === "Antebaño") {
+  if (ambient.name === "Baño") {
     prefix = "Bath-";
-  } else if (ambient.name === "Baño") {
+  } else if (ambient.name === "Ducha") {
     prefix = "ShowerArea-";
   }
   
   // Para las imágenes de preview en la sidebar
   let previewPath = "";
-  if (ambient.name === "Antebaño") {
+  if (ambient.name === "Baño") {
     previewPath = `/previews/ante-${darkMode ? 'dark' : 'light'}.webp`;
-  } else if (ambient.name === "Baño") {
+  } else if (ambient.name === "Ducha") {
     previewPath = `/previews/ducha-${darkMode ? 'dark' : 'light'}.webp`;
   }
   
