@@ -23,10 +23,10 @@ const LanguageSelector = ({ onSelectLanguage }) => {
           <img src="/icons/pt.png" alt="Português" className="w-12 h-12 mb-2" />
           <span className="text-sm group-hover:font-bold transition-all">Português</span>
         </button>
-        <button onClick={() => onSelectLanguage("en")} className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out">
+        {/* <button onClick={() => onSelectLanguage("en")} className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out">
           <img src="/icons/en.png" alt="English" className="w-12 h-12 mb-2" />
           <span className="text-sm group-hover:font-bold transition-all">English</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );
