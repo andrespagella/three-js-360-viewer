@@ -57,17 +57,17 @@ function App() {
   // se toma el elemento seleccionado según selectedItems y se usa su propiedad "closeup".
   const handleSelectPin = async (pin) => {
     try {
-      // Construir la URL correcta del recurso
-      const jsonUrl = new URL(pin.data, import.meta.url).href;
-      const response = await fetch(jsonUrl);
-      let jsonData = await response.json();
+      // Extraer el nombre de la colección del path del archivo
+      const collectionName = pin.data.split('/').pop().replace('.json', '');
+      
+      // Importar el módulo directamente usando dynamic import
+      const module = await import(`./data/collections/${collectionName}.json`);
+      let jsonData = module.default;
   
       // Procesar la colección para dispositivos móviles
       jsonData = processMobileCollection(jsonData);
 
       if (Array.isArray(jsonData) && jsonData.length > 0) {
-        const collectionName = pin.data.split('/').pop().replace('.json', '');
-        
         // Usar el índice seleccionado de selectedItems si existe, de lo contrario usar 0
         const selectedIndex = selectedItems[collectionName] || 0;
         
@@ -90,6 +90,12 @@ function App() {
 
   // Función que abre el closeup utilizando la imagen obtenida del JSON.
   const handleOpenCloseup = () => {
+    // En dispositivos móviles, cerrar los paneles antes de abrir el closeup
+    if (isMobile) {
+      setMenuExpanded(false);
+      setCollectionPanelExpanded(false);
+    }
+    
     setZooming(true);
     setTimeout(() => {
       if (selectedPin) {
