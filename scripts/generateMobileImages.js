@@ -21,6 +21,13 @@ async function processMobileImage(imagePath) {
     const dir = path.dirname(imagePath);
     const ext = path.extname(imagePath);
     const baseName = path.basename(imagePath, ext);
+    
+    // Verificar si el archivo ya es una versión móvil
+    if (baseName.includes('-mobile')) {
+      console.log(`Saltando archivo que ya es versión móvil: ${imagePath}`);
+      return;
+    }
+    
     const outputPath = path.join(dir, `${baseName}-mobile${ext}`);
     
     // Verificar si la imagen móvil ya existe
@@ -60,8 +67,8 @@ async function processDirectory(directory) {
       if (stat.isDirectory()) {
         // Si es un directorio, procesarlo recursivamente
         await processDirectory(filePath);
-      } else if (/\.(jpg|jpeg|png|webp)$/i.test(file)) {
-        // Si es una imagen, procesarla
+      } else if (/\.(jpg|jpeg|png|webp)$/i.test(file) && !file.includes('-mobile')) {
+        // Si es una imagen y no es una versión móvil, procesarla
         await processMobileImage(filePath);
       }
     }
