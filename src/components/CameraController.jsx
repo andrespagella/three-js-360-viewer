@@ -10,18 +10,29 @@ const CameraController = ({ selectedPin }) => {
   // Almacenar la posición inicial de la cámara
   const initialCameraPosition = useRef(camera.position.clone());
 
-  // Establecer la rotación inicial de la cámara para mirar más hacia la derecha
+  // Establecer la rotación inicial de la cámara para mirar más hacia la derecha y un poco hacia abajo
   useEffect(() => {
     if (controlsRef.current) {
       
       // Rotar la cámara hacia la derecha para que vea la union entre ducha y ventana
-      const rotationAngle = -Math.PI / 3;
+      const horizontalRotationAngle = -Math.PI / 3;
       
-      // Crear un quaternion para la rotación
-      const quaternion = new THREE.Quaternion().setFromAxisAngle(
+      // Añadir una rotación sutil hacia abajo
+      const verticalRotationAngle = Math.PI / -10; // Ángulo sutil hacia abajo
+      
+      // Crear quaternions para ambas rotaciones
+      const horizontalQuaternion = new THREE.Quaternion().setFromAxisAngle(
         new THREE.Vector3(0, 1, 0), // Eje Y para rotación horizontal
-        rotationAngle
+        horizontalRotationAngle
       );
+      
+      const verticalQuaternion = new THREE.Quaternion().setFromAxisAngle(
+        new THREE.Vector3(1, 0, 0), // Eje X para rotación vertical
+        verticalRotationAngle
+      );
+      
+      // Combinar ambas rotaciones
+      const quaternion = new THREE.Quaternion().multiplyQuaternions(verticalQuaternion, horizontalQuaternion);
       
       // Aplicar la rotación a la cámara
       camera.quaternion.copy(quaternion);
