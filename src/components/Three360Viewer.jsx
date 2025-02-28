@@ -9,6 +9,39 @@ import CameraController from "./CameraController";
 import InstructionsOverlay from "./InstructionsOverlay";
 import HelpButton from "./HelpButton";
 
+// Función para verificar si existe una cookie
+const getCookie = (name) => {
+  try {
+    // Verificar si estamos en el navegador
+    if (typeof document === 'undefined') return null;
+    
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+  } catch (error) {
+    console.error('Error al leer cookie:', error);
+    return null;
+  }
+};
+
+// Función para establecer una cookie
+const setCookie = (name, value, days) => {
+  try {
+    // Verificar si estamos en el navegador
+    if (typeof document === 'undefined') return false;
+    
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = `expires=${date.toUTCString()}`;
+    document.cookie = `${name}=${value};${expires};path=/`;
+    return true;
+  } catch (error) {
+    console.error('Error al establecer cookie:', error);
+    return false;
+  }
+};
+
 // Utilizamos el componente Stats de @react-three/drei que ya está optimizado para React Three Fiber
 const StatsPanel = () => {
   return <Stats className="stats-panel" />;
@@ -27,9 +60,18 @@ const Three360Viewer = ({
 }) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
-  // Siempre mostrar las instrucciones al inicio
+  
+  // Inicializar showInstructions como true y luego verificar las cookies en un efecto
   const [showInstructions, setShowInstructions] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Verificar la cookie cuando el componente se monta
+  useEffect(() => {
+    const hasSeenInstructions = getCookie('instructionsViewed');
+    if (hasSeenInstructions === 'true') {
+      setShowInstructions(false);
+    }
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,15 +105,11 @@ const Three360Viewer = ({
     }
   }, [selectedPin]);
 
-  // Mostrar instrucciones cuando cambia la vista o el ambiente
-  useEffect(() => {
-    // Mostrar instrucciones cada vez que cambia la vista
-    setShowInstructions(true);
-  }, [currentView, imageUrl]);
-
   // Función para cerrar el overlay de instrucciones
   const handleCloseInstructions = () => {
     setShowInstructions(false);
+    // Guardar en una cookie que el usuario ha visto las instrucciones (válida por 30 días)
+    setCookie('instructionsViewed', 'true', 30);
   };
 
   // Función para mostrar el overlay de instrucciones
