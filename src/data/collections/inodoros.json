@@ -1,16 +1,22 @@
 [
     {
-        "producto": "inodoro pur390",
+        "producto": "Inodoro Inteligente PuraSense",
         "SKU": "PUR390",
-        "descripcion": "Inodoro Inteligente PuraSense - Tanque de agua & Trampa S 250mm ",
+        "descripcion": "Inodoro inteligente con diseño elegante, apertura automática, funciones de lavado y secado ajustables. Sistema de descarga sin electricidad y trampa S de 250 mm para fácil instalación.",
         "caracteristicas": [
             "Inodoro inteligente de diseño sutil y elegante.",
             "Funciones principales:",
             "- Apertura y cierre automáticos para mayor comodidad.",
             "- Funciones de lavado, secado, autolimpieza, temperatura y flujo de agua ajustable.",
             "- Sistema de descarga que no requiere electricidad ni presión.",
-            "- Trampa S de 250 mm para una instalación sencilla y eficiente."
+            "- Trampa S de 250 mm para una instalación sencilla y eficiente.",
+            "- Tanque de agua"
         ],
+        "ficha": {
+            "coleccion": "PuraSense",
+            "material": "Porcelana sanitaria",
+            "color": "Blanco"
+        },
         "thumbnail": "thumbnails/inodoro/inodoro.webp",
         "closeup": "closeups/inodoros/inodoro.webp"
     }

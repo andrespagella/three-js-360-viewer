@@ -198,6 +198,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
           </p>
         )}
 
+        {selectedProduct.descripcion && (
+          <p className="text-base mb-10">
+            {selectedProduct.descripcion}
+          </p>
+        )}
+
         <h3 className="text-lg font-bold mb-3">Ficha Técnica</h3>
         
         {selectedProduct.ficha ? (
