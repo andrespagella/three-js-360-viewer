@@ -1,28 +1,5 @@
 [
     {
-        "producto": "espejo orb060m",
-        "SKU": "ORB060M",
-        "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño curvo.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
-        "ficha": {
-            "coleccion": "Orbital",
-            "terminacion": "Azul Intenso mate",
-            "medidas": [
-                "600mm",
-                "800mm"
-            ]
-        },
-        "thumbnail": "thumbnails/espejos/ORB060M.webp",
-        "closeup": "closeups/espejos/ORB060M.webp",
-        "overlay": "overlays/espejos/ORB060M.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
         "producto": "espejo con080m",
         "SKU": "CON080M",
         "descripcion": "ESPEJO LED CONTOUR 120X72 CM MADERA",
@@ -42,6 +19,29 @@
         "thumbnail": "thumbnails/espejos/CON080M.webp",
         "closeup": "closeups/espejos/CON080M.webp",
         "overlay": "overlays/espejos/CON080M.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "espejo orb060m",
+        "SKU": "ORB060M",
+        "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
+        "caracteristicas": [
+            "Diseño curvo.",
+            "Posibilidad con marco o sin marco.",
+            "Luz neutra LED integrada en el contorno del espejo."
+        ],
+        "ficha": {
+            "coleccion": "Orbital",
+            "terminacion": "Azul Intenso mate",
+            "medidas": [
+                "600mm",
+                "800mm"
+            ]
+        },
+        "thumbnail": "thumbnails/espejos/ORB060M.webp",
+        "closeup": "closeups/espejos/ORB060M.webp",
+        "overlay": "overlays/espejos/ORB060M.webp",
         "x": 0,
         "y": 0
     },

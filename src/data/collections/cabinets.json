@@ -1,5 +1,33 @@
 [
     {
+        "producto": "cabinet madrid",
+        "SKU": "MADSIMM",
+        "descripcion": {
+            "es": "Gabinete de diseño elegante con laterales biselados a 45° que crean una estética sofisticada. Incluye estantes movibles para maximizar el espacio de almacenamiento, bisagras soft close y opciones de apertura versátiles. Ideal para complementar cualquier baño con su acabado laqueado personalizable.",
+            "pt": "Gabinete de design elegante com laterais biseladas a 45° que criam uma estética sofisticada. Inclui prateleiras móveis para maximizar o espaço de armazenamento, dobradiças soft close e opções de abertura versáteis. Ideal para complementar qualquer banheiro com seu acabamento laqueado personalizável."
+        },
+        "caracteristicas": [
+            "Diseño clásico con un estante a la vista.",
+            "Acabado laqueado o madera personalizable.",
+            "Montaje en pared.",
+            "Bisagras soft close.",
+            "Puerta con opción de apertura derecha o izquierda."
+        ],
+        "ficha": {
+            "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior.",
+            "terminacion": "Roble Natural",
+            "bisagras": "Soft Close",
+            "medidas": [
+                "30cm x 150cm"
+            ]
+        },
+        "thumbnail": "thumbnails/cabinets/MADSIMM.webp",
+        "closeup": "closeups/cabinets/MADSIMM.webp",
+        "overlay": "overlays/cabinets/MADSIMM.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
         "producto": "cabinet varenna",
         "SKU": "VARPLEL",
         "descripcion": {
@@ -81,34 +109,6 @@
         "thumbnail": "thumbnails/cabinets/MADDUOL.webp",
         "closeup": "closeups/cabinets/MADDUOL.webp",
         "overlay": "overlays/cabinets/MADDUOL.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
-        "producto": "cabinet madrid",
-        "SKU": "MADSIMM",
-        "descripcion": {
-            "es": "Gabinete de diseño elegante con laterales biselados a 45° que crean una estética sofisticada. Incluye estantes movibles para maximizar el espacio de almacenamiento, bisagras soft close y opciones de apertura versátiles. Ideal para complementar cualquier baño con su acabado laqueado personalizable.",
-            "pt": "Gabinete de design elegante com laterais biseladas a 45° que criam uma estética sofisticada. Inclui prateleiras móveis para maximizar o espaço de armazenamento, dobradiças soft close e opções de abertura versáteis. Ideal para complementar qualquer banheiro com seu acabamento laqueado personalizável."
-        },
-        "caracteristicas": [
-            "Diseño clásico con un estante a la vista.",
-            "Acabado laqueado o madera personalizable.",
-            "Montaje en pared.",
-            "Bisagras soft close.",
-            "Puerta con opción de apertura derecha o izquierda."
-        ],
-        "ficha": {
-            "composicion": "2 estantes movibles dentro de la puerta superior y 1 estante movible dentro de la puerta inferior.",
-            "terminacion": "Roble Natural",
-            "bisagras": "Soft Close",
-            "medidas": [
-                "30cm x 150cm"
-            ]
-        },
-        "thumbnail": "thumbnails/cabinets/MADSIMM.webp",
-        "closeup": "closeups/cabinets/MADSIMM.webp",
-        "overlay": "overlays/cabinets/MADSIMM.webp",
         "x": 0,
         "y": 0
     },
