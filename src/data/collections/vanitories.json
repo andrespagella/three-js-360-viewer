@@ -1,8 +1,11 @@
 [
     {
-        "producto": "vanitory va080lfcon",
+        "producto": "Vanitory Modelo Varenna",
         "SKU": "VA080LFCON",
-        "descripcion": "vanitory varenna biselado 120 cm 120 cm mesada fina bacha connect",
+        "descripcion": {
+            "es": "Diseño con laterales biselados a 45° que generan una unión continua y una estética diferenciada. Incluye un cajón principal con un cajón oculto en su interior, ambos con correderas soft close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
+            "pt": "Design com laterais biseladas a 45° que geram uma união contínua e uma estética diferenciada. Inclui uma gaveta principal com uma gaveta oculta em seu interior, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
+        },
         "caracteristicas": [
             "Diseño con laterales biselados a 45° que generan una unión continua y una estética diferenciada. Incluye un cajón principal con un cajón oculto en su interior, ambos con correderas soft close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
             "Vanitory con cajones para montar sobre la pared.",
@@ -25,9 +28,12 @@
         "y": 0
     },
     {
-        "producto": "vanitory vi080lfcon",
+        "producto": "Vanitory Modelo Viterbo",
         "SKU": "VI080LFCON",
-        "descripcion": "vanitory viterbo varillado 120 cm laqueado mesada fina bacha connect",
+        "descripcion": {
+            "es": "Diseño con frente varillado, una de las últimas tendencias en decoración. Con un cajón principal y uno pequeño oculto, ambos con correderas soft close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
+            "pt": "Design com frente ripada, uma das últimas tendências em decoração. Com uma gaveta principal e uma pequena oculta, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
+        },
         "caracteristicas": [
             "Diseño con frente varillado, una de las últimas tendencias en decoración. Con un cajón principal y uno pequeño oculto, ambos con correderas soft close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
             "Vanitory con cajones para montar sobre la pared.",
@@ -48,9 +54,12 @@
         "y": 0
     },
     {
-        "producto": "vanitory ra080lbcon",
+        "producto": "Vanitory Modelo Ravello",
         "SKU": "RA080LBCON",
-        "descripcion": "vanitory ravello perfil j 120 cm laqueado mesada box bacha connect",
+        "descripcion": {
+            "es": "Diseño compacto que destaca por su perfil en acero inoxidable, un detalle disruptivo que no pasa desapercibido. Cuenta con un cajón amplio con correderas Soft Close. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
+            "pt": "Design compacto que se destaca por seu perfil em aço inoxidável, um detalhe disruptivo que não passa despercebido. Possui uma gaveta ampla com corrediças Soft Close. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
+        },
         "caracteristicas": [
             "Diseño compacto que destaca por su perfil en acero inoxidable, un detalle disruptivo que no pasa desapercibido. Cuenta con un cajón amplio con correderas Soft Close. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
             "Vanitory con cajones para montar sobre la pared.",
@@ -71,9 +80,12 @@
         "y": 0
     },
     {
-        "producto": "vanitory be080mfmax",
+        "producto": "Vanitory Modelo Bellagio",
         "SKU": "BE080MFMAX",
-        "descripcion": "vanitory bellagio cajones 120 cm madera mesada fina bacha maxime",
+        "descripcion": {
+            "es": "Diseño clásico de cajones, ideal para quienes buscan gran capacidad de almacenamiento. Disponible en versiones de 2 o 4 cajones, con correderas Soft Close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
+            "pt": "Design clássico de gavetas, ideal para quem busca grande capacidade de armazenamento. Disponível em versões de 2 ou 4 gavetas, com corrediças Soft Close e cobre ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
+        },
         "caracteristicas": [
             "Diseño clásico de cajones, ideal para quienes buscan gran capacidad de almacenamiento. Disponible en versiones de 2 o 4 cajones, con correderas Soft Close y cubre desagüe. La mesada y bacha está hecha 100% de Orastone, nuestra superficie innovadora, duradera, no porosa y fácil de limpiar. Totalmente personalizable tanto en diseño como en color.",
             "Vanitory con cajones para montar sobre la pared.",
@@ -98,9 +110,12 @@
         "y": 0
     },
     {
-        "producto": "vanitory ta080lbcon",
+        "producto": "Vanitory Modelo Taormina",
         "SKU": "TA080LBCON",
-        "descripcion": "vanitory taormina puertas 120 cm laqueado mesada fina bacha connect",
+        "descripcion": {
+            "es": "Diseño clásico de puertas con múltiples funciones, que incluye estantes internos ajustables por el usuario y bisagras Soft Close. Mesada y bacha en Orastone, material fácil de mantener, limpiar y reparar.",
+            "pt": "Design clássico de portas com múltiplas funções, que inclui prateleiras internas ajustáveis pelo usuário e dobradiças Soft Close. Bancada e cuba em Orastone, material fácil de manter, limpar e reparar."
+        },
         "caracteristicas": [
             "Diseño clásico de puertas con múltiples funciones, que incluye estantes internos ajustables por el usuario y bisagras Soft Close. Mesada y bacha en Orastone, material fácil de mantener, limpiar y reparar.",
             "Vanitory con puertas para montar sobre la pared.",

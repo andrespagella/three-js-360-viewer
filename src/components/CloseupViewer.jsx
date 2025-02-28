@@ -129,9 +129,9 @@ const CloseupViewer = ({ closeup, onClose }) => {
           backgroundColor: 'rgba(0,0,0,0.0)'
         }}>
           {/* Eliminar todos los paddings excepto un poco arriba */}
-          <div className="pt-2 pl-2 pb-2 px-0 m-0 w-full">
-            {/* Contenedor de desplazamiento - eliminar todos los espacios */}
-            <div className="flex overflow-x-auto m-0 p-0 w-full">
+          <div className="pt-2 pb-2 px-0 m-0 w-full">
+            {/* Contenedor de desplazamiento - centrado horizontalmente */}
+            <div className="flex overflow-x-auto m-0 p-0 w-full justify-center" style={{ paddingLeft: '20px', paddingRight: '20px' }}>
               {products.map((product, index) => (
                 <div 
                   key={index} 
@@ -200,7 +200,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
 
         {selectedProduct.descripcion && (
           <p className="text-base mb-10">
-            {selectedProduct.descripcion}
+            {selectedProduct.descripcion.es}
           </p>
         )}
 

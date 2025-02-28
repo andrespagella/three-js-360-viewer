@@ -2,7 +2,10 @@
     {
         "producto": "Inodoro Inteligente PuraSense",
         "SKU": "PUR390",
-        "descripcion": "Inodoro inteligente con diseño elegante, apertura automática, funciones de lavado y secado ajustables. Sistema de descarga sin electricidad y trampa S de 250 mm para fácil instalación.",
+        "descripcion": {
+            "es": "Inodoro inteligente con diseño elegante, apertura automática, funciones de lavado y secado ajustables. Sistema de descarga sin electricidad y trampa S de 250 mm para fácil instalación.",
+            "pt": "Vaso sanitário inteligente com design elegante, abertura automática, funções de lavagem e secagem ajustáveis. Sistema de descarga sem eletricidade e sifão S de 250 mm para fácil instalação."
+        },
         "caracteristicas": [
             "Inodoro inteligente de diseño sutil y elegante.",
             "Funciones principales:",
