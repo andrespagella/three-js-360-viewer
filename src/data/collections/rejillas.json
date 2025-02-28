@@ -1,24 +1,25 @@
 [
     {
-        "producto": "REJILLA PR120T02",
-        "SKU": "2309",
-        "descripcion": "Zócalo Orbit",
+        "producto": "REJILLA PR120T08",
+        "SKU": "PR120T08",
+        "descripcion": "Rejilla diseñada para facilitar la evacuación del agua, prevenir olores y evitar el acceso de grasas a las tuberías. Se instala en: baños, lavaderos y donde se requiera drenaje de agua.",
         "caracteristicas": [
             "Pintable, de cara plana y canto redondeado",
             "Diseño y color en cualquier ambiente",
             ""
         ],
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Pintable",
+            "material": "Acero Inoxidable 304  ",
+            "colección": "Lagoon Series",
             "medidas": [
-                "70mm",
-                "15mm",
-                "2,5mts"
+                "12 cm",
+                "12 cm",
+                "7,4 cm"
             ],
-            "forma": "Orbit"
+            "materiales": "SST 304 + ABS",
+            "color": "Negro"
         },
-        "thumbnail": "thumbnails/rejilla/PR120T02.webp",
+        "thumbnail": "thumbnails/rejilla/PR120T08.webp",
         "closeup": "closeups/rejilla/PR120T02.webp"
     }
 ]
