@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
-import CollectionPanel from "./components/CollectionPanel";
+import ProductPanel from "./components/ProductPanel";
 import LanguageSelector from "./components/LanguageSelector";
 import PreloadingScreen from "./components/PreloadingScreen";
 import ambientes from "./data/ambientes.json";
@@ -211,7 +211,7 @@ function App() {
               </button>
             )}
 
-            <CollectionPanel
+            <ProductPanel
               ambientes={ambientes}
               pinsData={pinsData}
               onSelectAmbiente={handleSelectAmbiente}
@@ -235,7 +235,7 @@ function App() {
                   boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                Colección
+                Productos
               </button>
             ) : (
               // COLECCIONES Mobile
@@ -251,7 +251,7 @@ function App() {
                   boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                Colección
+                Productos
               </button>
             )}
           </>

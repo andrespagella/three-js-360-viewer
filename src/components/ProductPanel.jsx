@@ -7,7 +7,7 @@ import { processMobileCollection } from "../utils/imageUtils";
 // Caché global para almacenar colecciones ya cargadas
 const collectionsCache = {};
 
-const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
+const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
   const isMobile = useIsMobile();
   const [thumbnails, setThumbnails] = useState({});
   const { theme } = useTheme();
@@ -25,7 +25,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
     }, []);
   }, [pinsData]);
 
-  // Para CollectionPanel: usar "bottom" en mobile y "right" en escritorio
+  // Para ProductPanel: usar "bottom" en mobile y "right" en escritorio
   const anchor = isMobile ? "bottom" : "right";
   const transformStyle = getTransformStyle(anchor, panelExpanded);
 
@@ -190,7 +190,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
       }}
     >
       <div className="h-full flex flex-col">
-        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mt-2 mb-2 px-2">Colección</h2>
+        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mt-2 mb-2 px-2">Productos</h2>
 
         <div 
           className="flex-1 overflow-y-auto px-2"
@@ -227,7 +227,7 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
             </div>
           ) : (
             <div className="flex items-center justify-center h-full">
-              <p style={{ color: theme.text.secondary }}>Cargando colección...</p>
+              <p style={{ color: theme.text.secondary }}>Cargando productos...</p>
             </div>
           )}
         </div>
@@ -243,4 +243,4 @@ const CollectionPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, p
   );
 };
 
-export default React.memo(CollectionPanel);
+export default React.memo(ProductPanel); 
