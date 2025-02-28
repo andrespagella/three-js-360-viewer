@@ -6,6 +6,8 @@ import Pin from "./Pin";
 import WarpZoom from "./WarpZoom";
 import TransparentCanvasSphere from "./TransparentCanvasSphere";
 import CameraController from "./CameraController";
+import InstructionsOverlay from "./InstructionsOverlay";
+import HelpButton from "./HelpButton";
 
 // Utilizamos el componente Stats de @react-three/drei que ya está optimizado para React Three Fiber
 const StatsPanel = () => {
@@ -25,6 +27,20 @@ const Three360Viewer = ({
 }) => {
   const [texture, setTexture] = useState(null);
   const [warpTarget, setWarpTarget] = useState(null);
+  // Siempre mostrar las instrucciones al inicio
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
@@ -47,8 +63,29 @@ const Three360Viewer = ({
     }
   }, [selectedPin]);
 
+  // Mostrar instrucciones cuando cambia la vista o el ambiente
+  useEffect(() => {
+    // Mostrar instrucciones cada vez que cambia la vista
+    setShowInstructions(true);
+  }, [currentView, imageUrl]);
+
+  // Función para cerrar el overlay de instrucciones
+  const handleCloseInstructions = () => {
+    setShowInstructions(false);
+  };
+
+  // Función para mostrar el overlay de instrucciones
+  const handleShowInstructions = () => {
+    setShowInstructions(true);
+  };
+
   return (
     <div style={{ position: 'relative', height: '100%' }}>
+      {showInstructions && <InstructionsOverlay onClose={handleCloseInstructions} />}
+      
+      {/* Help button to show instructions again */}
+      {!showInstructions && <HelpButton onClick={handleShowInstructions} isMobile={isMobile} />}
+      
       <Canvas style={{ height: "100%" }}>
         {/* La cámara rota hacia el pin seleccionado */}
         <CameraController selectedPin={selectedPin} />
