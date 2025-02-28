@@ -4,9 +4,11 @@ import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
 import CollectionPanel from "./components/CollectionPanel";
 import LanguageSelector from "./components/LanguageSelector";
+import PreloadingScreen from "./components/PreloadingScreen";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
+import preloadAllImages from './utils/preloadImages';
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
@@ -15,6 +17,7 @@ import { processMobileCollection } from "./utils/imageUtils";
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { theme } = useTheme();
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
@@ -37,6 +40,23 @@ function App() {
     espejos: 0,
     perfiles_piso: 0
   });
+
+  // Preload all images when the component mounts
+  useEffect(() => {
+    const loadAllImages = async () => {
+      try {
+        await preloadAllImages();
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error preloading images:", error);
+        
+        // Even if there's an error, we should still allow the user to proceed
+        setIsLoading(false);
+      }
+    };
+
+    loadAllImages();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -129,7 +149,12 @@ function App() {
     setLanguage(lang);
   };
 
-  // Hasta que el usuario seleccione el idioma, mostramos el selector
+  // Show the preloading screen while images are loading
+  if (isLoading) {
+    return <PreloadingScreen />;
+  }
+
+  // After loading, show the language selector if language is not selected
   if (!language) {
     return <LanguageSelector onSelectLanguage={handleSelectLanguage} />;
   }
