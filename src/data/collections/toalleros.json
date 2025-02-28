@@ -1,5 +1,40 @@
 [
     {
+        "producto": "toallero electrico coco-1004+",
+        "SKU": "COCO-1004+",
+        "descripcion": "Toallero Eléctrico Coco Smart",
+        "caracteristicas": [
+            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
+            "",
+            "Está compuesto por:",
+            "4 Barras calentadoras",
+            "Fijación trasera",
+            "Cables calefactores de aleación, con alta eficiencia de conversión",
+            "Marco completamente soldado",
+            "El grado de impermeabilidad alcanza IPX1",
+            "Producto completamente aislado, seguro y confiable",
+            "Interruptor de operación táctil",
+            "Cable de 1,5 metros"
+        ],
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "terminacion": "Brillante",
+            "medidas": [
+                "95cm",
+                "26mm",
+                "11cm"
+            ],
+            "peso": "4.6 kg",
+            "potencia": "86 wats",
+            "forma": "Diseño curvo"
+        },
+        "thumbnail": "thumbnails/toalleros/COCO-1004+.webp",
+        "closeup": "closeups/toalleros/COCO-1004+.webp",
+        "overlay": "overlays/toalleros/COCO-1004+.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
         "producto": "toallero electrico cubic-1135+",
         "SKU": "CUBIC-1135+",
         "descripcion": "Toallero Eléctrico Cubic Petit",
@@ -207,40 +242,5 @@
         "overlay": "overlays/toalleros/CUBIC-1137+.webp",
         "x": 0,
         "y": 0
-    },
-    {
-        "producto": "toallero electrico coco-1004+",
-        "SKU": "COCO-1004+",
-        "descripcion": "Toallero Eléctrico Coco Smart",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "4 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
-        "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Brillante",
-            "medidas": [
-                "95cm",
-                "26mm",
-                "11cm"
-            ],
-            "peso": "4.6 kg",
-            "potencia": "86 wats",
-            "forma": "Diseño curvo"
-        },
-        "thumbnail": "thumbnails/toalleros/COCO-1004+.webp",
-        "closeup": "closeups/toalleros/COCO-1004+.webp",
-        "overlay": "overlays/toalleros/COCO-1004+.webp",
-        "x": 0,
-        "y": 0
-    }
+    }    
 ]
