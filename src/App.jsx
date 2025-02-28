@@ -145,7 +145,8 @@ function App() {
               onToggleDarkMode={() => setDarkMode(!darkMode)}
               getAmbientFilePaths={getAmbientFilePaths}
             />
-            {!isMobile && (
+            {!isMobile ? (
+              // AMBIENTES Desktop
               <button
                 onClick={() => setMenuExpanded(!menuExpanded)}
                 className="fixed z-50 uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
@@ -161,6 +162,22 @@ function App() {
               >
                 Ambientes
               </button>
+            ) : (
+              // AMBIENTES Mobile
+              <button
+                onClick={() => setMenuExpanded(!menuExpanded)}
+                className="fixed z-50 uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
+                style={{
+                  backgroundColor: theme.background.primary,
+                  color: theme.text.primary,
+                  left: "1rem",
+                  bottom: "0rem",
+                  width: "43%",
+                  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
+                }}
+              >
+                Ambientes
+              </button>
             )}
 
             <CollectionPanel
@@ -172,7 +189,8 @@ function App() {
               selectedItems={selectedItems}
             />
 
-            {!isMobile && (
+            {!isMobile ? (
+              // COLECCIONES Desktop
               <button
                 onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
                 className="fixed z-50 uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
@@ -184,6 +202,22 @@ function App() {
                   transform: "translate(50%, -50%) rotate(90deg)",
                   transformOrigin: "center",
                   boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
+                }}
+              >
+                Colección
+              </button>
+            ) : (
+              // COLECCIONES Mobile
+              <button
+                onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
+                className="fixed z-50 uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
+                style={{
+                  backgroundColor: theme.background.primary,
+                  color: theme.text.primary,
+                  right: "1rem",
+                  bottom: "0rem",
+                  width: "43%",
+                  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                 }}
               >
                 Colección
