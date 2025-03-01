@@ -48,16 +48,50 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
     texture.anisotropy = 16; // Mejor calidad en ángulos oblicuos
 
     // Función para cargar y dibujar una imagen
-    const loadAndDrawImage = (src, x, y) => {
+    const loadAndDrawImage = (src, x, y, addDarkOverlay) => {
       return new Promise((resolve) => {
         const img = new Image();
         img.crossOrigin = "anonymous";
         img.onload = () => {
-          // Si es la imagen base (panorámica), asegurarse de que cubra todo el canvas
-          if (!x && !y) {
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+
+          // Si se solicita, agregar un overlay oscuro encima de la imagen
+          if (addDarkOverlay) {
+
+            const tmpCanvas = document.createElement("canvas");
+            tmpCanvas.width = canvas.width;
+            tmpCanvas.height = canvas.height;
+            const tmpCtx = tmpCanvas.getContext("2d");
+            
+            tmpCtx.save();
+            // Configurar un rectángulo semi-transparente para el efecto overlay
+            tmpCtx.fillStyle = "rgba(255, 0, 0, 0.5)";
+            
+            if (!x && !y) {
+              tmpCtx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            } else {
+              tmpCtx.drawImage(img, x || 0, y || 0);
+            }
+            
+            // Paso 2: Multiplicar el color en las zonas donde sí hay píxeles
+            tmpCtx.globalCompositeOperation = "overlay";
+            tmpCtx.fillStyle = "rgba(0, 0, 0, 0.6)";
+            tmpCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Paso 3: Restaurar la transparencia original
+            tmpCtx.globalCompositeOperation = "destination-in";
+            tmpCtx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            tmpCtx.restore();
+
+            ctx.drawImage(tmpCanvas, 0, 0, canvas.width, canvas.height);
+
           } else {
-            ctx.drawImage(img, x || 0, y || 0);
+            // Si es la imagen base (panorámica), asegurarse de que cubra todo el canvas
+            if (!x && !y) {
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            } else {
+              ctx.drawImage(img, x || 0, y || 0);
+            }
           }
           texture.needsUpdate = true;
           resolve();
@@ -87,12 +121,13 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
     };
 
     // Función para cargar un item específico
-    const loadItemOverlay = async (item) => {
+    const loadItemOverlay = async (item, addDarkOverlay = false) => {
       if (item && item.overlay) {
+
         // Procesar el item para obtener la ruta de imagen optimizada para móviles
         const processedItem = processMobileImages(item);
         const overlayPath = getOverlayPath(processedItem);
-        await loadAndDrawImage(overlayPath, item.x, item.y);
+        await loadAndDrawImage(overlayPath, item.x, item.y, addDarkOverlay);
       }
     };
 
@@ -127,10 +162,10 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
           await loadItemOverlay(collections.wallpanel);
           await loadItemOverlay(collections.perfil_pared);
           await loadItemOverlay(collections.zocalo);
-          await loadItemOverlay(collections.toallero);
           await loadItemOverlay(collections.vanitory);
           await loadItemOverlay(collections.cabinet);
           await loadItemOverlay(collections.espejo);
+          await loadItemOverlay(collections.toallero, true);
         } 
         else if (ambienteName === "Ducha") {
           // Para Ducha, cargamos estantes, desagües, vanitories, cabinets y espejos
