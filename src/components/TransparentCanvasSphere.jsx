@@ -55,8 +55,8 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
         img.onload = () => {
 
 
-          // Si se solicita, agregar un overlay oscuro encima de la imagen
-          if (addDarkOverlay) {
+          // Solo aplicar overlay oscuro si addDarkOverlay es true Y darkMode está activado
+          if (addDarkOverlay && darkMode) {
 
             const tmpCanvas = document.createElement("canvas");
             tmpCanvas.width = canvas.width;
@@ -64,8 +64,6 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
             const tmpCtx = tmpCanvas.getContext("2d");
             
             tmpCtx.save();
-            // Configurar un rectángulo semi-transparente para el efecto overlay
-            tmpCtx.fillStyle = "rgba(255, 0, 0, 0.5)";
             
             if (!x && !y) {
               tmpCtx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -75,7 +73,7 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
             
             // Paso 2: Multiplicar el color en las zonas donde sí hay píxeles
             tmpCtx.globalCompositeOperation = "overlay";
-            tmpCtx.fillStyle = "rgba(0, 0, 0, 0.6)";
+            tmpCtx.fillStyle = "rgba(0, 0, 0, 0.5)";
             tmpCtx.fillRect(0, 0, canvas.width, canvas.height);
 
             // Paso 3: Restaurar la transparencia original
@@ -127,6 +125,7 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
         // Procesar el item para obtener la ruta de imagen optimizada para móviles
         const processedItem = processMobileImages(item);
         const overlayPath = getOverlayPath(processedItem);
+        // El overlay oscuro solo se aplicará si addDarkOverlay=true Y darkMode está activado
         await loadAndDrawImage(overlayPath, item.x, item.y, addDarkOverlay);
       }
     };
