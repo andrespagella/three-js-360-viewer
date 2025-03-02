@@ -49,29 +49,31 @@ const Sidebar = ({
             Ambientes
           </button>
         )}
-        <div className="flex items-center">
-          <span style={{ color: theme.text.secondary }} className="text-sm">Claro</span>
-          <div
-            onClick={onToggleDarkMode}
-            className="mx-2 relative w-12 h-6 rounded-full cursor-pointer transition-colors duration-300"
-            style={{ backgroundColor: theme.background.tertiary }}
-          >
+        <div className="flex items-center justify-between w-full">
+          <h3 className="text-sm font-semibold" style={{ color: theme.text.primary }}>Estilo</h3>
+          <div className="flex items-center">
+            <img src="/light.svg" alt="Modo claro" className="w-4 h-4" />
             <div
-              className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform duration-300 ${
-                darkMode ? "translate-x-6" : ""
-              }`}
-              style={{ 
-                backgroundColor: theme.background.primary,
-                border: `1px solid ${theme.border.medium}`
-              }}
-            ></div>
+              onClick={onToggleDarkMode}
+              className="mx-2 relative w-12 h-6 rounded-full cursor-pointer transition-colors duration-300"
+              style={{ backgroundColor: '#666' }}
+            >
+              <div
+                className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full transition-transform duration-300 ${
+                  darkMode ? "translate-x-6" : ""
+                }`}
+                style={{ 
+                  backgroundColor: theme.background.primary,
+                  border: `1px solid ${theme.border.medium}`
+                }}
+              ></div>
+            </div>
+            <img src="/dark.svg" alt="Modo oscuro" className="w-4 h-4" />
           </div>
-          <span style={{ color: theme.text.secondary }} className="text-sm">Oscuro</span>
         </div>
       </div>
 
-      <div className="p-4 overflow-y-auto" style={{ maxHeight: isMobile ? "calc(100% - 60px)" : "calc(100% - 60px)" }}>
-        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mb-4">Ambientes</h2>
+      <div className="p-4 overflow-y-auto" style={{ maxHeight: isMobile ? "calc(100% - 60px)" : "calc(100% - 60px)", borderTop: "1px solid #CCC" }}>
         <div className="flex flex-col gap-4">
           {ambientes.map((ambiente) => {
             const { preview } = externalGetAmbientFilePaths
@@ -98,7 +100,7 @@ const Sidebar = ({
                     className="w-full h-[200px] object-cover"
                   />
                   <div
-                    className="absolute bottom-0 left-0 right-0 p-1 text-xs font-medium text-center"
+                    className="absolute bottom-0 left-0 right-0 p-1 text-sm font-bold text-center"
                     style={{ 
                       backgroundColor: isActive ? theme.accent.primary : theme.background.secondary,
                       color: isActive ? theme.text.inverted : theme.text.primary

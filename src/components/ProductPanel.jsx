@@ -190,10 +190,8 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
       }}
     >
       <div className="h-full flex flex-col">
-        <h2 style={{ color: theme.text.primary }} className="text-lg font-semibold mt-2 mb-2 px-2">Productos</h2>
-
         <div 
-          className="flex-1 overflow-y-auto px-2"
+          className="flex-1 overflow-y-auto pt-2 px-2"
           style={{ overflowX: 'hidden' }}
         >
           {isVisible ? (

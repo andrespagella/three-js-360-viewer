@@ -1,5 +1,34 @@
 [
     {
+        "producto": "zocalo 2066",
+        "SKU": "2066",
+        "descripcion": "Zócalo Slim",
+        "caracteristicas": [
+            "Este Zócalo ultra delgado es ideal para usar en ambientes de decoración minimalista tanto en hogares como en oficinas. Combina funcionalidad y estética",
+            "Son resistentes a los golpes y roces",
+            "No requieren mantenimiento ni se deterioran con el tiempo",
+            "Para su instalación solo tenés que usar Adhesivo Rellenador ProFix",
+            "",
+            "Ultradelgado, diseño minimalista",
+            "Resistentes a los golpes y roces"
+        ],
+        "ficha": {
+            "material": "Aluminio Anodizado",
+            "terminacion": "Negro Mate",
+            "medidas": [
+                "100 mm",
+                "10 mm",
+                "2,50 m"
+            ],
+            "forma": "Slim"
+        },
+        "thumbnail": "thumbnails/zocalos/2066.webp",
+        "closeup": "closeups/zocalos/2066.webp",
+        "overlay": "overlays/zocalos/2066.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
         "producto": "zocalo 2309",
         "SKU": "2309",
         "descripcion": "Zócalo Orbit",
@@ -50,35 +79,6 @@
         "thumbnail": "thumbnails/zocalos/2356.webp",
         "closeup": "closeups/zocalos/2356.webp",
         "overlay": "overlays/zocalos/2356.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
-        "producto": "zocalo 2066",
-        "SKU": "2066",
-        "descripcion": "Zócalo Slim",
-        "caracteristicas": [
-            "Este Zócalo ultra delgado es ideal para usar en ambientes de decoración minimalista tanto en hogares como en oficinas. Combina funcionalidad y estética",
-            "Son resistentes a los golpes y roces",
-            "No requieren mantenimiento ni se deterioran con el tiempo",
-            "Para su instalación solo tenés que usar Adhesivo Rellenador ProFix",
-            "",
-            "Ultradelgado, diseño minimalista",
-            "Resistentes a los golpes y roces"
-        ],
-        "ficha": {
-            "material": "Aluminio Anodizado",
-            "terminacion": "Negro Mate",
-            "medidas": [
-                "100 mm",
-                "10 mm",
-                "2,50 m"
-            ],
-            "forma": "Slim"
-        },
-        "thumbnail": "thumbnails/zocalos/2066.webp",
-        "closeup": "closeups/zocalos/2066.webp",
-        "overlay": "overlays/zocalos/2066.webp",
         "x": 0,
         "y": 0
     },
