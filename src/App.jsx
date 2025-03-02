@@ -23,7 +23,7 @@ function App() {
   const { theme } = useTheme();
 
   // Screensaver state
-  const { isIdle, resetIdleState } = useIdleTimer(20000); // 20 seconds of inactivity
+  const { isIdle, resetIdleState } = useIdleTimer(60000); // 60 seconds of inactivity
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
@@ -152,11 +152,6 @@ function App() {
 
   const handleSelectLanguage = (lang) => {
     setLanguage(lang);
-  };
-
-  // Handler for closing the screensaver
-  const handleCloseScreensaver = () => {
-    resetIdleState();
   };
 
   // Show the preloading screen while images are loading
