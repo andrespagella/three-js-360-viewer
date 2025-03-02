@@ -90,7 +90,7 @@ const CameraController = ({ selectedPin }) => {
   return (
     <OrbitControls
       ref={controlsRef}
-      enableZoom={true}
+      enableZoom={false}
       enablePan={false}
       minPolarAngle={Math.PI / 4}
       maxPolarAngle={(3 * Math.PI) / 4}
