@@ -46,6 +46,8 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
     texture.minFilter = THREE.LinearFilter; // Mejor filtrado
     texture.magFilter = THREE.LinearFilter;
     texture.anisotropy = 16; // Mejor calidad en ángulos oblicuos
+    texture.encoding = THREE.sRGBEncoding || THREE.LinearEncoding; // Mejor reproducción de color
+
 
     // Función para cargar y dibujar una imagen
     const loadAndDrawImage = (src, x, y, addDarkOverlay) => {
