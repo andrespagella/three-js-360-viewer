@@ -124,7 +124,14 @@ const Three360Viewer = ({
       {/* Help button to show instructions again */}
       {!showInstructions && <HelpButton onClick={handleShowInstructions} isMobile={isMobile} />}
       
-      <Canvas style={{ height: "100%" }}>
+      <Canvas
+        camera={{
+          fov: 55,
+          near: 1,
+          far: 2000,
+        }}
+        style={{ height: "100%" }}
+      >
         {/* La cámara rota hacia el pin seleccionado */}
         <CameraController selectedPin={selectedPin} />
 
@@ -134,7 +141,7 @@ const Three360Viewer = ({
         {texture && (
           <>
             <mesh renderOrder={1}>
-              <sphereGeometry args={[500, 60, 40]} />
+              <sphereGeometry args={[5000, 60, 40]} />
               <meshBasicMaterial transparent opacity={0} side={THREE.DoubleSide} />
             </mesh>
 
