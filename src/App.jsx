@@ -5,6 +5,7 @@ import CloseupViewer from "./components/CloseupViewer";
 import ProductPanel from "./components/ProductPanel";
 import LanguageSelector from "./components/LanguageSelector";
 import PreloadingScreen from "./components/PreloadingScreen";
+import Screensaver from "./components/Screensaver";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
@@ -13,12 +14,16 @@ import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
+import useIdleTimer from "./hooks/useIdleTimer";
 
 function App() {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { theme } = useTheme();
+
+  // Screensaver state
+  const { isIdle, resetIdleState } = useIdleTimer(20000); // 20 seconds of inactivity
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
@@ -149,9 +154,26 @@ function App() {
     setLanguage(lang);
   };
 
+  // Handler for closing the screensaver
+  const handleCloseScreensaver = () => {
+    resetIdleState();
+  };
+
   // Show the preloading screen while images are loading
   if (isLoading) {
     return <PreloadingScreen />;
+  }
+
+  // Show screensaver if user is idle and language is selected
+  if (isIdle && language) {
+    return (
+      <Screensaver 
+        onClose={() => {
+          // Cambiar la parte de resetIdleState() a reload
+          window.location.reload();
+        }}
+      />
+    );
   }
 
   // After loading, show the language selector if language is not selected
