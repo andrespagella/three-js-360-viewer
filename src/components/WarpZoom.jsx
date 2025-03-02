@@ -17,7 +17,7 @@ const WarpZoom = ({ onComplete }) => {
         setTimeout(() => {
           camera.fov = originalFov;
           // Resetear la posición de la cámara a (0, 0, 50.0)
-          camera.position.set(0, 0, 50.0);
+          // camera.position.set(0, 0, 50.0);
           camera.updateProjectionMatrix();
         }, 500);
       },
