@@ -217,9 +217,40 @@ const AppContent = () => {
   };
 
   // Función para manejar el envío del formulario
-  const handleFormSubmit = (formData, serverResponse) => {
+  const handleFormSubmit = async (formData, serverResponse) => {
     console.log('Datos del formulario:', formData);
     console.log('Respuesta del servidor:', serverResponse);
+    
+    // Recopilar los SKUs de los productos seleccionados
+    const selectedSkus = [];
+    
+    try {
+      // Recorrer todas las colecciones con productos seleccionados
+      for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
+        // Solo procesar si hay un producto seleccionado (índice diferente de 0)
+        if (selectedIndex !== 0) {
+          try {
+            // Cargar dinámicamente la colección
+            const module = await import(`./data/collections/${collection}.json`);
+            const products = module.default;
+            
+            // Verificar si el índice seleccionado es válido
+            if (products && products.length > selectedIndex) {
+              const product = products[selectedIndex];
+              if (product && product.SKU) {
+                selectedSkus.push(product.SKU);
+              }
+            }
+          } catch (error) {
+            console.error(`Error al cargar la colección ${collection}:`, error);
+          }
+        }
+      }
+      
+      console.log('SKUs de productos seleccionados:', selectedSkus.join(', '));
+    } catch (error) {
+      console.error('Error al procesar los SKUs:', error);
+    }
     
     // Cerrar el formulario después de enviar
     setShowContactForm(false);
@@ -403,6 +434,7 @@ const AppContent = () => {
         <ContactFormOverlay 
           onClose={() => setShowContactForm(false)}
           onSubmit={handleFormSubmit}
+          selectedItems={selectedItems}
         />
       )}
     </div>

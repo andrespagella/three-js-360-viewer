@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import config from "../utils/config";
 
-const ContactFormOverlay = ({ onClose, onSubmit }) => {
+const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -73,13 +73,51 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
       setSubmitError('');
       
       try {
+        // Recopilar los SKUs de los productos seleccionados
+        const selectedSkus = [];
+        
+        try {
+          // Recorrer todas las colecciones con productos seleccionados
+          for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
+            // Solo procesar si hay un producto seleccionado (índice diferente de 0)
+            if (selectedIndex !== 0) {
+              try {
+                // Cargar dinámicamente la colección
+                const module = await import(`../data/collections/${collection}.json`);
+                const products = module.default;
+                
+                // Verificar si el índice seleccionado es válido
+                if (products && products.length > selectedIndex) {
+                  const product = products[selectedIndex];
+                  if (product && product.SKU) {
+                    selectedSkus.push(product.SKU);
+                  }
+                }
+              } catch (error) {
+                console.error(`Error al cargar la colección ${collection}:`, error);
+              }
+            }
+          }
+          
+          console.log('SKUs de productos seleccionados:', selectedSkus.join(', '));
+        } catch (error) {
+          console.error('Error al procesar los SKUs:', error);
+        }
+        
+        // Preparar los datos del formulario con los productos seleccionados
+        const formDataWithProducts = {
+          ...formData,
+          products: selectedSkus.length > 0 ? selectedSkus.join(', ') : 'Ninguno'
+        };
+        
+        // Enviar el formulario con los productos seleccionados
         const response = await fetch(config.formServerUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'x-api-key': config.apiKey
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(formDataWithProducts),
         });
         
         if (!response.ok) {
@@ -90,7 +128,7 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
         console.log('Respuesta del servidor:', data);
         
         // Llamar a onSubmit con los datos y la respuesta del servidor
-        onSubmit(formData, data);
+        onSubmit(formDataWithProducts, data);
         
       } catch (error) {
         console.error('Error al enviar el formulario:', error);
