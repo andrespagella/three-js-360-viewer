@@ -11,7 +11,9 @@ const __dirname = path.dirname(__filename);
 const imageDirectories = [
   'public/thumbnails',
   'public/closeups',
-  'public/overlays'
+  'public/overlays',
+  'public/ambientes',
+  'public/previews'
 ];
 
 // Función para procesar una imagen y crear su versión móvil

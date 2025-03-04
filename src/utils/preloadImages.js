@@ -15,8 +15,21 @@ const preloadImage = (src) => {
       return;
     }
 
-    // Handle mobile optimized paths
-    const imageSrc = isMobileDevice() ? getMobileOptimizedImagePath(src) : src;
+    // Check if the image is from one of the directories that should use mobile optimization
+    const mobileOptimizedDirs = [
+      '/ambientes/', 
+      '/closeups/', 
+      '/overlays/', 
+      '/previews/', 
+      '/thumbnails/'
+    ];
+    
+    const shouldUseOptimized = mobileOptimizedDirs.some(dir => src.includes(dir));
+    
+    // Only use mobile optimized path for specific directories
+    const imageSrc = (isMobileDevice() && shouldUseOptimized) 
+      ? getMobileOptimizedImagePath(src) 
+      : src;
     
     const img = new Image();
     img.src = imageSrc;
