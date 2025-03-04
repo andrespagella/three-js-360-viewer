@@ -185,16 +185,15 @@ const AppContent = () => {
   };
 
   // Función para manejar el envío del formulario
-  const handleFormSubmit = (formData) => {
+  const handleFormSubmit = (formData, serverResponse) => {
     console.log('Datos del formulario:', formData);
-    // Aquí puedes implementar la lógica para enviar los datos a un servidor
-    // Por ejemplo, usando fetch o axios
+    console.log('Respuesta del servidor:', serverResponse);
     
     // Cerrar el formulario después de enviar
     setShowContactForm(false);
     
-    // Mostrar un mensaje de éxito (opcional)
-    alert('¡Gracias por tu información! Nos pondremos en contacto contigo pronto.');
+    // Mostrar un mensaje de éxito
+    alert("¡Gracias por tu información! Nos pondremos en contacto contigo pronto. \nContinúa disfrutando de ATRIM 3D Showcase.");
   };
 
   // Show the preloading screen while images are loading

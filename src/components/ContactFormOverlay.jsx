@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import config from "../utils/config";
 
 const ContactFormOverlay = ({ onClose, onSubmit }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -9,6 +10,8 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
     phone: ''
   });
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   
   useEffect(() => {
     const handleResize = () => {
@@ -62,11 +65,39 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (validateForm()) {
-      onSubmit(formData);
+      setIsSubmitting(true);
+      setSubmitError('');
+      
+      try {
+        const response = await fetch(config.formServerUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': config.apiKey
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Respuesta del servidor:', data);
+        
+        // Llamar a onSubmit con los datos y la respuesta del servidor
+        onSubmit(formData, data);
+        
+      } catch (error) {
+        console.error('Error al enviar el formulario:', error);
+        setSubmitError('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
   
@@ -91,14 +122,14 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
           padding: isMobile ? '15px' : '20px',
           borderRadius: '8px',
           maxWidth: isMobile ? '90%' : '80%',
-          width: isMobile ? '300px' : '500px',
+          width: isMobile ? '300px' : '400px',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
           border: '4px solid #000',
           position: 'relative',
         }}
       >
         <h2 style={{ 
-          textAlign: 'center', 
+          textAlign: 'left', 
           marginBottom: '10px', 
           color: 'var(--text-primary)',
           fontSize: isMobile ? '18px' : '22px',
@@ -108,7 +139,7 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
         </h2>
         
         <p style={{ 
-          textAlign: 'center', 
+          textAlign: 'left', 
           marginBottom: '20px', 
           color: 'var(--text-secondary)',
           fontSize: isMobile ? '14px' : '16px',
@@ -198,6 +229,19 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
             )}
           </div>
           
+          {submitError && (
+            <div style={{ 
+              marginBottom: '15px', 
+              padding: '8px', 
+              backgroundColor: 'rgba(255, 0, 0, 0.1)', 
+              borderRadius: '4px',
+              color: 'red',
+              fontSize: '14px'
+            }}>
+              {submitError}
+            </div>
+          )}
+          
           <div style={{ 
             display: 'flex', 
             justifyContent: 'space-between',
@@ -206,6 +250,7 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
             <button 
               type="button"
               onClick={onClose}
+              disabled={isSubmitting}
               style={{
                 flex: 1,
                 padding: isMobile ? '6px 12px' : '8px 16px',
@@ -213,9 +258,10 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
                 color: 'black',
                 border: '2px solid #000',
                 borderRadius: '4px',
-                cursor: 'pointer',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                opacity: isSubmitting ? 0.7 : 1
               }}
             >
               CANCELAR
@@ -223,6 +269,7 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
             
             <button 
               type="submit"
+              disabled={isSubmitting}
               style={{
                 flex: 1,
                 padding: isMobile ? '6px 12px' : '8px 16px',
@@ -230,12 +277,13 @@ const ContactFormOverlay = ({ onClose, onSubmit }) => {
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                opacity: isSubmitting ? 0.7 : 1
               }}
             >
-              CONTINUAR
+              {isSubmitting ? 'ENVIANDO...' : 'CONTINUAR'}
             </button>
           </div>
         </form>
