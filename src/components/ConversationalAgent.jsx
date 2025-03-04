@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import config from "../utils/config";
+import { useConversationalAgent } from "../context/ConversationalAgentContext";
 
-const ConversationalAgent = ({ language, isActive, onToggle }) => {
+const ConversationalAgent = ({ language }) => {
   const [status, setStatus] = useState("inactive");
   const [isMuted, setIsMuted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -10,6 +11,9 @@ const ConversationalAgent = ({ language, isActive, onToggle }) => {
   const audioElementRef = useRef(null);
   const microphoneStreamRef = useRef(null);
   const connectionAttempts = useRef(0);
+  
+  // Usar el contexto para acceder al estado global del agente
+  const { agentActive, setAgentActive } = useConversationalAgent();
 
   // Helper function for cross-browser getUserMedia
   const getMediaStream = async () => {
@@ -199,7 +203,7 @@ const ConversationalAgent = ({ language, isActive, onToggle }) => {
         if (connectionAttempts.current >= 3) {
           console.error('Demasiados intentos fallidos, deteniendo la conexión');
           setErrorMessage('Demasiados intentos fallidos. Por favor, intenta más tarde.');
-          onToggle(false);
+          setAgentActive(false);
         }
       }
     } catch (error) {
@@ -246,14 +250,14 @@ const ConversationalAgent = ({ language, isActive, onToggle }) => {
     });
   };
 
-  // Effect to start/stop session when isActive changes
+  // Effect to start/stop session when agentActive changes
   useEffect(() => {
-    if (isActive && language && status === "inactive") {
+    if (agentActive && language && status === "inactive") {
       startSession();
-    } else if (!isActive && status !== "inactive") {
+    } else if (!agentActive && status !== "inactive") {
       stopSession();
     }
-  }, [isActive, language]);
+  }, [agentActive, language, status]);
 
   // Clean up on unmount
   useEffect(() => {
@@ -265,7 +269,7 @@ const ConversationalAgent = ({ language, isActive, onToggle }) => {
   // Render the UI for the conversational agent
   return (
     <div className="conversational-agent">
-      {isActive && (
+      {agentActive && (
         <div className="agent-controls absolute top-16 right-4 bg-white p-3 rounded-lg shadow-lg z-50 flex flex-col items-center">
           <div className="status-indicator mb-2">
             {status === "connecting" && <p>Conectando...</p>}
@@ -285,7 +289,7 @@ const ConversationalAgent = ({ language, isActive, onToggle }) => {
               {isMuted ? 'Activar Micrófono' : 'Silenciar'}
             </button>
             <button 
-              onClick={() => onToggle(false)} 
+              onClick={() => setAgentActive(false)} 
               className="px-3 py-1 rounded bg-red-500 text-white"
             >
               Desconectar

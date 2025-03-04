@@ -3,11 +3,12 @@ import { useTheme } from "../context/ThemeContext";
 import { toggleFullscreen, isFullscreen } from "../utils/fullscreenUtils";
 import ConversationalAgent from "./ConversationalAgent";
 import config from "../utils/config";
+import { useConversationalAgent } from "../context/ConversationalAgentContext";
 
 const ViewerHeader = ({ language }) => {
   const { theme } = useTheme();
   const [fullscreen, setFullscreen] = useState(false);
-  const [agentActive, setAgentActive] = useState(false);
+  const { agentActive, setAgentActive } = useConversationalAgent();
   
   // Update fullscreen state when it changes
   useEffect(() => {
@@ -38,7 +39,7 @@ const ViewerHeader = ({ language }) => {
       
       return () => clearTimeout(timer);
     }
-  }, [language]);
+  }, [language, setAgentActive]);
   
   const handleToggleFullscreen = async () => {
     try {
@@ -110,11 +111,7 @@ const ViewerHeader = ({ language }) => {
       </div>
       
       {/* Componente del agente conversacional */}
-      <ConversationalAgent 
-        language={language} 
-        isActive={agentActive} 
-        onToggle={setAgentActive} 
-      />
+      <ConversationalAgent language={language} />
     </>
   );
 };

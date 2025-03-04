@@ -16,12 +16,15 @@ import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 import useIdleTimer from "./hooks/useIdleTimer";
+import { ConversationalAgentProvider, useConversationalAgent } from "./context/ConversationalAgentContext";
 
-function App() {
+// Componente interno que usa el contexto del agente conversacional
+const AppContent = () => {
   const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { theme } = useTheme();
+  const { deactivateAgent } = useConversationalAgent();
 
   // Screensaver state
   const { isIdle, resetIdleState } = useIdleTimer(60000); // 60 seconds of inactivity
@@ -73,6 +76,13 @@ function App() {
 
     loadAllAssets();
   }, []);
+
+  // Efecto para desactivar el agente conversacional cuando se active el screensaver
+  useEffect(() => {
+    if (isIdle) {
+      deactivateAgent();
+    }
+  }, [isIdle, deactivateAgent]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -326,6 +336,15 @@ function App() {
         </div>
       )}
     </div>
+  );
+};
+
+// Componente principal que proporciona el contexto
+function App() {
+  return (
+    <ConversationalAgentProvider>
+      <AppContent />
+    </ConversationalAgentProvider>
   );
 }
 
