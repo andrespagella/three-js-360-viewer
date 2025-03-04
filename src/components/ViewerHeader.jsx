@@ -20,14 +20,6 @@ const ViewerHeader = ({ language }) => {
       return () => clearTimeout(timer);
     }
   }, [language, setAgentActive]);
-  
-  const handleToggleFullscreen = async () => {
-    try {
-      await toggleFullscreen();
-    } catch (error) {
-      console.warn("Couldn't toggle fullscreen mode:", error);
-    }
-  };
 
   const handleToggleAgent = () => {
     setAgentActive(!agentActive);
