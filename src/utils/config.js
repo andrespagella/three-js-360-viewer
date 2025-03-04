@@ -10,6 +10,9 @@ const config = {
   // URL de la API de OpenAI para la comunicación en tiempo real
   openAiRealtimeUrl: 'https://api.openai.com/v1/realtime',
   
+  // API Key para el servidor de voz
+  apiKey: 'client1_a1b2c3d4e5f6g7h8i9j0',
+  
   // Configuración de servidores ICE para WebRTC
   iceServers: [
     { urls: 'stun:stun.l.google.com:19302' },

@@ -72,6 +72,7 @@ const ConversationalAgent = ({ language }) => {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
+            'X-API-Key': config.apiKey
           },
           // Importante para conexiones HTTPS con certificados autofirmados
           mode: 'cors',
@@ -174,7 +175,8 @@ const ConversationalAgent = ({ language }) => {
           method: "POST",
           headers: {
             'Authorization': `Bearer ${EPHEMERAL_KEY}`,
-            'Content-Type': 'application/sdp'
+            'Content-Type': 'application/sdp',
+            'X-API-Key': config.apiKey
           },
           body: offer.sdp
         });
