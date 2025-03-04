@@ -271,7 +271,8 @@ const ConversationalAgent = ({ language }) => {
   // Render the UI for the conversational agent
   return (
     <div className="conversational-agent">
-      {agentActive && (
+      
+      {/* {agentActive && (
         <div className="agent-controls absolute top-16 right-4 bg-white p-3 rounded-lg shadow-lg z-50 flex flex-col items-center">
           <div className="status-indicator mb-2">
             {status === "connecting" && <p>Conectando...</p>}
@@ -298,7 +299,7 @@ const ConversationalAgent = ({ language }) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
