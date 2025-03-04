@@ -235,6 +235,18 @@ function App() {
               onSelectPin={handleSelectPin}
               panelExpanded={collectionPanelExpanded}
               selectedItems={selectedItems}
+              collectionsOrder={[
+                'perfiles_pared',
+                //'perfiles_led',
+                'perfiles_piso',
+                'zocalos',
+                'toalleros',
+                'estantes',
+                'desagues',
+                'rejillas',
+                'wallpanels'
+                // El resto (cabinets, vanitories, etc.) carga "solo" en orden default
+              ]}
             />
 
             {!isMobile ? (

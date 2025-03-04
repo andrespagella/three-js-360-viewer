@@ -7,7 +7,7 @@ import { processMobileCollection } from "../utils/imageUtils";
 // Caché global para almacenar colecciones ya cargadas
 const collectionsCache = {};
 
-const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems }) => {
+const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, panelExpanded, selectedItems, collectionsOrder = [] }) => {
   const isMobile = useIsMobile();
   const [thumbnails, setThumbnails] = useState({});
   const { theme } = useTheme();
@@ -16,14 +16,48 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
   const loadingTimeoutRef = useRef(null);
   const isLoadingRef = useRef(false);
 
-  // Memoizar allPins para evitar recálculos innecesarios
-  const allPins = useMemo(() => {
-    return pinsData.reduce((acc, ambienteItem) => {
+  // Memoizar y ordenar los pins según collectionsOrder
+  const orderedPins = useMemo(() => {
+    // Obtener todos los pins con su ambiente
+    const allPins = pinsData.reduce((acc, ambienteItem) => {
       const ambienteName = ambienteItem.ambiente;
       const pinsWithAmbiente = ambienteItem.pins.map((pin) => ({ ...pin, ambiente: ambienteName }));
       return [...acc, ...pinsWithAmbiente];
     }, []);
-  }, [pinsData]);
+
+    // Si no hay orden personalizado, devolver los pins sin ordenar
+    if (!collectionsOrder || collectionsOrder.length === 0) {
+      return allPins;
+    }
+
+    // Crear un mapa de prioridad basado en el orden de las colecciones
+    const collectionPriority = collectionsOrder.reduce((acc, collection, index) => {
+      acc[collection] = index;
+      return acc;
+    }, {});
+
+    // Ordenar los pins según la prioridad de las colecciones
+    return [...allPins].sort((a, b) => {
+      if (!a.data && !b.data) return 0;
+      if (!a.data) return 1;
+      if (!b.data) return -1;
+
+      const collectionA = a.data.split('/').pop().replace('.json', '');
+      const collectionB = b.data.split('/').pop().replace('.json', '');
+
+      // Si ambas colecciones están en la lista de prioridad, ordenar según esa prioridad
+      if (collectionPriority[collectionA] !== undefined && collectionPriority[collectionB] !== undefined) {
+        return collectionPriority[collectionA] - collectionPriority[collectionB];
+      }
+
+      // Si solo una está en la lista, priorizarla
+      if (collectionPriority[collectionA] !== undefined) return -1;
+      if (collectionPriority[collectionB] !== undefined) return 1;
+
+      // Si ninguna está en la lista, mantener el orden original
+      return 0;
+    });
+  }, [pinsData, collectionsOrder]);
 
   // Para ProductPanel: usar "bottom" en mobile y "right" en escritorio
   const anchor = isMobile ? "bottom" : "right";
@@ -100,7 +134,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
       const batchSize = isMobile ? 1 : 3; // 1 para móviles, 3 para escritorio
       
       // Filtrar pins que aún no tienen thumbnail
-      const pinsToLoad = allPins.filter(pin => 
+      const pinsToLoad = orderedPins.filter(pin => 
         pin.data && !thumbnailsData[pin.id]
       );
       
@@ -165,7 +199,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
         clearTimeout(loadingTimeoutRef.current);
       }
     };
-  }, [panelExpanded, isVisible, allPins, loadSingleCollection, selectedItems, thumbnails]);
+  }, [panelExpanded, isVisible, orderedPins, loadSingleCollection, selectedItems, thumbnails, isMobile]);
 
   // Función memoizada para manejar el clic en un pin
   const handlePinClick = useCallback((pin) => {
@@ -196,7 +230,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
         >
           {isVisible ? (
             <div className="grid grid-cols-2 gap-2 auto-rows-max">
-              {allPins.map((pin, index) => (
+              {orderedPins.map((pin, index) => (
                 <div 
                   key={`pin-${pin.id}-${index}`}
                   onClick={handlePinClick(pin)}
