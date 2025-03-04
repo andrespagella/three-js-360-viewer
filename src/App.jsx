@@ -51,11 +51,17 @@ function App() {
   useEffect(() => {
     const loadAllAssets = async () => {
       try {
-        // Precargar el video del screensaver
-        await Promise.all([
-          preloadAllImages(),
-          preloadVideo('/videos/video-back_2880x2160.webm')
-        ]);
+        // Determinar si es un dispositivo móvil
+        const isMobileDevice = window.innerWidth < 768;
+        
+        // Precargar imágenes siempre
+        await preloadAllImages();
+        
+        // Precargar el video del screensaver solo en dispositivos no móviles
+        if (!isMobileDevice) {
+          await preloadVideo('/videos/video-back_2880x2160.webm');
+        }
+        
         setIsLoading(false);
       } catch (error) {
         console.error("Error preloading assets:", error);
@@ -168,8 +174,8 @@ function App() {
     return <PreloadingScreen />;
   }
 
-  // Show screensaver if user is idle and language is selected
-  if (isIdle && language) {
+  // Show screensaver if user is idle and language is selected (only on desktop)
+  if (isIdle && language && !isMobile) {
     return (
       <Screensaver 
         onClose={() => {

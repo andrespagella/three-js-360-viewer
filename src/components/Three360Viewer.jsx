@@ -76,7 +76,7 @@ const Three360Viewer = ({
   };
 
   return (
-    <div style={{ position: 'relative', height: '100%' }}>
+    <div style={{ position: 'relative', height: '100%', backgroundColor: 'white' }}>
       {showInstructions && <InstructionsOverlay onClose={handleCloseInstructions} />}
       
       {/* Help button to show instructions again */}

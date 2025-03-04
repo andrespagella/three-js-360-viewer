@@ -37,18 +37,6 @@ const Sidebar = ({
       }}
     >
       <div className="p-4 flex justify-between items-center">
-        {isMobile && (
-          <button
-            onClick={onToggleMenu}
-            style={{
-              backgroundColor: theme.background.secondary,
-              color: theme.text.primary,
-            }}
-            className="uppercase font-semibold rounded px-4 py-1 shadow-sm focus:outline-none"
-          >
-            Ambientes
-          </button>
-        )}
         <div className="flex items-center justify-between w-full">
           <h3 className="text-sm font-semibold" style={{ color: theme.text.primary }}>Estilo</h3>
           <div className="flex items-center">

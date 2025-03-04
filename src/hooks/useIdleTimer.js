@@ -7,13 +7,32 @@ import { useState, useEffect, useCallback } from 'react';
  */
 const useIdleTimer = (idleTime = 20000) => {
   const [isIdle, setIsIdle] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
   // Function to reset the idle state and timer
   const resetIdleState = useCallback(() => {
     setIsIdle(false);
   }, []);
 
+  // Detectar cambios en el tamaño de la ventana para actualizar isMobile
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // No rastrear inactividad en dispositivos móviles
+    if (isMobile) {
+      return;
+    }
+    
     let idleTimer;
 
     // Function to start the idle timer
@@ -56,7 +75,7 @@ const useIdleTimer = (idleTime = 20000) => {
         });
       };
     }
-  }, [isIdle, idleTime]);
+  }, [isIdle, idleTime, isMobile]);
 
   return { isIdle, resetIdleState };
 };
