@@ -6,6 +6,7 @@ import ProductPanel from "./components/ProductPanel";
 import LanguageSelector from "./components/LanguageSelector";
 import PreloadingScreen from "./components/PreloadingScreen";
 import Screensaver from "./components/Screensaver";
+import ContactFormOverlay from "./components/ContactFormOverlay";
 import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
@@ -37,6 +38,9 @@ const AppContent = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [selectedPin, setSelectedPin] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
+  
+  // Estado para controlar la visibilidad del formulario de contacto
+  const [showContactForm, setShowContactForm] = useState(false);
 
   // Añadir un nuevo estado para almacenar las selecciones del usuario
   const [selectedItems, setSelectedItems] = useState({
@@ -180,6 +184,19 @@ const AppContent = () => {
     setLanguage(lang);
   };
 
+  // Función para manejar el envío del formulario
+  const handleFormSubmit = (formData) => {
+    console.log('Datos del formulario:', formData);
+    // Aquí puedes implementar la lógica para enviar los datos a un servidor
+    // Por ejemplo, usando fetch o axios
+    
+    // Cerrar el formulario después de enviar
+    setShowContactForm(false);
+    
+    // Mostrar un mensaje de éxito (opcional)
+    alert('¡Gracias por tu información! Nos pondremos en contacto contigo pronto.');
+  };
+
   // Show the preloading screen while images are loading
   if (isLoading) {
     return <PreloadingScreen />;
@@ -203,7 +220,21 @@ const AppContent = () => {
   }
 
   return (
-    <div className="app-container" onClick={resetIdleState}>
+    <div
+      className={`app-container ${darkMode ? "dark-mode" : ""}`}
+      style={{
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+        overflow: "hidden",
+        backgroundColor: theme.bgPrimary,
+      }}
+      onClick={() => {
+        if (isIdle) {
+          resetIdleState();
+        }
+      }}
+    >
       {!language ? (
         <LanguageSelector onSelectLanguage={handleSelectLanguage} />
       ) : (
@@ -334,6 +365,35 @@ const AppContent = () => {
             </div>
           </div>
         </div>
+      )}
+      
+      {/* Botón para mostrar el formulario de contacto */}
+      <button
+        onClick={() => setShowContactForm(true)}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          padding: '10px 15px',
+          backgroundColor: 'var(--accent-primary)',
+          color: 'white',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          fontSize: isMobile ? '14px' : '16px',
+          fontWeight: 'bold',
+          zIndex: 900
+        }}
+      >
+        GUARDAR DISEÑO
+      </button>
+      
+      {/* Formulario de contacto */}
+      {showContactForm && (
+        <ContactFormOverlay 
+          onClose={() => setShowContactForm(false)}
+          onSubmit={handleFormSubmit}
+        />
       )}
     </div>
   );
