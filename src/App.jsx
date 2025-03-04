@@ -397,29 +397,6 @@ const AppContent = () => {
         </div>
       )}
       
-      {/* Botón para mostrar el formulario de contacto - solo si no estamos en modo bigscreen */}
-      {!isBigScreen && (
-        <button
-          onClick={() => setShowContactForm(true)}
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            padding: '10px 15px',
-            backgroundColor: 'var(--accent-primary)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontSize: isMobile ? '14px' : '16px',
-            fontWeight: 'bold',
-            zIndex: 900
-          }}
-        >
-          GUARDAR DISEÑO
-        </button>
-      )}
-      
       {/* Formulario de contacto - solo si no estamos en modo bigscreen */}
       {showContactForm && !isBigScreen && (
         <ContactFormOverlay 
