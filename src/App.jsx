@@ -156,6 +156,10 @@ function App() {
   };
 
   const handleSelectLanguage = (lang) => {
+    // On iOS, fullscreen can only be triggered by user gesture
+    // The LanguageSelector component handles the fullscreen request
+    // This is just a fallback in case the component's request fails
+    
     setLanguage(lang);
   };
 

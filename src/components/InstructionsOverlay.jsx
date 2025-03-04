@@ -18,7 +18,7 @@ const InstructionsOverlay = ({ onClose }) => {
     <div 
       style={{
         position: 'absolute',
-        top: 0,
+        top: 17,
         left: 0,
         width: '100%',
         height: '100%',
