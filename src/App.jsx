@@ -27,6 +27,16 @@ const AppContent = () => {
   const { theme } = useTheme();
   const { deactivateAgent } = useConversationalAgent();
 
+  // Detectar si el parámetro bigscreen=true está presente en la URL
+  const [isBigScreen, setIsBigScreen] = useState(false);
+  
+  // Efecto para detectar el parámetro bigscreen en la URL al cargar la aplicación
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const bigscreen = urlParams.get('bigscreen');
+    setIsBigScreen(bigscreen === 'true');
+  }, []);
+
   // Screensaver state
   const { isIdle, resetIdleState } = useIdleTimer(60000); // 60 seconds of inactivity
 
@@ -172,8 +182,8 @@ const AppContent = () => {
         setChangesCount(prevCount => {
           const newCount = prevCount + 1;
           
-          // Si se alcanza el umbral de 3 cambios, mostrar el formulario
-          if (newCount === 3 && !showContactForm) {
+          // Si se alcanza el umbral de 3 cambios y no estamos en modo bigscreen, mostrar el formulario
+          if (newCount === 3 && !showContactForm && !isBigScreen) {
             setTimeout(() => {
               setShowContactForm(true);
             }, 500); // Pequeño retraso para mejor experiencia de usuario
@@ -387,8 +397,31 @@ const AppContent = () => {
         </div>
       )}
       
-      {/* Formulario de contacto */}
-      {showContactForm && (
+      {/* Botón para mostrar el formulario de contacto - solo si no estamos en modo bigscreen */}
+      {!isBigScreen && (
+        <button
+          onClick={() => setShowContactForm(true)}
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            padding: '10px 15px',
+            backgroundColor: 'var(--accent-primary)',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: isMobile ? '14px' : '16px',
+            fontWeight: 'bold',
+            zIndex: 900
+          }}
+        >
+          GUARDAR DISEÑO
+        </button>
+      )}
+      
+      {/* Formulario de contacto - solo si no estamos en modo bigscreen */}
+      {showContactForm && !isBigScreen && (
         <ContactFormOverlay 
           onClose={() => setShowContactForm(false)}
           onSubmit={handleFormSubmit}
