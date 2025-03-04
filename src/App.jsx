@@ -18,6 +18,7 @@ import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 import useIdleTimer from "./hooks/useIdleTimer";
 import { ConversationalAgentProvider, useConversationalAgent } from "./context/ConversationalAgentContext";
+import config from "./utils/config";
 
 // Componente interno que usa el contexto del agente conversacional
 const AppContent = () => {
@@ -38,7 +39,7 @@ const AppContent = () => {
   }, []);
 
   // Screensaver state
-  const { isIdle, resetIdleState } = useIdleTimer(60000); // 60 seconds of inactivity
+  const { isIdle, resetIdleState } = useIdleTimer(config.idleTimeout); // Usar el tiempo de inactividad desde config
 
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
