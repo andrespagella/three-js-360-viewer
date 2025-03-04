@@ -41,6 +41,9 @@ const AppContent = () => {
   
   // Estado para controlar la visibilidad del formulario de contacto
   const [showContactForm, setShowContactForm] = useState(false);
+  
+  // Estado para contar cuántos cambios ha realizado el usuario
+  const [changesCount, setChangesCount] = useState(0);
 
   // Añadir un nuevo estado para almacenar las selecciones del usuario
   const [selectedItems, setSelectedItems] = useState({
@@ -163,10 +166,28 @@ const AppContent = () => {
   const handleCloseCloseup = (collection, selectedIndex) => {
     // Si se proporciona una colección y un índice, actualizar la selección
     if (collection && selectedIndex !== undefined) {
-      setSelectedItems(prev => ({
-        ...prev,
-        [collection]: selectedIndex
-      }));
+      // Verificar si el valor seleccionado es diferente al valor actual
+      if (selectedItems[collection] !== selectedIndex) {
+        // Incrementar el contador de cambios
+        setChangesCount(prevCount => {
+          const newCount = prevCount + 1;
+          
+          // Si se alcanza el umbral de 3 cambios, mostrar el formulario
+          if (newCount === 3 && !showContactForm) {
+            setTimeout(() => {
+              setShowContactForm(true);
+            }, 500); // Pequeño retraso para mejor experiencia de usuario
+          }
+          
+          return newCount;
+        });
+        
+        // Actualizar el item seleccionado
+        setSelectedItems(prev => ({
+          ...prev,
+          [collection]: selectedIndex
+        }));
+      }
     }
     setCloseup(null);
   };
@@ -193,7 +214,7 @@ const AppContent = () => {
     setShowContactForm(false);
     
     // Mostrar un mensaje de éxito
-    alert("¡Gracias por tu información! Nos pondremos en contacto contigo pronto. \nContinúa disfrutando de ATRIM 3D Showcase.");
+    alert('¡Gracias por tu información! Nos pondremos en contacto contigo pronto.');
   };
 
   // Show the preloading screen while images are loading
@@ -365,27 +386,6 @@ const AppContent = () => {
           </div>
         </div>
       )}
-      
-      {/* Botón para mostrar el formulario de contacto */}
-      <button
-        onClick={() => setShowContactForm(true)}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          padding: '10px 15px',
-          backgroundColor: 'var(--accent-primary)',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-          fontSize: isMobile ? '14px' : '16px',
-          fontWeight: 'bold',
-          zIndex: 900
-        }}
-      >
-        GUARDAR DISEÑO
-      </button>
       
       {/* Formulario de contacto */}
       {showContactForm && (
