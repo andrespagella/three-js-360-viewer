@@ -10,6 +10,7 @@ import ambientes from "./data/ambientes.json";
 import pinsData from "./data/pins.json";
 import getAmbientFilePaths from './utils/getAmbientFilePaths';
 import preloadAllImages from './utils/preloadImages';
+import preloadVideo from './utils/preloadVideo';
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
@@ -48,19 +49,23 @@ function App() {
 
   // Preload all images when the component mounts
   useEffect(() => {
-    const loadAllImages = async () => {
+    const loadAllAssets = async () => {
       try {
-        await preloadAllImages();
+        // Precargar el video del screensaver
+        await Promise.all([
+          preloadAllImages(),
+          preloadVideo('/videos/video-back_2880x2160.webm')
+        ]);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error preloading images:", error);
+        console.error("Error preloading assets:", error);
         
         // Even if there's an error, we should still allow the user to proceed
         setIsLoading(false);
       }
     };
 
-    loadAllImages();
+    loadAllAssets();
   }, []);
 
   useEffect(() => {
