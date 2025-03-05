@@ -51,10 +51,10 @@ const LanguageSelector = ({ onSelectLanguage }) => {
       }}
     >
       <div className={`transition-opacity duration-1000 ${fadeState === "fade-in" ? "opacity-100" : "opacity-0"}`}>
-        <h1 className="text-3xl font-bold text-black tracking-tight text-center animate-pulse" style={{ letterSpacing: "-1px" }}>
+        <h1 className="text-5xl font-bold text-black tracking-tight text-center animate-pulse" style={{ letterSpacing: "-1px" }}>
           {titles[titleLanguage].welcome}
         </h1>
-        <h2 className="text-xl text-black tracking-tight text-center mt-2 animate-pulse" style={{ letterSpacing: "-1px" }}>
+        <h2 className="text-2xl text-black tracking-tight text-center mt-2 animate-pulse" style={{ letterSpacing: "-1px" }}>
           {titles[titleLanguage].select}
         </h2>
       </div>
