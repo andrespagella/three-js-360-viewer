@@ -37,7 +37,8 @@
                 "2,5mts"
             ],
             "peso": "0.258 kg",
-            "forma": "Cuadrada"
+            "forma": "Cuadrada",
+            "uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3421.webp",
         "closeup": "closeups/perfiles_pared/3421.webp",
@@ -61,7 +62,8 @@
                 "2,5mts"
             ],
             "peso": "0.258 kg",
-            "forma": "Cuadrada"
+            "forma": "Cuadrada",
+            "uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3422.webp",
         "closeup": "closeups/perfiles_pared/3422.webp",
@@ -85,7 +87,8 @@
                 "2,5mts"
             ],
             "peso": "0.253 kg",
-            "forma": "Cuadrada"
+            "forma": "Cuadrada",
+            "uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3425B.webp",
         "closeup": "closeups/perfiles_pared/3425B.webp",
@@ -109,7 +112,8 @@
                 "2,5mts"
             ],
             "peso": "0.253 kg",
-            "forma": "Cuadrada"
+            "forma": "Cuadrada",
+            "uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3428TXA.webp",
         "closeup": "closeups/perfiles_pared/3428TXA.webp",
