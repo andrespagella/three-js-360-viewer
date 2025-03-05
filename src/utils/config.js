@@ -21,10 +21,11 @@ const config = {
   ],
   
   // Tiempo de inactividad para el screensaver (en milisegundos)
-  idleTimeout: 60000, // 60 segundos
+  idleTimeout: 240000, // 4 minutos
   
   // Tiempo de espera antes de iniciar automáticamente el agente conversacional (en milisegundos)
   agentAutoStartDelay: 1000, // 1 segundo
+
 };
 
 export default config; 
