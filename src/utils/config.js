@@ -4,9 +4,8 @@
 
 const config = {
   // URL del servidor de tokens para el agente conversacional
-  // Nota: Asegúrate de que esta URL sea accesible y tenga un certificado válido
-  tokenServerUrl: 'https://localhost:3000/token',
-  formServerUrl: 'https://localhost:3000/process-form',
+  tokenServerUrl: 'https://server.atrim3dshowcase.com:3000/token',
+  formServerUrl: 'https://server.atrim3dshowcase.com:3000/process-form',
   
   // URL de la API de OpenAI para la comunicación en tiempo real
   openAiRealtimeUrl: 'https://api.openai.com/v1/realtime',
@@ -21,7 +20,7 @@ const config = {
   ],
   
   // Tiempo de inactividad para el screensaver (en milisegundos)
-  idleTimeout: 240000, // 4 minutos
+  idleTimeout: 120000, // 4 minutos
   
   // Tiempo de espera antes de iniciar automáticamente el agente conversacional (en milisegundos)
   agentAutoStartDelay: 1000, // 1 segundo
