@@ -57,10 +57,12 @@ const ViewerHeader = ({ language }) => {
               />
             ) : (
               <div className="h-full w-auto flex items-center justify-center">
-                <div className="animate-pulse h-8 w-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                  </svg>
+                <div className="animate-pulse h-8 w-8 flex items-center justify-center">
+                  <img 
+                    src="/disconnected.svg" 
+                    alt="Asistente desactivado" 
+                    className="h-6 w-6" 
+                  />
                 </div>
               </div>
             )}
