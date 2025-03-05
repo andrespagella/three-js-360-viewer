@@ -1,37 +1,33 @@
 [
     {
-        "producto": "perfil decorativo 1810",
-        "descripcion": "Terminación Cuadrada",
-        "caracteristicas": [
-            "Perfil de acero inoxidable",
-            "Puede utilizarse como divisor de pisos en el mismo nivel, para unir diferentes revestimientos a 90 grados, delimitar ambientes o como terminación de escalón protegiendo el canto.\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
-        ],
+        "producto": "Terminación Cuadrada",
+        "descripcion": {
+            "es": "Recomendado para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
+            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Cromo",
+            "terminacion": "Titanio Esmerilado",
             "medidas": [
-                "10 mm",
-                "10 mm",
+                "7 mm",
+                "7 mm",
                 "2,5mts"
             ],
-            "peso": "0.625 kg",
             "forma": "Cuadrada"
         },
-        "thumbnail": "thumbnails/perfiles/1810.webp",
+        "thumbnail": "thumbnails/perfiles/1401ESM.webp",
         "closeup": "closeups/perfiles_pared/1810.webp",
         "overlay": "overlays/perfiles_pared/1810.webp",
         "x": 0,
         "y": 0,
-        "SKU": "1810"
+        "SKU": "1401ESM"
     },
     {
-        "producto": "perfil decorativo 3421",
-        "descripcion": "Guardacanto Quadra ",
-        "caracteristicas": [
-            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
-            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
-            "\n- Protege las uniones\n- Diseño moderno"
-        ],
+        "producto": "Guardacanto Quadra 3421",
+        "descripcion": {
+            "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+        },
         "ficha": {
             "material": "Aluminio",
             "terminacion": "Cromo Brillante",
@@ -51,13 +47,11 @@
         "SKU": "3421"
     },
     {
-        "producto": "perfil decorativo 3422",
-        "descripcion": "Guardacanto Quadra ",
-        "caracteristicas": [
-            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
-            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
-            "\n- Protege las uniones\n- Diseño moderno"
-        ],
+        "producto": "Guardacanto Quadra 3422",
+        "descripcion": {
+            "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+        },
         "ficha": {
             "material": "Aluminio",
             "terminacion": "Oro Mate",
@@ -77,13 +71,11 @@
         "SKU": "3422"
     },
     {
-        "producto": "perfil decorativo 3425B",
-        "descripcion": "Guardacanto Quadra ",
-        "caracteristicas": [
-            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
-            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
-            "\n- Protege las uniones\n- Diseño moderno"
-        ],
+        "producto": "Guardacanto Quadra 3425B",
+        "descripcion": {
+            "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+        },
         "ficha": {
             "material": "Aluminio",
             "terminacion": "Olivo",
@@ -103,13 +95,11 @@
         "SKU": "3425B"
     },
     {
-        "producto": "perfil decorativo 3428TXA",
-        "descripcion": "Guardacanto Quadra ",
-        "caracteristicas": [
-            "Perfil de aluminio de 10 mm de vista cuadrada que acompaña griferías y diseños rectos",
-            "Protege la unión de los revestimientos logrando un diseño moderno.\n- Acompaña griferías y diseños rectos",
-            "\n- Protege las uniones\n- Diseño moderno\n- Innovador color simil piedra "
-        ],
+        "producto": "Guardacanto Quadra 3428TXA",
+        "descripcion": {
+            "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+        },
         "ficha": {
             "material": "Aluminio",
             "terminacion": "Arena",

@@ -1,11 +1,10 @@
 [
     {
-        "producto": "perfil decorativo 1810",
-        "descripcion": "Terminación Cuadrada",
-        "caracteristicas": [
-            "Perfil de acero inoxidable",
-            "Puede utilizarse como divisor de pisos en el mismo nivel, para unir diferentes revestimientos a 90 grados, delimitar ambientes o como terminación de escalón protegiendo el canto.\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
-        ],
+        "producto": "Terminación Cuadrada 1810",
+        "descripcion": {
+            "es": "Perfil transicional de acero inoxidable calidad AISI 304 que puede utilizarse como divisor de pisos en el mismo nivel, para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
+            "pt": "Perfil transicional de aço inoxidável qualidade AISI 304 que pode ser utilizado como divisor de pisos no mesmo nível, para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Cromo",
@@ -25,12 +24,11 @@
         "SKU": "1810"
     },
     {
-        "producto": "perfil decorativo 1674",
-        "descripcion": "Varilla en L ",
-        "caracteristicas": [
-            "Perfil de aluminio de ángulo recto de 2,5 mm de cara visible",
-            "Multifacético de vista delgada y diseño simple, que crea con elegancia líneas sutiles en los revestimientos.\n- Multifacético de vista delgada y diseño simple\n- Crea con elegancia líneas sutiles en los revestimientos."
-        ],
+        "producto": "Varilla en L 1674",
+        "descripcion": {
+            "es": "Perfil multifacético, fabricado en aluminio aleación 6063 T5, de vista delgada, diseñado para cubrir los laterales de los revestimientos, ocultar bordes con imperfecciones, unir diferentes porcellanatos en un mismo nivel y enmarcar áreas en el piso.",
+            "pt": "Perfil multifacetado, fabricado em alumínio liga 6063 T5, de vista fina, projetado para cobrir as laterais dos revestimentos, ocultar bordas com imperfeições, unir diferentes porcelanatos em um mesmo nível e enquadrar áreas no piso."
+        },
         "ficha": {
             "material": "Aluminio Pintado",
             "terminacion": "Carbón",
@@ -50,11 +48,11 @@
         "SKU": "1674"
     },
     {
-        "producto": "perfil decorativo 1403esm",
-        "descripcion": "Terminación Cuadrada",
-        "caracteristicas": [
-            "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
-        ],
+        "producto": "Terminación Cuadrada 1403ESM",
+        "descripcion": {
+            "es": "Recomendado para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
+            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Oro ESM",
@@ -74,11 +72,11 @@
         "SKU": "1403ESM"
     },
     {
-        "producto": "perfil decorativo 1402esm",
-        "descripcion": "Terminación Cuadrada",
-        "caracteristicas": [
-            "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
-        ],
+        "producto": "Terminación Cuadrada 1402ESM",
+        "descripcion": {
+            "es": "Recomendado para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
+            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Oro Rosa ESM",
@@ -98,11 +96,11 @@
         "SKU": "1402ESM"
     },
     {
-        "producto": "perfil decorativo 1401esm",
-        "descripcion": "Terminación Cuadrada",
-        "caracteristicas": [
-            "- Diseño para placas slim\n- Divisor de pisos en el mismo nivel\n- Delimita ambientes \n- Protege el canto."
-        ],
+        "producto": "Terminación Cuadrada 1401ESM",
+        "descripcion": {
+            "es": "Recomendado para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
+            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Titanio ESM",

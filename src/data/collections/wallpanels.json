@@ -1,22 +1,17 @@
 [
     {
-        "producto": "REVESTIMIENTO EWP301-259T",
-        "descripcion": "Revestimientos de paredes EPS",
-        "caracteristicas": [
-            "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
-            "Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio",
-            "Son muy livianos lo que permiten una fácil instalación",
-            "Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente",
-            "\n- Diseño y decoración a tus ambientes\n- Ayudan a mantener temperaturas más agradables en interiores \n- Son muy livianos lo que permite una fácil instalación",
-            "\n- Muy buena resistencia al impacto y la humedad, \n- Se limpian fácilmente",
-            ""
-        ],
+        "producto": "Wall Panel / Revestimientos de paredes EPS",
+        "descripcion": {
+            "es": "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes. Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio. Son muy livianos lo que permiten una fácil instalación. Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente.",
+            "pt": "Os novos Revestimentos de paredes EPS são ideais para dar design e decoração aos seus ambientes. Além disso, ajudam a manter temperaturas mais agradáveis em interiores, melhorando o conforto do espaço. São muito leves, o que permite uma fácil instalação. Têm muito boa resistência ao impacto e à umidade, podem ser limpos facilmente."
+        },
         "ficha": {
             "material": "EPS",
+            "terminacion": "Simil madera (claro)",
             "medidas": [
-                "1.2",
-                "12",
-                "244 cm"
+                "12.2cm de ancho",
+                "1.2cm de grosor",
+                "244cm de alto"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP301-259T.webp",
@@ -27,23 +22,18 @@
         "SKU": "EWP301-259T"
     },
     {
-        "producto": "REVESTIMIENTO EWP302-260T",
-        "descripcion": "Revestimientos de paredes EPS",
-        "caracteristicas": [
-            "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes",
-            "Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio",
-            "Son muy livianos lo que permiten una fácil instalación",
-            "Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente",
-            "\n- Diseño y decoración a tus ambientes\n- Ayudan a mantener temperaturas más agradables en interiores \n- Son muy livianos lo que permite una fácil instalación",
-            "\n- Muy buena resistencia al impacto y la humedad, \n- Se limpian fácilmente",
-            ""
-        ],
+        "producto": "Wall Panel / Revestimientos de paredes EPS",
+        "descripcion": {
+            "es": "Los nuevos Revestimientos de paredes EPS son ideales para darle diseño y decoración a tus ambientes. Además ayudan a mantener temperaturas más agradables en interiores, mejorando el confort del espacio. Son muy livianos lo que permiten una fácil instalación. Tienen muy buena resistencia al impacto y la humedad, pueden limpiarse fácilmente.",
+            "pt": "Os novos Revestimentos de paredes EPS são ideais para dar design e decoração aos seus ambientes. Além disso, ajudam a manter temperaturas mais agradáveis em interiores, melhorando o conforto do espaço. São muito leves, o que permite uma fácil instalação. Têm muito boa resistência ao impacto e à umidade, podem ser limpos facilmente."
+        },
         "ficha": {
             "material": "EPS",
+            "terminacion": "Simil madera (oscuro)",
             "medidas": [
-                "1.2",
-                "12",
-                "244 cm"
+                "12.2cm de ancho",
+                "1.2cm de grosor",
+                "244cm de alto"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP302-260T.webp",
@@ -54,19 +44,18 @@
         "SKU": "EWP302-260T"
     },
     {
-        "producto": "REVESTIMIENTO SPC468",
-        "descripcion": "Revestimientos de paredes SPC",
-        "caracteristicas": [
-            "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
-            "Con \nsus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural \nclásico y moderno",
-            "Son impermeables, fáciles de limpiar e instalar",
-            "\n-Innovación y elegancia\n-Texturas mármol \n- Ofrece estética y funcionalidad\n- Fácil de instalar"
-        ],
+        "producto": "Revestimientos de paredes SPC",
+        "descripcion": {
+            "es": "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia. Con sus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural clásico y moderno. Son impermeables, fáciles de limpiar e instalar.",
+            "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
+        },
         "ficha": {
             "material": "SPC",
+            "terminacion": "Marmol",
+            "Forma": "Rectangular",
             "medidas": [
-                "120",
-                "260mm"
+                "120mm (ancho)",
+                "260mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC468.webp",
@@ -77,19 +66,18 @@
         "SKU": "SPC468"
     },
     {
-        "producto": "REVESTIMIENTO SPC462",
-        "descripcion": "Revestimientos de paredes SPC",
-        "caracteristicas": [
-            "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
-            "Con \nsus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural \nclásico y moderno",
-            "Son impermeables, fáciles de limpiar e instalar",
-            "\n- Innovación y elegancia\n- Textura de piedra \n- Ofrece estética y funcionalidad\n- Impermeables, fáciles de limpiar e instalar"
-        ],
+        "producto": "Revestimientos de paredes SPC",
+        "descripcion": {
+            "es": "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia. Con sus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural clásico y moderno. Son impermeables, fáciles de limpiar e instalar.",
+            "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
+        },
         "ficha": {
             "material": "SPC",
+            "terminacion": "Piedra",
+            "Forma": "Rectangular",
             "medidas": [
-                "120",
-                "260mm"
+                "120mm (ancho)",
+                "260mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC462.webp",
@@ -100,19 +88,18 @@
         "SKU": "SPC462"
     },
     {
-        "producto": "REVESTIMIENTO SPC456",
-        "descripcion": "Revestimientos de paredes SPC",
-        "caracteristicas": [
-            "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
-            "Con \nsus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural \nclásico y moderno",
-            "Son impermeables, fáciles de limpiar e instalar",
-            "\n- Innovación y elegancia\n- Textura de piedra \n- Ofrece estética y funcionalidad\n- Impermeables, fáciles de limpiar e instalar"
-        ],
+        "producto": "Revestimientos de paredes SPC",
+        "descripcion": {
+            "es": "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia. Con sus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural clásico y moderno. Son impermeables, fáciles de limpiar e instalar.",
+            "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
+        },
         "ficha": {
             "material": "SPC",
+            "terminacion": "Piedra",
+            "Forma": "Rectangular",
             "medidas": [
-                "120",
-                "260mm"
+                "120mm (ancho)",
+                "260mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC456.webp",
@@ -123,19 +110,18 @@
         "SKU": "SPC456"
     },
     {
-        "producto": "REVESTIMIENTO SPC452",
-        "descripcion": "Revestimientos de paredes SPC",
-        "caracteristicas": [
-            "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia",
-            "Con \nsus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural \nclásico y moderno",
-            "Son impermeables, fáciles de limpiar e instalar",
-            "\n- Innovación y elegancia\n- Textura de piedra \n- Ofrece estética y funcionalidad\n- Impermeables, fáciles de limpiar e instalar"
-        ],
+        "producto": "Revestimientos de paredes SPC",
+        "descripcion": {
+            "es": "Los Revestimientos de SPC son la combinación perfecta entre innovación y elegancia. Con sus impresionantes texturas de piedra y mármol ofrecen estética y funcionalidad, irradiando un encanto natural clásico y moderno. Son impermeables, fáciles de limpiar e instalar.",
+            "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
+        },
         "ficha": {
             "material": "SPC",
+            "terminacion": "Marmol",
+            "Forma": "Rectangular",
             "medidas": [
-                "120",
-                "260mm"
+                "120mm (ancho)",
+                "260mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC452.webp",

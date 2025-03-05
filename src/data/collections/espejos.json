@@ -1,19 +1,17 @@
 [
     {
-        "producto": "espejo con080m",
+        "producto": "Espejo LED Contour",
         "SKU": "CON080M",
-        "descripcion": "ESPEJO LED CONTOUR 120X72 CM MADERA",
-        "caracteristicas": [
-            "Diseño clásico y elegante.",
-            "Marco con posibilidad de acabado laqueado o madera personalizable.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
+        "descripcion": {
+            "es": "Espejo LED Contour con diseño clásico y elegante. Marco con posibilidad de acabado laqueado o madera personalizable. Cuenta con luz neutra LED integrada en todo el contorno para una iluminación perfecta y funcional.",
+            "pt": "Espelho LED Contour com design clássico e elegante. Moldura com possibilidade de acabamento laqueado ou madeira personalizável. Possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
+        },
         "ficha": {
             "coleccion": "Contour",
             "terminacion": "Roble Natural",
             "medidas": [
-                "60mm",
-                "1500mm"
+                "60/80/90/100/120/150 cm de ancho",
+                "72cm de altura"
             ]
         },
         "thumbnail": "thumbnails/espejos/CON080M.webp",
@@ -23,20 +21,17 @@
         "y": 0
     },
     {
-        "producto": "espejo orb060m",
+        "producto": "Espejo Led Orbital laqueado",
         "SKU": "ORB060M",
-        "descripcion": "ESPEJO LED ORBITAL 80 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño curvo.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
+        "descripcion": {
+            "es": "Espejo LED Orbital con diseño curvo que aporta un toque moderno a tu baño. Disponible con marco o sin marco, cuenta con luz neutra LED integrada en todo el contorno para una iluminación perfecta y funcional.",
+            "pt": "Espelho LED Orbital com design curvo que adiciona um toque moderno ao seu banheiro. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
+        },
         "ficha": {
             "coleccion": "Orbital",
             "terminacion": "Azul Intenso mate",
             "medidas": [
-                "600mm",
-                "800mm"
+                "60cm y 80cm de diámetro"
             ]
         },
         "thumbnail": "thumbnails/espejos/ORB060M.webp",
@@ -46,20 +41,18 @@
         "y": 0
     },
     {
-        "producto": "espejo pil040m",
+        "producto": "Espejo LED Pill Laqueado",
         "SKU": "PIL040M",
-        "descripcion": "ESPEJO LED PILL 40X100 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño tipo pastilla.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
+        "descripcion": {
+            "es": "Espejo PILL con diseño tipo pastilla que aporta elegancia a tu baño. Disponible con marco o sin marco, cuenta con luz neutra LED integrada en todo el contorno para una iluminación perfecta y funcional.",
+            "pt": "Espelho PILL com design tipo pastilha que adiciona elegância ao seu banheiro. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
+        },
         "ficha": {
             "coleccion": "Pill",
             "terminacion": "Greige mate",
             "medidas": [
-                "400mm",
-                "1000mm"
+                "40cm de ancho",
+                "100cm de altura"
             ]
         },
         "thumbnail": "thumbnails/espejos/PIL040M.webp",
@@ -69,20 +62,18 @@
         "y": 0
     },
     {
-        "producto": "espejo ten050m",
+        "producto": "Espejo LED Tendence Laqueado",
         "SKU": "TEN050M",
-        "descripcion": "ESPEJO LED TENDENCE 50X90 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño que se adapta a tu estilo.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
+        "descripcion": {
+            "es": "Espejo TENDENCE LED con diseño versátil que se adapta a cualquier estilo decorativo. Disponible con marco o sin marco, cuenta con luz neutra LED integrada en todo el contorno para una iluminación perfecta en tu baño.",
+            "pt": "Espelho TENDENCE LED com design versátil que se adapta a qualquer estilo decorativo. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita no seu banheiro."
+        },
         "ficha": {
             "coleccion": "Tendence",
             "terminacion": "Verde Suculenta mate",
             "medidas": [
-                "500mm",
-                "100mm"
+                "50cm de ancho",
+                "100cm de altura"
             ]
         },
         "thumbnail": "thumbnails/espejos/TEN050M.webp",
@@ -92,21 +83,18 @@
         "y": 0
     },
     {
-        "producto": "espejo gap060m",
+        "producto": "Espejo LED Gap Laqueado",
         "SKU": "GAP060M",
-        "descripcion": "ESPEJO LED GAP 60X80 CM LAQUEADO",
-        "caracteristicas": [
-            "Diseño en tendencia.",
-            "Posibilidad con marco o sin marco.",
-            "Luz neutra LED integrada en el contorno del espejo."
-        ],
+        "descripcion": {
+            "es": "Espejo GAP con diseño en tendencia que se adapta a cualquier estilo. Disponible con marco o sin marco, cuenta con luz neutra LED integrada en todo el contorno para una iluminación perfecta en tu baño.",
+            "pt": "Espelho GAP com design moderno que se adapta a qualquer estilo. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita no seu banheiro."
+        },
         "ficha": {
             "coleccion": "Gap",
             "terminacion": "Gris grafito mate",
             "medidas": [
-                "400mm",
-                "600mm",
-                "800mm"
+                "40cm y 60cm de ancho",
+                "80cm de altura"
             ]
         },
         "thumbnail": "thumbnails/espejos/GAP060M.webp",

@@ -40,7 +40,7 @@
         },
         {
           "id": 7,
-          "position": [-300, -150, -100],
+          "position": [-300, -50, -100],
           "data": "data/collections/espejos.json",
           "label": "Espejos"
         },

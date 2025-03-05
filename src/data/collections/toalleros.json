@@ -1,32 +1,23 @@
 [
     {
-        "producto": "toallero electrico coco-1004+",
+        "producto": "Toallero Eléctrico Coco Smart Brillante",
         "SKU": "COCO-1004+",
-        "descripcion": "Toallero Eléctrico Coco Smart",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "4 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 26 x 95 x 11 cm - 86 watts de diseño vertical y angosto, es ideal para economizar espacio. Dispone de cuatro ganchos para colgar y mantener las toallas calientes.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 26 x 95 x 11 cm - 86 watts de design vertical e estreito, é ideal para economizar espaço. Possui quatro ganchos para pendurar e manter as toalhas aquecidas."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Brillante",
+            "coleccion": "Modern",
             "medidas": [
                 "95cm",
                 "26mm",
                 "11cm"
             ],
             "peso": "4.6 kg",
-            "potencia": "86 wats",
-            "forma": "Diseño curvo"
+            "potencia": "86 watts",
+            "forma": "Diseño vertical y angosto"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1004+.webp",
         "closeup": "closeups/toalleros/COCO-1004+.webp",
@@ -35,21 +26,12 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico cubic-1135+",
+        "producto": "Toallero Eléctrico Cubic Brillante",
         "SKU": "CUBIC-1135+",
-        "descripcion": "Toallero Eléctrico Cubic Petit",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "Está compuesto por:",
-            "4 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Sus formas suaves y curvas combinan con diseños y griferías redondeadas. Cuenta con 4 barras calentadoras y display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Destaca por su bajo consumo energético.",
+            "pt": "Suas formas suaves e curvas combinam com designs e torneiras arredondadas. Possui 4 barras de aquecimento e display tátil de ligação, regulador de temperatura e temporizador para configurar o tempo de uso. Disponível em dois formatos: arredondado e quadrado. Destaca-se pelo seu baixo consumo energético."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Brillante",
@@ -69,22 +51,12 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico coco-1116+",
+        "producto": "Toallero Eléctrico Coco Petit Negro Mate",
         "SKU": "COCO-1116+",
-        "descripcion": "Toallero Eléctrico Coco Petit",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "4 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 40 x 50 x 8 cm con potencia de 40 watts. Destaca por su bajo consumo, con switch de ahorro de energía. Sus formas suaves y curvas combinan perfectamente con diseños y griferías redondeadas, aportando elegancia a cualquier ambiente.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 40 x 50 x 8 cm com potência de 40 watts. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas, proporcionando elegância a qualquer ambiente."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Negro Mate",
@@ -104,22 +76,12 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico coco-1110+",
+        "producto": "Toallero Eléctrico Coco Petit Oro Mate",
         "SKU": "COCO-1110+",
-        "descripcion": "Toallero Eléctrico Coco Petit",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "4 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 40 x 50 x 8 cm con potencia de 40 watts. Destaca por su bajo consumo, con switch de ahorro de energía. Sus formas suaves y curvas combinan perfectamente con diseños y griferías redondeadas, aportando elegancia a cualquier ambiente.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 40 x 50 x 8 cm com potência de 40 watts. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas, proporcionando elegância a qualquer ambiente."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Oro Mate",
@@ -139,28 +101,18 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico coco-1111+",
+        "producto": "Toallero Eléctrico Coco Flow Oro Mate",
         "SKU": "COCO-1111+",
-        "descripcion": "Toallero Eléctrico Coco Flow",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "6 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 50 cm X 60 cm X 12 cm con potencia de 56 watts. Sus formas suaves y curvas combinan perfectamente con diseños y griferías redondeadas. Destaca por su bajo consumo, con switch de ahorro de energía, aportando elegancia y funcionalidad a cualquier ambiente.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm com potência de 56 watts. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia, proporcionando elegância e funcionalidade a qualquer ambiente."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Oro Mate",
             "medidas": [
-                "60cm",
-                "50mm",
+                "50cm",
+                "60mm",
                 "12cm"
             ],
             "peso": "2.5 kg",
@@ -174,28 +126,18 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico coco-1119+",
+        "producto": "Toallero Eléctrico Coco Flow Negro Mate",
         "SKU": "COCO-1119+",
-        "descripcion": "Toallero Eléctrico Coco Flow",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "6 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 50 cm X 60 cm X 12 cm con potencia de 56 watts. Sus formas suaves y curvas combinan perfectamente con diseños y griferías redondeadas. Destaca por su bajo consumo, con switch de ahorro de energía, aportando elegancia y funcionalidad a cualquier ambiente.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm com potência de 56 watts. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia, proporcionando elegância e funcionalidade a qualquer ambiente."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Negro Mate",
             "medidas": [
-                "60cm",
-                "50mm",
+                "50cm",
+                "60mm",
                 "12cm"
             ],
             "peso": "2.5 kg",
@@ -209,28 +151,18 @@
         "y": 0
     },
     {
-        "producto": "toallero electrico cubic-1137+",
+        "producto": "Toallero Eléctrico Cubic Flow Brillante",
         "SKU": "CUBIC-1137+",
-        "descripcion": "Toallero Eléctrico Cubic Flow",
-        "caracteristicas": [
-            "Con display táctil de encendido, regulador de temperatura y timer para configurar el tiempo de uso. Disponible en dos formatos: redondeado y cuadrado. Bajo consumo",
-            "",
-            "Está compuesto por:",
-            "6 Barras calentadoras",
-            "Fijación trasera",
-            "Cables calefactores de aleación, con alta eficiencia de conversión",
-            "Marco completamente soldado",
-            "El grado de impermeabilidad alcanza IPX1",
-            "Producto completamente aislado, seguro y confiable",
-            "Interruptor de operación táctil",
-            "Cable de 1,5 metros"
-        ],
+        "descripcion": {
+            "es": "Toallero eléctrico premium de acero inoxidable de 50 cm X 60 cm X 12 cm de 56 watts. Las líneas rectas acompañan griferías de diseño vanguardista. Son de bajo consumo, con switch de ahorro de energía.",
+            "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm de 56 watts. As linhas retas acompanham torneiras de design vanguardista. São de baixo consumo, com interruptor de economia de energia."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Brillante",
             "medidas": [
-                "60cm",
-                "50mm",
+                "50cm",
+                "60mm",
                 "12cm"
             ],
             "peso": "3.1 kg",

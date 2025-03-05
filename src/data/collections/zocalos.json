@@ -1,17 +1,11 @@
 [
     {
-        "producto": "zocalo 2066",
+        "producto": "Zócalo Slim",
         "SKU": "2066",
-        "descripcion": "Zócalo Slim",
-        "caracteristicas": [
-            "Este Zócalo ultra delgado es ideal para usar en ambientes de decoración minimalista tanto en hogares como en oficinas. Combina funcionalidad y estética",
-            "Son resistentes a los golpes y roces",
-            "No requieren mantenimiento ni se deterioran con el tiempo",
-            "Para su instalación solo tenés que usar Adhesivo Rellenador ProFix",
-            "",
-            "Ultradelgado, diseño minimalista",
-            "Resistentes a los golpes y roces"
-        ],
+        "descripcion": {
+            "es": "El Zócalo Slim es una solución elegante y funcional para unir la pared y el piso, ideal para darle ese toque distintivo en todos tus proyectos. Es la elección perfecta para quienes buscan una combinación de estilo, funcionalidad y durabilidad. Su diseño ultra delgado proporciona una terminación moderna ahora pintado en color negro.",
+            "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta."
+        },
         "ficha": {
             "material": "Aluminio Anodizado",
             "terminacion": "Negro Mate",
@@ -29,21 +23,19 @@
         "y": 0
     },
     {
-        "producto": "zocalo 2309",
+        "producto": "Zócalo Orbit",
         "SKU": "2309",
-        "descripcion": "Zócalo Orbit",
-        "caracteristicas": [
-            "Pintable, de cara plana y canto redondeado",
-            "Diseño y color en cualquier ambiente",
-            ""
-        ],
+        "descripcion": {
+            "es": "Zócalo/Contramarco pintable de cara plana y canto redondeado. Fabricado en EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente pintura látex al agua interior.",
+            "pt": "Rodapé/Contramarco pintável de face plana e borda arredondada. Fabricado em EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente tinta látex à água para interiores."
+        },
         "ficha": {
             "material": "EPS",
             "terminacion": "Pintable",
             "medidas": [
                 "70mm",
                 "15mm",
-                " 2,5mts"
+                "2,5mts"
             ],
             "forma": "Orbit"
         },
@@ -54,18 +46,12 @@
         "y": 0
     },
     {
-        "producto": "zocalo 2356",
+        "producto": "Zócalo Maxi Line",
         "SKU": "2356",
-        "descripcion": "Zócalo Maxi Line",
-        "caracteristicas": [
-            "El Zócalo blanco Maxi line con línea bajo relieve, da mayor sofisticación y elegancia a tus ambientes.",
-            "Además son altamente resistente a los golpes y no se deforman con el agua ni humedad como ocurre con otros materiales.",
-            "Son de muy fácil instalación y no se deterioran con el tiempo.",
-            "",
-            "Diseño de cara plana y línea bajo relieve",
-            "Mayor sofisticación y elegancia",
-            "Altamente resistente a los golpes - No se deforman con el agua ni humedad."
-        ],
+        "descripcion": {
+            "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
+            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
+        },
         "ficha": {
             "material": "EPS",
             "terminacion": "Blanco ",
@@ -83,13 +69,12 @@
         "y": 0
     },
     {
-        "producto": "zocalo 2314",
+        "producto": "Zócalo Line",
         "SKU": "2314",
-        "descripcion": "Zócalo Line",
-        "caracteristicas": [
-            "Diseño vanguardista que destaca con personalidad los espacios.",
-            "Variedad de colores en tendencia."
-        ],
+        "descripcion": {
+            "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
+            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
+        },
         "ficha": {
             "material": "EPS",
             "terminacion": "Cemento",
@@ -107,22 +92,21 @@
         "y": 0
     },
     {
-        "producto": "zocalo 2323",
+        "producto": "Zócalo Extra Line Plata",
         "SKU": "2323",
-        "descripcion": "Zócalo Curves",
-        "caracteristicas": [
-            "Diseño tradicional",
-            "Otorga una visual continua a la unión con la pared."
-        ],
+        "descripcion": {
+            "es": "Zócalo de EPS (poliestireno expandido reciclado) de 100 mm de altura, de diseño vanguardista que destaca con personalidad los espacios. Variedad de colores en tendencia.",
+            "pt": "Rodapé de EPS (poliestireno expandido reciclado) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
+        },
         "ficha": {
             "material": "EPS",
-            "terminacion": "Avellana",
+            "terminacion": "Gris plata",
             "medidas": [
-                "80 mm",
+                "100 mm",
                 "15 mm",
                 "2,5 m"
             ],
-            "forma": "Curves"
+            "peso": "1.25 kg"
         },
         "thumbnail": "thumbnails/zocalos/2323.webp",
         "closeup": "closeups/zocalos/2323.webp",

@@ -1,16 +1,17 @@
 [
     {
-        "producto": "estante etm230ac",
-        "descripcion": "Estante Triangular Cuadrado",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Esquinero Triangular Cuadrado Esmerilado",
+        "descripcion": {
+            "es": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento. Diseño minimalista que aporta elegancia y funcionalidad a cualquier espacio.",
+            "pt": "Acessório premium de aço inoxidável AISI 304 para aplicar em cantos após a colocação do revestimento. Design minimalista que proporciona elegância e funcionalidade a qualquer espaço."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Acero Cepillado",
             "medidas": [
                 "23cm",
                 "23cm",
-                "32.8cm",
-                "2 cm"
+                "32.8cm"
             ],
             "peso": "0.256 kg",
             "forma": "Triangular"
@@ -23,16 +24,17 @@
         "SKU": "ETM230AC"
     },
     {
-        "producto": "estante erp300ac",
-        "descripcion": "Estante Rectangular Línea",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Rectangular Linea Esmerilado",
+        "descripcion": {
+            "es": "Estante/repisa rectangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Acero Cepillado",
             "medidas": [
                 "30cm",
-                "11.5cm",
-                "2cm"
+                "11.5cm"
             ],
             "peso": "0.256 kg",
             "forma": "Rectangular"
@@ -45,16 +47,18 @@
         "SKU": "ERP300AC"
     },
     {
-        "producto": "estante etj230bm",
-        "descripcion": "Estante Triangular Abstracto",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Esquinero Triangular Abstracto Blanco Mate",
+        "descripcion": {
+            "es": "Estante/repisa triangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Blanco Mate",
             "medidas": [
                 "23cm",
                 "23cm",
-                "2cm"
+                "32.8cm"
             ],
             "peso": "0.256 kg",
             "forma": "Triangular"
@@ -67,19 +71,21 @@
         "SKU": "ETJ230BM"
     },
     {
-        "producto": "estante etj230nm",
-        "descripcion": "Estante Rectangular Línea",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Esquinero Triangular Abstracto Negro Mate",
+        "descripcion": {
+            "es": "Estante/repisa triangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Negro Mate",
             "medidas": [
-                "30cm",
-                "11cm",
-                "2cm"
+                "23cm",
+                "23cm",
+                "32.8cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Rectangular"
+            "forma": "Triangular"
         },
         "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
         "closeup": "closeups/estantes/ETJ230NM.webp",
@@ -89,19 +95,20 @@
         "SKU": "ETJ230NM"
     },
     {
-        "producto": "estante erp300nm",
-        "descripcion": "Estante Triangular Abstracto",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Rectangular Linea Negro Mate",
+        "descripcion": {
+            "es": "Estante/repisa rectangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Negro Mate",
             "medidas": [
                 "30cm",
-                "23cm",
-                "2cm"
+                "11.5cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Triangular"
+            "forma": "Rectangular"
         },
         "thumbnail": "thumbnails/estantes/ERP300NM.webp",
         "closeup": "closeups/estantes/ERP300NM.webp",
@@ -111,16 +118,17 @@
         "SKU": "ERP300NM"
     },
     {
-        "producto": "estante erm300nm",
-        "descripcion": "Estante Rectangular Cuadrado",
-        "caracteristicas": "Accesorio premium de acero inoxidable AISI 304 para aplicar en esquinas luego de la colocación del revestimiento.\nDiseño minimalista",
+        "producto": "Estante Rectangular Cuadrado Negro Mate",
+        "descripcion": {
+            "es": "Estante/repisa rectangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Negro Mate",
             "medidas": [
                 "30cm",
-                "11cm",
-                "2cm"
+                "11.5cm"
             ],
             "peso": "0.256 kg",
             "forma": "Rectangular"

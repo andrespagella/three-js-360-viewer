@@ -1,14 +1,18 @@
 [
     {
-        "producto": "desague dn700t02",
-        "descripcion": "Desagüe Lineal Narrow",
-        "caracteristicas": "Desagüe de ducha de acero inoxidable AISI 304 doble esmerilado. Diseño delgado, que reemplaza la rejilla tradicional y crea un plano único de continuidad en el piso de la ducha. Provisto de pies regulables en altura que se fijan al cuerpo del desagüe para una nivelación precisa y rápida. Con cesta para filtro de pelos que puede retirarse manualmente para su limpieza.",
+        "producto": "Desagüe Lineal Narrow Clásico Mate Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de ducha de acero inoxidable AISI 304 doble esmerilado. Diseño delgado, que reemplaza la rejilla tradicional y crea un plano único de continuidad en el piso de la ducha. Provisto de pies regulables en altura que se fijan al cuerpo del desagüe para una nivelación precisa y rápida. Con cesta para filtro de pelos que puede retirarse manualmente para su limpieza.",
+            "pt": "Ralo de chuveiro em aço inoxidável AISI 304 duplamente escovado. Design fino, que substitui a grade tradicional e cria um plano único de continuidade no piso do chuveiro. Equipado com pés de altura ajustável que se fixam ao corpo do ralo para um nivelamento preciso e rápido. Com cesto para filtro de cabelos que pode ser removido manualmente para limpeza."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Mate",
+            "coleccion": "Aqua Series",
+            "terminacion": "Esmerilado",
             "medidas": [
-                "700mm",
-                "76mm x40mm"
+                "70cm",
+                "7.6cm",
+                "8.6cm"
             ],
             "peso": "1.8 kg",
             "forma": "Lineal"
@@ -21,15 +25,18 @@
         "SKU": "DN700T02"
     },
     {
-        "producto": "desague da300t02",
-        "descripcion": "Desagüe Lineal 2 en 1",
-        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Tapa 2 en 1: Cromo o Ceramic (cavidad para insertar el revestimiento). Diseñado para reemplazar la rejilla. Caída en forma de diamante.",
+        "producto": "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304 con innovadora tapa 2 en 1 que permite elegir entre acabado Cromo o Ceramic con cavidad para insertar el revestimiento. Diseñado para reemplazar la rejilla tradicional, creando un plano continuo en el piso de la ducha. Su estructura con caída en forma de diamante garantiza un drenaje eficiente y rápido.",
+            "pt": "Ralo de aço inoxidável AISI 304 com tampa inovadora 2 em 1 que permite escolher entre acabamento Cromo ou Ceramic com cavidade para inserir o revestimento. Projetado para substituir a grade tradicional, criando um plano contínuo no piso do chuveiro. Sua estrutura com queda em forma de diamante garante uma drenagem eficiente e rápida."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Mate",
+            "coleccion": "Aqua Series",
+            "terminacion": "Esmerilado",
             "medidas": [
-                "30 cm",
-                "7 cm",
+                "30cm",
+                "7cm",
                 "7.4 cm"
             ],
             "peso": "0.663 kg",
@@ -43,12 +50,15 @@
         "SKU": "DA300T02"
     },
     {
-        "producto": "desague da700t10",
-        "descripcion": "Desagüe Lineal Eme",
-        "caracteristicas": "Desagüe de acero inoxidable AISI 304. La ranura central y los planos inclinados permiten que el agua fluya rápidamente.",
+        "producto": "Desagüe Lineal Eme Mate Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304. La ranura central y los planos inclinados permiten que el agua fluya rápidamente.",
+            "pt": "Ralo de aço inoxidável AISI 304. A ranhura central e os planos inclinados permitem que a água flua rapidamente."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Mate",
+            "coleccion": "Aqua Series",
+            "terminacion": "Esmerilado",
             "medidas": [
                 "70 cm",
                 "7 cm",
@@ -65,12 +75,15 @@
         "SKU": "DA700T10"
     },
     {
-        "producto": "desague da900t01",
-        "descripcion": "Desagüe Lineal Clásico",
-        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Patrones de líneas rectas. Su cuerpo con caída en forma de diamante permite una mayor capacidad de drenaje",
+        "producto": "Desagüe Lineal Inca Mate Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304. Patrones de líneas rectas. Su cuerpo con caída en forma de diamante permite una mayor capacidad de drenaje.",
+            "pt": "Ralo de aço inoxidável AISI 304. Padrões de linhas retas. Seu corpo com queda em forma de diamante permite uma maior capacidade de drenagem."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Negro Mate",
+            "coleccion": "Aqua Series",
+            "terminacion": "Esmerilado",
             "medidas": [
                 "90 cm",
                 "7 cm",
@@ -87,12 +100,15 @@
         "SKU": "DA900T01"
     },
     {
-        "producto": "desague da150t02",
-        "descripcion": "Desagüe Cuadrado",
-        "caracteristicas": "Desagüe cuadrado de acero inoxidable AISI 304. Ofrece dos opciones de tapas en un único producto: Clásica, con un acabado esmerilado y Ceramic, cuyo lado posterior es hueco y permite insertar el revestimiento.",
+        "producto": "Desagüe Cuadrado 2 en 1 Brillante",
+        "descripcion": {
+            "es": "Desagüe cuadrado de acero inoxidable AISI 304. Ofrece dos opciones de tapas en un único producto: Clásica, con un acabado esmerilado y Ceramic, cuyo lado posterior es hueco y permite insertar el revestimiento.",
+            "pt": "Ralo quadrado de aço inoxidável AISI 304. Oferece duas opções de tampas em um único produto: Clássica, com acabamento fosco e Ceramic, cujo lado posterior é oco e permite inserir o revestimento."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
-            "terminacion": "Mate",
+            "coleccion": "Aqua Series",
+            "terminacion": "Brillante",
             "medidas": [
                 "15 cm",
                 "15 cm",
@@ -109,15 +125,17 @@
         "SKU": "DA150T02"
     },
     {
-        "producto": "desague da600t09",
-        "descripcion": "Desagüe Lineal Grid",
-        "caracteristicas": "Desagüe de acero inoxidable AISI 304. Diseño reticular combina drenaje eficiente, resistencia y ligereza.",
+        "producto": "Desagüe Lineal Grid Mate Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304. Diseño reticular combina drenaje eficiente, resistencia y ligereza.",
+            "pt": "Ralo de aço inoxidável AISI 304. Design reticular combina drenagem eficiente, resistência e leveza."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
             "terminacion": "Mate",
             "medidas": [
-                "60 cm",
-                "7 cm",
+                "60cm",
+                "7cm",
                 "7.4 cm"
             ],
             "peso": "0.729 kg",
@@ -131,11 +149,14 @@
         "SKU": "DA600T09"
     },
     {
-        "producto": "desague da700t05",
-        "descripcion": "Desagüe Lineal Diagonal",
-        "caracteristicas": "Desagüe de acero inoxidable AISI 304 doble esmerilado, tapa de patrones de líneas en diagonal. Diseñado para reemplazar la rejilla tradicional. Con caída en forma de diamante permite una mayor capacidad de drenaje.",
+        "producto": "Desagüe Diagonal Mate Esmerilado",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304 doble esmerilado, tapa de patrones de líneas en diagonal. Diseñado para reemplazar la rejilla tradicional. Con caída en forma de diamante permite una mayor capacidad de drenaje.",
+            "pt": "Ralo de aço inoxidável AISI 304 duplo fosco, tampa com padrões de linhas diagonais. Projetado para substituir a grade tradicional. Com queda em forma de diamante permite maior capacidade de drenagem."
+        },
         "ficha": {
             "material": "Acero Inoxidable 304",
+            "coleccion": "Aqua Series",
             "terminacion": "Mate",
             "medidas": [
                 "70 cm",

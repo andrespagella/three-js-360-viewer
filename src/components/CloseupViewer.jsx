@@ -215,7 +215,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
                   if (!value || typeof value === 'object' && !Array.isArray(value)) return null;
                   
                   // Formatear el valor si es un array
-                  const displayValue = Array.isArray(value) ? value.join(", ") : value;
+                  const displayValue = Array.isArray(value) ? value.join(" x ") : value;
                   
                   // Capitalizar la primera letra de la clave
                   const label = key.charAt(0).toUpperCase() + key.slice(1);
