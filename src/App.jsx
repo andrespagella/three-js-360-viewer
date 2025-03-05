@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
@@ -27,6 +27,9 @@ const AppContent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { theme } = useTheme();
   const { deactivateAgent } = useConversationalAgent();
+  
+  // Referencia para rastrear si el formulario ya ha sido enviado
+  const formSubmittedRef = useRef(false);
 
   // Detectar si el parámetro bigscreen=true está presente en la URL
   const [isBigScreen, setIsBigScreen] = useState(false);
@@ -70,6 +73,14 @@ const AppContent = () => {
 
   // Nuevo estado para almacenar los datos del formulario
   const [pendingFormData, setPendingFormData] = useState(null);
+
+  // Efecto para reiniciar la referencia de formulario enviado cuando el usuario vuelve a estar activo
+  useEffect(() => {
+    if (!isIdle && formSubmittedRef.current) {
+      console.log('Usuario activo de nuevo, reiniciando referencia de formulario enviado');
+      formSubmittedRef.current = false;
+    }
+  }, [isIdle]);
 
   // Preload all images when the component mounts
   useEffect(() => {
@@ -224,6 +235,9 @@ const AppContent = () => {
     console.log('Datos del formulario guardados en memoria:', formData);
     console.log('Estado actual de selectedItems al guardar:', selectedItems);
     
+    // Reiniciar la referencia de formulario enviado
+    formSubmittedRef.current = false;
+    
     // Verificar que formData tenga todas las selecciones
     if (formData.selectedItems) {
       console.log('Selecciones en formData:', Object.keys(formData.selectedItems).length);
@@ -249,7 +263,11 @@ const AppContent = () => {
 
   // Función para enviar los datos del formulario al servidor
   const submitFormData = async () => {
-    if (!pendingFormData) return;
+    // Si no hay datos pendientes o el formulario ya ha sido enviado, salir
+    if (!pendingFormData || formSubmittedRef.current) return;
+    
+    // Marcar el formulario como enviado para evitar envíos duplicados
+    formSubmittedRef.current = true;
     
     try {
       console.log('Enviando datos del formulario al servidor:', pendingFormData);
@@ -350,8 +368,9 @@ const AppContent = () => {
 
   // Show screensaver if user is idle and language is selected (only on desktop)
   if (isIdle && language && !isMobile) {
-    // Enviar los datos del formulario si existen
-    if (pendingFormData) {
+    // Enviar los datos del formulario si existen y no han sido enviados aún
+    if (pendingFormData && !formSubmittedRef.current) {
+      console.log('Activando envío de formulario desde screensaver');
       submitFormData();
     }
     
