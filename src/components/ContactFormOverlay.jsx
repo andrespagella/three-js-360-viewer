@@ -75,10 +75,15 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
       try {
         // Recopilar los SKUs de los productos seleccionados
         const selectedSkus = [];
+        const selectedProductDetails = {};
         
         try {
+          console.log('Procesando selecciones del usuario:', selectedItems);
+          
           // Recorrer todas las colecciones con productos seleccionados
           for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
+            console.log(`Procesando colección ${collection} con índice ${selectedIndex}`);
+            
             // Solo procesar si hay un producto seleccionado (índice diferente de 0)
             if (selectedIndex !== 0) {
               try {
@@ -86,11 +91,25 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
                 const module = await import(`../data/collections/${collection}.json`);
                 const products = module.default;
                 
+                console.log(`Colección ${collection} cargada con ${products?.length || 0} productos`);
+                
                 // Verificar si el índice seleccionado es válido
                 if (products && products.length > selectedIndex) {
                   const product = products[selectedIndex];
-                  if (product && product.SKU) {
-                    selectedSkus.push(product.SKU);
+                  if (product) {
+                    // Guardar el SKU si existe
+                    if (product.SKU) {
+                      selectedSkus.push(product.SKU);
+                    }
+                    
+                    // Guardar detalles del producto seleccionado
+                    selectedProductDetails[collection] = {
+                      index: selectedIndex,
+                      name: product.name || 'Sin nombre',
+                      sku: product.SKU || 'Sin SKU'
+                    };
+                    
+                    console.log(`Producto seleccionado en ${collection}:`, selectedProductDetails[collection]);
                   }
                 }
               } catch (error) {
@@ -100,39 +119,37 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
           }
           
           console.log('SKUs de productos seleccionados:', selectedSkus.join(', '));
+          console.log('Detalles de productos seleccionados:', selectedProductDetails);
         } catch (error) {
           console.error('Error al procesar los SKUs:', error);
         }
         
+        // Crear un string con todos los productos seleccionados
+        let productsString = 'Ninguno';
+        if (selectedSkus.length > 0) {
+          productsString = selectedSkus.join(', ');
+        }
+        
+        console.log('String final de productos:', productsString);
+        
         // Preparar los datos del formulario con los productos seleccionados
         const formDataWithProducts = {
           ...formData,
-          products: selectedSkus.length > 0 ? selectedSkus.join(', ') : 'Ninguno'
+          products: productsString,
+          selectedItems: {...selectedItems}, // Incluir todas las selecciones originales (copia profunda)
+          selectedProductDetails: selectedProductDetails, // Incluir detalles de los productos
+          allSelectedSkus: selectedSkus // Incluir array de SKUs para facilitar procesamiento
         };
         
-        // Enviar el formulario con los productos seleccionados
-        const response = await fetch(config.formServerUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': config.apiKey
-          },
-          body: JSON.stringify(formDataWithProducts),
-        });
+        console.log('Datos del formulario completos para guardar:', formDataWithProducts);
         
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log('Respuesta del servidor:', data);
-        
-        // Llamar a onSubmit con los datos y la respuesta del servidor
-        onSubmit(formDataWithProducts, data);
+        // En lugar de enviar el formulario inmediatamente, lo guardamos en memoria
+        // llamando a onSubmit con los datos preparados pero sin enviarlos al servidor
+        onSubmit(formDataWithProducts, null);
         
       } catch (error) {
-        console.error('Error al enviar el formulario:', error);
-        setSubmitError('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        console.error('Error al procesar el formulario:', error);
+        setSubmitError('Hubo un error al procesar el formulario. Por favor, inténtalo de nuevo.');
       } finally {
         setIsSubmitting(false);
       }

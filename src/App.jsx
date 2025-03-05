@@ -68,6 +68,9 @@ const AppContent = () => {
     perfiles_piso: 0
   });
 
+  // Nuevo estado para almacenar los datos del formulario
+  const [pendingFormData, setPendingFormData] = useState(null);
+
   // Preload all images when the component mounts
   useEffect(() => {
     const loadAllAssets = async () => {
@@ -218,45 +221,126 @@ const AppContent = () => {
 
   // Función para manejar el envío del formulario
   const handleFormSubmit = async (formData, serverResponse) => {
-    console.log('Datos del formulario:', formData);
-    console.log('Respuesta del servidor:', serverResponse);
+    console.log('Datos del formulario guardados en memoria:', formData);
+    console.log('Estado actual de selectedItems al guardar:', selectedItems);
     
-    // Recopilar los SKUs de los productos seleccionados
-    const selectedSkus = [];
+    // Verificar que formData tenga todas las selecciones
+    if (formData.selectedItems) {
+      console.log('Selecciones en formData:', Object.keys(formData.selectedItems).length);
+      console.log('Selecciones en estado:', Object.keys(selectedItems).length);
+      
+      // Si formData no tiene todas las selecciones, añadirlas
+      if (Object.keys(formData.selectedItems).length < Object.keys(selectedItems).length) {
+        console.log('Añadiendo selecciones faltantes a formData');
+        formData.selectedItems = {...selectedItems};
+      }
+    } else {
+      // Si formData no tiene selectedItems, añadirlo
+      console.log('Añadiendo selectedItems a formData');
+      formData.selectedItems = {...selectedItems};
+    }
+    
+    // Guardar los datos del formulario en el estado
+    setPendingFormData({...formData});
+    
+    // Cerrar el formulario después de guardar los datos
+    setShowContactForm(false);
+  };
+
+  // Función para enviar los datos del formulario al servidor
+  const submitFormData = async () => {
+    if (!pendingFormData) return;
     
     try {
-      // Recorrer todas las colecciones con productos seleccionados
-      for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
-        // Solo procesar si hay un producto seleccionado (índice diferente de 0)
-        if (selectedIndex !== 0) {
-          try {
-            // Cargar dinámicamente la colección
-            const module = await import(`./data/collections/${collection}.json`);
-            const products = module.default;
-            
-            // Verificar si el índice seleccionado es válido
-            if (products && products.length > selectedIndex) {
-              const product = products[selectedIndex];
-              if (product && product.SKU) {
-                selectedSkus.push(product.SKU);
+      console.log('Enviando datos del formulario al servidor:', pendingFormData);
+      console.log('Estado actual de selectedItems:', selectedItems);
+      
+      // Verificar si pendingFormData tiene las selecciones completas
+      const hasCompleteSelections = pendingFormData.selectedItems && 
+        Object.keys(pendingFormData.selectedItems).length === Object.keys(selectedItems).length;
+      
+      console.log('¿Tiene selecciones completas?', hasCompleteSelections);
+      
+      // Si no tiene selecciones completas, necesitamos reconstruir los SKUs
+      let updatedProducts = pendingFormData.products;
+      
+      if (!hasCompleteSelections) {
+        console.log('Reconstruyendo lista de productos con selecciones actualizadas');
+        
+        // Recopilar los SKUs de los productos seleccionados actuales
+        const currentSelectedSkus = [];
+        
+        try {
+          // Recorrer todas las colecciones con productos seleccionados
+          for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
+            // Solo procesar si hay un producto seleccionado (índice diferente de 0)
+            if (selectedIndex !== 0) {
+              try {
+                // Cargar dinámicamente la colección
+                const module = await import(`./data/collections/${collection}.json`);
+                const products = module.default;
+                
+                // Verificar si el índice seleccionado es válido
+                if (products && products.length > selectedIndex) {
+                  const product = products[selectedIndex];
+                  if (product && product.SKU) {
+                    currentSelectedSkus.push(product.SKU);
+                  }
+                }
+              } catch (error) {
+                console.error(`Error al cargar la colección ${collection}:`, error);
               }
             }
-          } catch (error) {
-            console.error(`Error al cargar la colección ${collection}:`, error);
           }
+          
+          console.log('SKUs actualizados de productos seleccionados:', currentSelectedSkus.join(', '));
+          
+          // Actualizar el string de productos
+          if (currentSelectedSkus.length > 0) {
+            updatedProducts = currentSelectedSkus.join(', ');
+          } else {
+            updatedProducts = 'Ninguno';
+          }
+        } catch (error) {
+          console.error('Error al procesar los SKUs actualizados:', error);
         }
       }
       
-      console.log('SKUs de productos seleccionados:', selectedSkus.join(', '));
+      // Asegurarse de que tenemos la información más actualizada de las selecciones
+      const updatedFormData = {
+        ...pendingFormData,
+        // Si pendingFormData ya tiene todas las selecciones, usarlas
+        // De lo contrario, usar el estado actual de selectedItems
+        selectedItems: hasCompleteSelections ? pendingFormData.selectedItems : selectedItems,
+        // Actualizar el string de productos si es necesario
+        products: updatedProducts
+      };
+      
+      console.log('Datos actualizados para enviar:', updatedFormData);
+      
+      // Enviar el formulario con los productos seleccionados
+      const response = await fetch(config.formServerUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': config.apiKey
+        },
+        body: JSON.stringify(updatedFormData),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('Respuesta del servidor:', data);
+      
+      // Limpiar los datos del formulario después de enviarlos
+      setPendingFormData(null);
+      
     } catch (error) {
-      console.error('Error al procesar los SKUs:', error);
+      console.error('Error al enviar el formulario:', error);
     }
-    
-    // Cerrar el formulario después de enviar
-    setShowContactForm(false);
-    
-    // Mostrar un mensaje de éxito
-    alert('¡Gracias por tu información! Nos pondremos en contacto contigo pronto.');
   };
 
   // Show the preloading screen while images are loading
@@ -266,6 +350,11 @@ const AppContent = () => {
 
   // Show screensaver if user is idle and language is selected (only on desktop)
   if (isIdle && language && !isMobile) {
+    // Enviar los datos del formulario si existen
+    if (pendingFormData) {
+      submitFormData();
+    }
+    
     return (
       <Screensaver 
         onClose={() => {
