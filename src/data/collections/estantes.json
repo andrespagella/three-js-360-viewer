@@ -14,7 +14,8 @@
                 "32.8cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Triangular"
+            "forma": "Triangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETM230AC.webp",
         "closeup": "closeups/estantes/ETM230AC.webp",
@@ -37,7 +38,8 @@
                 "11.5cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Rectangular"
+            "forma": "Rectangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300AC.webp",
         "closeup": "closeups/estantes/ERP300AC.webp",
@@ -49,8 +51,8 @@
     {
         "producto": "Estante Esquinero Triangular Abstracto Blanco Mate",
         "descripcion": {
-            "es": "Estante/repisa triangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
-            "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
+            "es": "Estante/repisa triangular para aplicar, de acero inoxidable AISI 304 esmerilado o terminación con pintura en polvo de poliéster negro o blanco mate, de 1 mm de espesor. Superficie suave al tacto. Se instala después de la colocación del revestimiento en paredes/muros.",
+            "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto ou branco fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
             "material": "Acero Inoxidable 304",
@@ -61,7 +63,8 @@
                 "32.8cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Triangular"
+            "forma": "Triangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230BM.webp",
         "closeup": "closeups/estantes/ETJ230BM.webp",
@@ -85,7 +88,8 @@
                 "32.8cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Triangular"
+            "forma": "Triangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
         "closeup": "closeups/estantes/ETJ230NM.webp",
@@ -108,7 +112,8 @@
                 "11.5cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Rectangular"
+            "forma": "Rectangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300NM.webp",
         "closeup": "closeups/estantes/ERP300NM.webp",
@@ -131,7 +136,8 @@
                 "11.5cm"
             ],
             "peso": "0.256 kg",
-            "forma": "Rectangular"
+            "forma": "Rectangular",
+            "instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERM300NM.webp",
         "closeup": "closeups/estantes/ERM300NM.webp",
