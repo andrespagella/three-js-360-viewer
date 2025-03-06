@@ -6,9 +6,11 @@ Este proyecto incluye una solución para optimizar automáticamente las imágene
 
 1. **Detección de dispositivos móviles**: La aplicación detecta automáticamente si el usuario está utilizando un iPad, iPhone o dispositivo Android.
 
-2. **Rutas de imágenes modificadas**: Cuando se detecta un dispositivo móvil, las rutas de las imágenes se modifican para usar versiones optimizadas con el sufijo `-mobile` antes de la extensión.
+2. **Parámetro slow=true**: También es posible forzar el uso de imágenes optimizadas en cualquier dispositivo añadiendo el parámetro `slow=true` a la URL (por ejemplo: `https://ejemplo.com/?slow=true`). Esto es útil para conexiones lentas o para pruebas.
 
-3. **Generación automática de imágenes**: Se incluye un script que genera automáticamente versiones optimizadas de todas las imágenes en las carpetas `thumbnails`, `closeups` y `overlays`.
+3. **Rutas de imágenes modificadas**: Cuando se detecta un dispositivo móvil o se usa el parámetro `slow=true`, las rutas de las imágenes se modifican para usar versiones optimizadas con el sufijo `-mobile` antes de la extensión.
+
+4. **Generación automática de imágenes**: Se incluye un script que genera automáticamente versiones optimizadas de todas las imágenes en las carpetas `thumbnails`, `closeups` y `overlays`.
 
 ## Cómo generar las imágenes optimizadas
 

@@ -3,9 +3,14 @@
  * Reduce el tamaño y calidad de las imágenes para mejorar el rendimiento
  */
 
-// Detecta si el dispositivo es móvil (iPad, iPhone, etc.)
+// Detecta si el dispositivo es móvil (iPad, iPhone, etc.) o si se especificó el parámetro slow=true
 export const isMobileDevice = () => {
-  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Verificar si el parámetro slow=true está presente en la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const slowMode = urlParams.get('slow') === 'true';
+  
+  // Devolver true si es un dispositivo móvil O si se especificó slow=true
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || slowMode;
 };
 
 // Modifica la ruta de la imagen para dispositivos móviles

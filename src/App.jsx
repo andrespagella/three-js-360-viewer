@@ -39,6 +39,10 @@ const AppContent = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const bigscreen = urlParams.get('bigscreen');
     setIsBigScreen(bigscreen === 'true');
+    
+    // Nota: El parámetro slow=true también es soportado y hace que se carguen
+    // imágenes optimizadas para móviles (más pequeñas) incluso en dispositivos de escritorio.
+    // Esta lógica se maneja en src/utils/imageUtils.js
   }, []);
 
   // Screensaver state
