@@ -4,6 +4,13 @@ import { enterFullscreen } from "../utils/fullscreenUtils";
 const LanguageSelector = ({ onSelectLanguage }) => {
   const [titleLanguage, setTitleLanguage] = useState("es");
   const [fadeState, setFadeState] = useState("fade-in");
+  const [isBigScreen, setIsBigScreen] = useState(false);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const bigscreen = urlParams.get('bigscreen');
+    setIsBigScreen(bigscreen === 'true');
+  }, []);
 
   const titles = {
     es: {
@@ -30,11 +37,20 @@ const LanguageSelector = ({ onSelectLanguage }) => {
   }, []);
 
   const handleLanguageSelect = async (lang) => {
-    try {
-      // Request fullscreen mode
-      await enterFullscreen();
-    } catch (error) {
-      console.warn("Couldn't enter fullscreen mode:", error);
+    /**
+     * Solo se inicia en pantalla completa cuando bigscreen=true porque la aplicación de iPad 
+     * va a estar configurada con Guided Access.
+     * En iPads cuando la pantalla está completa no se puede mostrar el teclado virtual.
+     * Pero como si se va a estar duplicando el display en una pantalla grande 
+     * no hay que completar ningún formulario, estamos bien.
+     */
+    if (isBigScreen) {
+      try {
+        // Request fullscreen mode
+        await enterFullscreen();
+      } catch (error) {
+        console.warn("Couldn't enter fullscreen mode:", error);
+      }
     }
     
     // Call the original language selection handler
