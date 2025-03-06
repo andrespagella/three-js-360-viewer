@@ -7,7 +7,7 @@
             "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta."
         },
         "ficha": {
-            "material": "Aluminio Anodizado",
+            "material": "Aluminio",
             "terminacion": "Negro Mate",
             "medidas": [
                 "100 mm",
@@ -69,7 +69,7 @@
         "y": 0
     },
     {
-        "producto": "Zócalo Line",
+        "producto": "Zócalo Extra Line Cemento",
         "SKU": "2314",
         "descripcion": {
             "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
