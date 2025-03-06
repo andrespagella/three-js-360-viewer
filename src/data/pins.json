@@ -34,7 +34,7 @@
         },
         {
           "id": 6,
-          "position": [-300, 50, -270],
+          "position": [-270, 120, -270],
           "data": "data/collections/wallpanels.json",
           "label": "Wall Panels & SPC"
         },
