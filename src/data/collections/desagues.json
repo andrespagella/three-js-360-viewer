@@ -25,6 +25,31 @@
         "SKU": "DN700T02"
     },
     {
+        "producto": "Desagüe Lineal Clásico Negro Mate 2 en 1",
+        "descripcion": {
+            "es": "Desagüe de acero inoxidable AISI 304. Tapa 2x1: Negro o Ceramic (insertar en el porcellanato). Diseñado para reemplazar la rejilla tradicional. Su estructura con caída en forma de diamante garantiza mayor capacidad de drenaje y un flujo eficiente del agua.",
+            "pt": "Ralo de aço inoxidável AISI 304. Tampa 2x1: Preto ou Ceramic (inserir no porcelanato). Projetado para substituir a grade tradicional. Sua estrutura com queda em forma de diamante garante maior capacidade de drenagem e um fluxo eficiente da água."
+        },
+        "ficha": {
+            "material": "Acero Inoxidable 304",
+            "coleccion": "Aqua Series",
+            "terminacion": "Negro mate",
+            "medidas": [
+                "90cm",
+                "7cm",
+                "7.4cm"
+            ],
+            "peso": "0.822 kg",
+            "forma": "Lineal"
+        },
+        "thumbnail": "thumbnails/desagues/DA900T08.webp",
+        "closeup": "closeups/desagues/DA900T08.webp",
+        "overlay": "overlays/desagues/DA900T08.webp",
+        "x": 0,
+        "y": 0,
+        "SKU": "DA900T08"
+    },
+    {
         "producto": "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304 con innovadora tapa 2 en 1 que permite elegir entre acabado Cromo o Ceramic con cavidad para insertar el revestimiento. Diseñado para reemplazar la rejilla tradicional, creando un plano continuo en el piso de la ducha. Su estructura con caída en forma de diamante garantiza un drenaje eficiente y rápido.",
