@@ -6,12 +6,12 @@
             "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
+            "material": "Acero Inoxidable AISI 304",
             "terminacion": "Titanio Esmerilado",
             "medidas": [
                 "7 mm",
                 "7 mm",
-                "2,5mts"
+                "2,5 m"
             ],
             "forma": "Cuadrada"
         },
@@ -34,7 +34,7 @@
             "medidas": [
                 "10 mm",
                 "10 mm",
-                "2,5mts"
+                "2,5 m"
             ],
             "peso": "0.258 kg",
             "forma": "Cuadrada",
@@ -59,7 +59,7 @@
             "medidas": [
                 "10 mm",
                 "10 mm",
-                "2,5mts"
+                "2,5 m"
             ],
             "peso": "0.258 kg",
             "forma": "Cuadrada",
@@ -75,8 +75,8 @@
     {
         "producto": "Guardacanto Quadra 3425B",
         "descripcion": {
-            "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
-            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+            "es": "Perfil de aluminio anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
+            "pt": "Perfil de alumínio anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
         },
         "ficha": {
             "material": "Aluminio",
@@ -84,7 +84,7 @@
             "medidas": [
                 "10 mm",
                 "10 mm",
-                "2,5mts"
+                "2,5 m"
             ],
             "peso": "0.253 kg",
             "forma": "Cuadrada",
@@ -109,7 +109,7 @@
             "medidas": [
                 "10 mm",
                 "10 mm",
-                "2,5mts"
+                "2,5 m"
             ],
             "peso": "0.253 kg",
             "forma": "Cuadrada",

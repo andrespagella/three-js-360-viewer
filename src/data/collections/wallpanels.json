@@ -9,9 +9,9 @@
             "material": "EPS",
             "terminacion": "Simil madera (claro)",
             "medidas": [
-                "12.2cm de ancho",
-                "1.2cm de grosor",
-                "244cm de alto"
+                "12.2 cm de ancho",
+                "1.2 cm de grosor",
+                "2.75 mts de alto"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP301-259T.webp",
@@ -31,9 +31,9 @@
             "material": "EPS",
             "terminacion": "Simil madera (oscuro)",
             "medidas": [
-                "12.2cm de ancho",
-                "1.2cm de grosor",
-                "244cm de alto"
+                "12.2 cm de ancho",
+                "1.2 cm de grosor",
+                "2.75 mts de alto"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP302-260T.webp",
@@ -54,8 +54,8 @@
             "terminacion": "Marmol",
             "Forma": "Rectangular",
             "medidas": [
-                "1200mm (ancho)",
-                "2600mm (alto)"
+                "1200 mm (ancho)",
+                "2600 mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC468.webp",
@@ -76,8 +76,8 @@
             "terminacion": "Piedra",
             "Forma": "Rectangular",
             "medidas": [
-                "1200mm (ancho)",
-                "2600mm (alto)"
+                "1200 mm (ancho)",
+                "2600 mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC462.webp",
@@ -98,8 +98,8 @@
             "terminacion": "Piedra",
             "Forma": "Rectangular",
             "medidas": [
-                "1200mm (ancho)",
-                "2600mm (alto)"
+                "1200 mm (ancho)",
+                "2600 mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC456.webp",
@@ -120,8 +120,8 @@
             "terminacion": "Marmol",
             "Forma": "Rectangular",
             "medidas": [
-                "1200mm (ancho)",
-                "2600mm (alto)"
+                "1200 mm (ancho)",
+                "2600 mm (alto)"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC452.webp",
