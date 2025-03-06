@@ -94,7 +94,7 @@ const AppContent = () => {
         
         // Precargar el video del screensaver solo en dispositivos no móviles
         if (!isMobileDevice) {
-          await preloadVideo('/videos/video-back_2880x2160.webm');
+          await preloadVideo('https://atrim3dshowcase-storage.s3.us-east-1.amazonaws.com/video-back_2880x2160.webm');
         }
         
         setIsLoading(false);
