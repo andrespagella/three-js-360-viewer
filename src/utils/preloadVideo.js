@@ -49,10 +49,12 @@ const loadVideoManually = (videoUrl, resolve, reject) => {
   
   video.addEventListener('error', (error) => {
     console.error('Error al precargar el video:', error);
-    reject(error);
+    // Resolver de todos modos para no bloquear la carga de la aplicación
+    resolve();
   }, { once: true });
   
   // Configurar el video para precargar
+  video.crossOrigin = 'anonymous'; // Añadir para recursos externos
   video.src = videoUrl;
   video.load();
   video.style.display = 'none';

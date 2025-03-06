@@ -43,8 +43,12 @@ const Screensaver = ({ onClose }) => {
           muted
           playsInline
           webkit-playsinline="true"
+          crossOrigin="anonymous"
+          onError={(e) => console.error("Error al reproducir el video:", e)}
         >
           <source src="https://atrim3dshowcase-storage.s3.us-east-1.amazonaws.com/video-back_2880x2160.webm" type="video/webm" />
+          {/* Fallback para cuando el video no puede cargarse */}
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-800 to-gray-900" />
         </video>
       ) : (
         <div 
