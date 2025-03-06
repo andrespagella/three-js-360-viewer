@@ -64,9 +64,12 @@ const LanguageSelector = ({ onSelectLanguage }) => {
           <img src="/icons/es.png" alt="Español" className="w-12 h-12 mb-2" />
           <span className="text-sm group-hover:font-bold transition-all">Español</span>
         </button>
-        <button onClick={() => handleLanguageSelect("pt")} className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out">
-          <img src="/icons/pt.png" alt="Português" className="w-12 h-12 mb-2" />
-          <span className="text-sm group-hover:font-bold transition-all">Português</span>
+        <button 
+          className="group flex flex-col items-center p-4 rounded-lg opacity-50 cursor-not-allowed"
+          disabled
+        >
+          <img src="/icons/pt.png" alt="Português" className="w-12 h-12 mb-2 grayscale" />
+          <span className="text-sm">Português</span>
         </button>
         {/* <button onClick={() => handleLanguageSelect("en")} className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out">
           <img src="/icons/en.png" alt="English" className="w-12 h-12 mb-2" />
