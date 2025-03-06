@@ -3,8 +3,8 @@
         "producto": "Bañera Ocean Boreal",
         "SKU": "OBO160S",
         "descripcion": {
-            "es": "Bañera de Solid Surface que combinan elegancia y durabilidad, perfectas para quienes buscan un baño sofisticado y moderno.",
-            "pt": "Banheira de Solid Surface que combinam elegância e durabilidade, perfeitas para quem procura um banheiro sofisticado e moderno."
+            "es": "Bañera de materialidad Orastone, un solid surface de apariencia piedra. No absorbe manchas y es reparable ante rayones superficiales. Combinación perfecta entre elegancia, calidad y durabilidad.",
+            "pt": "Banheira de materialidade Orastone, um solid surface de aparência pedra. Não absorve manchas e é reparável em caso de arranhões superficiais. Combinação perfeita entre elegância, qualidade e durabilidade."
         },
         "ficha": {
             "coleccion": "Ocean",
@@ -14,7 +14,7 @@
                 "78 cm",
                 "71 cm"
             ],
-            "componentes": "Superficie lisa y cálida al tacto, estructura robusta y diseño minimalista",
+            "componentes": "Botón pop-up de Orastone. Desagüe con sifón anti retorno de olor y kit de reparación en casa incluído.",
             "color": "Blanco"
         },
         "thumbnail": "thumbnails/baneras/banera.webp",
