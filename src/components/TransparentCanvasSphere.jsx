@@ -157,7 +157,7 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
           perfil_pared: getSelectedItem(perfiles_pared, 'perfiles_pared')
         };
         
-        if (ambienteName === "Baño") {
+        if (ambienteName === "ambientes.bathroom") {
           // Para Baño, cargamos zócalos, toalleros, vanitories, cabinets y espejos
           await loadItemOverlay(collections.perfil_piso);
           await loadItemOverlay(collections.wallpanel);
@@ -168,7 +168,7 @@ const TransparentCanvasSphere = ({ baseTexture, darkMode, currentView, selectedI
           await loadItemOverlay(collections.espejo);
           await loadItemOverlay(collections.toallero, true);
         } 
-        else if (ambienteName === "Ducha") {
+        else if (ambienteName === "ambientes.shower") {
           // Para Ducha, cargamos estantes, desagües, vanitories, cabinets y espejos
           await loadItemOverlay(collections.estante);
           await loadItemOverlay(collections.desague);
