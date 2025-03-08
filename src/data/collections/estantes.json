@@ -6,16 +6,16 @@
             "pt": "Acessório premium de aço inoxidável AISI 304 para aplicar em cantos após a colocação do revestimento. Design minimalista que proporciona elegância e funcionalidade a qualquer espaço."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Acero Cepillado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Acero Cepillado",
+            "ficha.medidas": [
                 "23cm",
                 "23cm",
                 "32.8cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Triangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Triangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETM230AC.webp",
         "closeup": "closeups/estantes/ETM230AC.webp",
@@ -31,15 +31,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Acero Cepillado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Acero Cepillado",
+            "ficha.medidas": [
                 "30cm",
                 "11.5cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Rectangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Rectangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300AC.webp",
         "closeup": "closeups/estantes/ERP300AC.webp",
@@ -55,16 +55,16 @@
             "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto ou branco fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Blanco Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Blanco Mate",
+            "ficha.medidas": [
                 "23cm",
                 "23cm",
                 "32.8cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Triangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Triangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230BM.webp",
         "closeup": "closeups/estantes/ETJ230BM.webp",
@@ -80,16 +80,16 @@
             "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "23cm",
                 "23cm",
                 "32.8cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Triangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Triangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
         "closeup": "closeups/estantes/ETJ230NM.webp",
@@ -105,15 +105,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "30cm",
                 "11.5cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Rectangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Rectangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300NM.webp",
         "closeup": "closeups/estantes/ERP300NM.webp",
@@ -129,15 +129,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "30cm",
                 "11.5cm"
             ],
-            "peso": "0.256 kg",
-            "forma": "Rectangular",
-            "instalacion": "Con tornillos"
+            "ficha.peso": "0.256 kg",
+            "ficha.forma": "Rectangular",
+            "ficha.instalacion": "Con tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERM300NM.webp",
         "closeup": "closeups/estantes/ERM300NM.webp",

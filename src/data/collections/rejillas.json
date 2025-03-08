@@ -7,15 +7,15 @@
             "pt": "Grelha projetada para facilitar a evacuação da água, prevenir odores e evitar o acesso de gorduras às tubulações. Instala-se em: banheiros, lavanderias e onde for necessária a drenagem de água."
         },
         "ficha": {
-            "material": "Acero Inoxidable 304  ",
-            "colección": "Lagoon Series",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable 304  ",
+            "ficha.coleccion": "Lagoon Series",
+            "ficha.medidas": [
                 "12 cm",
                 "12 cm",
                 "7,4 cm"
             ],
-            "materiales": "SST 304 + ABS",
-            "color": "Negro mate y Mate"
+            "ficha.materiales": "SST 304 + ABS",
+            "ficha.color": "Negro mate y Mate"
         },
         "thumbnail": "thumbnails/rejilla/PR120T08.webp",
         "closeup": "closeups/rejilla/PR120T02.webp"

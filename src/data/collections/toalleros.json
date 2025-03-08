@@ -7,17 +7,17 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 26 x 95 x 11 cm - 86 watts de design vertical e estreito, é ideal para economizar espaço. Possui quatro ganchos para pendurar e manter as toalhas aquecidas."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Brillante",
-            "coleccion": "Modern",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Brillante",
+            "ficha.coleccion": "Modern",
+            "ficha.medidas": [
                 "95 cm",
                 "26 mm",
                 "11 cm"
             ],
-            "peso": "4.6 kg",
-            "potencia": "86 watts",
-            "forma": "Diseño vertical y angosto"
+            "ficha.peso": "4.6 kg",
+            "ficha.potencia": "86 watts",
+            "ficha.forma": "Diseño vertical y angosto"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1004+.webp",
         "closeup": "closeups/toalleros/COCO-1004+.webp",
@@ -33,16 +33,16 @@
             "pt": "Suas formas suaves e curvas combinam com designs e torneiras arredondadas. Possui 4 barras de aquecimento e display tátil de ligação, regulador de temperatura e temporizador para configurar o tempo de uso. Disponível em dois formatos: arredondado e quadrado. Destaca-se pelo seu baixo consumo energético."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Brillante",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Brillante",
+            "ficha.medidas": [
                 "40 cm",
                 "50 cm",
                 "12 cm"
             ],
-            "peso": "2.1 kg",
-            "potencia": "40 watts",
-            "forma": "Diseño curvo"
+            "ficha.peso": "2.1 kg",
+            "ficha.potencia": "40 watts",
+            "ficha.forma": "Diseño curvo"
         },
         "thumbnail": "thumbnails/toalleros/CUBIC-1135+.webp",
         "closeup": "closeups/toalleros/CUBIC-1135+.webp",
@@ -58,16 +58,16 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 40 x 50 x 8 cm com potência de 40 watts. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas, proporcionando elegância a qualquer ambiente."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "40 cm",
                 "50 cm",
                 "12 cm"
             ],
-            "peso": "2.1 kg",
-            "potencia": "40 watts",
-            "forma": "Diseño curvo"
+            "ficha.peso": "2.1 kg",
+            "ficha.potencia": "40 watts",
+            "ficha.forma": "Diseño curvo"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1116+.webp",
         "closeup": "closeups/toalleros/COCO-1116+.webp",
@@ -83,16 +83,16 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 40 x 50 x 8 cm com potência de 40 watts. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas, proporcionando elegância a qualquer ambiente."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Oro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Oro Mate",
+            "ficha.medidas": [
                 "40 cm",
                 "50 cm",
                 "12 cm"
             ],
-            "peso": "2.1 kg",
-            "potencia": "40 watts",
-            "forma": "Diseño curvo"
+            "ficha.peso": "2.1 kg",
+            "ficha.potencia": "40 watts",
+            "ficha.forma": "Diseño curvo"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1110+.webp",
         "closeup": "closeups/toalleros/COCO-1110+.webp",
@@ -108,16 +108,16 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm com potência de 56 watts. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia, proporcionando elegância e funcionalidade a qualquer ambiente."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Oro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Oro Mate",
+            "ficha.medidas": [
                 "50 cm",
                 "60 mm",
                 "12 cm"
             ],
-            "peso": "2.5 kg",
-            "potencia": "56 watts",
-            "forma": "Diseño lineas recta"
+            "ficha.peso": "2.5 kg",
+            "ficha.potencia": "56 watts",
+            "ficha.forma": "Diseño lineas recta"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1111+.webp",
         "closeup": "closeups/toalleros/COCO-1111+.webp",
@@ -133,16 +133,16 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm com potência de 56 watts. Suas formas suaves e curvas combinam perfeitamente com designs e torneiras arredondadas. Destaca-se pelo seu baixo consumo, com interruptor de economia de energia, proporcionando elegância e funcionalidade a qualquer ambiente."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "50 cm",
                 "60 mm",
                 "12 cm"
             ],
-            "peso": "2.5 kg",
-            "potencia": "56 watts",
-            "forma": "Diseño lineas recta"
+            "ficha.peso": "2.5 kg",
+            "ficha.potencia": "56 watts",
+            "ficha.forma": "Diseño lineas recta"
         },
         "thumbnail": "thumbnails/toalleros/COCO-1119+.webp",
         "closeup": "closeups/toalleros/COCO-1119+.webp",
@@ -158,16 +158,16 @@
             "pt": "Toalheiro elétrico premium de aço inoxidável de 50 cm X 60 cm X 12 cm de 56 watts. As linhas retas acompanham torneiras de design vanguardista. São de baixo consumo, com interruptor de economia de energia."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Brillante",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Brillante",
+            "ficha.medidas": [
                 "50 cm",
                 "60 mm",
                 "12 cm"
             ],
-            "peso": "3.1 kg",
-            "potencia": "56 watts",
-            "forma": "Diseño líneas recta"
+            "ficha.peso": "3.1 kg",
+            "ficha.potencia": "56 watts",
+            "ficha.forma": "Diseño líneas recta"
         },
         "thumbnail": "thumbnails/toalleros/CUBIC-1137+.webp",
         "closeup": "closeups/toalleros/CUBIC-1137+.webp",

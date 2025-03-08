@@ -7,15 +7,15 @@
             "pt": "Banheira de materialidade Orastone, um solid surface de aparência pedra. Não absorve manchas e é reparável em caso de arranhões superficiais. Combinação perfeita entre elegância, qualidade e durabilidade."
         },
         "ficha": {
-            "coleccion": "Ocean",
-            "material": "Orastone",
-            "medida": [
+            "ficha.coleccion": "Ocean",
+            "ficha.material": "Orastone",
+            "ficha.medidas": [
                 "160 cm",
                 "78 cm",
                 "71 cm"
             ],
-            "componentes": "Botón pop-up de Orastone. Desagüe con sifón anti retorno de olor y kit de reparación en casa incluído.",
-            "color": "Blanco"
+            "ficha.componentes": "Botón pop-up de Orastone. Desagüe con sifón anti retorno de olor y kit de reparación en casa incluído.",
+            "ficha.color": "Blanco"
         },
         "thumbnail": "thumbnails/baneras/banera.webp",
         "closeup": "closeups/baneras/banera.webp"

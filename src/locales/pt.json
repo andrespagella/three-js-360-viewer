@@ -68,7 +68,16 @@
     "peso": "Peso",
     "forma": "Forma",
     "instalacion": "Instalação",
-    "coleccion": "Coleção"
+    "coleccion": "Coleção",
+    "potencia": "Potência",
+    "componentes": "Componentes",
+    "color": "Cor",
+    "materiales": "Materiais",
+    "bacha": "Cuba",
+    "herrajes": "Ferragens",
+    "bisagras": "Dobradiças",
+    "garantia": "Garantia",
+    "forma": "Forma"
   },
   "ambientes": {
     "bathroom": "Banheiro",

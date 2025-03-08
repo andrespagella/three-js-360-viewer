@@ -7,14 +7,14 @@
             "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta."
         },
         "ficha": {
-            "material": "Aluminio",
-            "terminacion": "Negro Mate",
-            "medidas": [
+            "ficha.material": "Aluminio",
+            "ficha.terminacion": "Negro Mate",
+            "ficha.medidas": [
                 "100 mm",
                 "10 mm",
                 "2,50 m"
             ],
-            "forma": "Slim"
+            "ficha.forma": "Slim"
         },
         "thumbnail": "thumbnails/zocalos/2066.webp",
         "closeup": "closeups/zocalos/2066.webp",
@@ -30,41 +30,18 @@
             "pt": "Rodapé/Contramarco pintável de face plana e borda arredondada. Fabricado em EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente tinta látex à água para interiores."
         },
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Pintable",
-            "medidas": [
+            "ficha.material": "EPS (poliestireno expandido)",
+            "ficha.terminacion": "Pintable",
+            "ficha.medidas": [
                 "70mm",
                 "15mm",
                 "2,5mts"
             ],
-            "forma": "Orbit"
+            "ficha.forma": "Orbit"
         },
         "thumbnail": "thumbnails/zocalos/2309.webp",
         "closeup": "closeups/zocalos/2309.webp",
         "overlay": "overlays/zocalos/2309.webp",
-        "x": 0,
-        "y": 0
-    },
-    {
-        "producto": "Zócalo Maxi Line",
-        "SKU": "2356",
-        "descripcion": {
-            "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
-            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
-        },
-        "ficha": {
-            "material": "EPS",
-            "terminacion": "Blanco ",
-            "medidas": [
-                "150mm",
-                "15mm",
-                "2,5mts"
-            ],
-            "forma": "Maxi Line"
-        },
-        "thumbnail": "thumbnails/zocalos/2356.webp",
-        "closeup": "closeups/zocalos/2356.webp",
-        "overlay": "overlays/zocalos/2356.webp",
         "x": 0,
         "y": 0
     },
@@ -76,14 +53,14 @@
             "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
         },
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Cemento",
-            "medidas": [
+            "ficha.material": "EPS",
+            "ficha.terminacion": "Cemento",
+            "ficha.medidas": [
                 "100 mm",
                 "15 mm",
                 "2,5 m"
             ],
-            "forma": "Extra line"
+            "ficha.forma": "Extra line"
         },
         "thumbnail": "thumbnails/zocalos/2314.webp",
         "closeup": "closeups/zocalos/2314.webp",
@@ -99,18 +76,41 @@
             "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
         },
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Gris plata",
-            "medidas": [
+            "ficha.material": "EPS",
+            "ficha.terminacion": "Gris plata",
+            "ficha.medidas": [
                 "100 mm",
                 "15 mm",
                 "2,5 m"
             ],
-            "peso": "1.25 kg"
+            "ficha.peso": "1.25 kg"
         },
         "thumbnail": "thumbnails/zocalos/2323.webp",
         "closeup": "closeups/zocalos/2323.webp",
         "overlay": "overlays/zocalos/2323.webp",
+        "x": 0,
+        "y": 0
+    },
+    {
+        "producto": "Zócalo Maxi Line",
+        "SKU": "2356",
+        "descripcion": {
+            "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
+            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
+        },
+        "ficha": {
+            "ficha.material": "EPS",
+            "ficha.terminacion": "Blanco ",
+            "ficha.medidas": [
+                "150mm",
+                "15mm",
+                "2,5mts"
+            ],
+            "ficha.forma": "Maxi Line"
+        },
+        "thumbnail": "thumbnails/zocalos/2356.webp",
+        "closeup": "closeups/zocalos/2356.webp",
+        "overlay": "overlays/zocalos/2356.webp",
         "x": 0,
         "y": 0
     }

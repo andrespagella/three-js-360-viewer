@@ -7,11 +7,11 @@
             "pt": "Gabinete para uma organização ótima. Disponível em 5 designs com possibilidade de acabamento em madeiras e laqueados de diferentes tons, para combinar com o gabinete e espelho. Possui prateleiras em seu interior, dobradiças com fechamento suave e possibilidade de abertura esquerda ou direita."
         },
         "ficha": {
-            "composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
-            "terminacion": "Roble Natural",
-            "bisagras": "Soft Close",
-            "garantia": "1 año",
-            "medidas": [
+            "ficha.composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
+            "ficha.terminacion": "Roble Natural",
+            "ficha.bisagras": "Soft Close",
+            "ficha.garantia": "1 año",
+            "ficha.medidas": [
                 "30 cm (base)",
                 "150 cm (altura)",
                 "30 cm (profundidad)"
@@ -31,11 +31,11 @@
             "pt": "Gabinete para uma organização ótima. Disponível em 5 designs com possibilidade de acabamento em madeiras e laqueados de diferentes tons, para combinar com o gabinete e espelho. Possui prateleiras em seu interior, dobradiças com fechamento suave e possibilidade de abertura esquerda ou direita."
         },
         "ficha": {
-            "composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
-            "terminacion": "Gris grafito mate",
-            "bisagras": "Soft Close",
-            "garantia": "1 año",
-            "medidas": [
+            "ficha.composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
+            "ficha.terminacion": "Gris grafito mate",
+            "ficha.bisagras": "Soft Close",
+            "ficha.garantia": "1 año",
+            "ficha.medidas": [
                 "30 cm (base)",
                 "150 cm (altura)",
                 "30 cm (profundidad)"
@@ -55,11 +55,11 @@
             "pt": "Gabinete para uma organização ótima. Disponível em 5 designs com possibilidade de acabamento em madeiras e laqueados de diferentes tons, para combinar com o gabinete e espelho. Possui prateleiras em seu interior, dobradiças com fechamento suave e possibilidade de abertura esquerda ou direita."
         },
         "ficha": {
-            "composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
-            "terminacion": "Greige mate",
-            "bisagras": "Soft Close",
-            "garantia": "1 año",
-            "medidas": [
+            "ficha.composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
+            "ficha.terminacion": "Greige mate",
+            "ficha.bisagras": "Soft Close",
+            "ficha.garantia": "1 año",
+            "ficha.medidas": [
                 "30 cm (base)",
                 "150 cm (altura)",
                 "30 cm (profundidad)"
@@ -79,11 +79,11 @@
             "pt": "Gabinete para uma organização ótima. Disponível em 5 designs com possibilidade de acabamento em madeiras e laqueados de diferentes tons, para combinar com o gabinete e espelho. Possui prateleiras em seu interior, dobradiças com fechamento suave e possibilidade de abertura esquerda ou direita."
         },
         "ficha": {
-            "composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
-            "terminacion": "Verde Suculenta Mate",
-            "bisagras": "Soft Close",
-            "garantia": "1 año",
-            "medidas": [
+            "ficha.composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
+            "ficha.terminacion": "Verde Suculenta Mate",
+            "ficha.bisagras": "Soft Close",
+            "ficha.garantia": "1 año",
+            "ficha.medidas": [
                 "30 cm (base)",
                 "150 cm (altura)",
                 "30 cm (profundidad)"
@@ -103,11 +103,11 @@
             "pt": "Gabinete para uma organização ótima. Disponível em 5 designs com possibilidade de acabamento em madeiras e laqueados de diferentes tons, para combinar com o gabinete e espelho. Possui prateleiras em seu interior, dobradiças com fechamento suave e possibilidade de abertura esquerda ou direita."
         },
         "ficha": {
-            "composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
-            "terminacion": "Azul Intenso mate",
-            "bisagras": "Soft Close",
-            "garantia": "1 año",
-            "Medidas": [
+            "ficha.composicion": "Estantes movibles en su interior. Incluye sistema de fijación.",
+            "ficha.terminacion": "Azul Intenso mate",
+            "ficha.bisagras": "Soft Close",
+            "ficha.garantia": "1 año",
+            "ficha.medidas": [
                 "30 cm (base)",
                 "150 cm (altura)",
                 "30 cm (profundidad)"

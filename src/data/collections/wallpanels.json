@@ -6,9 +6,9 @@
             "pt": "Os novos Revestimentos de paredes EPS são ideais para dar design e decoração aos seus ambientes. Além disso, ajudam a manter temperaturas mais agradáveis em interiores, melhorando o conforto do espaço. São muito leves, o que permite uma fácil instalação. Têm muito boa resistência ao impacto e à umidade, podem ser limpos facilmente."
         },
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Simil madera (claro)",
-            "medidas": [
+            "ficha.material": "EPS",
+            "ficha.terminacion": "Simil madera (claro)",
+            "ficha.medidas": [
                 "12.2 cm de ancho",
                 "1.2 cm de grosor",
                 "2.75 mts de alto"
@@ -28,9 +28,9 @@
             "pt": "Os novos Revestimentos de paredes EPS são ideais para dar design e decoração aos seus ambientes. Além disso, ajudam a manter temperaturas mais agradáveis em interiores, melhorando o conforto do espaço. São muito leves, o que permite uma fácil instalação. Têm muito boa resistência ao impacto e à umidade, podem ser limpos facilmente."
         },
         "ficha": {
-            "material": "EPS",
-            "terminacion": "Simil madera (oscuro)",
-            "medidas": [
+            "ficha.material": "EPS",
+            "ficha.terminacion": "Simil madera (oscuro)",
+            "ficha.medidas": [
                 "12.2 cm de ancho",
                 "1.2 cm de grosor",
                 "2.75 mts de alto"
@@ -50,10 +50,10 @@
             "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
         },
         "ficha": {
-            "material": "SPC",
-            "terminacion": "Marmol",
-            "Forma": "Rectangular",
-            "medidas": [
+            "ficha.material": "SPC",
+            "ficha.terminacion": "Marmol",
+            "ficha.forma": "Rectangular",
+            "ficha.medidas": [
                 "1200 mm (ancho)",
                 "2600 mm (alto)"
             ]
@@ -72,10 +72,10 @@
             "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
         },
         "ficha": {
-            "material": "SPC",
-            "terminacion": "Piedra",
-            "Forma": "Rectangular",
-            "medidas": [
+            "ficha.material": "SPC",
+            "ficha.terminacion": "Piedra",
+            "ficha.forma": "Rectangular",
+            "ficha.medidas": [
                 "1200 mm (ancho)",
                 "2600 mm (alto)"
             ]
@@ -94,10 +94,10 @@
             "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
         },
         "ficha": {
-            "material": "SPC",
-            "terminacion": "Piedra",
-            "Forma": "Rectangular",
-            "medidas": [
+            "ficha.material": "SPC",
+            "ficha.terminacion": "Piedra",
+            "ficha.forma": "Rectangular",
+            "ficha.medidas": [
                 "1200 mm (ancho)",
                 "2600 mm (alto)"
             ]
@@ -116,10 +116,10 @@
             "pt": "Os Revestimentos de SPC são a combinação perfeita entre inovação e elegância. Com suas impressionantes texturas de pedra e mármore oferecem estética e funcionalidade, irradiando um encanto natural clássico e moderno. São impermeáveis, fáceis de limpar e instalar."
         },
         "ficha": {
-            "material": "SPC",
-            "terminacion": "Marmol",
-            "Forma": "Rectangular",
-            "medidas": [
+            "ficha.material": "SPC",
+            "ficha.terminacion": "Marmol",
+            "ficha.forma": "Rectangular",
+            "ficha.medidas": [
                 "1200 mm (ancho)",
                 "2600 mm (alto)"
             ]

@@ -7,9 +7,9 @@
             "pt": "Vaso sanitário inteligente com design elegante, abertura automática, funções de lavagem e secagem ajustáveis. Sistema de descarga sem eletricidade e sifão S de 250 mm para fácil instalação."
         },
         "ficha": {
-            "coleccion": "PuraSense",
-            "material": "Porcelana sanitaria",
-            "color": "Blanco"
+            "ficha.coleccion": "PuraSense",
+            "ficha.material": "Porcelana sanitaria",
+            "ficha.color": "Blanco"
         },
         "thumbnail": "thumbnails/inodoro/inodoro.webp",
         "closeup": "closeups/inodoros/inodoro.webp"

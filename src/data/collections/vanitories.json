@@ -7,12 +7,12 @@
             "pt": "Design clássico de gavetas, ideal para quem busca grande capacidade de armazenamento. Disponível em versões de 2 ou 4 gavetas, com corrediças Soft Close e cobre ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "terminacion": "Roble Natural",
-            "medidas": [
+            "ficha.terminacion": "Roble Natural",
+            "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
-            "bacha": "Hadid",
-            "herrajes": [
+            "ficha.bacha": "Hadid",
+            "ficha.herrajes": [
                 "Lotus mediano",
                 "Negro mate"
             ]
@@ -31,11 +31,11 @@
             "pt": "Design com laterais biseladas a 45° que geram uma união contínua e uma estética diferenciada. Inclui uma gaveta principal com uma gaveta oculta em seu interior, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "terminacion": "Gris grafito mate",
-            "medidas": [
+            "ficha.terminacion": "Gris grafito mate",
+            "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
-            "bacha": "Dieter"
+            "ficha.bacha": "Dieter"
         },
         "thumbnail": "thumbnails/vanitories/VA080LFCON.webp",
         "closeup": "closeups/vanitories/VA080LFCON.webp",
@@ -51,11 +51,11 @@
             "pt": "Design com frente ripada, uma das últimas tendências em decoração. Com uma gaveta principal e uma pequena oculta, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "terminacion": "Verde Suculenta mate",
-            "medidas": [
+            "ficha.terminacion": "Verde Suculenta mate",
+            "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
-            "bacha": "Rashid"
+            "ficha.bacha": "Rashid"
         },
         "thumbnail": "thumbnails/vanitories/VI080LFCON.webp",
         "closeup": "closeups/vanitories/VI080LFCON.webp",
@@ -71,11 +71,11 @@
             "pt": "Design compacto que se destaca por seu perfil em aço inoxidável, um detalhe disruptivo que não passa despercebido. Possui uma gaveta ampla com corrediças Soft Close. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "terminacion": "Greige mate",
-            "medidas": [
+            "ficha.terminacion": "Greige mate",
+            "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
-            "bacha": "Philippe"
+            "ficha.bacha": "Philippe"
         },
         "thumbnail": "thumbnails/vanitories/RA080LBCON.webp",
         "closeup": "closeups/vanitories/RA080LBCON.webp",
@@ -91,12 +91,12 @@
             "pt": "Design clássico de portas com múltiplas funções, que inclui prateleiras internas ajustáveis pelo usuário e dobradiças Soft Close. Bancada e cuba em Orastone, material fácil de manter, limpar e reparar."
         },
         "ficha": {
-            "terminacion": "Azul Intenso mate\nc/ molduras",
-            "medidas": [
+            "ficha.terminacion": "Azul Intenso mate\nc/ molduras",
+            "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
-            "bacha": "Gaudí",
-            "herrajes": [
+            "ficha.bacha": "Gaudí",
+            "ficha.herrajes": [
                 "Cross tirador",
                 "Oro mate"
             ]

@@ -6,16 +6,16 @@
             "pt": "Ralo de chuveiro em aço inoxidável AISI 304 duplamente escovado. Design fino, que substitui a grade tradicional e cria um plano único de continuidade no piso do chuveiro. Equipado com pés de altura ajustável que se fixam ao corpo do ralo para um nivelamento preciso e rápido. Com cesto para filtro de cabelos que pode ser removido manualmente para limpeza."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Esmerilado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Esmerilado",
+            "ficha.medidas": [
                 "70cm",
                 "7.6cm",
                 "8.6cm"
             ],
-            "peso": "1.8 kg",
-            "forma": "Lineal"
+            "ficha.peso": "1.8 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DN700T02.webp",
         "closeup": "closeups/desagues/DN700T02.webp",
@@ -31,16 +31,16 @@
             "pt": "Ralo de aço inoxidável AISI 304. Tampa 2x1: Preto ou Ceramic (inserir no porcelanato). Projetado para substituir a grade tradicional. Sua estrutura com queda em forma de diamante garante maior capacidade de drenagem e um fluxo eficiente da água."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Negro mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Negro mate",
+            "ficha.medidas": [
                 "90cm",
                 "7cm",
                 "7.4cm"
             ],
-            "peso": "0.822 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.822 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA900T08.webp",
         "closeup": "closeups/desagues/DA900T08.webp",
@@ -56,16 +56,16 @@
             "pt": "Ralo de aço inoxidável AISI 304 com tampa inovadora 2 em 1 que permite escolher entre acabamento Cromo ou Ceramic com cavidade para inserir o revestimento. Projetado para substituir a grade tradicional, criando um plano contínuo no piso do chuveiro. Sua estrutura com queda em forma de diamante garante uma drenagem eficiente e rápida."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Esmerilado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Esmerilado",
+            "ficha.medidas": [
                 "30cm",
                 "7cm",
                 "7.4 cm"
             ],
-            "peso": "0.663 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.663 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA300T02.webp",
         "closeup": "closeups/desagues/DA300T02.webp",
@@ -81,16 +81,16 @@
             "pt": "Ralo de aço inoxidável AISI 304. A ranhura central e os planos inclinados permitem que a água flua rapidamente."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Esmerilado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Esmerilado",
+            "ficha.medidas": [
                 "70 cm",
                 "7 cm",
                 "7.4 cm"
             ],
-            "peso": "0.822 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.822 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA700T10.webp",
         "closeup": "closeups/desagues/DA700T10.webp",
@@ -106,16 +106,16 @@
             "pt": "Ralo de aço inoxidável AISI 304. Padrões de linhas retas. Seu corpo com queda em forma de diamante permite uma maior capacidade de drenagem."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Esmerilado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Esmerilado",
+            "ficha.medidas": [
                 "90 cm",
                 "7 cm",
                 "7.4 cm"
             ],
-            "peso": "0.822 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.822 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA900T01.webp",
         "closeup": "closeups/desagues/DA900T01.webp",
@@ -131,16 +131,16 @@
             "pt": "Ralo quadrado de aço inoxidável AISI 304. Oferece duas opções de tampas em um único produto: Clássica, com acabamento fosco e Ceramic, cujo lado posterior é oco e permite inserir o revestimento."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Brillante",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Brillante",
+            "ficha.medidas": [
                 "15 cm",
                 "15 cm",
                 "7 cm"
             ],
-            "peso": "0.538 kg",
-            "forma": "Cuadrada"
+            "ficha.peso": "0.538 kg",
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/desagues/DA150T02.webp",
         "closeup": "closeups/desagues/DA150T02.webp",
@@ -156,15 +156,15 @@
             "pt": "Ralo de aço inoxidável AISI 304. Design reticular combina drenagem eficiente, resistência e leveza."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Mate",
+            "ficha.medidas": [
                 "60cm",
                 "7cm",
                 "7.4 cm"
             ],
-            "peso": "0.729 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.729 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA600T09.webp",
         "closeup": "closeups/desagues/DA600T09.webp",
@@ -180,16 +180,16 @@
             "pt": "Ralo de aço inoxidável AISI 304 duplo fosco, tampa com padrões de linhas diagonais. Projetado para substituir a grade tradicional. Com queda em forma de diamante permite maior capacidade de drenagem."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "coleccion": "Aqua Series",
-            "terminacion": "Mate",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.coleccion": "Aqua Series",
+            "ficha.terminacion": "Mate",
+            "ficha.medidas": [
                 "70 cm",
                 "7 cm",
                 "7.4 cm"
             ],
-            "peso": "0.822 kg",
-            "forma": "Lineal"
+            "ficha.peso": "0.822 kg",
+            "ficha.forma": "Lineal"
         },
         "thumbnail": "thumbnails/desagues/DA700T05.webp",
         "closeup": "closeups/desagues/DA700T05.webp",
