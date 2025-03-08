@@ -86,7 +86,7 @@ const Sidebar = ({
                 <div className="relative">
                   <img
                     src={preview}
-                    alt={ambiente.name}
+                    alt={t(ambiente.name)}
                     className="w-full h-[200px] object-cover"
                   />
                   <div
@@ -96,7 +96,7 @@ const Sidebar = ({
                       color: isActive ? theme.text.inverted : theme.text.primary
                     }}
                   >
-                    {ambiente.name}
+                    {t(ambiente.name)}
                   </div>
                 </div>
               </div>

@@ -33,7 +33,8 @@
   },
   "collections": {
     "title": "Coleções",
-    "description": "Explore nossas coleções"
+    "description": "Explore nossas coleções",
+    "loading": "Carregando produtos..."
   },
   "product": {
     "details": "Detalhes do produto",
@@ -42,6 +43,35 @@
     "dimensions": "Dimensões",
     "weight": "Peso",
     "shape": "Forma",
-    "installation": "Instalação"
+    "installation": "Instalação",
+    "noInfo": "Não há informações disponíveis."
+  },
+  "pins": {
+    "towelRacks": "Toalheiros",
+    "toilet": "Vaso Sanitário",
+    "drains": "Ralo de Pátio",
+    "baseboards": "Rodapés",
+    "cabinets": "Armários",
+    "wallPanels": "Painéis de Parede & SPC",
+    "mirrors": "Espelhos",
+    "vanities": "Bancadas",
+    "floorProfiles": "Perfis de Piso",
+    "bathtubs": "Banheira",
+    "wallProfiles": "Perfis de Parede",
+    "showerDrains": "Ralos",
+    "shelves": "Prateleiras"
+  },
+  "ficha": {
+    "material": "Material",
+    "terminacion": "Acabamento",
+    "medidas": "Dimensões",
+    "peso": "Peso",
+    "forma": "Forma",
+    "instalacion": "Instalação",
+    "coleccion": "Coleção"
+  },
+  "ambientes": {
+    "bathroom": "Banheiro",
+    "shower": "Chuveiro"
   }
 } 

@@ -3,6 +3,7 @@ import { getTransformStyle } from "../utils/transformStyles";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
 import { processMobileCollection } from "../utils/imageUtils";
+import { useTranslation } from "react-i18next";
 
 // Caché global para almacenar colecciones ya cargadas
 const collectionsCache = {};
@@ -11,6 +12,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
   const isMobile = useIsMobile();
   const [thumbnails, setThumbnails] = useState({});
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const loadingTimeoutRef = useRef(null);
@@ -251,7 +253,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
                         color: theme.text.primary
                       }}
                     >
-                      {pin.label || 'Sin título'}
+                      {pin.label ? t(pin.label) : 'Sin título'}
                     </div>
                   </div>
                 </div>
@@ -259,7 +261,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
             </div>
           ) : (
             <div className="flex items-center justify-center h-full">
-              <p style={{ color: theme.text.secondary }}>Cargando productos...</p>
+              <p style={{ color: theme.text.secondary }}>{t('collections.loading', 'Cargando productos...')}</p>
             </div>
           )}
         </div>
@@ -267,7 +269,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-4 rounded-lg">
-            <p>Cargando...</p>
+            <p>{t('collections.loading', 'Cargando...')}</p>
           </div>
         </div>
       )}
@@ -275,4 +277,4 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
   );
 };
 
-export default React.memo(ProductPanel); 
+export default ProductPanel; 

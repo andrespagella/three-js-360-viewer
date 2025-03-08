@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ViewerHeader from "./ViewerHeader";
 import { useTheme } from "../context/ThemeContext";
 import { processMobileCollection } from "../utils/imageUtils";
+import useIsMobile from "../hooks/useIsMobile";
+import { useTranslation } from "react-i18next";
 
 const CloseupViewer = ({ closeup, onClose }) => {
+  const { t, i18n } = useTranslation();
   const { file: closeupFile, collection: defaultCollection, selectedIndex: initialIndex = 0 } = closeup;
   const [currentCollection, setCurrentCollection] = useState(defaultCollection || "inodoros");
   const [products, setProducts] = useState([]);
@@ -11,6 +14,12 @@ const CloseupViewer = ({ closeup, onClose }) => {
   const { theme } = useTheme();
   const [intermediateScreen, setIntermediateScreen] = useState(false);
   const [transitionState, setTransitionState] = useState('normal'); // 'normal', 'transitioning', 'loading'
+  const isMobile = useIsMobile();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [overlayImage, setOverlayImage] = useState(null);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const overlayRef = useRef(null);
 
   useEffect(() => {
     // Dynamically import the JSON file based on the currentCollection state
@@ -120,7 +129,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
           onClick={() => handleCloseCloseup(currentCollection, selectedIndex)}
           className="absolute top-20 left-[10px] bg-black text-white px-4 py-2 text-sm font-bold rounded-md"
         >
-          Vista principal
+          {t('buttons.back', 'Vista principal')}
         </button>
 
         {/* Contenedor principal de la galería - pegado completamente al borde inferior */}
@@ -153,7 +162,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
                         border: '1px solid rgba(0,0,0,0.2)',
                         boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
                       }
-                    }
+                  }
                   >
                     <img
                       src={product.thumbnail}
@@ -200,11 +209,11 @@ const CloseupViewer = ({ closeup, onClose }) => {
 
         {selectedProduct.descripcion && (
           <p className="text-base mb-10">
-            {selectedProduct.descripcion.es}
+            {selectedProduct.descripcion[i18n.language] || selectedProduct.descripcion.es}
           </p>
         )}
 
-        <h3 className="text-lg font-bold mb-3">Ficha Técnica</h3>
+        <h3 className="text-lg font-bold mb-3">{t('product.details')}</h3>
         
         {selectedProduct.ficha ? (
           <div className="w-full">
@@ -217,8 +226,8 @@ const CloseupViewer = ({ closeup, onClose }) => {
                   // Formatear el valor si es un array
                   const displayValue = Array.isArray(value) ? value.join(" x ") : value;
                   
-                  // Capitalizar la primera letra de la clave
-                  const label = key.charAt(0).toUpperCase() + key.slice(1);
+                  // Obtener la clave de traducción
+                  const translationKey = key;
                   
                   return (
                     <tr key={key} style={{ borderBottom: `1px solid black` }}>
@@ -226,7 +235,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
                         className="py-2 px-3 font-bold border border-black align-top" 
                         style={{ color: theme.text.primary, width: "40%" }}
                       >
-                        {label}
+                        {t(translationKey, key)}
                       </td>
                       <td 
                         className="py-2 px-3 border border-black align-top text-sm" 
@@ -241,13 +250,13 @@ const CloseupViewer = ({ closeup, onClose }) => {
             </table>
           </div>
         ) : (
-          <p style={{ color: theme.text.tertiary }}>No hay información disponible.</p>
+          <p style={{ color: theme.text.tertiary }}>{t('product.noInfo', 'No hay información disponible.')}</p>
         )}
       </div>
 
       {transitionState === 'transitioning' && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black">
-          <div className="text-white text-xl">Cargando vista principal...</div>
+          <div className="text-white text-xl">{t('collections.loading', 'Cargando vista principal...')}</div>
         </div>
       )}
     </div>

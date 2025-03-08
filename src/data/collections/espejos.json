@@ -7,9 +7,9 @@
             "pt": "Espelho LED Contour com design clássico e elegante. Moldura com possibilidade de acabamento laqueado ou madeira personalizável. Possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
         },
         "ficha": {
-            "coleccion": "Contour",
-            "terminacion": "Roble Natural",
-            "medidas": [
+            "ficha.coleccion": "Contour",
+            "ficha.terminacion": "Roble Natural",
+            "ficha.medidas": [
                 "60/80/90/100/120/150 cm de ancho",
                 "72cm de altura"
             ]
@@ -28,9 +28,9 @@
             "pt": "Espelho LED Orbital com design curvo que adiciona um toque moderno ao seu banheiro. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
         },
         "ficha": {
-            "coleccion": "Orbital",
-            "terminacion": "Azul Intenso mate",
-            "medidas": [
+            "ficha.coleccion": "Orbital",
+            "ficha.terminacion": "Azul Intenso mate",
+            "ficha.medidas": [
                 "60cm y 80cm de diámetro"
             ]
         },
@@ -48,9 +48,9 @@
             "pt": "Espelho PILL com design tipo pastilha que adiciona elegância ao seu banheiro. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita e funcional."
         },
         "ficha": {
-            "coleccion": "Pill",
-            "terminacion": "Greige mate",
-            "medidas": [
+            "ficha.coleccion": "Pill",
+            "ficha.terminacion": "Greige mate",
+            "ficha.medidas": [
                 "40cm de ancho",
                 "100cm de altura"
             ]
@@ -69,9 +69,9 @@
             "pt": "Espelho TENDENCE LED com design versátil que se adapta a qualquer estilo decorativo. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita no seu banheiro."
         },
         "ficha": {
-            "coleccion": "Tendence",
-            "terminacion": "Verde Suculenta mate",
-            "medidas": [
+            "ficha.coleccion": "Tendence",
+            "ficha.terminacion": "Verde Suculenta mate",
+            "ficha.medidas": [
                 "50cm de ancho",
                 "100cm de altura"
             ]
@@ -90,9 +90,9 @@
             "pt": "Espelho GAP com design moderno que se adapta a qualquer estilo. Disponível com ou sem moldura, possui luz neutra LED integrada em todo o contorno para uma iluminação perfeita no seu banheiro."
         },
         "ficha": {
-            "coleccion": "Gap",
-            "terminacion": "Gris grafito mate",
-            "medidas": [
+            "ficha.coleccion": "Gap",
+            "ficha.terminacion": "Gris grafito mate",
+            "ficha.medidas": [
                 "40cm y 60cm de ancho",
                 "80cm de altura"
             ]

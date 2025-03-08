@@ -6,15 +6,15 @@
             "pt": "Perfil transicional de aço inoxidável qualidade AISI 304 que pode ser utilizado como divisor de pisos no mesmo nível, para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Cromo",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Cromo",
+            "ficha.medidas": [
                 "10 mm",
                 "10 mm",
                 "2,5 m"
             ],
-            "peso": "0.625 kg",
-            "forma": "Cuadrada"
+            "ficha.peso": "0.625 kg",
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/perfiles/1810.webp",
         "closeup": "closeups/perfiles_piso/1810.webp",
@@ -30,15 +30,15 @@
             "pt": "Perfil de alumínio de ângulo reto de 2,5 mm de face visível. Multifacetado de vista fina e design simples, que cria com elegância linhas sutis nos revestimentos. Ideal para cobrir laterais, ocultar imperfeições e enquadrar áreas no piso."
         },
         "ficha": {
-            "material": "Aluminio Pintado",
-            "terminacion": "Carbón",
-            "medidas": [
+            "ficha.material": "Aluminio Pintado",
+            "ficha.terminacion": "Carbón",
+            "ficha.medidas": [
                 "2,5 mm",
                 "12 mm",
                 "2,5 m"
             ],
-            "peso": "0.175 kg",
-            "forma": "Varilla en L"
+            "ficha.peso": "0.175 kg",
+            "ficha.forma": "Varilla en L"
         },
         "thumbnail": "thumbnails/perfiles/1674.webp",
         "closeup": "closeups/perfiles_piso/1674.webp",
@@ -54,15 +54,15 @@
             "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Oro ESM",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Oro ESM",
+            "ficha.medidas": [
                 "7 mm",
                 "7 mm",
                 "2,5 m"
             ],
-            "peso": "",
-            "forma": "Cuadrada"
+            "ficha.peso": "",
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/perfiles/1403ESM.webp",
         "closeup": "closeups/perfiles_piso/1403ESM.webp",
@@ -78,15 +78,15 @@
             "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Oro Rosa ESM",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Oro Rosa ESM",
+            "ficha.medidas": [
                 "7 mm",
                 "7 mm",
                 "2,5 m"
             ],
-            "peso": "",
-            "forma": "Cuadrada"
+            "ficha.peso": "",
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/perfiles/1402ESM.webp",
         "closeup": "closeups/perfiles_piso/1402ESM.webp",
@@ -102,15 +102,15 @@
             "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Titanio ESM",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Titanio ESM",
+            "ficha.medidas": [
                 "7 mm",
                 "7 mm",
                 "2,5 m"
             ],
-            "peso": "",
-            "forma": "Cuadrada"
+            "ficha.peso": "",
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/perfiles/1401ESM.webp",
         "closeup": "closeups/perfiles_piso/1401ESM.webp",

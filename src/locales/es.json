@@ -33,7 +33,8 @@
   },
   "collections": {
     "title": "Colecciones",
-    "description": "Explora nuestras colecciones"
+    "description": "Explora nuestras colecciones",
+    "loading": "Cargando productos..."
   },
   "product": {
     "details": "Detalles del producto",
@@ -42,6 +43,35 @@
     "dimensions": "Dimensiones",
     "weight": "Peso",
     "shape": "Forma",
-    "installation": "Instalación"
+    "installation": "Instalación",
+    "noInfo": "No hay información disponible."
+  },
+  "pins": {
+    "towelRacks": "Toalleros",
+    "toilet": "Inodoro",
+    "drains": "Rejilla de Patio",
+    "baseboards": "Zócalos",
+    "cabinets": "Cabinets",
+    "wallPanels": "Wall Panels & SPC",
+    "mirrors": "Espejos",
+    "vanities": "Vanitories",
+    "floorProfiles": "Perfiles Piso",
+    "bathtubs": "Bañera",
+    "wallProfiles": "Perfiles Pared",
+    "showerDrains": "Desagües",
+    "shelves": "Estantes"
+  },
+  "ficha": {
+    "material": "Material",
+    "terminacion": "Terminación",
+    "medidas": "Medidas",
+    "peso": "Peso",
+    "forma": "Forma",
+    "instalacion": "Instalación",
+    "coleccion": "Colección"
+  },
+  "ambientes": {
+    "bathroom": "Baño",
+    "shower": "Ducha"
   }
 } 
