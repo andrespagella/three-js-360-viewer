@@ -6,14 +6,14 @@
             "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
         },
         "ficha": {
-            "material": "Acero Inoxidable AISI 304",
-            "terminacion": "Titanio Esmerilado",
-            "medidas": [
+            "ficha.material": "Acero Inoxidable AISI 304",
+            "ficha.terminacion": "Titanio Esmerilado",
+            "ficha.medidas": [
                 "7 mm",
                 "7 mm",
                 "2,5 m"
             ],
-            "forma": "Cuadrada"
+            "ficha.forma": "Cuadrada"
         },
         "thumbnail": "thumbnails/perfiles/1401ESM.webp",
         "closeup": "closeups/perfiles_pared/1810.webp",
@@ -29,16 +29,16 @@
             "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
         },
         "ficha": {
-            "material": "Aluminio",
-            "terminacion": "Cromo Brillante",
-            "medidas": [
+            "ficha.material": "Aluminio",
+            "ficha.terminacion": "Cromo Brillante",
+            "ficha.medidas": [
                 "10 mm",
                 "10 mm",
                 "2,5 m"
             ],
-            "peso": "0.258 kg",
-            "forma": "Cuadrada",
-            "uso": "Solo en paredes"
+            "ficha.peso": "0.258 kg",
+            "ficha.forma": "Cuadrada",
+            "ficha.uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3421.webp",
         "closeup": "closeups/perfiles_pared/3421.webp",
@@ -54,16 +54,16 @@
             "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
         },
         "ficha": {
-            "material": "Aluminio",
-            "terminacion": "Oro Mate",
-            "medidas": [
+            "ficha.material": "Aluminio",
+            "ficha.terminacion": "Oro Mate",
+            "ficha.medidas": [
                 "10 mm",
                 "10 mm",
                 "2,5 m"
             ],
-            "peso": "0.258 kg",
-            "forma": "Cuadrada",
-            "uso": "Solo en paredes"
+            "ficha.peso": "0.258 kg",
+            "ficha.forma": "Cuadrada",
+            "ficha.uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3422.webp",
         "closeup": "closeups/perfiles_pared/3422.webp",
@@ -79,16 +79,16 @@
             "pt": "Perfil de alumínio anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
         },
         "ficha": {
-            "material": "Aluminio",
-            "terminacion": "Olivo",
-            "medidas": [
+            "ficha.material": "Aluminio",
+            "ficha.terminacion": "Olivo",
+            "ficha.medidas": [
                 "10 mm",
                 "10 mm",
                 "2,5 m"
             ],
-            "peso": "0.253 kg",
-            "forma": "Cuadrada",
-            "uso": "Solo en paredes"
+            "ficha.peso": "0.253 kg",
+            "ficha.forma": "Cuadrada",
+            "ficha.uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3425B.webp",
         "closeup": "closeups/perfiles_pared/3425B.webp",
@@ -104,16 +104,16 @@
             "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
         },
         "ficha": {
-            "material": "Aluminio",
-            "terminacion": "Arena",
-            "medidas": [
+            "ficha.material": "Aluminio",
+            "ficha.terminacion": "Arena",
+            "ficha.medidas": [
                 "10 mm",
                 "10 mm",
                 "2,5 m"
             ],
-            "peso": "0.253 kg",
-            "forma": "Cuadrada",
-            "uso": "Solo en paredes"
+            "ficha.peso": "0.253 kg",
+            "ficha.forma": "Cuadrada",
+            "ficha.uso": "Solo en paredes"
         },
         "thumbnail": "thumbnails/perfiles/3428TXA.webp",
         "closeup": "closeups/perfiles_pared/3428TXA.webp",
