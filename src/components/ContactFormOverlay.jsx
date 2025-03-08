@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import config from "../utils/config";
+import { useTranslation } from "react-i18next";
 
 const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -44,21 +46,21 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
     const newErrors = {};
     
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'El nombre es requerido';
+      newErrors.fullName = t('forms.required');
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = 'El correo electrónico es requerido';
+      newErrors.email = t('forms.required');
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'El correo electrónico no es válido';
     }
     
     if (!formData.company.trim()) {
-      newErrors.company = 'La empresa es requerida';
+      newErrors.company = t('forms.required');
     }
     
     if (!formData.phone.trim()) {
-      newErrors.phone = 'El teléfono es requerido';
+      newErrors.phone = t('forms.required');
     }
     
     setErrors(newErrors);
@@ -190,7 +192,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
           fontSize: isMobile ? '18px' : '22px',
           fontWeight: 'bold'
         }}>
-          ¡No pierdas tu diseño!
+          {t('forms.title', '¡No pierdas tu diseño!')}
         </h2>
         
         <p style={{ 
@@ -200,7 +202,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
           fontSize: isMobile ? '14px' : '16px',
           fontWeight: 500
         }}>
-          Solo completa tus datos y convierte tu diseño en una realidad.
+          {t('forms.subtitle', 'Solo completa tus datos y convierte tu diseño en una realidad.')}
         </p>
         
         <form onSubmit={handleSubmit}>
@@ -210,7 +212,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="Nombre y apellido"
+              placeholder={t('forms.name')}
               style={{
                 width: '100%',
                 padding: '8px',
@@ -230,7 +232,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Correo electrónico"
+              placeholder={t('forms.email')}
               style={{
                 width: '100%',
                 padding: '8px',
@@ -250,7 +252,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              placeholder="Empresa"
+              placeholder={t('forms.company', 'Empresa')}
               style={{
                 width: '100%',
                 padding: '8px',
@@ -270,7 +272,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Teléfono"
+              placeholder={t('forms.phone')}
               style={{
                 width: '100%',
                 padding: '8px',
@@ -284,63 +286,46 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
             )}
           </div>
           
-          {submitError && (
-            <div style={{ 
-              marginBottom: '15px', 
-              padding: '8px', 
-              backgroundColor: 'rgba(255, 0, 0, 0.1)', 
-              borderRadius: '4px',
-              color: 'red',
-              fontSize: '14px'
-            }}>
-              {submitError}
-            </div>
-          )}
-          
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between',
-            gap: '15px'
-          }}>
-            <button 
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <button
               type="button"
               onClick={onClose}
-              disabled={isSubmitting}
               style={{
-                flex: 1,
-                padding: isMobile ? '6px 12px' : '8px 16px',
-                backgroundColor: 'white',
-                color: 'black',
-                border: '2px solid #000',
+                padding: '8px 16px',
                 borderRadius: '4px',
-                cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                border: '1px solid var(--border-medium)',
+                backgroundColor: 'white',
+                color: 'var(--text-primary)',
+                cursor: 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontWeight: 'bold',
-                opacity: isSubmitting ? 0.7 : 1
+                fontWeight: 'bold'
               }}
             >
-              CANCELAR
+              {t('buttons.back')}
             </button>
             
-            <button 
+            <button
               type="submit"
               disabled={isSubmitting}
               style={{
-                flex: 1,
-                padding: isMobile ? '6px 12px' : '8px 16px',
-                backgroundColor: '#000',
-                color: 'white',
-                border: 'none',
+                padding: '8px 16px',
                 borderRadius: '4px',
+                border: 'none',
+                backgroundColor: 'var(--accent-primary)',
+                color: 'white',
                 cursor: isSubmitting ? 'not-allowed' : 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
                 fontWeight: 'bold',
                 opacity: isSubmitting ? 0.7 : 1
               }}
             >
-              {isSubmitting ? 'ENVIANDO...' : 'CONTINUAR'}
+              {isSubmitting ? 'Enviando...' : t('buttons.submit')}
             </button>
           </div>
+          
+          {submitError && (
+            <p style={{ color: 'red', textAlign: 'center', marginTop: '15px' }}>{submitError}</p>
+          )}
         </form>
       </div>
     </div>

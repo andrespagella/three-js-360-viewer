@@ -19,9 +19,11 @@ import { processMobileCollection } from "./utils/imageUtils";
 import useIdleTimer from "./hooks/useIdleTimer";
 import { ConversationalAgentProvider, useConversationalAgent } from "./context/ConversationalAgentContext";
 import config from "./utils/config";
+import { useTranslation } from "react-i18next";
 
 // Componente interno que usa el contexto del agente conversacional
 const AppContent = () => {
+  const { t } = useTranslation();
   const developmentMode = false; // Flag para activar el overlay de desarrollo
   const [language, setLanguage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -234,6 +236,7 @@ const AppContent = () => {
     // This is just a fallback in case the component's request fails
     
     console.log(`Idioma seleccionado: ${lang}`);
+    // El cambio de idioma en i18n ya se maneja en el componente LanguageSelector
     setLanguage(lang);
   };
 
@@ -446,7 +449,7 @@ const AppContent = () => {
                       boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
                     }}
                   >
-                    Ambientes
+                    {t('sidebar.ambients')}
                   </button>
                 ) : (
                   // AMBIENTES Mobile
@@ -462,7 +465,7 @@ const AppContent = () => {
                       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                     }}
                   >
-                    Ambientes
+                    {t('sidebar.products')}
                   </button>
                 )}
 
@@ -502,7 +505,7 @@ const AppContent = () => {
                       boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
                     }}
                   >
-                    Productos
+                    {t('sidebar.products')}
                   </button>
                 ) : (
                   // COLECCIONES Mobile
@@ -518,7 +521,7 @@ const AppContent = () => {
                       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                     }}
                   >
-                    Productos
+                    {t('sidebar.products')}
                   </button>
                 )}
               </>

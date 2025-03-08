@@ -4,6 +4,7 @@ import getAmbientFilePaths from "../utils/getAmbientFilePaths";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTheme } from "../context/ThemeContext";
 import Three360Viewer from "./Three360Viewer";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = ({
   ambientes,
@@ -17,6 +18,7 @@ const Sidebar = ({
 }) => {
   const isMobile = useIsMobile();
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   // Para Sidebar: usar "bottom" en mobile y "left" en escritorio
   const anchor = isMobile ? "bottom" : "left";
@@ -38,7 +40,7 @@ const Sidebar = ({
     >
       <div className="p-4 flex justify-between items-center">
         <div className="flex items-center justify-between w-full">
-          <h3 className="text-sm font-semibold" style={{ color: theme.text.primary }}>Estilo</h3>
+          <h3 className="text-sm font-semibold" style={{ color: theme.text.primary }}>{t('sidebar.style', 'Estilo')}</h3>
           <div className="flex items-center">
             <img src="/light.svg" alt="Modo claro" className="w-4 h-4" />
             <div

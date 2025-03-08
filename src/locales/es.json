@@ -1,0 +1,42 @@
+{
+  "languageSelector": {
+    "welcome": "Te damos la bienvenida a Atrim 3D Showcase",
+    "select": "Selecciona el lenguaje para continuar",
+    "spanish": "Español",
+    "portuguese": "Português"
+  },
+  "sidebar": {
+    "products": "Productos",
+    "contact": "Contacto",
+    "style": "Estilo",
+    "ambients": "Ambientes" 
+  },
+  "buttons": {
+    "back": "Volver",
+    "next": "Siguiente",
+    "submit": "Enviar"
+  },
+  "forms": {
+    "title": "¡No pierdas tu diseño!",
+    "subtitle": "Solo completa tus datos y convierte tu diseño en una realidad.",
+    "name": "Nombre y apellido",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "company": "Empresa",
+    "message": "Mensaje",
+    "required": "Campo requerido"
+  },
+  "collections": {
+    "title": "Colecciones",
+    "description": "Explora nuestras colecciones"
+  },
+  "product": {
+    "details": "Detalles del producto",
+    "material": "Material",
+    "finish": "Acabado",
+    "dimensions": "Dimensiones",
+    "weight": "Peso",
+    "shape": "Forma",
+    "installation": "Instalación"
+  }
+} 

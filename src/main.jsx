@@ -4,6 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { ThemeProvider } from './context/ThemeContext'
 
+// Importar configuración de i18n
+import './i18n';
+
 // Registrar el service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

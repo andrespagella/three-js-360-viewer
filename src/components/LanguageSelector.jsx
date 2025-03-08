@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { enterFullscreen } from "../utils/fullscreenUtils";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
+  const { t, i18n } = useTranslation();
   const [titleLanguage, setTitleLanguage] = useState("es");
   const [fadeState, setFadeState] = useState("fade-in");
   const [isBigScreen, setIsBigScreen] = useState(false);
@@ -12,29 +15,20 @@ const LanguageSelector = ({ onSelectLanguage }) => {
     setIsBigScreen(bigscreen === 'true');
   }, []);
 
-  const titles = {
-    es: {
-      welcome: "Te damos la bienvenida a Atrim 3D Showcase",
-      select: "Selecciona el lenguaje para continuar"
-    },
-    pt: {
-      welcome: "Bem-vindo ao Atrim 3D Showcase",
-      select: "Selecione o idioma para continuar"
-    }
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeState("fade-out");
       
       setTimeout(() => {
         setTitleLanguage(prev => prev === "es" ? "pt" : "es");
+        // Cambiar el idioma de i18n para la animación
+        i18n.changeLanguage(titleLanguage === "es" ? "pt" : "es");
         setFadeState("fade-in");
       }, 1000); // Wait for fade-out to complete
     }, 4000); // Change language every 4 seconds
     
     return () => clearInterval(interval);
-  }, []);
+  }, [titleLanguage]);
 
   const handleLanguageSelect = async (lang) => {
     /**
@@ -53,6 +47,10 @@ const LanguageSelector = ({ onSelectLanguage }) => {
       }
     }
     
+    // Cambiar el idioma en i18n
+    console.log(`Cambiando idioma a: ${lang}`);
+    i18n.changeLanguage(lang);
+    
     // Call the original language selection handler
     onSelectLanguage(lang);
   };
@@ -68,10 +66,10 @@ const LanguageSelector = ({ onSelectLanguage }) => {
     >
       <div className={`transition-opacity duration-1000 ${fadeState === "fade-in" ? "opacity-100" : "opacity-0"}`}>
         <h1 className="text-5xl font-bold text-black tracking-tight text-center animate-pulse" style={{ letterSpacing: "-1px" }}>
-          {titles[titleLanguage].welcome}
+          {t('languageSelector.welcome')}
         </h1>
         <h2 className="text-2xl text-black tracking-tight text-center mt-2 animate-pulse" style={{ letterSpacing: "-1px" }}>
-          {titles[titleLanguage].select}
+          {t('languageSelector.select')}
         </h2>
       </div>
 
@@ -82,7 +80,7 @@ const LanguageSelector = ({ onSelectLanguage }) => {
           className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out"
         >
           <img src="/icons/es.png" alt="Español" className="w-12 h-12 mb-2" />
-          <span className="text-sm group-hover:font-bold transition-all">Español</span>
+          <span className="text-sm group-hover:font-bold transition-all">{t('languageSelector.spanish')}</span>
         </button>
 
         {/* PORTUGUES */}
@@ -90,7 +88,7 @@ const LanguageSelector = ({ onSelectLanguage }) => {
           className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out"
         >
           <img src="/icons/pt.png" alt="Português" className="w-12 h-12 mb-2" />
-          <span className="text-sm group-hover:font-bold transition-all">Português</span>
+          <span className="text-sm group-hover:font-bold transition-all">{t('languageSelector.portuguese')}</span>
         </button>
 
         
