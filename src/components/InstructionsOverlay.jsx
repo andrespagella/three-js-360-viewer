@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const InstructionsOverlay = ({ onClose }) => {
+  const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
   useEffect(() => {
@@ -57,12 +59,12 @@ const InstructionsOverlay = ({ onClose }) => {
             }}
           >
             <source src="/videos/instructions.mp4" type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
+            {t('instructions.videoFallback')}
           </video>
         </div>
 
         <p style={{ fontWeight: 500, marginBottom: '20px', fontSize: isMobile ? '14px' : '16px' }}>
-          Presiona y desliza tu dedo para mirar alrededor
+          {t('instructions.dragToLook')}
         </p>
         <button 
           onClick={onClose}
@@ -78,7 +80,7 @@ const InstructionsOverlay = ({ onClose }) => {
             width: '150px'
           }}
         >
-          CERRAR
+          {t('buttons.close')}
         </button>
       </div>
     </div>

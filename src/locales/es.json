@@ -14,7 +14,8 @@
   "buttons": {
     "back": "Volver",
     "next": "Siguiente",
-    "submit": "Enviar"
+    "submit": "Enviar",
+    "close": "CERRAR"
   },
   "forms": {
     "title": "¡No pierdas tu diseño!",
@@ -25,6 +26,10 @@
     "company": "Empresa",
     "message": "Mensaje",
     "required": "Campo requerido"
+  },
+  "instructions": {
+    "videoFallback": "Tu navegador no soporta videos HTML5.",
+    "dragToLook": "Presiona y desliza tu dedo para mirar alrededor"
   },
   "collections": {
     "title": "Colecciones",
