@@ -61,6 +61,88 @@
     "showerDrains": "Desagües",
     "shelves": "Estantes"
   },
+  "products": {
+    "baneras": {
+      "Bañera Ocean Boreal": "Bañera Ocean Boreal"
+    },
+    "inodoros": {
+      "Inodoro Inteligente PuraSense": "Inodoro Inteligente PuraSense"
+    },
+    "rejillas": {
+      "Rejilla para pileta de patio": "Rejilla para pileta de patio"
+    },
+    "cabinets": {
+      "cabinet madrid": "cabinet madrid",
+      "cabinet varenna": "cabinet varenna",
+      "cabinet ravello": "cabinet ravello"
+    },
+    "desagues": {
+      "Desagüe Lineal Narrow Clásico Mate Esmerilado": "Desagüe Lineal Narrow Clásico Mate Esmerilado",
+      "Desagüe Lineal Clásico Negro Mate 2 en 1": "Desagüe Lineal Clásico Negro Mate 2 en 1",
+      "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado": "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado",
+      "Desagüe Lineal Eme Mate Esmerilado": "Desagüe Lineal Eme Mate Esmerilado",
+      "Desagüe Lineal Inca Mate Esmerilado": "Desagüe Lineal Inca Mate Esmerilado",
+      "Desagüe Cuadrado 2 en 1 Brillante": "Desagüe Cuadrado 2 en 1 Brillante",
+      "Desagüe Lineal Grid Mate Esmerilado": "Desagüe Lineal Grid Mate Esmerilado",
+      "Desagüe Diagonal Mate Esmerilado": "Desagüe Diagonal Mate Esmerilado"
+    },
+    "espejos": {
+      "Espejo LED Contour": "Espejo LED Contour",
+      "Espejo Led Orbital laqueado": "Espejo Led Orbital laqueado",
+      "Espejo LED Pill Laqueado": "Espejo LED Pill Laqueado",
+      "Espejo LED Tendence Laqueado": "Espejo LED Tendence Laqueado",
+      "Espejo LED Gap Laqueado": "Espejo LED Gap Laqueado"
+    },
+    "estantes": {
+      "Estante Esquinero Triangular Cuadrado Esmerilado": "Estante Esquinero Triangular Cuadrado Esmerilado",
+      "Estante Rectangular Linea Esmerilado": "Estante Rectangular Linea Esmerilado",
+      "Estante Esquinero Triangular Abstracto Blanco Mate": "Estante Esquinero Triangular Abstracto Blanco Mate",
+      "Estante Esquinero Triangular Abstracto Negro Mate": "Estante Esquinero Triangular Abstracto Negro Mate",
+      "Estante Rectangular Linea Negro Mate": "Estante Rectangular Linea Negro Mate",
+      "Estante Rectangular Cuadrado Negro Mate": "Estante Rectangular Cuadrado Negro Mate"
+    },
+    "toalleros": {
+      "Toallero Eléctrico Coco Smart Brillante": "Toallero Eléctrico Coco Smart Brillante",
+      "Toallero Eléctrico Cubic Petit Brillante": "Toallero Eléctrico Cubic Petit Brillante",
+      "Toallero Eléctrico Coco Petit Negro Mate": "Toallero Eléctrico Coco Petit Negro Mate",
+      "Toallero Eléctrico Coco Petit Oro Mate": "Toallero Eléctrico Coco Petit Oro Mate",
+      "Toallero Eléctrico Coco Flow Oro Mate": "Toallero Eléctrico Coco Flow Oro Mate",
+      "Toallero Eléctrico Coco Flow Negro Mate": "Toallero Eléctrico Coco Flow Negro Mate",
+      "Toallero Eléctrico Cubic Flow Brillante": "Toallero Eléctrico Cubic Flow Brillante"
+    },
+    "perfiles_piso": {
+      "Terminación Cuadrada 1810": "Terminación Cuadrada 1810",
+      "Varilla en L 1674": "Varilla en L 1674",
+      "Terminación Cuadrada 1403ESM": "Terminación Cuadrada 1403ESM",
+      "Terminación Cuadrada 1402ESM": "Terminación Cuadrada 1402ESM",
+      "Terminación Cuadrada 1401ESM": "Terminación Cuadrada 1401ESM"
+    },
+    "perfiles_pared": {
+      "Terminación Cuadrada 1401ESM": "Terminación Cuadrada 1401ESM",
+      "Guardacanto Quadra 3421": "Guardacanto Quadra 3421",
+      "Guardacanto Quadra 3422": "Guardacanto Quadra 3422",
+      "Guardacanto Quadra 3425B": "Guardacanto Quadra 3425B",
+      "Guardacanto Quadra 3428TXA": "Guardacanto Quadra 3428TXA"
+    },
+    "vanitories": {
+      "Vanitory Modelo Bellagio": "Vanitory Modelo Bellagio",
+      "Vanitory Modelo Varenna": "Vanitory Modelo Varenna",
+      "Vanitory Modelo Viterbo": "Vanitory Modelo Viterbo",
+      "Vanitory Modelo Ravello": "Vanitory Modelo Ravello",
+      "Vanitory Modelo Taormina": "Vanitory Modelo Taormina"
+    },
+    "wallpanels": {
+      "Wall Panel / Revestimientos de paredes EPS": "Wall Panel / Revestimientos de paredes EPS",
+      "Revestimientos de paredes SPC": "Revestimientos de paredes SPC"
+    },
+    "zocalos": {
+      "Zócalo Slim": "Zócalo Slim",
+      "Zócalo Orbit": "Zócalo Orbit",
+      "Zócalo Extra Line Cemento": "Zócalo Extra Line Cemento",
+      "Zócalo Extra Line Plata": "Zócalo Extra Line Plata",
+      "Zócalo Maxi Line": "Zócalo Maxi Line"
+    }
+  },
   "ficha": {
     "material": "Material",
     "terminacion": "Terminación",

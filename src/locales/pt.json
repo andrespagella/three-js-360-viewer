@@ -61,6 +61,88 @@
     "showerDrains": "Ralos",
     "shelves": "Prateleiras"
   },
+  "products": {
+    "baneras": {
+      "Bañera Ocean Boreal": "Banheira Ocean Boreal"
+    },
+    "inodoros": {
+      "Inodoro Inteligente PuraSense": "Vaso Sanitário Inteligente PuraSense"
+    },
+    "rejillas": {
+      "Rejilla para pileta de patio": "Grade para ralo de pátio"
+    },
+    "cabinets": {
+      "cabinet madrid": "armário madrid",
+      "cabinet varenna": "armário varenna",
+      "cabinet ravello": "armário ravello"
+    },
+    "desagues": {
+      "Desagüe Lineal Narrow Clásico Mate Esmerilado": "Ralo Linear Narrow Clássico Fosco",
+      "Desagüe Lineal Clásico Negro Mate 2 en 1": "Ralo Linear Clássico Preto Fosco 2 em 1",
+      "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado": "Ralo Linear Clássico Fosco 2 em 1",
+      "Desagüe Lineal Eme Mate Esmerilado": "Ralo Linear Eme Fosco",
+      "Desagüe Lineal Inca Mate Esmerilado": "Ralo Linear Inca Fosco",
+      "Desagüe Cuadrado 2 en 1 Brillante": "Ralo Quadrado 2 em 1 Brilhante",
+      "Desagüe Lineal Grid Mate Esmerilado": "Ralo Linear Grid Fosco",
+      "Desagüe Diagonal Mate Esmerilado": "Ralo Diagonal Fosco"
+    },
+    "espejos": {
+      "Espejo LED Contour": "Espelho LED Contour",
+      "Espejo Led Orbital laqueado": "Espelho Led Orbital laqueado",
+      "Espejo LED Pill Laqueado": "Espelho LED Pill Laqueado",
+      "Espejo LED Tendence Laqueado": "Espelho LED Tendence Laqueado",
+      "Espejo LED Gap Laqueado": "Espelho LED Gap Laqueado"
+    },
+    "estantes": {
+      "Estante Esquinero Triangular Cuadrado Esmerilado": "Prateleira de Canto Triangular Quadrada Fosca",
+      "Estante Rectangular Linea Esmerilado": "Prateleira Retangular Linea Fosca",
+      "Estante Esquinero Triangular Abstracto Blanco Mate": "Prateleira de Canto Triangular Abstrata Branca Fosca",
+      "Estante Esquinero Triangular Abstracto Negro Mate": "Prateleira de Canto Triangular Abstrata Preta Fosca",
+      "Estante Rectangular Linea Negro Mate": "Prateleira Retangular Linea Preta Fosca",
+      "Estante Rectangular Cuadrado Negro Mate": "Prateleira Retangular Quadrada Preta Fosca"
+    },
+    "toalleros": {
+      "Toallero Eléctrico Coco Smart Brillante": "Toalheiro Elétrico Coco Smart Brilhante",
+      "Toallero Eléctrico Cubic Petit Brillante": "Toalheiro Elétrico Cubic Petit Brilhante",
+      "Toallero Eléctrico Coco Petit Negro Mate": "Toalheiro Elétrico Coco Petit Preto Fosco",
+      "Toallero Eléctrico Coco Petit Oro Mate": "Toalheiro Elétrico Coco Petit Ouro Fosco",
+      "Toallero Eléctrico Coco Flow Oro Mate": "Toalheiro Elétrico Coco Flow Ouro Fosco",
+      "Toallero Eléctrico Coco Flow Negro Mate": "Toalheiro Elétrico Coco Flow Preto Fosco",
+      "Toallero Eléctrico Cubic Flow Brillante": "Toalheiro Elétrico Cubic Flow Brilhante"
+    },
+    "perfiles_piso": {
+      "Terminación Cuadrada 1810": "Acabamento Quadrado 1810",
+      "Varilla en L 1674": "Perfil em L 1674",
+      "Terminación Cuadrada 1403ESM": "Acabamento Quadrado 1403ESM",
+      "Terminación Cuadrada 1402ESM": "Acabamento Quadrado 1402ESM",
+      "Terminación Cuadrada 1401ESM": "Acabamento Quadrado 1401ESM"
+    },
+    "perfiles_pared": {
+      "Terminación Cuadrada 1401ESM": "Acabamento Quadrado 1401ESM",
+      "Guardacanto Quadra 3421": "Cantoneira Quadra 3421",
+      "Guardacanto Quadra 3422": "Cantoneira Quadra 3422",
+      "Guardacanto Quadra 3425B": "Cantoneira Quadra 3425B",
+      "Guardacanto Quadra 3428TXA": "Cantoneira Quadra 3428TXA"
+    },
+    "vanitories": {
+      "Vanitory Modelo Bellagio": "Bancada Modelo Bellagio",
+      "Vanitory Modelo Varenna": "Bancada Modelo Varenna",
+      "Vanitory Modelo Viterbo": "Bancada Modelo Viterbo",
+      "Vanitory Modelo Ravello": "Bancada Modelo Ravello",
+      "Vanitory Modelo Taormina": "Bancada Modelo Taormina"
+    },
+    "wallpanels": {
+      "Wall Panel / Revestimientos de paredes EPS": "Painel de Parede / Revestimentos de paredes EPS",
+      "Revestimientos de paredes SPC": "Revestimentos de paredes SPC"
+    },
+    "zocalos": {
+      "Zócalo Slim": "Rodapé Slim",
+      "Zócalo Orbit": "Rodapé Orbit",
+      "Zócalo Extra Line Cemento": "Rodapé Extra Line Cimento",
+      "Zócalo Extra Line Plata": "Rodapé Extra Line Prata",
+      "Zócalo Maxi Line": "Rodapé Maxi Line"
+    }
+  },
   "ficha": {
     "material": "Material",
     "terminacion": "Acabamento",

@@ -21,6 +21,17 @@ const CloseupViewer = ({ closeup, onClose }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const overlayRef = useRef(null);
 
+  // Función para obtener el nombre traducido del producto
+  const getTranslatedProductName = (product) => {
+    if (!product || !product.producto) return '';
+    
+    // Intentar obtener la traducción del producto desde los archivos de localización
+    const translatedName = t(`products.${currentCollection}.${product.producto}`, '');
+    
+    // Si no hay traducción disponible, usar el nombre original
+    return translatedName || product.producto;
+  };
+
   useEffect(() => {
     // Dynamically import the JSON file based on the currentCollection state
     import(`../data/collections/${currentCollection}.json`)
@@ -162,11 +173,11 @@ const CloseupViewer = ({ closeup, onClose }) => {
                         border: '1px solid rgba(0,0,0,0.2)',
                         boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
                       }
-                  }
+                    }
                   >
                     <img
                       src={product.thumbnail}
-                      alt={product.descripcion}
+                      alt={getTranslatedProductName(product)}
                       className="absolute w-full h-full object-cover"
                       draggable="false"
                       onDragStart={preventDragHandler}
@@ -195,7 +206,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
           className="text-xl font-bold"
           style={{ color: theme.text.primary }}
         >
-          {selectedProduct.producto.toUpperCase()}
+          {getTranslatedProductName(selectedProduct).toUpperCase()}
         </h2>
         
         {selectedProduct.SKU && (
