@@ -341,7 +341,9 @@ const AppContent = () => {
         // De lo contrario, usar el estado actual de selectedItems
         selectedItems: hasCompleteSelections ? pendingFormData.selectedItems : selectedItems,
         // Actualizar el string de productos si es necesario
-        products: updatedProducts
+        products: updatedProducts,
+        // Añadir el idioma seleccionado por el usuario
+        language: language
       };
       
       console.log('Datos actualizados para enviar:', updatedFormData);
