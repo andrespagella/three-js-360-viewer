@@ -8,8 +8,8 @@
         },
         "ficha": {
             "ficha.coleccion": "PuraSense",
-            "ficha.material": "Porcelana sanitaria",
-            "ficha.color": "Blanco"
+            "ficha.material": "ficha.porcelana",
+            "ficha.color": "ficha.blanco"
         },
         "thumbnail": "thumbnails/inodoro/inodoro.webp",
         "closeup": "closeups/inodoros/inodoro.webp"

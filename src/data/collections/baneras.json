@@ -14,8 +14,8 @@
                 "78 cm",
                 "71 cm"
             ],
-            "ficha.componentes": "Botón pop-up de Orastone. Desagüe con sifón anti retorno de olor y kit de reparación en casa incluído.",
-            "ficha.color": "Blanco"
+            "ficha.componentes": "ficha.boton_banera",
+            "ficha.color": "ficha.blanco"
         },
         "thumbnail": "thumbnails/baneras/banera.webp",
         "closeup": "closeups/baneras/banera.webp"

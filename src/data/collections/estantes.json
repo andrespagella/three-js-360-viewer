@@ -6,16 +6,16 @@
             "pt": "Acessório premium de aço inoxidável AISI 304 para aplicar em cantos após a colocação do revestimento. Design minimalista que proporciona elegância e funcionalidade a qualquer espaço."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Acero Cepillado",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.acero_cepillado",
             "ficha.medidas": [
-                "23cm",
-                "23cm",
-                "32.8cm"
+                "23 cm",
+                "23 cm",
+                "32.8 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Triangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.triangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETM230AC.webp",
         "closeup": "closeups/estantes/ETM230AC.webp",
@@ -31,15 +31,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Acero Cepillado",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.acero_cepillado",
             "ficha.medidas": [
-                "30cm",
-                "11.5cm"
+                "30 cm",
+                "11.5 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Rectangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.rectangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300AC.webp",
         "closeup": "closeups/estantes/ERP300AC.webp",
@@ -55,16 +55,16 @@
             "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto ou branco fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Blanco Mate",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.blanco_mate",
             "ficha.medidas": [
-                "23cm",
-                "23cm",
-                "32.8cm"
+                "23 cm",
+                "23 cm",
+                "32.8 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Triangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.triangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230BM.webp",
         "closeup": "closeups/estantes/ETJ230BM.webp",
@@ -80,16 +80,16 @@
             "pt": "Prateleira triangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Negro Mate",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.acero_mate",
             "ficha.medidas": [
-                "23cm",
-                "23cm",
-                "32.8cm"
+                "23 cm",
+                "23 cm",
+                "32.8 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Triangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.triangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ETJ230NM.webp",
         "closeup": "closeups/estantes/ETJ230NM.webp",
@@ -105,15 +105,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Negro Mate",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.negro_mate",
             "ficha.medidas": [
-                "30cm",
-                "11.5cm"
+                "30 cm",
+                "11.5 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Rectangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.rectangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERP300NM.webp",
         "closeup": "closeups/estantes/ERP300NM.webp",
@@ -129,15 +129,15 @@
             "pt": "Prateleira retangular para aplicar, de aço inoxidável AISI 304 fosco ou acabamento com pintura em pó de poliéster preto fosco, de 1 mm de espessura. Superfície suave ao toque. É instalada após a colocação do revestimento em paredes/muros."
         },
         "ficha": {
-            "ficha.material": "Acero Inoxidable 304",
-            "ficha.terminacion": "Negro Mate",
+            "ficha.material": "ficha.acero",
+            "ficha.terminacion": "ficha.negro_mate",
             "ficha.medidas": [
-                "30cm",
-                "11.5cm"
+                "30 cm",
+                "11.5 cm"
             ],
             "ficha.peso": "0.256 kg",
-            "ficha.forma": "Rectangular",
-            "ficha.instalacion": "Con tornillos"
+            "ficha.forma": "ficha.rectangular",
+            "ficha.instalacion": "ficha.con_tornillos"
         },
         "thumbnail": "thumbnails/estantes/ERM300NM.webp",
         "closeup": "closeups/estantes/ERM300NM.webp",

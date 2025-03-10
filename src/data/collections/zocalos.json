@@ -7,8 +7,8 @@
             "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta."
         },
         "ficha": {
-            "ficha.material": "Aluminio",
-            "ficha.terminacion": "Negro Mate",
+            "ficha.material": "ficha.aluminio",
+            "ficha.terminacion": "ficha.negro_mate",
             "ficha.medidas": [
                 "100 mm",
                 "10 mm",
@@ -30,12 +30,12 @@
             "pt": "Rodapé/Contramarco pintável de face plana e borda arredondada. Fabricado em EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente tinta látex à água para interiores."
         },
         "ficha": {
-            "ficha.material": "EPS (poliestireno expandido)",
-            "ficha.terminacion": "Pintable",
+            "ficha.material": "ficha.eps",
+            "ficha.terminacion": "ficha.pintable",
             "ficha.medidas": [
-                "70mm",
-                "15mm",
-                "2,5mts"
+                "70 mm",
+                "15 mm",
+                "2,5 mts"
             ],
             "ficha.forma": "Orbit"
         },
@@ -53,8 +53,8 @@
             "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
         },
         "ficha": {
-            "ficha.material": "EPS",
-            "ficha.terminacion": "Cemento",
+            "ficha.material": "ficha.eps",
+            "ficha.terminacion": "ficha.cemento",
             "ficha.medidas": [
                 "100 mm",
                 "15 mm",
@@ -76,8 +76,8 @@
             "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
         },
         "ficha": {
-            "ficha.material": "EPS",
-            "ficha.terminacion": "Gris plata",
+            "ficha.material": "ficha.eps",
+            "ficha.terminacion": "ficha.gris_plata",
             "ficha.medidas": [
                 "100 mm",
                 "15 mm",
@@ -99,12 +99,12 @@
             "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
         },
         "ficha": {
-            "ficha.material": "EPS",
-            "ficha.terminacion": "Blanco ",
+            "ficha.material": "ficha.eps",
+            "ficha.terminacion": "ficha.blanco",
             "ficha.medidas": [
-                "150mm",
-                "15mm",
-                "2,5mts"
+                "150 mm",
+                "15 mm",
+                "2,5 mts"
             ],
             "ficha.forma": "Maxi Line"
         },

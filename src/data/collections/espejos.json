@@ -8,10 +8,10 @@
         },
         "ficha": {
             "ficha.coleccion": "Contour",
-            "ficha.terminacion": "Roble Natural",
+            "ficha.terminacion": "ficha.roble",
             "ficha.medidas": [
-                "60/80/90/100/120/150 cm de ancho",
-                "72cm de altura"
+                "60/80/90/100/120/150 cm",
+                "72 cm"
             ]
         },
         "thumbnail": "thumbnails/espejos/CON080M.webp",
@@ -29,9 +29,9 @@
         },
         "ficha": {
             "ficha.coleccion": "Orbital",
-            "ficha.terminacion": "Azul Intenso mate",
+            "ficha.terminacion": "ficha.azul_intenso",
             "ficha.medidas": [
-                "60cm y 80cm de diámetro"
+                "60 cm / 80 cm"
             ]
         },
         "thumbnail": "thumbnails/espejos/ORB060M.webp",
@@ -49,10 +49,10 @@
         },
         "ficha": {
             "ficha.coleccion": "Pill",
-            "ficha.terminacion": "Greige mate",
+            "ficha.terminacion": "ficha.greige",
             "ficha.medidas": [
-                "40cm de ancho",
-                "100cm de altura"
+                "40 cm",
+                "100 cm"
             ]
         },
         "thumbnail": "thumbnails/espejos/PIL040M.webp",
@@ -70,10 +70,10 @@
         },
         "ficha": {
             "ficha.coleccion": "Tendence",
-            "ficha.terminacion": "Verde Suculenta mate",
+            "ficha.terminacion": "ficha.verde_suculenta",
             "ficha.medidas": [
-                "50cm de ancho",
-                "100cm de altura"
+                "50 cm",
+                "100 cm"
             ]
         },
         "thumbnail": "thumbnails/espejos/TEN050M.webp",
@@ -91,10 +91,10 @@
         },
         "ficha": {
             "ficha.coleccion": "Gap",
-            "ficha.terminacion": "Gris grafito mate",
+            "ficha.terminacion": "ficha.gris_grafito",
             "ficha.medidas": [
-                "40cm y 60cm de ancho",
-                "80cm de altura"
+                "40 cm / 60 cm",
+                "80 cm"
             ]
         },
         "thumbnail": "thumbnails/espejos/GAP060M.webp",

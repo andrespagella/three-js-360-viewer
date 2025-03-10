@@ -7,11 +7,11 @@
         },
         "ficha": {
             "ficha.material": "EPS",
-            "ficha.terminacion": "Simil madera (claro)",
+            "ficha.terminacion": "ficha.simil_madera_claro",
             "ficha.medidas": [
-                "12.2 cm de ancho",
-                "1.2 cm de grosor",
-                "2.75 mts de alto"
+                "12.2 cm",
+                "1.2 cm",
+                "2.75 mts"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP301-259T.webp",
@@ -29,11 +29,11 @@
         },
         "ficha": {
             "ficha.material": "EPS",
-            "ficha.terminacion": "Simil madera (oscuro)",
+            "ficha.terminacion": "ficha.simil_madera_oscuro",
             "ficha.medidas": [
-                "12.2 cm de ancho",
-                "1.2 cm de grosor",
-                "2.75 mts de alto"
+                "12.2 cm",
+                "1.2 cm",
+                "2.75 mts"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/EWP302-260T.webp",
@@ -51,11 +51,11 @@
         },
         "ficha": {
             "ficha.material": "SPC",
-            "ficha.terminacion": "Marmol",
-            "ficha.forma": "Rectangular",
+            "ficha.terminacion": "ficha.marmol",
+            "ficha.forma": "ficha.rectangular",
             "ficha.medidas": [
-                "1200 mm (ancho)",
-                "2600 mm (alto)"
+                "1200 mm",
+                "2600 mm"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC468.webp",
@@ -73,11 +73,11 @@
         },
         "ficha": {
             "ficha.material": "SPC",
-            "ficha.terminacion": "Piedra",
-            "ficha.forma": "Rectangular",
+            "ficha.terminacion": "ficha.piedra",
+            "ficha.forma": "ficha.rectangular",
             "ficha.medidas": [
-                "1200 mm (ancho)",
-                "2600 mm (alto)"
+                "1200 mm",
+                "2600 mm"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC462.webp",
@@ -95,11 +95,11 @@
         },
         "ficha": {
             "ficha.material": "SPC",
-            "ficha.terminacion": "Piedra",
-            "ficha.forma": "Rectangular",
+            "ficha.terminacion": "ficha.piedra",
+            "ficha.forma": "ficha.rectangular",
             "ficha.medidas": [
-                "1200 mm (ancho)",
-                "2600 mm (alto)"
+                "1200 mm",
+                "2600 mm"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC456.webp",
@@ -117,11 +117,11 @@
         },
         "ficha": {
             "ficha.material": "SPC",
-            "ficha.terminacion": "Marmol",
-            "ficha.forma": "Rectangular",
+            "ficha.terminacion": "ficha.marmol",
+            "ficha.forma": "ficha.rectangular",
             "ficha.medidas": [
-                "1200 mm (ancho)",
-                "2600 mm (alto)"
+                "1200 mm",
+                "2600 mm"
             ]
         },
         "thumbnail": "thumbnails/wallpanels-spc/SPC452.webp",

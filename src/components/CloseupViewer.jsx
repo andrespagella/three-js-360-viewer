@@ -229,6 +229,11 @@ const CloseupViewer = ({ closeup, onClose }) => {
                   // Obtener la clave de traducción
                   const translationKey = key;
                   
+                  // Verificar si el valor comienza con "ficha." para usar traducción
+                  const finalDisplayValue = typeof displayValue === 'string' && displayValue.startsWith('ficha.') 
+                    ? t(displayValue, displayValue.substring(6)) // Eliminar "ficha." del inicio para mostrar como fallback
+                    : displayValue;
+                  
                   return (
                     <tr key={key} style={{ borderBottom: `1px solid black` }}>
                       <td 
@@ -241,7 +246,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
                         className="py-2 px-3 border border-black align-top text-sm" 
                         style={{ color: theme.text.secondary }}
                       >
-                        {displayValue}
+                        {finalDisplayValue}
                       </td>
                     </tr>
                   );

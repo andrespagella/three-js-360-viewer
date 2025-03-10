@@ -7,7 +7,7 @@
             "pt": "Design clássico de gavetas, ideal para quem busca grande capacidade de armazenamento. Disponível em versões de 2 ou 4 gavetas, com corrediças Soft Close e cobre ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "ficha.terminacion": "Roble Natural",
+            "ficha.terminacion": "ficha.roble",
             "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
@@ -31,7 +31,7 @@
             "pt": "Design com laterais biseladas a 45° que geram uma união contínua e uma estética diferenciada. Inclui uma gaveta principal com uma gaveta oculta em seu interior, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "ficha.terminacion": "Gris grafito mate",
+            "ficha.terminacion": "ficha.gris_grafito",
             "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
@@ -51,7 +51,7 @@
             "pt": "Design com frente ripada, uma das últimas tendências em decoração. Com uma gaveta principal e uma pequena oculta, ambas com corrediças soft close e cobertura para ralo. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "ficha.terminacion": "Verde Suculenta mate",
+            "ficha.terminacion": "ficha.verde_suculenta",
             "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
@@ -71,7 +71,7 @@
             "pt": "Design compacto que se destaca por seu perfil em aço inoxidável, um detalhe disruptivo que não passa despercebido. Possui uma gaveta ampla com corrediças Soft Close. A bancada e cuba são feitas 100% de Orastone, nossa superfície inovadora, durável, não porosa e fácil de limpar. Totalmente personalizável tanto em design quanto em cor."
         },
         "ficha": {
-            "ficha.terminacion": "Greige mate",
+            "ficha.terminacion": "ficha.greige",
             "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
@@ -91,7 +91,7 @@
             "pt": "Design clássico de portas com múltiplas funções, que inclui prateleiras internas ajustáveis pelo usuário e dobradiças Soft Close. Bancada e cuba em Orastone, material fácil de manter, limpar e reparar."
         },
         "ficha": {
-            "ficha.terminacion": "Azul Intenso mate\nc/ molduras",
+            "ficha.terminacion": "ficha.azul_intenso",
             "ficha.medidas": [
                 "60 cm, 80 cm, 90 cm, 100 cm, 120 cm, 150 cm"
             ],
