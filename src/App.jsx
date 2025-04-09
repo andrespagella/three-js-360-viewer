@@ -17,7 +17,6 @@ import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 import useIdleTimer from "./hooks/useIdleTimer";
-import { ConversationalAgentProvider, useConversationalAgent } from "./context/ConversationalAgentContext";
 import config from "./utils/config";
 import { useTranslation } from "react-i18next";
 
@@ -28,7 +27,6 @@ const AppContent = () => {
   const [language, setLanguage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { theme } = useTheme();
-  const { deactivateAgent } = useConversationalAgent();
   
   // Referencia para rastrear si el formulario ya ha sido enviado
   const formSubmittedRef = useRef(false);
@@ -117,13 +115,6 @@ const AppContent = () => {
 
     loadAllAssets();
   }, []);
-
-  // Efecto para desactivar el agente conversacional cuando se active el screensaver
-  useEffect(() => {
-    if (isIdle) {
-      deactivateAgent();
-    }
-  }, [isIdle, deactivateAgent]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -564,9 +555,7 @@ const AppContent = () => {
 // Componente principal que proporciona el contexto
 function App() {
   return (
-    <ConversationalAgentProvider>
-      <AppContent />
-    </ConversationalAgentProvider>
+    <AppContent />
   );
 }
 
