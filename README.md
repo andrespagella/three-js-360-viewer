@@ -1,12 +1,55 @@
-# React + Vite
+# Atrim 3D Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de visualización 3D basada en React, Three.js y Vite.
 
-Currently, two official plugins are available:
+## Requisitos previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (versión recomendada: 18.x o superior)
+- npm (incluido con Node.js)
 
+## Instalación
 
-# Para correr
-npm run dev
+```bash
+# Clonar el repositorio (si aplica)
+git clone <url-del-repositorio>
+cd Atrim3DShowcase
+
+# Instalar dependencias
+npm install
+```
+
+## Scripts disponibles
+
+- **Desarrollo**: Inicia un servidor de desarrollo local con hot-reload
+  ```bash
+  npm run dev
+  ```
+
+- **Construcción**: Genera archivos optimizados para producción en la carpeta `dist`
+  ```bash
+  npm run build
+  ```
+
+- **Generación de imágenes para móvil**: Crea versiones optimizadas de las imágenes para dispositivos móviles
+  ```bash
+  npm run generate-mobile-images
+  ```
+
+## Configuración HTTPS
+
+El proyecto está configurado para usar HTTPS durante el desarrollo. Se requieren certificados en la carpeta `certs/`. Para modificar esta configuración, edita el archivo `vite.config.js`.
+
+## Parámetros de URL
+
+- **slow=true**: Fuerza el uso de imágenes optimizadas para móviles en cualquier dispositivo, útil para conexiones lentas.
+  ```
+  https://ejemplo.com/?slow=true
+  ```
+
+## Optimización para dispositivos móviles
+
+Este proyecto incluye una solución automática para optimizar imágenes en dispositivos móviles:
+
+1. Las imágenes se reducen al 50% en tamaño y calidad para dispositivos móviles
+2. La detección de dispositivos es automática (iPad, iPhone, Android)
+3. Ver `MOBILE_IMAGES_README.md` para más información
