@@ -46,6 +46,22 @@ El proyecto está configurado para usar HTTPS durante el desarrollo. Se requiere
   https://ejemplo.com/?slow=true
   ```
 
+- **bigscreen=true**: Activa el modo pantalla completa cuando se selecciona un idioma.
+  ```
+  https://ejemplo.com/?bigscreen=true
+  ```
+
+- **lang=es|pt**: Establece el idioma directamente sin mostrar el selector de idiomas. Valores aceptados: 'es' (español) o 'pt' (portugués). Cualquier otro valor cargará por defecto el idioma español.
+  ```
+  https://ejemplo.com/?lang=es
+  https://ejemplo.com/?lang=pt
+  ```
+
+- Los parámetros pueden combinarse:
+  ```
+  https://ejemplo.com/?lang=pt&bigscreen=true
+  ```
+
 ## Optimización para dispositivos móviles
 
 Este proyecto incluye una solución automática para optimizar imágenes en dispositivos móviles:

@@ -19,6 +19,7 @@ import { processMobileCollection } from "./utils/imageUtils";
 import useIdleTimer from "./hooks/useIdleTimer";
 import config from "./utils/config";
 import { useTranslation } from "react-i18next";
+import i18n from "./i18n";
 
 // Componente interno que usa el contexto del agente conversacional
 const AppContent = () => {
@@ -39,6 +40,22 @@ const AppContent = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const bigscreen = urlParams.get('bigscreen');
     setIsBigScreen(bigscreen === 'true');
+    
+    // Check for 'lang' parameter in URL
+    const langParam = urlParams.get('lang');
+    if (langParam) {
+      // If the language is 'es' or 'pt', set it directly
+      if (langParam === 'es' || langParam === 'pt') {
+        console.log(`Setting language from URL parameter: ${langParam}`);
+        i18n.changeLanguage(langParam);
+        setLanguage(langParam);
+      } else {
+        // If language is not valid, default to Spanish
+        console.log(`Invalid language parameter: ${langParam}, defaulting to 'es'`);
+        i18n.changeLanguage('es');
+        setLanguage('es');
+      }
+    }
     
     // Nota: El parámetro bigscreen=true controla si la aplicación se inicia en modo pantalla completa
     // cuando el usuario selecciona un idioma en la pantalla inicial.
@@ -389,6 +406,7 @@ const AppContent = () => {
 
   // After loading, show the language selector if language is not selected
   if (!language) {
+    // If URL has no language parameter, show language selector
     return <LanguageSelector onSelectLanguage={handleSelectLanguage} />;
   }
 
