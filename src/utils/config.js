@@ -19,9 +19,6 @@ const config = {
     { urls: 'stun:stun1.l.google.com:19302' }
   ],
   
-  // Tiempo de inactividad para el screensaver (en milisegundos)
-  idleTimeout: 120000, // 2 minutos exactos
-  
   // Tiempo de espera antes de iniciar automáticamente el agente conversacional (en milisegundos)
   agentAutoStartDelay: 1000, // 1 segundo
 

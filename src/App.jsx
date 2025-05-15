@@ -5,21 +5,18 @@ import CloseupViewer from "./components/CloseupViewer";
 import ProductPanel from "./components/ProductPanel";
 import LanguageSelector from "./components/LanguageSelector";
 import PreloadingScreen from "./components/PreloadingScreen";
-import Screensaver from "./components/Screensaver";
-import ContactFormOverlay from "./components/ContactFormOverlay";
-import ambientes from "./data/ambientes.json";
-import pinsData from "./data/pins.json";
-import getAmbientFilePaths from './utils/getAmbientFilePaths';
-import preloadAllImages from './utils/preloadImages';
-import preloadVideo from './utils/preloadVideo';
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
-import useIdleTimer from "./hooks/useIdleTimer";
 import config from "./utils/config";
 import { useTranslation } from "react-i18next";
 import i18n from "./i18n";
+import ambientes from "./data/ambientes.json";
+import pinsData from "./data/pins.json";
+import getAmbientFilePaths from './utils/getAmbientFilePaths';
+import preloadAllImages from './utils/preloadImages';
+import ContactFormOverlay from "./components/ContactFormOverlay";
 
 // Componente interno que usa el contexto del agente conversacional
 const AppContent = () => {
@@ -65,9 +62,6 @@ const AppContent = () => {
     // Esta lógica se maneja en src/utils/imageUtils.js
   }, []);
 
-  // Screensaver state
-  const { isIdle, resetIdleState } = useIdleTimer(config.idleTimeout); // Usar el tiempo de inactividad desde config
-
   const [currentView, setCurrentView] = useState(ambientes[0]);
   const [closeup, setCloseup] = useState(null);
   const [zooming, setZooming] = useState(false);
@@ -98,14 +92,6 @@ const AppContent = () => {
   // Nuevo estado para almacenar los datos del formulario
   const [pendingFormData, setPendingFormData] = useState(null);
 
-  // Efecto para reiniciar la referencia de formulario enviado cuando el usuario vuelve a estar activo
-  useEffect(() => {
-    if (!isIdle && formSubmittedRef.current) {
-      console.log('Usuario activo de nuevo, reiniciando referencia de formulario enviado');
-      formSubmittedRef.current = false;
-    }
-  }, [isIdle]);
-
   // Preload all images when the component mounts
   useEffect(() => {
     const loadAllAssets = async () => {
@@ -115,11 +101,6 @@ const AppContent = () => {
         
         // Precargar imágenes siempre
         await preloadAllImages();
-        
-        // Precargar el video del screensaver solo en dispositivos no móviles
-        if (!isMobileDevice) {
-          await preloadVideo('https://atrim3dshowcase-storage.s3.us-east-1.amazonaws.com/video-back_2880x2160.webm');
-        }
         
         setIsLoading(false);
       } catch (error) {
@@ -386,24 +367,6 @@ const AppContent = () => {
     return <PreloadingScreen />;
   }
 
-  // Show screensaver if user is idle and language is selected (only on desktop)
-  if (isIdle && language && !isMobile) {
-    // Enviar los datos del formulario si existen y no han sido enviados aún
-    if (pendingFormData && !formSubmittedRef.current) {
-      console.log('Activando envío de formulario desde screensaver');
-      submitFormData();
-    }
-    
-    return (
-      <Screensaver 
-        onClose={() => {
-          // Cambiar la parte de resetIdleState() a reload
-          window.location.reload();
-        }}
-      />
-    );
-  }
-
   // After loading, show the language selector if language is not selected
   if (!language) {
     // If URL has no language parameter, show language selector
@@ -419,11 +382,6 @@ const AppContent = () => {
         height: "100vh",
         overflow: "hidden",
         backgroundColor: theme.bgPrimary,
-      }}
-      onClick={() => {
-        if (isIdle) {
-          resetIdleState();
-        }
       }}
     >
       {!language ? (
