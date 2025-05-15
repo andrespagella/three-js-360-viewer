@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
@@ -91,6 +91,23 @@ const AppContent = () => {
 
   // Nuevo estado para almacenar los datos del formulario
   const [pendingFormData, setPendingFormData] = useState(null);
+
+  // Agregar un evento para enviar el formulario cuando el usuario abandone la página
+  useEffect(() => {
+    // Solo configurar el listener si hay datos pendientes
+    if (pendingFormData && !formSubmittedRef.current) {
+      const handleBeforeUnload = () => {
+        // Intenta enviar los datos del formulario antes de que la página se cierre
+        submitFormData();
+      };
+      
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }
+  }, [pendingFormData, submitFormData]);
 
   // Preload all images when the component mounts
   useEffect(() => {
@@ -261,7 +278,7 @@ const AppContent = () => {
   };
 
   // Función para enviar los datos del formulario al servidor
-  const submitFormData = async () => {
+  const submitFormData = useCallback(async () => {
     // Si no hay datos pendientes o el formulario ya ha sido enviado, salir
     if (!pendingFormData || formSubmittedRef.current) return;
     
@@ -360,7 +377,7 @@ const AppContent = () => {
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
     }
-  };
+  }, [pendingFormData, selectedItems, language, formSubmittedRef]);
 
   // Show the preloading screen while images are loading
   if (isLoading) {
