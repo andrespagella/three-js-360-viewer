@@ -92,6 +92,108 @@ const AppContent = () => {
   // Nuevo estado para almacenar los datos del formulario
   const [pendingFormData, setPendingFormData] = useState(null);
 
+  // Función para enviar los datos del formulario al servidor
+  const submitFormData = useCallback(async () => {
+    // Si no hay datos pendientes o el formulario ya ha sido enviado, salir
+    if (!pendingFormData || formSubmittedRef.current) return;
+    
+    // Marcar el formulario como enviado para evitar envíos duplicados
+    formSubmittedRef.current = true;
+    
+    try {
+      console.log('Enviando datos del formulario al servidor:', pendingFormData);
+      console.log('Estado actual de selectedItems:', selectedItems);
+      
+      // Verificar si pendingFormData tiene las selecciones completas
+      const hasCompleteSelections = pendingFormData.selectedItems && 
+        Object.keys(pendingFormData.selectedItems).length === Object.keys(selectedItems).length;
+      
+      console.log('¿Tiene selecciones completas?', hasCompleteSelections);
+      
+      // Si no tiene selecciones completas, necesitamos reconstruir los SKUs
+      let updatedProducts = pendingFormData.products;
+      
+      if (!hasCompleteSelections) {
+        console.log('Reconstruyendo lista de productos con selecciones actualizadas');
+        
+        // Recopilar los SKUs de los productos seleccionados actuales
+        const currentSelectedSkus = [];
+        
+        try {
+          // Recorrer todas las colecciones con productos seleccionados
+          for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
+            // Solo procesar si hay un producto seleccionado (índice diferente de 0)
+            if (selectedIndex !== 0) {
+              try {
+                // Cargar dinámicamente la colección
+                const module = await import(`./data/collections/${collection}.json`);
+                const products = module.default;
+                
+                // Verificar si el índice seleccionado es válido
+                if (products && products.length > selectedIndex) {
+                  const product = products[selectedIndex];
+                  if (product && product.SKU) {
+                    currentSelectedSkus.push(product.SKU);
+                  }
+                }
+              } catch (error) {
+                console.error(`Error al cargar la colección ${collection}:`, error);
+              }
+            }
+          }
+          
+          console.log('SKUs actualizados de productos seleccionados:', currentSelectedSkus.join(', '));
+          
+          // Actualizar el string de productos
+          if (currentSelectedSkus.length > 0) {
+            updatedProducts = currentSelectedSkus.join(', ');
+          } else {
+            updatedProducts = 'Ninguno';
+          }
+        } catch (error) {
+          console.error('Error al procesar los SKUs actualizados:', error);
+        }
+      }
+      
+      // Asegurarse de que tenemos la información más actualizada de las selecciones
+      const updatedFormData = {
+        ...pendingFormData,
+        // Si pendingFormData ya tiene todas las selecciones, usarlas
+        // De lo contrario, usar el estado actual de selectedItems
+        selectedItems: hasCompleteSelections ? pendingFormData.selectedItems : selectedItems,
+        // Actualizar el string de productos si es necesario
+        products: updatedProducts,
+        // Añadir el idioma seleccionado por el usuario
+        language: language
+      };
+      
+      console.log('Datos actualizados para enviar:', updatedFormData);
+      
+      // Enviar el formulario con los productos seleccionados
+      const response = await fetch(config.formServerUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': config.apiKey
+        },
+        body: JSON.stringify(updatedFormData),
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('Respuesta del servidor:', data);
+      
+      // Limpiar los datos del formulario después de enviarlos
+      setPendingFormData(null);
+      
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    }
+  }, [pendingFormData, selectedItems, language, formSubmittedRef]);
+
   // Agregar un evento para enviar el formulario cuando el usuario abandone la página
   useEffect(() => {
     // Solo configurar el listener si hay datos pendientes
@@ -276,108 +378,6 @@ const AppContent = () => {
     // Cerrar el formulario después de guardar los datos
     setShowContactForm(false);
   };
-
-  // Función para enviar los datos del formulario al servidor
-  const submitFormData = useCallback(async () => {
-    // Si no hay datos pendientes o el formulario ya ha sido enviado, salir
-    if (!pendingFormData || formSubmittedRef.current) return;
-    
-    // Marcar el formulario como enviado para evitar envíos duplicados
-    formSubmittedRef.current = true;
-    
-    try {
-      console.log('Enviando datos del formulario al servidor:', pendingFormData);
-      console.log('Estado actual de selectedItems:', selectedItems);
-      
-      // Verificar si pendingFormData tiene las selecciones completas
-      const hasCompleteSelections = pendingFormData.selectedItems && 
-        Object.keys(pendingFormData.selectedItems).length === Object.keys(selectedItems).length;
-      
-      console.log('¿Tiene selecciones completas?', hasCompleteSelections);
-      
-      // Si no tiene selecciones completas, necesitamos reconstruir los SKUs
-      let updatedProducts = pendingFormData.products;
-      
-      if (!hasCompleteSelections) {
-        console.log('Reconstruyendo lista de productos con selecciones actualizadas');
-        
-        // Recopilar los SKUs de los productos seleccionados actuales
-        const currentSelectedSkus = [];
-        
-        try {
-          // Recorrer todas las colecciones con productos seleccionados
-          for (const [collection, selectedIndex] of Object.entries(selectedItems)) {
-            // Solo procesar si hay un producto seleccionado (índice diferente de 0)
-            if (selectedIndex !== 0) {
-              try {
-                // Cargar dinámicamente la colección
-                const module = await import(`./data/collections/${collection}.json`);
-                const products = module.default;
-                
-                // Verificar si el índice seleccionado es válido
-                if (products && products.length > selectedIndex) {
-                  const product = products[selectedIndex];
-                  if (product && product.SKU) {
-                    currentSelectedSkus.push(product.SKU);
-                  }
-                }
-              } catch (error) {
-                console.error(`Error al cargar la colección ${collection}:`, error);
-              }
-            }
-          }
-          
-          console.log('SKUs actualizados de productos seleccionados:', currentSelectedSkus.join(', '));
-          
-          // Actualizar el string de productos
-          if (currentSelectedSkus.length > 0) {
-            updatedProducts = currentSelectedSkus.join(', ');
-          } else {
-            updatedProducts = 'Ninguno';
-          }
-        } catch (error) {
-          console.error('Error al procesar los SKUs actualizados:', error);
-        }
-      }
-      
-      // Asegurarse de que tenemos la información más actualizada de las selecciones
-      const updatedFormData = {
-        ...pendingFormData,
-        // Si pendingFormData ya tiene todas las selecciones, usarlas
-        // De lo contrario, usar el estado actual de selectedItems
-        selectedItems: hasCompleteSelections ? pendingFormData.selectedItems : selectedItems,
-        // Actualizar el string de productos si es necesario
-        products: updatedProducts,
-        // Añadir el idioma seleccionado por el usuario
-        language: language
-      };
-      
-      console.log('Datos actualizados para enviar:', updatedFormData);
-      
-      // Enviar el formulario con los productos seleccionados
-      const response = await fetch(config.formServerUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': config.apiKey
-        },
-        body: JSON.stringify(updatedFormData),
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      console.log('Respuesta del servidor:', data);
-      
-      // Limpiar los datos del formulario después de enviarlos
-      setPendingFormData(null);
-      
-    } catch (error) {
-      console.error('Error al enviar el formulario:', error);
-    }
-  }, [pendingFormData, selectedItems, language, formSubmittedRef]);
 
   // Show the preloading screen while images are loading
   if (isLoading) {
