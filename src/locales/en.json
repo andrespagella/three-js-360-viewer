@@ -1,0 +1,216 @@
+{
+  "languageSelector": {
+    "welcome": "Welcome to Atrim 3D Showcase",
+    "select": "Select a language to continue",
+    "spanish": "Español",
+    "portuguese": "Português",
+    "english": "English"
+  },
+  "sidebar": {
+    "products": "Products",
+    "contact": "Contact",
+    "style": "Style",
+    "ambients": "Environments"
+  },
+  "buttons": {
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "close": "CLOSE"
+  },
+  "forms": {
+    "title": "Don't lose your design!",
+    "subtitle": "Just complete your information and turn your design into reality.",
+    "name": "First and last name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "message": "Message",
+    "required": "Required field"
+  },
+  "instructions": {
+    "videoFallback": "Your browser does not support HTML5 videos.",
+    "dragToLook": "Press and slide your finger to look around"
+  },
+  "collections": {
+    "title": "Collections",
+    "description": "Explore our collections",
+    "loading": "Loading products..."
+  },
+  "product": {
+    "details": "Product details",
+    "material": "Material",
+    "finish": "Finish",
+    "dimensions": "Dimensions",
+    "weight": "Weight",
+    "shape": "Shape",
+    "installation": "Installation",
+    "noInfo": "No information available."
+  },
+  "pins": {
+    "towelRacks": "Towel Racks",
+    "toilet": "Toilet",
+    "drains": "Patio Drain",
+    "baseboards": "Baseboards",
+    "cabinets": "Cabinets",
+    "wallPanels": "Wall Panels & SPC",
+    "mirrors": "Mirrors",
+    "vanities": "Vanities",
+    "floorProfiles": "Floor Profiles",
+    "bathtubs": "Bathtub",
+    "wallProfiles": "Wall Profiles",
+    "showerDrains": "Shower Drains",
+    "shelves": "Shelves"
+  },
+  "products": {
+    "baneras": {
+      "Bañera Ocean Boreal": "Ocean Boreal Bathtub"
+    },
+    "inodoros": {
+      "Inodoro Inteligente PuraSense": "PuraSense Smart Toilet"
+    },
+    "rejillas": {
+      "Rejilla para pileta de patio": "Patio drain grate"
+    },
+    "cabinets": {
+      "cabinet madrid": "Madrid cabinet",
+      "cabinet varenna": "Varenna cabinet",
+      "cabinet ravello": "Ravello cabinet"
+    },
+    "desagues": {
+      "Desagüe Lineal Narrow Clásico Mate Esmerilado": "Classic Narrow Linear Drain Frosted Matte",
+      "Desagüe Lineal Clásico Negro Mate 2 en 1": "Classic Linear Drain Matte Black 2 in 1",
+      "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado": "Classic Linear Drain Frosted Matte 2 in 1",
+      "Desagüe Lineal Eme Mate Esmerilado": "Eme Linear Drain Frosted Matte",
+      "Desagüe Lineal Inca Mate Esmerilado": "Inca Linear Drain Frosted Matte",
+      "Desagüe Cuadrado 2 en 1 Brillante": "Square Drain 2 in 1 Glossy",
+      "Desagüe Lineal Grid Mate Esmerilado": "Grid Linear Drain Frosted Matte",
+      "Desagüe Diagonal Mate Esmerilado": "Diagonal Drain Frosted Matte"
+    },
+    "espejos": {
+      "Espejo LED Contour": "Contour LED Mirror",
+      "Espejo Led Orbital laqueado": "Orbital LED Mirror Lacquered",
+      "Espejo LED Pill Laqueado": "Pill LED Mirror Lacquered",
+      "Espejo LED Tendence Laqueado": "Tendence LED Mirror Lacquered",
+      "Espejo LED Gap Laqueado": "Gap LED Mirror Lacquered"
+    },
+    "estantes": {
+      "Estante Esquinero Triangular Cuadrado Esmerilado": "Square Triangular Corner Shelf Frosted",
+      "Estante Rectangular Linea Esmerilado": "Rectangular Line Shelf Frosted",
+      "Estante Esquinero Triangular Abstracto Blanco Mate": "Abstract Triangular Corner Shelf Matte White",
+      "Estante Esquinero Triangular Abstracto Negro Mate": "Abstract Triangular Corner Shelf Matte Black",
+      "Estante Rectangular Linea Negro Mate": "Rectangular Line Shelf Matte Black",
+      "Estante Rectangular Cuadrado Negro Mate": "Rectangular Square Shelf Matte Black"
+    },
+    "toalleros": {
+      "Toallero Eléctrico Coco Smart Brillante": "Coco Smart Electric Towel Warmer Glossy",
+      "Toallero Eléctrico Cubic Petit Brillante": "Cubic Petit Electric Towel Warmer Glossy",
+      "Toallero Eléctrico Coco Petit Negro Mate": "Coco Petit Electric Towel Warmer Matte Black",
+      "Toallero Eléctrico Coco Petit Oro Mate": "Coco Petit Electric Towel Warmer Matte Gold",
+      "Toallero Eléctrico Coco Flow Oro Mate": "Coco Flow Electric Towel Warmer Matte Gold",
+      "Toallero Eléctrico Coco Flow Negro Mate": "Coco Flow Electric Towel Warmer Matte Black",
+      "Toallero Eléctrico Cubic Flow Brillante": "Cubic Flow Electric Towel Warmer Glossy"
+    },
+    "perfiles_piso": {
+      "Terminación Cuadrada 1810": "Square Termination 1810",
+      "Varilla en L 1674": "L-Rod 1674",
+      "Terminación Cuadrada 1403ESM": "Square Termination 1403ESM",
+      "Terminación Cuadrada 1402ESM": "Square Termination 1402ESM",
+      "Terminación Cuadrada 1401ESM": "Square Termination 1401ESM"
+    },
+    "perfiles_pared": {
+      "Terminación Cuadrada 1401ESM": "Square Termination 1401ESM",
+      "Guardacanto Quadra 3421": "Quadra Edge Guard 3421",
+      "Guardacanto Quadra 3422": "Quadra Edge Guard 3422",
+      "Guardacanto Quadra 3425B": "Quadra Edge Guard 3425B",
+      "Guardacanto Quadra 3428TXA": "Quadra Edge Guard 3428TXA"
+    },
+    "vanitories": {
+      "Vanitory Modelo Bellagio": "Bellagio Model Vanity",
+      "Vanitory Modelo Varenna": "Varenna Model Vanity",
+      "Vanitory Modelo Viterbo": "Viterbo Model Vanity",
+      "Vanitory Modelo Ravello": "Ravello Model Vanity",
+      "Vanitory Modelo Taormina": "Taormina Model Vanity"
+    },
+    "wallpanels": {
+      "Wall Panel / Revestimientos de paredes EPS": "Wall Panel / EPS Wall Coverings",
+      "Revestimientos de paredes SPC": "SPC Wall Coverings"
+    },
+    "zocalos": {
+      "Zócalo Slim": "Slim Baseboard",
+      "Zócalo Orbit": "Orbit Baseboard",
+      "Zócalo Extra Line Cemento": "Extra Line Cement Baseboard",
+      "Zócalo Extra Line Plata": "Extra Line Silver Baseboard",
+      "Zócalo Maxi Line": "Maxi Line Baseboard"
+    }
+  },
+  "ficha": {
+    "material": "Material",
+    "terminacion": "Finish",
+    "medidas": "Measurements",
+    "peso": "Weight",
+    "forma": "Shape",
+    "instalacion": "Installation",
+    "coleccion": "Collection",
+    "potencia": "Power",
+    "componentes": "Components",
+    "color": "Color",
+    "materiales": "Materials",
+    "bacha": "Basin",
+    "herrajes": "Hardware",
+    "bisagras": "Hinges",
+    "garantia": "Warranty",
+    "boton_banera": "Orastone pop-up button. Drain with anti-odor return siphon and home repair kit included.",
+    "blanco": "White",
+    "estantes_movibles": "Movable shelves inside. Mounting system included.",
+    "roble": "Natural Oak",
+    "gris_grafito": "Matte Graphite Gray",
+    "greige": "Matte Greige",
+    "verde_suculenta": "Matte Succulent Green",
+    "azul_intenso": "Matte Intense Blue",
+    "esmerilado": "Frosted",
+    "negro_mate": "Matte Black",
+    "blanco_mate": "Matte White",
+    "oro_mate": "Matte Gold",
+    "olivo": "Olive",
+    "arena": "Sand",
+    "brillante": "Glossy",
+    "mate": "Matte",
+    "acero": "Stainless Steel AISI 304",
+    "acero_cepillado": "Brushed Steel",
+    "acero_mate": "Matte Steel",
+    "titanio": "Frosted Titanium",
+    "aluminio": "Aluminum",
+    "aluminio_pintado": "Painted Aluminum",
+    "cromo": "Chrome",
+    "cromo_brillante": "Glossy Chrome",
+    "carbon": "Carbon",
+    "cemento": "Cement",
+    "gris_plata": "Silver Gray",
+    "porcelana": "Sanitary porcelain",
+    "un_ano": "1 year",
+    "estante_base": "30 cm (base)",
+    "estante_altura": "150 cm (height)",
+    "estante_profundidad": "30 cm (depth)",
+    "lineal": "Linear",
+    "rectangular": "Rectangular",
+    "cuadrada": "Square",
+    "triangular": "Triangular",
+    "varilla_l": "L-Rod",
+    "con_tornillos": "With screws",
+    "solo_paredes": "Walls only",
+    "diseno_vertical_angosto": "Narrow vertical design",
+    "diseno_curvo": "Curved design",
+    "diseno_lineas_recta": "Straight line design",
+    "simil_madera_claro": "Wood-like (light)",
+    "simil_madera_oscuro": "Wood-like (dark)",
+    "marmol": "Marble",
+    "piedra": "Stone",
+    "pintable": "Paintable",
+    "eps": "EPS (expanded polystyrene)"
+  },
+  "ambientes": {
+    "bathroom": "Bathroom",
+    "shower": "Shower"
+  }
+} 

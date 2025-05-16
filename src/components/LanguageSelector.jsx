@@ -20,9 +20,17 @@ const LanguageSelector = ({ onSelectLanguage }) => {
       setFadeState("fade-out");
       
       setTimeout(() => {
-        setTitleLanguage(prev => prev === "es" ? "pt" : "es");
-        // Cambiar el idioma de i18n para la animación
-        i18n.changeLanguage(titleLanguage === "es" ? "pt" : "es");
+        // Rotate between three languages
+        setTitleLanguage(prev => {
+          if (prev === "es") return "pt";
+          if (prev === "pt") return "en";
+          return "es";
+        });
+        // Change i18n language for the animation
+        i18n.changeLanguage(
+          titleLanguage === "es" ? "pt" : 
+          titleLanguage === "pt" ? "en" : "es"
+        );
         setFadeState("fade-in");
       }, 1000); // Wait for fade-out to complete
     }, 4000); // Change language every 4 seconds
@@ -92,10 +100,13 @@ const LanguageSelector = ({ onSelectLanguage }) => {
         </button>
 
         
-        {/* <button onClick={() => handleLanguageSelect("en")} className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out">
+        {/* ENGLISH */}
+        <button onClick={() => handleLanguageSelect("en")} 
+          className="group flex flex-col items-center p-4 rounded-lg hover:bg-opacity-100 transition-all hover:scale-110 transform transition-transform duration-300 ease-in-out"
+        >
           <img src="/icons/en.png" alt="English" className="w-12 h-12 mb-2" />
-          <span className="text-sm group-hover:font-bold transition-all">English</span>
-        </button> */}
+          <span className="text-sm group-hover:font-bold transition-all">{t('languageSelector.english')}</span>
+        </button>
       </div>
     </div>
   );
