@@ -41,8 +41,8 @@ const AppContent = () => {
     // Check for 'lang' parameter in URL
     const langParam = urlParams.get('lang');
     if (langParam) {
-      // If the language is 'es' or 'pt', set it directly
-      if (langParam === 'es' || langParam === 'pt') {
+      // If the language is 'es', 'pt', or 'en', set it directly
+      if (langParam === 'es' || langParam === 'pt' || langParam === 'en') {
         console.log(`Setting language from URL parameter: ${langParam}`);
         i18n.changeLanguage(langParam);
         setLanguage(langParam);
