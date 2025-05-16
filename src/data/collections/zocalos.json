@@ -4,7 +4,8 @@
         "SKU": "2066",
         "descripcion": {
             "es": "El Zócalo Slim es una solución elegante y funcional para unir la pared y el piso, ideal para darle ese toque distintivo en todos tus proyectos. Es la elección perfecta para quienes buscan una combinación de estilo, funcionalidad y durabilidad. Su diseño ultra delgado proporciona una terminación moderna ahora pintado en color negro.",
-            "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta."
+            "pt": "O Rodapé Slim é uma solução elegante e funcional para unir a parede e o piso, ideal para dar aquele toque distintivo em todos os seus projetos. É a escolha perfeita para quem busca uma combinação de estilo, funcionalidade e durabilidade. Seu design ultra fino proporciona um acabamento moderno agora pintado na cor preta.",
+            "en": "The Slim Baseboard is an elegant and functional solution for joining wall and floor, ideal for giving that distinctive touch to all your projects. It is the perfect choice for those looking for a combination of style, functionality, and durability. Its ultra-thin design provides a modern finish now painted in black."
         },
         "ficha": {
             "ficha.material": "ficha.aluminio",
@@ -27,7 +28,8 @@
         "SKU": "2309",
         "descripcion": {
             "es": "Zócalo/Contramarco pintable de cara plana y canto redondeado. Fabricado en EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente pintura látex al agua interior.",
-            "pt": "Rodapé/Contramarco pintável de face plana e borda arredondada. Fabricado em EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente tinta látex à água para interiores."
+            "pt": "Rodapé/Contramarco pintável de face plana e borda arredondada. Fabricado em EPS (poliestireno expandido) de alto impacto. Aplicar exclusivamente tinta látex à água para interiores.",
+            "en": "Paintable flat-faced baseboard/frame with rounded edge. Made of high-impact EPS (expanded polystyrene). Apply exclusively water-based interior latex paint."
         },
         "ficha": {
             "ficha.material": "ficha.eps",
@@ -50,7 +52,8 @@
         "SKU": "2314",
         "descripcion": {
             "es": "Zócalo o rodapie de EPS (poliestireno expandido) de 100 mm de altura, de diseño vanguardista que destaca con personalidad los espacios. Variedad de colores en tendencia.",
-            "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
+            "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência.",
+            "en": "Baseboard made of EPS (expanded polystyrene) with a height of 100 mm, featuring an avant-garde design that highlights spaces with personality. Variety of trendy colors."
         },
         "ficha": {
             "ficha.material": "ficha.eps",
@@ -73,7 +76,8 @@
         "SKU": "2323",
         "descripcion": {
             "es": "Zócalo o rodapie de EPS (poliestireno expandido) de 100 mm de altura, de diseño vanguardista que destaca con personalidad los espacios. Variedad de colores en tendencia.",
-            "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência."
+            "pt": "Rodapé de EPS (poliestireno expandido) de 100 mm de altura, de design vanguardista que destaca com personalidade os espaços. Variedade de cores em tendência.",
+            "en": "Baseboard made of EPS (expanded polystyrene) with a height of 100 mm, featuring an avant-garde design that highlights spaces with personality. Variety of trendy colors."
         },
         "ficha": {
             "ficha.material": "ficha.eps",
@@ -96,7 +100,8 @@
         "SKU": "2356",
         "descripcion": {
             "es": "Zócalo o rodapié de cara plana y linea bajo relieve fabricado en poliestireno reciclado altamente resistente a los golpes y al agua.",
-            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água."
+            "pt": "Rodapé de face plana e linha em baixo relevo fabricado em poliestireno reciclado altamente resistente a impactos e água.",
+            "en": "Flat-faced baseboard with low relief line made of recycled polystyrene highly resistant to impacts and water."
         },
         "ficha": {
             "ficha.material": "ficha.eps",

@@ -4,7 +4,8 @@
         "SKU": "PR120T08",
         "descripcion": {
             "es": "Rejilla diseñada para facilitar la evacuación del agua, prevenir olores y evitar el acceso de grasas a las tuberías. Se instala en: baños, lavaderos y donde se requiera drenaje de agua.",
-            "pt": "Grelha projetada para facilitar a evacuação da água, prevenir odores e evitar o acesso de gorduras às tubulações. Instala-se em: banheiros, lavanderias e onde for necessária a drenagem de água."
+            "pt": "Grelha projetada para facilitar a evacuação da água, prevenir odores e evitar o acesso de gorduras às tubulações. Instala-se em: banheiros, lavanderias e onde for necessária a drenagem de água.",
+            "en": "Drain grate designed to facilitate water evacuation, prevent odors, and avoid grease access to pipes. Installed in: bathrooms, laundry areas, and wherever water drainage is required."
         },
         "ficha": {
             "ficha.material": "ficha.acero",

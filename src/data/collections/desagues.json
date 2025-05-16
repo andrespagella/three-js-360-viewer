@@ -3,7 +3,8 @@
         "producto": "Desagüe Lineal Narrow Clásico Mate Esmerilado",
         "descripcion": {
             "es": "Desagüe de ducha de acero inoxidable AISI 304 doble esmerilado. Diseño delgado, que reemplaza la rejilla tradicional y crea un plano único de continuidad en el piso de la ducha. Provisto de pies regulables en altura que se fijan al cuerpo del desagüe para una nivelación precisa y rápida. Con cesta para filtro de pelos que puede retirarse manualmente para su limpieza.",
-            "pt": "Ralo de chuveiro em aço inoxidável AISI 304 duplamente escovado. Design fino, que substitui a grade tradicional e cria um plano único de continuidade no piso do chuveiro. Equipado com pés de altura ajustável que se fixam ao corpo do ralo para um nivelamento preciso e rápido. Com cesto para filtro de cabelos que pode ser removido manualmente para limpeza."
+            "pt": "Ralo de chuveiro em aço inoxidável AISI 304 duplamente escovado. Design fino, que substitui a grade tradicional e cria um plano único de continuidade no piso do chuveiro. Equipado com pés de altura ajustável que se fixam ao corpo do ralo para um nivelamento preciso e rápido. Com cesto para filtro de cabelos que pode ser removido manualmente para limpeza.",
+            "en": "AISI 304 double-frosted stainless steel shower drain. Slim design that replaces the traditional grate and creates a unique plane of continuity on the shower floor. Equipped with height-adjustable feet that attach to the drain body for precise and quick leveling. Features a removable hair filter basket for easy cleaning."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -28,7 +29,8 @@
         "producto": "Desagüe Lineal Clásico Negro Mate 2 en 1",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304. Tapa 2x1: Negro o Ceramic (insertar en el porcellanato). Diseñado para reemplazar la rejilla tradicional. Su estructura con caída en forma de diamante garantiza mayor capacidad de drenaje y un flujo eficiente del agua.",
-            "pt": "Ralo de aço inoxidável AISI 304. Tampa 2x1: Preto ou Ceramic (inserir no porcelanato). Projetado para substituir a grade tradicional. Sua estrutura com queda em forma de diamante garante maior capacidade de drenagem e um fluxo eficiente da água."
+            "pt": "Ralo de aço inoxidável AISI 304. Tampa 2x1: Preto ou Ceramic (inserir no porcelanato). Projetado para substituir a grade tradicional. Sua estrutura com queda em forma de diamante garante maior capacidade de drenagem e um fluxo eficiente da água.",
+            "en": "AISI 304 stainless steel drain. 2-in-1 cover: Black or Ceramic (insert porcelain tile). Designed to replace the traditional grate. Its diamond-shaped drop structure ensures greater drainage capacity and efficient water flow."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -53,7 +55,8 @@
         "producto": "Desagüe Lineal Clásico Mate 2 en 1 Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304 con innovadora tapa 2 en 1 que permite elegir entre acabado Cromo o Ceramic con cavidad para insertar el revestimiento. Diseñado para reemplazar la rejilla tradicional, creando un plano continuo en el piso de la ducha. Su estructura con caída en forma de diamante garantiza un drenaje eficiente y rápido.",
-            "pt": "Ralo de aço inoxidável AISI 304 com tampa inovadora 2 em 1 que permite escolher entre acabamento Cromo ou Ceramic com cavidade para inserir o revestimento. Projetado para substituir a grade tradicional, criando um plano contínuo no piso do chuveiro. Sua estrutura com queda em forma de diamante garante uma drenagem eficiente e rápida."
+            "pt": "Ralo de aço inoxidável AISI 304 com tampa inovadora 2 em 1 que permite escolher entre acabamento Cromo ou Ceramic com cavidade para inserir o revestimento. Projetado para substituir a grade tradicional, criando um plano contínuo no piso do chuveiro. Sua estrutura com queda em forma de diamante garante uma drenagem eficiente e rápida.",
+            "en": "AISI 304 stainless steel drain with innovative 2-in-1 cover that allows choosing between Chrome finish or Ceramic with cavity to insert the tile. Designed to replace the traditional grate, creating a continuous plane on the shower floor. Its diamond-shaped drop structure ensures efficient and quick drainage."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -78,7 +81,8 @@
         "producto": "Desagüe Lineal Eme Mate Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304. La ranura central y los planos inclinados permiten que el agua fluya rápidamente.",
-            "pt": "Ralo de aço inoxidável AISI 304. A ranhura central e os planos inclinados permitem que a água flua rapidamente."
+            "pt": "Ralo de aço inoxidável AISI 304. A ranhura central e os planos inclinados permitem que a água flua rapidamente.",
+            "en": "AISI 304 stainless steel drain. The central slot and inclined planes allow water to flow quickly."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -103,7 +107,8 @@
         "producto": "Desagüe Lineal Inca Mate Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304. Patrones de líneas rectas. Su cuerpo con caída en forma de diamante permite una mayor capacidad de drenaje.",
-            "pt": "Ralo de aço inoxidável AISI 304. Padrões de linhas retas. Seu corpo com queda em forma de diamante permite uma maior capacidade de drenagem."
+            "pt": "Ralo de aço inoxidável AISI 304. Padrões de linhas retas. Seu corpo com queda em forma de diamante permite uma maior capacidade de drenagem.",
+            "en": "AISI 304 stainless steel drain. Straight-line patterns. Its diamond-shaped drop body allows for greater drainage capacity."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -128,7 +133,8 @@
         "producto": "Desagüe Cuadrado 2 en 1 Brillante",
         "descripcion": {
             "es": "Desagüe cuadrado de acero inoxidable AISI 304. Ofrece dos opciones de tapas en un único producto: Clásica, con un acabado esmerilado y Ceramic, cuyo lado posterior es hueco y permite insertar el revestimiento.",
-            "pt": "Ralo quadrado de aço inoxidável AISI 304. Oferece duas opções de tampas em um único produto: Clássica, com acabamento fosco e Ceramic, cujo lado posterior é oco e permite inserir o revestimento."
+            "pt": "Ralo quadrado de aço inoxidável AISI 304. Oferece duas opções de tampas em um único produto: Clássica, com acabamento fosco e Ceramic, cujo lado posterior é oco e permite inserir o revestimento.",
+            "en": "AISI 304 stainless steel square drain. Offers two cover options in a single product: Classic, with a frosted finish and Ceramic, whose back side is hollow and allows tile insertion."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -153,7 +159,8 @@
         "producto": "Desagüe Lineal Grid Mate Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304. Diseño reticular combina drenaje eficiente, resistencia y ligereza.",
-            "pt": "Ralo de aço inoxidável AISI 304. Design reticular combina drenagem eficiente, resistência e leveza."
+            "pt": "Ralo de aço inoxidável AISI 304. Design reticular combina drenagem eficiente, resistência e leveza.",
+            "en": "AISI 304 stainless steel drain. Grid design combines efficient drainage, strength, and lightness."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -177,7 +184,8 @@
         "producto": "Desagüe Diagonal Mate Esmerilado",
         "descripcion": {
             "es": "Desagüe de acero inoxidable AISI 304 doble esmerilado, tapa de patrones de líneas en diagonal. Diseñado para reemplazar la rejilla tradicional. Con caída en forma de diamante permite una mayor capacidad de drenaje.",
-            "pt": "Ralo de aço inoxidável AISI 304 duplo fosco, tampa com padrões de linhas diagonais. Projetado para substituir a grade tradicional. Com queda em forma de diamante permite maior capacidade de drenagem."
+            "pt": "Ralo de aço inoxidável AISI 304 duplo fosco, tampa com padrões de linhas diagonais. Projetado para substituir a grade tradicional. Com queda em forma de diamante permite maior capacidade de drenagem.",
+            "en": "AISI 304 double-frosted stainless steel drain with diagonal line pattern cover. Designed to replace the traditional grate. Features a diamond-shaped drop for increased drainage capacity."
         },
         "ficha": {
             "ficha.material": "ficha.acero",

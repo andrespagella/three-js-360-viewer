@@ -3,7 +3,8 @@
         "producto": "Terminación Cuadrada 1401ESM",
         "descripcion": {
             "es": "Recomendado para unir diferentes revestimientos a 90°, para delimitar ambientes o como terminación de escalón protegiendo los cantos. Es una gran solución para esquinas externas, mesadas, paredes, columnas rectas, etc. Usos: interior y exterior. Calidad superior y aspecto sofisticado. Fabricado en acero inoxidable 304, de gran resistencia y brillo, permiten crear un diseño moderno en pisos interiores y exteriores.",
-            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores."
+            "pt": "Recomendado para unir diferentes revestimentos a 90°, para delimitar ambientes ou como acabamento de degrau protegendo as bordas. É uma ótima solução para cantos externos, bancadas, paredes, colunas retas, etc. Usos: interior e exterior. Qualidade superior e aspecto sofisticado. Fabricado em aço inoxidável 304, de grande resistência e brilho, permitem criar um design moderno em pisos interiores e exteriores.",
+            "en": "Recommended for joining different coverings at 90°, for delimiting spaces or as a step finish protecting the edges. It's a great solution for external corners, countertops, walls, straight columns, etc. Uses: interior and exterior. Superior quality and sophisticated appearance. Made of 304 stainless steel, with great resistance and shine, they allow creating a modern design in interior and exterior floors."
         },
         "ficha": {
             "ficha.material": "ficha.acero",
@@ -26,7 +27,8 @@
         "producto": "Guardacanto Quadra 3421",
         "descripcion": {
             "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
-            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno.",
+            "en": "Anodized aluminum profile alloy 6063 T5, for covered walls. Square-view design that protects the junction of coverings and offers protection to the edges, achieving a modern design."
         },
         "ficha": {
             "ficha.material": "ficha.aluminio",
@@ -51,7 +53,8 @@
         "producto": "Guardacanto Quadra 3422",
         "descripcion": {
             "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
-            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno.",
+            "en": "Anodized aluminum profile alloy 6063 T5, for covered walls. Square-view design that protects the junction of coverings and offers protection to the edges, achieving a modern design."
         },
         "ficha": {
             "ficha.material": "ficha.aluminio",
@@ -76,7 +79,8 @@
         "producto": "Guardacanto Quadra 3425B",
         "descripcion": {
             "es": "Perfil de aluminio anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
-            "pt": "Perfil de alumínio anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+            "pt": "Perfil de alumínio anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno.",
+            "en": "Anodized aluminum profile, for covered walls. Square-view design that protects the junction of coverings and offers protection to the edges, achieving a modern design."
         },
         "ficha": {
             "ficha.material": "ficha.aluminio",
@@ -101,7 +105,8 @@
         "producto": "Guardacanto Quadra 3428TXA",
         "descripcion": {
             "es": "Perfil de aluminio aleación 6063 T5 anodizado, para paredes o muros revestidos. Diseño de vista cuadrada que protege la unión de los revestimientos y ofrece protección a los bordes, logrando un diseño moderno.",
-            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno."
+            "pt": "Perfil de alumínio liga 6063 T5 anodizado, para paredes ou muros revestidos. Design de vista quadrada que protege a união dos revestimentos e oferece proteção às bordas, conseguindo um design moderno.",
+            "en": "Anodized aluminum profile alloy 6063 T5, for covered walls. Square-view design that protects the junction of coverings and offers protection to the edges, achieving a modern design."
         },
         "ficha": {
             "ficha.material": "ficha.aluminio",
