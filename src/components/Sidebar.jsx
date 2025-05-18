@@ -27,7 +27,7 @@ const Sidebar = ({
   return (
     <div 
       className={`fixed z-50 transition-transform duration-300 shadow-lg ${
-        isMobile ? "bottom-0 left-0 w-full h-64" : "top-[57px] left-0 h-[calc(100%-40px)] w-64"
+        isMobile ? "bottom-0 left-0 w-full h-[calc(100%-57px)]" : "top-[57px] left-0 h-[calc(100%-40px)] w-64"
       }`}
       style={{ 
         backgroundColor: theme.background.primary,

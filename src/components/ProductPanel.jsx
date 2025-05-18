@@ -214,7 +214,7 @@ const ProductPanel = ({ ambientes, pinsData, onSelectAmbiente, onSelectPin, pane
   return (
     <div 
       className={`fixed z-40 transition-transform duration-300 overflow-hidden shadow-sm ${
-        isMobile ? "bottom-0 right-0 w-full h-64" : "top-[57px] right-0 h-[calc(100%-57px)] w-80"
+        isMobile ? "bottom-0 right-0 w-full h-[calc(100%-57px)]" : "top-[57px] right-0 h-[calc(100%-57px)] w-80"
       }`}
       style={{ 
         backgroundColor: theme.background.primary,
