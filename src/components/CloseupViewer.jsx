@@ -124,9 +124,10 @@ const CloseupViewer = ({ closeup, onClose }) => {
       onDragOver={preventDragHandler}
       onDragEnd={preventDragHandler}
       onDrop={preventDragHandler}
+      style={{ flexDirection: isMobile ? 'column' : 'row' }}
     >
-      {/* Contenedor de la imagen principal - exactamente 2/3 del ancho */}
-      <div className="relative w-2/3 h-full p-0 m-0">
+      {/* Contenedor de la imagen principal */}
+      <div className={`relative ${isMobile ? 'w-full h-1/2' : 'w-2/3 h-full'} p-0 m-0`}>
         <img 
           src={selectedProduct.closeup} 
           alt={selectedProduct.descripcion} 
@@ -143,63 +144,67 @@ const CloseupViewer = ({ closeup, onClose }) => {
           {t('buttons.back', 'Vista principal')}
         </button>
 
-        {/* Contenedor principal de la galería - pegado completamente al borde inferior */}
-        <div className="absolute bottom-0 left-0 right-0 w-full m-0 p-0" style={{ 
-          bottom: '0',
-          backgroundColor: 'rgba(0,0,0,0.0)'
-        }}>
-          {/* Eliminar todos los paddings excepto un poco arriba */}
-          <div className="pt-2 pb-2 px-0 m-0 w-full">
-            {/* Contenedor de desplazamiento - centrado horizontalmente */}
-            <div className="flex overflow-x-auto m-0 p-0 w-full justify-center" style={{ paddingLeft: '20px', paddingRight: '20px' }}>
-              {products.map((product, index) => (
+        {/* Contenedor principal de la galería - adaptado para desktop y mobile */}
+        <div className={`${isMobile ? 'relative bottom-0 py-1' : 'absolute bottom-0'} left-0 right-0 w-full m-0 p-0`} 
+          style={{ 
+            bottom: isMobile ? '100px' : '20px'
+          }}
+        >
+          {/* Contenedor de desplazamiento - centrado horizontalmente */}
+          <div className={`flex overflow-x-auto m-0 p-0 w-full ${isMobile ? 'justify-start' : 'justify-center'}`} 
+            style={{ 
+              paddingLeft: '20px', 
+              paddingRight: '20px',
+            }}
+          >
+            {products.map((product, index) => (
+              <div 
+                key={index} 
+                className="relative flex-shrink-0"
+                style={{ 
+                  padding: '3px',
+                  marginLeft: index === 0 ? '0' : '8px' // Espacio entre items, pero no al inicio
+                }}
+              >
                 <div 
-                  key={index} 
-                  className="relative flex-shrink-0"
-                  style={{ 
-                    padding: '3px',
-                    marginLeft: index === 0 ? '0' : '8px' // Espacio entre items, pero no al inicio
-                  }}
-                >
-                  <div 
-                    className="w-28 h-28 relative cursor-pointer rounded-[10px] overflow-hidden"
-                    onClick={() => setSelectedIndex(index)}
-                    style={index === selectedIndex ? 
-                      { 
-                        border: `3px solid ${theme.accent.primary}`,
-                        boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)'
-                      } : 
-                      { 
-                        border: '1px solid rgba(0,0,0,0.2)',
-                        boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
-                      }
+                  className={`relative cursor-pointer rounded-[10px] overflow-hidden ${isMobile ? 'w-20 h-20' : 'w-28 h-28'}`}
+                  onClick={() => setSelectedIndex(index)}
+                  style={index === selectedIndex ? 
+                    { 
+                      border: `3px solid ${theme.accent.primary}`,
+                      boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)'
+                    } : 
+                    { 
+                      border: '1px solid rgba(0,0,0,0.2)',
+                      boxShadow: '2px 2px 3px 0px rgba(0, 0, 0, 0.5)' 
                     }
-                  >
-                    <img
-                      src={product.thumbnail}
-                      alt={getTranslatedProductName(product)}
-                      className="absolute w-full h-full object-cover"
-                      draggable="false"
-                      onDragStart={preventDragHandler}
-                    />
-                  </div>
+                  }
+                >
+                  <img
+                    src={product.thumbnail}
+                    alt={getTranslatedProductName(product)}
+                    className="absolute w-full h-full object-cover"
+                    draggable="false"
+                    onDragStart={preventDragHandler}
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
       
-      {/* Panel lateral - exactamente 1/3 del ancho y pegado al borde derecho */}
+      {/* Panel de información */}
       <div 
-        className="w-1/3 p-6 overflow-y-auto m-0"
+        className={`${isMobile ? 'w-full h-1/2 overflow-auto' : 'w-1/3'} p-6 overflow-y-auto m-0`}
         style={{ 
           backgroundColor: theme.background.primary,
           color: theme.text.primary,
-          borderLeft: `1px solid ${theme.border.light}`,
-          boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)',
-          marginTop: '57px',
-          height: 'calc(100% - 57px)'
+          borderLeft: isMobile ? 'none' : `1px solid ${theme.border.light}`,
+          borderTop: isMobile ? `1px solid ${theme.border.light}` : 'none',
+          boxShadow: isMobile ? '0px -4px 6px -1px rgba(0, 0, 0, 0.2)' : '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)',
+          marginTop: isMobile ? '0' : '57px',
+          height: isMobile ? '50%' : 'calc(100% - 57px)'
         }}
       >
         <h2 
