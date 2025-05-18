@@ -445,13 +445,13 @@ const AppContent = () => {
                     style={{
                       backgroundColor: theme.background.primary,
                       color: theme.text.primary,
-                      left: "1rem",
+                      left: "0rem",
                       bottom: "0rem",
-                      width: "43%",
+                      width: "49%",
                       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                     }}
                   >
-                    {t('sidebar.products')}
+                    {t('sidebar.ambients')}
                   </button>
                 )}
 
@@ -501,9 +501,9 @@ const AppContent = () => {
                     style={{
                       backgroundColor: theme.background.primary,
                       color: theme.text.primary,
-                      right: "1rem",
+                      right: "0rem",
                       bottom: "0rem",
-                      width: "43%",
+                      width: "49%",
                       boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                     }}
                   >
