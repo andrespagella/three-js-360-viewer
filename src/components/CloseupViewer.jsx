@@ -5,7 +5,7 @@ import { processMobileCollection } from "../utils/imageUtils";
 import useIsMobile from "../hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
 
-const CloseupViewer = ({ closeup, onClose }) => {
+const CloseupViewer = ({ closeup, onClose, isFooterVisible = false }) => {
   const { t, i18n } = useTranslation();
   const { file: closeupFile, collection: defaultCollection, selectedIndex: initialIndex = 0 } = closeup;
   const [currentCollection, setCurrentCollection] = useState(defaultCollection || "inodoros");
@@ -127,7 +127,7 @@ const CloseupViewer = ({ closeup, onClose }) => {
       style={{ 
         flexDirection: isMobile ? 'column' : 'row',
         zIndex: 20,
-        bottom: '60px' // Dejar espacio para el footer
+        bottom: isFooterVisible ? '60px' : '0px' // Ajustar según visibilidad del footer
       }}
     >
       {/* Contenedor de la imagen principal */}

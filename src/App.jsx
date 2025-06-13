@@ -394,6 +394,9 @@ const AppContent = () => {
     return <PreloadingScreen />;
   }
 
+  // Determinar si el footer está visible
+  const isFooterVisible = langParamSpecified && !isBigScreen;
+
   return (
     <div
       className={`app-container ${darkMode ? "dark-mode" : ""}`}
@@ -410,7 +413,7 @@ const AppContent = () => {
           <div className="flex-1">
             <LanguageSelector onSelectLanguage={handleSelectLanguage} />
           </div>
-          <Footer />
+          {/* Footer NO visible cuando no hay idioma seleccionado */}
         </div>
       ) : (
         <div className="relative h-screen overflow-hidden flex flex-col">
@@ -456,7 +459,7 @@ const AppContent = () => {
                         backgroundColor: theme.background.primary,
                         color: theme.text.primary,
                         left: "0rem",
-                        bottom: "70px",
+                        bottom: isFooterVisible ? "70px" : "0px",
                         width: "49%",
                         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                       }}
@@ -512,7 +515,7 @@ const AppContent = () => {
                         backgroundColor: theme.background.primary,
                         color: theme.text.primary,
                         right: "0rem",
-                        bottom: "70px",
+                        bottom: isFooterVisible ? "70px" : "0px",
                         width: "49%",
                         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
                       }}
@@ -536,14 +539,14 @@ const AppContent = () => {
                   selectedItems={selectedItems}
                 />
                 {closeup && (
-                  <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
+                  <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} isFooterVisible={isFooterVisible} />
                 )}
               </div>
             </div>
           </div>
           
-          {/* Footer - solo cuando no estamos en modo bigscreen Y no se especificó el parámetro lang */}
-          {!isBigScreen && !langParamSpecified && <Footer />}
+          {/* Footer - visible cuando SÍ se especificó el parámetro lang Y no estamos en modo bigscreen */}
+          {isFooterVisible && <Footer />}
         </div>
       )}
       
