@@ -21,12 +21,25 @@
   "forms": {
     "title": "Complete seus dados para continuar com seu design",
     "subtitle": "Apenas preencha seus dados e transforme seu design em realidade.",
+    "firstname": "Nome",
+    "lastname": "Sobrenome",
     "name": "Nome e sobrenome",
     "email": "E-mail",
     "phone": "Telefone",
     "company": "Empresa",
+    "tipo": "Tipo de Cliente",
+    "country": "País",
     "message": "Mensagem",
-    "required": "Campo obrigatório"
+    "required": "Campo obrigatório",
+    "tipo_placeholder": "Tipo",
+    "country_placeholder": "País",
+    "client_types": {
+      "empresa_constructora": "Empresa Construtora",
+      "arquitecto": "Arquiteto",
+      "consumidor_final": "Consumidor Final",
+      "distribuidor": "Distribuidor",
+      "disenador_interiores": "Designer de Interiores"
+    }
   },
   "instructions": {
     "videoFallback": "Seu navegador não suporta vídeos HTML5.",

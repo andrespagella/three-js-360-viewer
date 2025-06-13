@@ -5,11 +5,44 @@ import { useTranslation } from "react-i18next";
 const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  // Client types
+  const clientTypes = [
+    { value: 'empresa_constructora', key: 'empresa_constructora' },
+    { value: 'arquitecto', key: 'arquitecto' },
+    { value: 'consumidor_final', key: 'consumidor_final' },
+    { value: 'distribuidor', key: 'distribuidor' },
+    { value: 'disenador_interiores', key: 'disenador_interiores' }
+  ];
+  
+  // Countries in alphabetical order
+  const countries = [
+    'Argentina',
+    'Bolivia',
+    'Bonaire',
+    'Brasil',
+    'Chile',
+    'Colombia',
+    'Costa Rica',
+    'Curazao',
+    'Ecuador',
+    'El Salvador',
+    'Guatemala',
+    'Honduras',
+    'Nicaragua',
+    'Panamá',
+    'Paraguay',
+    'Perú',
+    'Uruguay',
+    'USA'
+  ];
   const [formData, setFormData] = useState({
-    fullName: '',
+    firstname: '',
+    lastname: '',
     email: '',
     company: '',
-    phone: ''
+    tipo: '',
+    country: ''
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,8 +78,12 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = t('forms.required');
+    if (!formData.firstname.trim()) {
+      newErrors.firstname = t('forms.required');
+    }
+    
+    if (!formData.lastname.trim()) {
+      newErrors.lastname = t('forms.required');
     }
     
     if (!formData.email.trim()) {
@@ -59,8 +96,12 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
       newErrors.company = t('forms.required');
     }
     
-    if (!formData.phone.trim()) {
-      newErrors.phone = t('forms.required');
+    if (!formData.tipo.trim()) {
+      newErrors.tipo = t('forms.required');
+    }
+    
+    if (!formData.country.trim()) {
+      newErrors.country = t('forms.required');
     }
     
     setErrors(newErrors);
@@ -195,34 +236,44 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
           {t('forms.title', '¡No pierdas tu diseño!')}
         </h2>
         
-        <p style={{ 
-          textAlign: 'left', 
-          marginBottom: '20px', 
-          color: 'var(--text-secondary)',
-          fontSize: isMobile ? '14px' : '16px',
-          fontWeight: 500
-        }}>
-          {t('forms.subtitle', 'Solo completa tus datos y convierte tu diseño en una realidad.')}
-        </p>
-        
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: '15px' }}>
             <input 
               type="text"
-              name="fullName"
-              value={formData.fullName}
+              name="firstname"
+              value={formData.firstname}
               onChange={handleChange}
-              placeholder={t('forms.name')}
+              placeholder={t('forms.firstname')}
               style={{
                 width: '100%',
                 padding: '8px',
                 borderRadius: '4px',
-                border: errors.fullName ? '1px solid red' : '1px solid var(--border-medium)',
+                border: errors.firstname ? '1px solid red' : '1px solid var(--border-medium)',
                 fontSize: isMobile ? '14px' : '16px'
               }}
             />
-            {errors.fullName && (
-              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.fullName}</p>
+            {errors.firstname && (
+              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.firstname}</p>
+            )}
+          </div>
+          
+          <div style={{ marginBottom: '15px' }}>
+            <input 
+              type="text"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+              placeholder={t('forms.lastname')}
+              style={{
+                width: '100%',
+                padding: '8px',
+                borderRadius: '4px',
+                border: errors.lastname ? '1px solid red' : '1px solid var(--border-medium)',
+                fontSize: isMobile ? '14px' : '16px'
+              }}
+            />
+            {errors.lastname && (
+              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.lastname}</p>
             )}
           </div>
           
@@ -252,7 +303,7 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              placeholder={t('forms.company', 'Empresa')}
+              placeholder={t('forms.company')}
               style={{
                 width: '100%',
                 padding: '8px',
@@ -266,23 +317,55 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
             )}
           </div>
           
-          <div style={{ marginBottom: '20px' }}>
-            <input 
-              type="tel"
-              name="phone"
-              value={formData.phone}
+          <div style={{ marginBottom: '15px' }}>
+            <select
+              name="tipo"
+              value={formData.tipo}
               onChange={handleChange}
-              placeholder={t('forms.phone')}
               style={{
                 width: '100%',
                 padding: '8px',
                 borderRadius: '4px',
-                border: errors.phone ? '1px solid red' : '1px solid var(--border-medium)',
-                fontSize: isMobile ? '14px' : '16px'
+                border: errors.tipo ? '1px solid red' : '1px solid var(--border-medium)',
+                fontSize: isMobile ? '14px' : '16px',
+                backgroundColor: 'white'
               }}
-            />
-            {errors.phone && (
-              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.phone}</p>
+            >
+              <option value="">{t('forms.tipo_placeholder')}</option>
+              {clientTypes.map((type) => (
+                <option key={type.key} value={type.value}>
+                  {t(`forms.client_types.${type.key}`)}
+                </option>
+              ))}
+            </select>
+            {errors.tipo && (
+              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.tipo}</p>
+            )}
+          </div>
+          
+          <div style={{ marginBottom: '15px' }}>
+            <select
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              style={{
+                width: '100%',
+                padding: '8px',
+                borderRadius: '4px',
+                border: errors.country ? '1px solid red' : '1px solid var(--border-medium)',
+                fontSize: isMobile ? '14px' : '16px',
+                backgroundColor: 'white'
+              }}
+            >
+              <option value="">{t('forms.country_placeholder')}</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
+            {errors.country && (
+              <p style={{ color: 'red', fontSize: '12px', marginTop: '5px' }}>{errors.country}</p>
             )}
           </div>
           
