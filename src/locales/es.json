@@ -212,5 +212,10 @@
   "ambientes": {
     "bathroom": "Baño",
     "shower": "Ducha"
+  },
+  "footer": {
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "copyright": "© 2025 Atrim Argentina S.A. Todos los derechos reservados."
   }
 } 

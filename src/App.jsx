@@ -7,6 +7,7 @@ import LanguageSelector from "./components/LanguageSelector";
 import PreloadingScreen from "./components/PreloadingScreen";
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
+import Footer from "./components/Footer";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 import config from "./utils/config";
@@ -32,6 +33,9 @@ const AppContent = () => {
   // Detectar si el parámetro bigscreen=true está presente en la URL
   const [isBigScreen, setIsBigScreen] = useState(false);
   
+  // Detectar si el parámetro lang fue especificado en la URL
+  const [langParamSpecified, setLangParamSpecified] = useState(false);
+  
   // Efecto para detectar el parámetro bigscreen en la URL al cargar la aplicación
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -41,6 +45,7 @@ const AppContent = () => {
     // Check for 'lang' parameter in URL
     const langParam = urlParams.get('lang');
     if (langParam) {
+      setLangParamSpecified(true);
       // If the language is 'es', 'pt', or 'en', set it directly
       if (langParam === 'es' || langParam === 'pt' || langParam === 'en') {
         console.log(`Setting language from URL parameter: ${langParam}`);
@@ -52,6 +57,8 @@ const AppContent = () => {
         i18n.changeLanguage('es');
         setLanguage('es');
       }
+    } else {
+      setLangParamSpecified(false);
     }
     
     // Nota: El parámetro bigscreen=true controla si la aplicación se inicia en modo pantalla completa
@@ -384,12 +391,6 @@ const AppContent = () => {
     return <PreloadingScreen />;
   }
 
-  // After loading, show the language selector if language is not selected
-  if (!language) {
-    // If URL has no language parameter, show language selector
-    return <LanguageSelector onSelectLanguage={handleSelectLanguage} />;
-  }
-
   return (
     <div
       className={`app-container ${darkMode ? "dark-mode" : ""}`}
@@ -398,11 +399,14 @@ const AppContent = () => {
         width: "100vw",
         height: "100vh",
         overflow: "hidden",
-        backgroundColor: theme.bgPrimary,
+        backgroundColor: theme.background.primary,
       }}
     >
       {!language ? (
-        <LanguageSelector onSelectLanguage={handleSelectLanguage} />
+        <div className="relative h-screen overflow-hidden">
+          <LanguageSelector onSelectLanguage={handleSelectLanguage} />
+          <Footer />
+        </div>
       ) : (
         <div className="relative h-screen overflow-hidden">
           <ThemeUpdater darkMode={darkMode} />
@@ -530,6 +534,9 @@ const AppContent = () => {
               )}
             </div>
           </div>
+          
+          {/* Footer - solo cuando no estamos en modo bigscreen Y no se especificó el parámetro lang */}
+          {!isBigScreen && !langParamSpecified && <Footer />}
         </div>
       )}
       
