@@ -395,7 +395,7 @@ const AppContent = () => {
   }
 
   // Determinar si el footer está visible
-  const isFooterVisible = langParamSpecified && !isBigScreen;
+  const isFooterVisible = !langParamSpecified && !isBigScreen;
 
   return (
     <div
@@ -413,7 +413,8 @@ const AppContent = () => {
           <div className="flex-1">
             <LanguageSelector onSelectLanguage={handleSelectLanguage} />
           </div>
-          {/* Footer NO visible cuando no hay idioma seleccionado */}
+          {/* Footer visible en pantalla de selección de idioma cuando lang no fue especificado */}
+          {isFooterVisible && <Footer />}
         </div>
       ) : (
         <div className="relative h-screen overflow-hidden flex flex-col">
@@ -545,7 +546,7 @@ const AppContent = () => {
             </div>
           </div>
           
-          {/* Footer - visible cuando SÍ se especificó el parámetro lang Y no estamos en modo bigscreen */}
+          {/* Footer - visible cuando NO se especificó el parámetro lang Y no estamos en modo bigscreen */}
           {isFooterVisible && <Footer />}
         </div>
       )}
