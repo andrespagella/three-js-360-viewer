@@ -324,8 +324,8 @@ const AppContent = () => {
         setChangesCount(prevCount => {
           const newCount = prevCount + 1;
           
-          // Si se alcanza el umbral de 3 cambios y no estamos en modo bigscreen, mostrar el formulario
-          if (newCount === 3 && !showContactForm && !isBigScreen) {
+          // Si se alcanza el umbral de 1 cambio y no estamos en modo bigscreen, mostrar el formulario
+          if (newCount === 1 && !showContactForm && !isBigScreen) {
             setTimeout(() => {
               setShowContactForm(true);
             }, 500); // Pequeño retraso para mejor experiencia de usuario
