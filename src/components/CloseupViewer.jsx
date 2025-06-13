@@ -119,12 +119,16 @@ const CloseupViewer = ({ closeup, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-10 flex p-0 m-0"
+      className="fixed top-0 left-0 right-0 flex p-0 m-0"
       onDragStart={preventDragHandler}
       onDragOver={preventDragHandler}
       onDragEnd={preventDragHandler}
       onDrop={preventDragHandler}
-      style={{ flexDirection: isMobile ? 'column' : 'row' }}
+      style={{ 
+        flexDirection: isMobile ? 'column' : 'row',
+        zIndex: 20,
+        bottom: '60px' // Dejar espacio para el footer
+      }}
     >
       {/* Contenedor de la imagen principal */}
       <div className={`relative ${isMobile ? 'w-full h-1/2' : 'w-2/3 h-full'} p-0 m-0`}>

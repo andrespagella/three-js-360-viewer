@@ -14,11 +14,15 @@ const Footer = () => {
 
   return (
     <footer 
-      className="fixed bottom-0 left-0 right-0 z-40 py-3 px-4 text-center"
+      className="py-3 px-4 text-center"
       style={{
         backgroundColor: '#000000',
         color: '#FFFFFF',
-        borderTop: '1px solid #333333'
+        borderTop: '1px solid #333333',
+        width: '100%',
+        flexShrink: 0,
+        zIndex: 9999,
+        position: 'relative'
       }}
     >
       <div className="flex flex-col items-center space-y-2">

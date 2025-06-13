@@ -406,135 +406,139 @@ const AppContent = () => {
       }}
     >
       {!language ? (
-        <div className="relative h-screen overflow-hidden">
-          <LanguageSelector onSelectLanguage={handleSelectLanguage} />
+        <div className="relative h-screen overflow-hidden flex flex-col">
+          <div className="flex-1">
+            <LanguageSelector onSelectLanguage={handleSelectLanguage} />
+          </div>
           <Footer />
         </div>
       ) : (
-        <div className="relative h-screen overflow-hidden">
-          <ThemeUpdater darkMode={darkMode} />
-          <ViewerHeader language={language} />
-          <div className="pt-[40px] h-full">
-            {!closeup && (
-              <>
-                <Sidebar
-                  ambientes={ambientes}
-                  currentView={currentView}
-                  onViewClick={handleViewClick}
-                  menuExpanded={menuExpanded}
-                  onToggleMenu={() => setMenuExpanded(!menuExpanded)}
-                  darkMode={darkMode}
-                  onToggleDarkMode={() => setDarkMode(!darkMode)}
-                  getAmbientFilePaths={getAmbientFilePaths}
-                />
-                {!isMobile ? (
-                  // AMBIENTES Desktop
-                  <button
-                    onClick={() => setMenuExpanded(!menuExpanded)}
-                    className="fixed z-50 uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
-                    style={{
-                      backgroundColor: theme.background.primary,
-                      color: theme.text.primary,
-                      left: menuExpanded ? "16.9rem" : "1rem",
-                      top: "50%",
-                      transform: "translate(-50%, -50%) rotate(-90deg)",
-                      transformOrigin: "center",
-                      boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
-                    }}
-                  >
-                    {t('sidebar.ambients')}
-                  </button>
-                ) : (
-                  // AMBIENTES Mobile
-                  <button
-                    onClick={() => setMenuExpanded(!menuExpanded)}
-                    className="fixed z-50 uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
-                    style={{
-                      backgroundColor: theme.background.primary,
-                      color: theme.text.primary,
-                      left: "0rem",
-                      bottom: "0rem",
-                      width: "49%",
-                      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
-                    }}
-                  >
-                    {t('sidebar.ambients')}
-                  </button>
-                )}
+        <div className="relative h-screen overflow-hidden flex flex-col">
+          <div className="flex-1">
+            <ThemeUpdater darkMode={darkMode} />
+            <ViewerHeader language={language} />
+            <div className="pt-[40px] h-full">
+              {!closeup && (
+                <>
+                  <Sidebar
+                    ambientes={ambientes}
+                    currentView={currentView}
+                    onViewClick={handleViewClick}
+                    menuExpanded={menuExpanded}
+                    onToggleMenu={() => setMenuExpanded(!menuExpanded)}
+                    darkMode={darkMode}
+                    onToggleDarkMode={() => setDarkMode(!darkMode)}
+                    getAmbientFilePaths={getAmbientFilePaths}
+                  />
+                  {!isMobile ? (
+                    // AMBIENTES Desktop
+                    <button
+                      onClick={() => setMenuExpanded(!menuExpanded)}
+                      className="fixed z-50 uppercase font-semibold rounded-br rounded-bl px-4 py-1 focus:outline-none transition-all duration-300"
+                      style={{
+                        backgroundColor: theme.background.primary,
+                        color: theme.text.primary,
+                        left: menuExpanded ? "16.9rem" : "1rem",
+                        top: "50%",
+                        transform: "translate(-50%, -50%) rotate(-90deg)",
+                        transformOrigin: "center",
+                        boxShadow: '-4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
+                      }}
+                    >
+                      {t('sidebar.ambients')}
+                    </button>
+                  ) : (
+                    // AMBIENTES Mobile
+                    <button
+                      onClick={() => setMenuExpanded(!menuExpanded)}
+                      className="fixed z-[50] uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
+                      style={{
+                        backgroundColor: theme.background.primary,
+                        color: theme.text.primary,
+                        left: "0rem",
+                        bottom: "70px",
+                        width: "49%",
+                        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
+                      }}
+                    >
+                      {t('sidebar.ambients')}
+                    </button>
+                  )}
 
-                <ProductPanel
-                  ambientes={ambientes}
-                  pinsData={pinsData}
-                  onSelectAmbiente={handleSelectAmbiente}
-                  onSelectPin={handleSelectPin}
-                  panelExpanded={collectionPanelExpanded}
-                  selectedItems={selectedItems}
-                  collectionsOrder={[
-                    'perfiles_pared',
-                    //'perfiles_led',
-                    'perfiles_piso',
-                    'zocalos',
-                    'toalleros',
-                    'estantes',
-                    'desagues',
-                    'rejillas',
-                    'wallpanels'
-                    // El resto (cabinets, vanitories, etc.) carga "solo" en orden default
-                  ]}
-                />
+                  <ProductPanel
+                    ambientes={ambientes}
+                    pinsData={pinsData}
+                    onSelectAmbiente={handleSelectAmbiente}
+                    onSelectPin={handleSelectPin}
+                    panelExpanded={collectionPanelExpanded}
+                    selectedItems={selectedItems}
+                    collectionsOrder={[
+                      'perfiles_pared',
+                      //'perfiles_led',
+                      'perfiles_piso',
+                      'zocalos',
+                      'toalleros',
+                      'estantes',
+                      'desagues',
+                      'rejillas',
+                      'wallpanels'
+                      // El resto (cabinets, vanitories, etc.) carga "solo" en orden default
+                    ]}
+                  />
 
-                {!isMobile ? (
-                  // COLECCIONES Desktop
-                  <button
-                    onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
-                    className="fixed z-50 uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
-                    style={{
-                      backgroundColor: theme.background.primary,
-                      color: theme.text.primary,
-                      right: collectionPanelExpanded ? "20.9rem" : "1rem",
-                      top: "50%",
-                      transform: "translate(50%, -50%) rotate(90deg)",
-                      transformOrigin: "center",
-                      boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
-                    }}
-                  >
-                    {t('sidebar.products')}
-                  </button>
-                ) : (
-                  // COLECCIONES Mobile
-                  <button
-                    onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
-                    className="fixed z-50 uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
-                    style={{
-                      backgroundColor: theme.background.primary,
-                      color: theme.text.primary,
-                      right: "0rem",
-                      bottom: "0rem",
-                      width: "49%",
-                      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
-                    }}
-                  >
-                    {t('sidebar.products')}
-                  </button>
-                )}
-              </>
-            )}
-
-            <div className="viewer-container h-full">
-              <Three360Viewer
-                imageUrl={getAmbientFilePaths(currentView, darkMode).url}
-                pins={currentPins}
-                onOpenCloseup={handleOpenCloseup}
-                selectedPin={selectedPin}
-                onSelectPin={handleSelectPin}
-                developmentMode={developmentMode}
-                darkMode={darkMode}
-                currentView={currentView}
-                selectedItems={selectedItems}
-              />
-              {closeup && (
-                <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
+                  {!isMobile ? (
+                    // COLECCIONES Desktop
+                    <button
+                      onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
+                      className="fixed z-50 uppercase font-semibold rounded-bl rounded-br px-4 py-1 focus:outline-none transition-all duration-300"
+                      style={{
+                        backgroundColor: theme.background.primary,
+                        color: theme.text.primary,
+                        right: collectionPanelExpanded ? "20.9rem" : "1rem",
+                        top: "50%",
+                        transform: "translate(50%, -50%) rotate(90deg)",
+                        transformOrigin: "center",
+                        boxShadow: '4px 5px 6px -1px rgba(0, 0, 0, 0.2)'
+                      }}
+                    >
+                      {t('sidebar.products')}
+                    </button>
+                  ) : (
+                    // COLECCIONES Mobile
+                    <button
+                      onClick={() => setCollectionPanelExpanded(!collectionPanelExpanded)}
+                      className="fixed z-[50] uppercase font-semibold rounded-tl rounded-tr px-5 py-4 focus:outline-none transition-all duration-300"
+                      style={{
+                        backgroundColor: theme.background.primary,
+                        color: theme.text.primary,
+                        right: "0rem",
+                        bottom: "70px",
+                        width: "49%",
+                        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)'
+                      }}
+                    >
+                      {t('sidebar.products')}
+                    </button>
+                  )}
+                </>
               )}
+
+              <div className="viewer-container h-full">
+                <Three360Viewer
+                  imageUrl={getAmbientFilePaths(currentView, darkMode).url}
+                  pins={currentPins}
+                  onOpenCloseup={handleOpenCloseup}
+                  selectedPin={selectedPin}
+                  onSelectPin={handleSelectPin}
+                  developmentMode={developmentMode}
+                  darkMode={darkMode}
+                  currentView={currentView}
+                  selectedItems={selectedItems}
+                />
+                {closeup && (
+                  <CloseupViewer closeup={closeup} onClose={handleCloseCloseup} />
+                )}
+              </div>
             </div>
           </div>
           
