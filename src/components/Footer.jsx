@@ -1,14 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const handleTermsClick = () => {
-    // Aquí puedes abrir los términos y condiciones en una nueva ventana o modal
-    window.open('/terminos-y-condiciones', '_blank');
+    navigate('/terminos-condiciones');
   };
 
   const handlePrivacyClick = () => {
-    // Aquí puedes abrir la política de privacidad en una nueva ventana o modal
-    window.open('/politica-de-privacidad', '_blank');
+    navigate('/politica-privacidad');
   };
 
   return (

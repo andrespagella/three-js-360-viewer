@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Three360Viewer from "./components/Three360Viewer";
 import Sidebar from "./components/Sidebar";
 import CloseupViewer from "./components/CloseupViewer";
@@ -8,6 +9,8 @@ import PreloadingScreen from "./components/PreloadingScreen";
 import ViewerHeader from "./components/ViewerHeader";
 import ThemeUpdater from "./components/ThemeUpdater";
 import Footer from "./components/Footer";
+import TerminosCondiciones from "./pages/TerminosCondiciones";
+import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import { useTheme } from "./context/ThemeContext";
 import { processMobileCollection } from "./utils/imageUtils";
 import config from "./utils/config";
@@ -555,7 +558,13 @@ const AppContent = () => {
 // Componente principal que proporciona el contexto
 function App() {
   return (
-    <AppContent />
+    <Router>
+      <Routes>
+        <Route path="/" element={<AppContent />} />
+        <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+        <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+      </Routes>
+    </Router>
   );
 }
 
