@@ -6,13 +6,13 @@ const ContactFormOverlay = ({ onClose, onSubmit, selectedItems = {} }) => {
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
-  // Client types
+  // Client types - valores siempre en español para el backend
   const clientTypes = [
-    { value: 'empresa_constructora', key: 'empresa_constructora' },
-    { value: 'arquitecto', key: 'arquitecto' },
-    { value: 'consumidor_final', key: 'consumidor_final' },
-    { value: 'distribuidor', key: 'distribuidor' },
-    { value: 'disenador_interiores', key: 'disenador_interiores' }
+    { value: 'Empresa Constructora', key: 'empresa_constructora' },
+    { value: 'Arquitecto', key: 'arquitecto' },
+    { value: 'Consumidor Final', key: 'consumidor_final' },
+    { value: 'Distribuidor', key: 'distribuidor' },
+    { value: 'Diseñador de Interiores', key: 'disenador_interiores' }
   ];
   
   // Countries in alphabetical order
