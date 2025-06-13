@@ -65,7 +65,7 @@ const LanguageSelector = ({ onSelectLanguage }) => {
 
   return (
     <div 
-      className="flex flex-col items-center justify-center h-screen space-y-8"
+      className="flex flex-col items-center justify-center h-full space-y-8"
       style={{
         backgroundImage: "url('/app-bg.jpg')",
         backgroundSize: "cover",
